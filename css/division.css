@@ -1,0 +1,1330 @@
+:root {
+    --main-color: #ff7f00;
+    --background-blur: 5px;
+    --background-brightness: 40%;
+}
+@font-face {
+    font-family: Borda;
+    src: url(https://cdn.rawgit.com/Zerthox/font-hosting/master/Borda/Borda%20Medium.ttf) format("truetype");
+}
+@font-face {
+    font-family: Borda;
+    src: url(https://cdn.rawgit.com/Zerthox/font-hosting/master/Borda/Borda%20DemiBold.ttf) format("truetype");
+    font-weight: 600;
+}
+@font-face {
+    font-family: Borda;
+    src: url(https://cdn.rawgit.com/Zerthox/font-hosting/master/Borda/Borda%20Bold.ttf) format("truetype");
+    font-weight: 700;
+}
+@font-face {
+    font-family: Borda;
+    src: url(https://cdn.rawgit.com/Zerthox/font-hosting/master/Borda/Borda%20Bold.ttf) format("truetype");
+    font-weight: bold;
+}
+body {
+    height: 100vh;
+    width: 100vw;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    font-family: Borda;
+    color: hsla(0, 0%, 100%, .5);
+    text-shadow: 0 0 3px rgba(0, 0, 0, .3), 3px 3px 0 rgba(150, 150, 150, .1);
+    overflow-x: hidden;
+    overflow-y: auto;
+    cursor: default;
+}
+body::after {
+    content: "";
+    position: fixed;
+    top: -1%;
+    right: -1%;
+    bottom: -1%;
+    left: -1%;
+    background-image: url(https://images4.alphacoders.com/773/773361.jpg);
+    background-size: cover;
+    background-position: center;
+    z-index: -9999;
+    -webkit-filter: blur(var(--background-blur)) brightness(var(--background-brightness));
+    filter: blur(var(--background-blur)) brightness(var(--background-brightness));
+}
+::selection,
+::-moz-selection {
+    color: var(--dark-bg);
+    background: hsla(0, 0%, 100%, .5);
+}
+a:hover {
+    text-decoration: none;
+}
+.main {
+    width: 90%;
+    min-width: 500px;
+    max-height: 90%;
+    margin: auto;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+
+/* BACK BUTTON */
+.back-button {
+    position: absolute;
+    height: 36px;
+    width: 36px;
+    top: 40px;
+    right: 40px;
+    opacity: .5;
+    -webkit-transition: all .15s ease-in-out;
+    transition: all .15s ease-in-out;
+}
+.back-button:hover {
+    opacity: .7;
+}
+
+/* HEADER */
+.header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+.main-header,
+.build-header {
+    padding: 0 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+.main-header > *,
+.build-header > * {
+    margin: 3px;
+}
+.main-header .title,
+.build-header .title {
+    height: 100%;
+    color: var(--main-color);
+    font-size: 4em;
+    line-height: 40px;
+    font-weight: bold;
+}
+.build-header .info {
+    font-size: 1.25em;
+    margin-left: 8px;
+}
+.build-header .author {
+    color: hsla(0, 0%, 100%, .7);
+    font-weight: bold;
+    -webkit-transition: all .15s ease-in-out;
+    transition: all .15s ease-in-out;
+}
+.build-header .author:hover {
+    color: #fff;
+}
+.build-header .date {
+    margin-left: .5em;
+    font-size: .75em;
+    opacity: .3;
+}
+
+/* FOOTER */
+.footer {
+    margin: 5px 10px;
+    font-size: 1.125em;
+    text-align: right;
+}
+.footer a {
+    color: hsla(0, 0%, 100%, .5);
+    -webkit-transition: all .15s ease-in-out;
+    transition: all .15s ease-in-out;
+}
+.footer a:hover {
+    color: hsla(0, 0%, 100%, .7);
+}
+
+/* TEXT */
+.text-container {
+    width: 70%;
+    min-width: 500px;
+    margin: 40px auto;
+    padding: 20px 40px;
+    background: hsla(0, 0%, 50%, .1);
+}
+
+/* ABOUT PAGE */
+.flex-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+.flex-item {
+    margin-top: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    font-size: 1.125em;
+}
+.flex-item .title {
+    font-size: 1.25em;
+    font-weight: bold;
+}
+.flex-item .link a {
+    position: relative;
+    color: var(--main-color);
+}
+.flex-item .link a::after,
+.flex-item .link a::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -3px;
+    width: 0;
+    height: 2px;
+    background: var(--main-color);
+    -webkit-transition: all .15s ease-in-out;
+    transition: all .15s ease-in-out;
+    -webkit-transition-delay: .15s;
+    transition-delay: .15s;
+}
+.flex-item .link a::before {
+    margin-left: 1.5px;
+    margin-bottom: -1.5px;
+    background: rgba(150, 150, 150, .1);
+}
+.flex-item .link a:hover::after,
+.flex-item .link a:hover::before {
+    left: 0;
+    width: 100%;
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+}
+.flex-item .logo {
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+    background-position: center;
+    background-size: auto 100px;
+    background-repeat: no-repeat;
+}
+.logo.zerthox {
+    background-image: url(https://i.ytimg.com/an/coOrbYqvnx6BG_VdwDxhhQ/featured_channel.jpg);
+}
+.logo.github {
+    background-image: url(https://cdn.rawgit.com/gilbarbara/logos/master/logos/github-icon.svg);
+    background-size: 100px;
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
+}
+.logo.ubisoft {
+    background-image: url(https://ubistatic19-a.akamaihd.net/ubicomstatic/de-DE/global/css/images/ubi-mark.svg);
+    background-position: 0 10px;
+    background-size: 115px;
+}
+.logo.alphacoders {
+    background-image: url(https://static.alphacoders.com/alpha_system_360.png);
+}
+
+/* TAB BAR */
+.tab-bar {
+    height: 78px;
+    padding: 0 20px;
+    margin-left: auto;
+    margin-right: 5%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    font-size: 1.5em;
+    line-height: 16px;
+    font-weight: 600;
+    letter-spacing: .4px;
+}
+.tab-bar .tab-bar-item {
+    position: relative;
+    min-width: 200px;
+    padding: 6px 16px 4px;
+    margin: 0 8px;
+    background: hsla(0, 0%, 100%, .1);
+    border-radius: 0;
+    line-height: 18px;
+    text-align: center;
+    cursor: pointer;
+    -webkit-transition: all .15s ease-in-out;
+    transition: all .15s ease-in-out;
+    -webkit-transition-delay: .15s;
+    transition-delay: .15s;
+}
+.tab-bar .tab-bar-item:hover {
+    background-color: hsla(0, 0%, 100%, .3);
+}
+.tab-bar .tab-bar-item.selected {
+    background-color: var(--main-color);
+    color: #fff;
+}
+.tab-bar .tab-bar-item:hover,
+.tab-bar .tab-bar-item.selected {
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+}
+.tab-bar .tab-bar-item::before,
+.tab-bar .tab-bar-item::after {
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 0;
+    left: 50%;
+    bottom: 100%;
+    margin-bottom: 2px;
+    background: hsla(0, 0%, 100%, .3);
+    -webkit-transition: all .15s ease-in-out;
+    transition: all .15s ease-in-out;
+    -webkit-transition-delay: .15s;
+    transition-delay: .15s;
+}
+.tab-bar .tab-bar-item:hover::before,
+.tab-bar .tab-bar-item.selected::before,
+.tab-bar .tab-bar-item.selected::after {
+    width: 100%;
+    left: 0;
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+}
+.tab-bar .tab-bar-item.selected::after {
+    background: var(--main-color) !important;
+}
+
+/* BUILD LIST */
+.build-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    margin-top: 40px;
+}
+.build-list:empty::after {
+    content: "";
+    width: 50px;
+    height: 50px;
+    left: 50%;
+    border: 4px solid hsla(0, 0%, 100%, .1);
+    border-radius: 50%;
+    border-top-color: var(--main-color);
+    -webkit-animation: circle-spin .7s infinite linear;
+    animation: circle-spin .7s infinite linear;
+}
+@-webkit-keyframes circle-spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    25% {
+        -webkit-transform: rotate(60deg);
+        transform: rotate(60deg);
+    }
+    75% {
+        -webkit-transform: rotate(300deg);
+        transform: rotate(300deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+@keyframes circle-spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    25% {
+        -webkit-transform: rotate(60deg);
+        transform: rotate(60deg);
+    }
+    75% {
+        -webkit-transform: rotate(300deg);
+        transform: rotate(300deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+.build-list .list-item {
+    min-width: 350px;
+    padding: 15px 20px;
+    margin: 5px 0;
+    color: hsla(0, 0%, 100%, .7);
+    font-size: 1.25em;
+    -webkit-transition: all .15s ease-in-out;
+    transition: all .15s ease-in-out;
+}
+.build-list .list-item:hover {
+    background: hsla(0, 0%, 100%, .1);
+}
+.build-list .list-item .title {
+    font-size: 1.275em;
+    font-weight: bold;
+}
+.build-list .list-item .author {
+    position: relative;
+    color: var(--main-color);
+}
+.build-list .list-item .author::after,
+.build-list .list-item .author::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -3px;
+    width: 0;
+    height: 2px;
+    background: var(--main-color);
+    -webkit-transition: all .15s ease-in-out;
+    transition: all .15s ease-in-out;
+    -webkit-transition-delay: .15s;
+    transition-delay: .15s;
+}
+.build-list .list-item .author::before {
+    margin-left: 1.5px;
+    margin-bottom: -1.5px;
+    background: rgba(150, 150, 150, .1);
+}
+.build-list .list-item .author:hover::after,
+.build-list .list-item .author:hover::before {
+    left: 0;
+    width: 100%;
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+}
+.build-list .list-item .date {
+    margin-left: .5em;
+    float: right;
+    font-size: .75em;
+    opacity: .3;
+}
+.build-list .list-item .tag {
+    font-size: .75em;
+    margin: 3px;
+    padding: 3px 5px;
+    background: hsla(0, 0%, 100%, .1);
+    opacity: .7;
+}
+
+/* SEARCH BAR */
+.search-bar {
+    margin-left: auto;
+    margin-right: 5%;
+    -webkit-align-self: center;
+    -ms-align-self: center;
+    align-self: center;
+}
+.search-bar .search {
+    padding: 3px 7px;
+    background: hsla(0, 0%, 100%, .1);
+    color: hsla(0, 0%, 100%, 7);
+    outline: none !important;
+    border: none;
+}
+
+/* BUILD */
+.build-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    margin: 0 40px;
+}
+.build-content > :not(.visible) {
+    display: none;
+}
+.build-content > * {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin: 0 auto;
+}
+.build-content > * > * {
+    margin: 5px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-flex-shrink: 0;
+    -ms-flex-shrink: 0;
+    flex-shrink: 0;
+}
+.build-content > * > * > * {
+    margin: 5px;
+}
+.build-content .info {
+    font-size: 1.125em;
+}
+.build-content .info .name {
+    font-size: 1.25em;
+    font-weight: bold;
+}
+.build-content .icon {
+    position: relative;
+    opacity: .7;
+    height: 100px;
+}
+.build-content .weapons .icon::before,
+.build-content .skills .icon::before {
+    content: "";
+    position: absolute;
+    top: 3px;
+    right: -3px;
+    bottom: -3px;
+    left: 3px;
+    background-image: inherit;
+    background-size: inherit;
+    background-position: inherit;
+    opacity: .1;
+}
+.build-content .weapons .info {
+    width: 250px;
+}
+.build-content .weapons .talents {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.build-content .gear {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+}
+.build-content .gear > * {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: initial;
+    -ms-flex-align: initial;
+    align-items: initial;
+    -webkit-flex-shrink: 0;
+    -ms-flex-shrink: 0;
+    flex-shrink: 0;
+    margin: 0 auto;
+}
+.build-content .gear > * > * {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-flex-shrink: 0;
+    -ms-flex-shrink: 0;
+    flex-shrink: 0;
+    margin: 0;
+}
+.build-content .gear > * > * > * {
+    margin: 5px;
+}
+.build-content .gear .stats .icon {
+    margin-right: 10px;
+}
+.build-content .gear .stats .amount {
+    width: 35px;
+    font-size: 2.5em;
+    text-align: center;
+}
+.build-content .gear .icon {
+    position: relative;
+    width: 120px;
+    height: 110px;
+    padding: 5px 30px 5px 10px;
+    -webkit-flex-shrink: 0;
+    -ms-flex-shrink: 0;
+    flex-shrink: 0;
+}
+.build-content .gear .icon::after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    bottom: 5px;
+    left: 10px;
+}
+.build-content .gear .items .icon {
+    background: linear-gradient(rgba(244, 255, 255, .5), rgba(244, 255, 255, .5) 0) no-repeat, linear-gradient(rgba(244, 255, 255, .5), rgba(244, 255, 255, .5) 0) top right no-repeat, linear-gradient(rgba(244, 255, 255, .5), rgba(244, 255, 255, .5) 0) bottom left no-repeat, linear-gradient(rgba(244, 255, 255, .5), rgba(244, 255, 255, .5) 0) bottom right no-repeat;
+    background-size: 3px 3px;
+}
+.build-content .gear .items .icon::after {
+    -webkit-filter: drop-shadow(3px 3px 0 rgba(200, 200, 200, .3));
+    filter: drop-shadow(3px 3px 0 rgba(200, 200, 200, .3));
+}
+.build-content .gear .stats .icon::after {
+    -webkit-filter: drop-shadow(3px 3px 0 hsla(0, 0%, 100%, .07));
+    filter: drop-shadow(3px 3px 0 hsla(0, 0%, 100%, .07));
+}
+.build-content .gear .icon.he {
+    background-color: rgb(180, 139, 55);
+}
+.build-content .gear .icon.exotic {
+    background-color: rgb(208, 92, 60);
+}
+.build-content .gear .icon.gearset {
+    background-color: rgb(15, 211, 129);
+}
+.build-content .gear .stats .main-stats + .mods {
+    position: relative;
+    margin-top: 6px;
+}
+.build-content .gear .stats .main-stats + .mods::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: 10%;
+    right: 10%;
+    height: 2px;
+    background: hsla(0, 0%, 100%, .3);
+}
+.build-content > :not(.weapons) .icon {
+    margin-right: 30px;
+}
+
+/* ERRORS */
+.error {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    -ms-justify-content: center;
+    justify-content: center;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+.error .error-title {
+    color: var(--main-color);
+    font-size: 4em;
+    line-height: 40px;
+    font-weight: bold;
+}
+.error .error-content {
+    margin-top: 10px;
+    font-size: 1.5em;
+}
+
+/* WEAPON ICONS */
+.build-content .weapons .icon.weapon {
+    width: 250px;
+    background-size: auto;
+    background-position: 0 -15px;
+    -webkit-mix-blend-mode: screen;
+    -ms-mix-blend-mode: screen;
+    mix-blend-mode: screen;
+}
+.build-content .weapons .icon.m60 {
+    background-position: 0 -260px;
+}
+.build-content .weapons .icon.m249 {
+    background-position: -250px -260px;
+}
+.build-content .weapons .icon.acr {
+    background-image: url(../division/sprites/weapons/acr.png);
+}
+.build-content .weapons .icon.ak,
+.build-content .weapons .icon.ak47,
+.build-content .weapons .icon.ak-47 {
+    background-image: url(../division/sprites/weapons/ak-47.png);
+}
+.build-content .weapons .icon.aug {
+    background-image: url(../division/sprites/weapons/aug.png);
+}
+.build-content .weapons .icon.bullfrog,
+.build-content .weapons .icon.famas {
+    background-image: url(../division/sprites/weapons/bullfrog.png);
+}
+.build-content .weapons .icon.double-barrel,
+.build-content .weapons .icon.double-barrel-shotgun {
+    background-image: url(../division/sprites/weapons/double-barrel.png);
+}
+.build-content .weapons .icon.fal {
+    background-image: url(../division/sprites/weapons/fal.png);
+}
+.build-content .weapons .icon.g36 {
+    background-image: url(../division/sprites/weapons/g36.png);
+}
+.build-content .weapons .icon.historian {
+    background-image: url(../division/sprites/weapons/historian.png);
+}
+.build-content .weapons .icon.l86 {
+    background-image: url(../division/sprites/weapons/l86.png);
+}
+.build-content .weapons .icon.m1a {
+    background-image: url(../division/sprites/weapons/m1a.png);
+}
+.build-content .weapons .icon.m4 {
+    background-image: url(../division/sprites/weapons/m4.png);
+}
+.build-content .weapons .icon.m44 {
+    background-image: url(../division/sprites/weapons/m44.png);
+}
+.build-content .weapons .icon.m60 {
+    background-image: url(../division/sprites/weapons/m60.png);
+}
+.build-content .weapons .icon.m249 {
+    background-image: url(../division/sprites/weapons/m249.png);
+}
+.build-content .weapons .icon.m700 {
+    background-image: url(../division/sprites/weapons/m700.png);
+}
+.build-content .weapons .icon.m870 {
+    background-image: url(../division/sprites/weapons/m870.png);
+}
+.build-content .weapons .icon.mg5 {
+    background-image: url(../division/sprites/weapons/mg5.png);
+}
+.build-content .weapons .icon.mp5 {
+    background-image: url(../division/sprites/weapons/mp5.png);
+}
+.build-content .weapons .icon.mp7 {
+    background-image: url(../division/sprites/weapons/mp7.png);
+}
+.build-content .weapons .icon.p416 {
+    background-image: url(../division/sprites/weapons/p416.png);
+}
+.build-content .weapons .icon.pp19,
+.build-content .weapons .icon.pp-19 {
+    background-image: url(../division/sprites/weapons/pp-19.png);
+}
+.build-content .weapons .icon.rpk,
+.build-content .weapons .icon.rpk-74 {
+    background-image: url(../division/sprites/weapons/rpk.png);
+}
+.build-content .weapons .icon.sa58,
+.build-content .weapons .icon.sa-58 {
+    background-image: url(../division/sprites/weapons/sa-58.png);
+}
+.build-content .weapons .icon.sasg,
+.build-content .weapons .icon.sasg12,
+.build-content .weapons .icon.sasg-12 {
+    background-image: url(../division/sprites/weapons/sasg-12.png);
+}
+.build-content .weapons .icon.scarh,
+.build-content .weapons .icon.scar-h {
+    background-image: url(../division/sprites/weapons/scar-h.png);
+}
+.build-content .weapons .icon.scarl,
+.build-content .weapons .icon.scar-l {
+    background-image: url(../division/sprites/weapons/scar-l.png);
+}
+.build-content .weapons .icon.showstopper {
+    background-image: url(../division/sprites/weapons/showstopper.png);
+}
+.build-content .weapons .icon.srs {
+    background-image: url(../division/sprites/weapons/srs.png);
+}
+.build-content .weapons .icon.super90,
+.build-content .weapons .icon.super-90 {
+    background-image: url(../division/sprites/weapons/super-90.png);
+}
+.build-content .weapons .icon.svd {
+    background-image: url(../division/sprites/weapons/svd.png);
+}
+.build-content .weapons .icon.t821 {
+    background-image: url(../division/sprites/weapons/t821.png);
+}
+.build-content .weapons .icon.tec9,
+.build-content .weapons .icon.tec-9 {
+    background-image: url(../division/sprites/weapons/tec-9.png);
+}
+.build-content .weapons .icon.tenebrae {
+    background-image: url(../division/sprites/weapons/tenebrae.png);
+}
+.build-content .weapons .icon.ump {
+    background-image: url(../division/sprites/weapons/ump.png);
+}
+.build-content .weapons .icon.mdr,
+.build-content .weapons .icon.urban-mdr {
+    background-image: url(../division/sprites/weapons/urban-mdr.png);
+}
+.build-content .weapons .icon.vector {
+    background-image: url(../division/sprites/weapons/vector.png);
+}
+
+/* WEAPON TALENT ICONS */
+.build-content .weapons .icon.weapon-talent {
+    background-image: url(../division/sprites/weapon-talents.png);
+    background-size: 800px;
+    width: 100px;
+    margin: 0 5px;
+}
+.build-content .weapons .icon.ferocious {
+    background-position: 0 0;
+}
+.build-content .weapons .icon.destructive {
+    background-position: -100px 0;
+}
+.build-content .weapons .icon.harmful {
+    background-position: -200px 0;
+}
+.build-content .weapons .icon.responsive {
+    background-position: -300px 0;
+}
+.build-content .weapons .icon.deadly {
+    background-position: -400px 0;
+}
+.build-content .weapons .icon.fierce {
+    background-position: -500px 0;
+}
+.build-content .weapons .icon.self-preserved {
+    background-position: -600px 0;
+}
+.build-content .weapons .icon.trained {
+    background-position: -700px 0;
+}
+.build-content .weapons .icon.competent {
+    background-position: -500px -300px;
+}
+.build-content .weapons .icon.unforgiving {
+    background-position: 0 -100px;
+}
+.build-content .weapons .icon.prepared {
+    background-position: -100px -100px;
+}
+.build-content .weapons .icon.swift {
+    background-position: -200px -100px;
+}
+.build-content .weapons .icon.intense {
+    background-position: -300px -100px;
+}
+.build-content .weapons .icon.vicious {
+    background-position: -400px -100px;
+}
+.build-content .weapons .icon.toxic {
+    background-position: -500px -100px;
+}
+.build-content .weapons .icon.brutal {
+    background-position: -600px -100px;
+}
+.build-content .weapons .icon.skilled {
+    background-position: -700px -100px;
+}
+/*.build-content .weapons .icon. {
+     background-position: 0 -200px; 
+}*/
+.build-content .weapons .icon.coolheaded {
+    background-position: -100px -200px;
+}
+.build-content .weapons .icon.talented {
+    background-position: -200px -200px;
+}
+.build-content .weapons .icon.meticulous {
+    background-position: -300px -200px;
+}
+/*.build-content .weapons .icon. {
+    background-position: -400px -200px;
+}*/
+.build-content .weapons .icon.determined {
+    background-position: -500px -200px;
+}
+.build-content .weapons .icon.predatory {
+    background-position: -600px -200px;
+}
+.build-content .weapons .icon.sustained {
+    background-position: -700px -200px;
+}
+.build-content .weapons .icon.provident {
+    background-position: 0 -300px;
+}
+.build-content .weapons .icon.proficient {
+    background-position: -100px -300px;
+}
+.build-content .weapons .icon.balanced {
+    background-position: -200px -300px;
+}
+.build-content .weapons .icon.adept {
+    background-position: -300px -300px;
+}
+.build-content .weapons .icon.capable {
+    background-position: -400px -300px;
+}
+.build-content .weapons .icon.competent {
+    background-position: -500px -300px;
+}
+.build-content .weapons .icon.stable {
+    background-position: -600px -300px;
+}
+.build-content .weapons .icon.accurate {
+    background-position: -700px -300px;
+}
+.build-content .weapons .icon.commanding {
+    background-position: 0 -400px;
+}
+.build-content .weapons .icon.dominant {
+    background-position: -100px -400px;
+}
+/*.build-content .weapons .icon. {
+    background-position: -200px -400px;
+}
+.build-content .weapons .icon. {
+    background-position: -300px -400px;
+}
+.build-content .weapons .icon. {
+    background-position: -400px -400px;
+}
+.build-content .weapons .icon. {
+    background-position: -500px -400px;
+}
+.build-content .weapons .icon. {
+    background-position: -600px -400px;
+}*/
+.build-content .weapons .icon.expert {
+    background-position: -700px -400px;
+}
+.build-content .weapons .icon.disciplined {
+    background-position: 0 -500px;
+}
+/*.build-content .weapons .icon. {
+    background-position: -100px -500px;
+}
+.build-content .weapons .icon. {
+    background-position: -200px -500px;
+}*/
+.build-content .weapons .icon.weapon-talent.showstopper {
+    background-position: -300px -500px;
+}
+.build-content .weapons .icon.hurried {
+    background-position: -400px -500px;
+}
+.build-content .weapons .icon.distracted {
+    background-position: -500px -500px;
+}
+.build-content .weapons .icon.focused {
+    background-position: -600px -500px;
+}
+.build-content .weapons .icon.carefree {
+    background-position: -700px -500px;
+}
+.build-content .weapons .icon.ambusher {
+    background-position: -100px -600px;
+}
+.build-content .weapons .icon.elevated {
+    background-position: -200px -600px;
+}
+.build-content .weapons .icon.uncomplicated {
+    background-position: -300px -600px;
+}
+.build-content .weapons .icon.weapon-talent.caduceus {
+    background-position: -600px -600px;
+}
+.build-content .weapons .icon.glutton {
+    background-position: -600px -600px;
+}
+.build-content .weapons .icon.valkyrie {
+    background-position: 0 -700px;
+}
+.build-content .weapons .icon.lights-out {
+    background-position: -100px -700px;
+}
+.build-content .weapons .icon.center-mass {
+    background-position: -200px -700px;
+}
+.build-content .weapons .icon.boomstick {
+    background-position: -300px -700px;
+}
+.build-content .weapons .icon.quickdraw {
+    background-position: -400px -700px;
+}
+.build-content .weapons .icon.weapon-talent.pakhan {
+    background-position: -500px -700px;
+}
+.build-content .weapons .icon.weapon-talent.midas {
+    background-position: -700px -700px;
+}
+.build-content .weapons .icon.free-republic,
+.build-content .weapons .icon.history-repeats {
+    background-image: url(../division/sprites/weapon-talents2.png);
+}
+.build-content .weapons .icon.free-republic {
+    background-position: 0 0;
+}
+.build-content .weapons .icon.history-repeats {
+    background-position: -300px 0;
+}
+
+/* MAIN STAT ICONS */
+.build-content .gear .stats .main-stats .icon::after,
+.build-content .gear .stats .mods .icon::after {
+    background-image: url(../division/sprites/stats.png);
+    width: 64px;
+    height: 64px;
+    top: 23px;
+    left: 28px;
+}
+.build-content .gear .stats .icon.firearms::after {
+    background-position: 0 0;
+}
+.build-content .gear .stats .icon.stamina::after {
+    background-position: -64px 0;
+}
+.build-content .gear .stats .icon.electronics::after {
+    background-position: -128px 0;
+}
+
+/* GEAR ICONS */
+.build-content .gear .items .icon.he::after,
+.build-content .gear .items .icon.exotic::after {
+    background-image: url(../division/sprites/items.png);
+        background-size: 800px;
+}
+.build-content .gear .icon.holster::after {
+    background-position: 0 -413px;
+}
+.build-content .gear .icon.chest::after {
+    background-position: -103px -413px;
+}
+.build-content .gear .icon.nomad::after {
+    background-position: -200px -413px;
+}
+.build-content .gear .icon.backpack::after {
+    background-position: -206px -413px;
+}
+.build-content .gear .icon.mask::after {
+    background-position: -310px -413px;
+}
+.build-content .gear .icon.gloves::after {
+    background-position: -516px -413px;
+}
+.build-content .gear .icon.knee-pads::after {
+    background-position: -618px -413px;
+}
+
+/* GEAR SET ICONS */
+.build-content .gear .icon.gearset::after {
+    background-image: url(../division/sprites/gearsets.png);
+    background-size: 800px;
+}
+.build-content .gear .icon.striker::after {
+    background-position: 0 0;
+}
+.build-content .gear .icon.hunters-faith::after {
+    background-position: -100px 0;
+}
+.build-content .gear .icon.nomad::after {
+    background-position: -200px 0;
+}
+.build-content .gear .icon.sentry::after {
+    background-position: -300px 0;
+}
+.build-content .gear .icon.tactician::after {
+    background-position: -400px 0;
+}
+.build-content .gear .icon.predators-mark::after {
+    background-position: -500px 0;
+}
+.build-content .gear .icon.final-measures::after {
+    background-position: -600px 0;
+}
+.build-content .gear .icon.lone-star::after {
+    background-position: -700px 0;
+}
+/*.build-content .gear .icon.::after {
+    background-position: 0 -100px;
+}*/
+.build-content .gear .icon.defence::after,
+.build-content .gear .icon.frontline::after {
+    background-position: -100px -100px;
+}
+/*.build-content .gear .icon.::after {
+    background-position: -200px -100px;
+}
+.build-content .gear .icon.::after {
+    background-position: -300px -100px;
+}*/
+.build-content .gear .icon.banshee::after {
+    background-position: -400px -100px;
+}
+/*.build-content .gear .icon.::after {
+    background-position: -500px -100px;
+}*/
+.build-content .gear .icon.reclaimer::after {
+    background-position: -600px -100px;
+}
+.build-content .gear .icon.firecrest::after {
+    background-position: -700px -100px;
+}
+.build-content .gear .icon.alphabridge::after {
+    background-position: 0 -200px;
+}
+.build-content .gear .icon.deadeye::after {
+    background-position: -100px -200px;
+}
+
+/* SKILL ICONS */
+.build-content .skills .icon,
+.build-content .gear .stats .performance .icon::after {
+    width: 100px;
+    background-image: url(../division/sprites/skills.png);
+    background-size: 800px;
+}
+.build-content .gear .stats .performance .icon::after {
+    width: 75px;
+    height: 75px;
+    top: 17.5px;
+    left: 22.5px;
+    background-size: 600px;
+}
+.build-content .skills .icon.shield,
+.build-content .skills .icon.ballistic-shield,
+.build-content .gear .stats .performance .icon.shield::after,
+.build-content .gear .stats .performance .icon.ballistic-shield::after, {
+    background-position: 0 0;
+}
+.build-content .skills .icon.assault-shield {
+    background-position: -103px 0;
+}
+.build-content .skills .icon.pulse-shield,
+.build-content .skills .icon.reactive-targeting {
+    background-position: -206px 0;
+}
+.build-content .skills .icon.kinetic-breaker {
+    background-position: -309px 0;
+}
+.build-content .skills .icon.pulse {
+    background-position: 0 -103px;
+}
+.build-content .gear .stats .performance .icon.pulse::after {
+    background-position: 0 -77.25px;
+}
+.build-content .skills .icon.recon-pack,
+.build-content .skills .icon.recon-pulse {
+    background-position: -103px -103px;
+}
+.build-content .skills .icon.tactical-scanner,
+.build-content .skills .icon.tactical-pulse,
+.build-content .skills .icon.damage-pulse {
+    background-position: -206px -103px;
+}
+.build-content .skills .icon.scrambler,
+.build-content .skills .icon.conceal-pulse {
+    background-position: -309px -103px;
+}
+.build-content .skills .icon.seeker,
+.build-content .skills .icon.seeker-mine {
+    background-position: 0 -206px;
+}
+.build-content .gear .stats .performance .icon.seeker::after,
+.build-content .gear .stats .performance .icon.seeker-mine::after {
+    background-position: 0 -154.5px;
+}
+.build-content .skills .icon.cluster {
+    background-position: -103px -206px;
+}
+.build-content .skills .icon.gas-charge {
+    background-position: -206px -206px;
+}
+.build-content .skills .icon.ariburst,
+.build-content .skills .icon.fire-seeker {
+    background-position: -309px -206px;
+}
+.build-content .skills .icon.first-aid {
+    background-position: 0 -309px;
+}
+.build-content .gear .stats .performance .icon.first-aid::after {
+    background-position: 0 -231.75px;
+}
+.build-content .skills .icon.overdose {
+    background-position: -103px -309px;
+}
+.build-content .skills .icon.defibrillator {
+    background-position: -206px -309px;
+}
+.build-content .skills .icon.booster-shot {
+    background-position: -309px -309px;
+}
+.build-content .skills .icon.smart-cover {
+    background-position: 0 -412px;
+}
+.build-content .gear .stats .performance .icon.smart-cover::after {
+    background-position: 0 -309px;
+}
+.build-content .skills .icon.trapper {
+    background-position: -103px -412px;
+}
+.build-content .skills .icon.recharger {
+    background-position: -206px -412px;
+}
+.build-content .skills .icon.concealment {
+    background-position: -309px -412px;
+}
+.build-content .skills .icon.mobile-cover {
+    background-position: 0 -515px;
+}
+.build-content .gear .stats .performance .icon.mobile-cover::after {
+    background-position: 0 -386.25px;
+}
+.build-content .skills .icon.extension {
+    background-position: -103px -515px;
+}
+.build-content .skills .icon.countermeasures {
+    background-position: -206px -515px;
+}
+.build-content .skills .icon.blast-shield {
+    background-position: -309px -515px;
+}
+.build-content .skills .icon.sticky,
+.build-content .skills .icon.sticky-bomb {
+    background-position: 0 -618px;
+}
+.build-content .gear .stats .performance .icon.sticky::after,
+.build-content .gear .stats .performance .icon.sticky-bomb::after {
+    background-position: 0 -463.5px;
+}
+.build-content .skills .icon.bfb,
+.build-content .skills .icon.damage-sticky {
+    background-position: -103px -618px;
+}
+.build-content .skills .icon.flashbang,
+.build-content .skills .icon.flash-sticky {
+    background-position: -206px -618px;
+}
+.build-content .skills .icon.disruptor,
+.build-content .skills .icon.disrupt-sticky {
+    background-position: -309px -618px;
+}
+.build-content .skills .icon.support-station,
+.build-content .skills .icon.heal-station,
+.build-content .skills .icon.life-support,
+.build-content .skills .icon.revive-station,
+.build-content .skills .icon.immunizer,
+.build-content .skills .icon.ammo-cache,
+.build-content .skills .icon.ammo-station,
+.build-content .skills .icon.turret,
+.build-content .skills .icon.active-sensor,
+.build-content .skills .icon.pulse-turret,
+.build-content .skills .icon.dragonbreath,
+.build-content .skills .icon.fire-turret,
+.build-content .skills .icon.zapper,
+.build-content .skills .icon.shock-turret,
+.build-content .skills .icon.green-link,
+.build-content .skills .icon.recovery-link,
+.build-content .skills .icon.tactical-link,
+.build-content .skills .icon.orange-link,
+.build-content .skills .icon.survivor-link,
+.build-content .skills .icon.blue-link,
+.build-content .gear .stats .performance .icon.support-station::after,
+.build-content .gear .stats .performance .icon.heal-station::after,
+.build-content .gear .stats .performance .icon.turret::after,
+.build-content .gear .stats .performance .icon.green-link::after,
+.build-content .gear .stats .performance .icon.recovery-link::after,
+.build-content .gear .stats .performance .icon.tactical-link::after,
+.build-content .gear .stats .performance .icon.orange-link::after,
+.build-content .gear .stats .performance .icon.survivor-link::after,
+.build-content .gear .stats .performance .icon.blue-link::after {
+    background-image: url(../division/sprites/skills2.png);
+}
+.build-content .skills .icon.support-station,
+.build-content .skills .icon.heal-station,
+.build-content .gear .stats .performance .icon.support-station::after,
+.build-content .gear .stats .performance .icon.heal-station::after {
+    background-position: 0 0;
+}
+.build-content .skills .icon.immunizer {
+    background-position: -103px 0;
+}
+.build-content .skills .icon.life-support,
+.build-content .skills .icon.revive-station {
+    background-position: -206px 0;
+}
+.build-content .skills .icon.ammo-cache,
+.build-content .skills .icon.ammo-station {
+    background-position: -309px 0;
+}
+.build-content .skills .icon.turret {
+    background-position: 0 -309px;
+}
+.build-content .gear .stats .performance .icon.turret::after {
+    background-position: 0 -231.75px;
+}
+.build-content .skills .icon.zapper,
+.build-content .skills .icon.shock-turret {
+    background-position: -103px -309px;
+}
+.build-content .skills .icon.active-sensor,
+.build-content .skills .icon.pulse-turret {
+    background-position: -206px -309px;
+}
+.build-content .skills .icon.dragonbreath,
+.build-content .skills .icon.fire-turret {
+    background-position: -309px -309px;
+}
+.build-content .skills .icon.green-link,
+.build-content .skills .icon.recovery-link {
+    background-position: 0 -515px;
+}
+.build-content .skills .icon.tactical-link,
+.build-content .skills .icon.orange-link  {
+    background-position: -103px -515px;
+}
+.build-content .skills .icon.survivor-link,
+.build-content .skills .icon.blue-link  {
+    background-position: -206px -515px;
+}
+
+/* MEDIA ADJUSTEMENTS */
+@media (max-width: 950px) {
+    .build-content .weapons .talents {
+        display: none;
+    }
+}
+@media (max-width: 1050px) {
+    .build-content .gear {
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+}
