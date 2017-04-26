@@ -1,12 +1,12 @@
 $(document).ready(function() {
      $.ajax({
-          url: "https://api.github.com/repos/Zerthox/zerthox.github.io/contents/division/builds",
+          url: "https://github.com/DivisionBuilds/divisionbuilds.github.io/contents/builds",
           success: function(result) {
                for (i = 0; i < result.length; i++) {
                     var n = result[i].name;
                     if (n.slice(-5) === ".json") {
                          $.ajax({
-                         url: "https://raw.githubusercontent.com/Zerthox/zerthox.github.io/master/division/builds/" + n,
+                         url: "https://raw.githubusercontent.com/DivisionBuilds/divisionbuilds.github.io/master/builds/" + n,
                          success: function(result) {
                               var u = this.url.split("/");
                               $(".build-list").append('<a href="build?id=' + u[u.length - 1].slice(0, -5) + '"></a>');
