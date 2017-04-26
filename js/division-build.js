@@ -8,7 +8,7 @@ $(document).ready(function() {
         $.each(s.slice(1).split("&"), function() {
             if (this.split("=")[0] === "id") {
                 $.ajax({
-                    url: "https://raw.githubusercontent.com/Zerthox/zerthox.github.io/master/division/builds/" + this.split("=")[1] + ".json",
+                    url: "https://raw.githubusercontent.com/DivisionBuilds/divisionbuilds.github.io/master/builds/" + this.split("=")[1] + ".json",
                     success: function(result) {
                         var d = JSON.parse(result);
                         document.title = d.title + " - " + document.title;
