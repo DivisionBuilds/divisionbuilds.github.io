@@ -164,6 +164,36 @@ a:hover {
     padding: 20px 40px;
     background: hsla(0, 0%, 50%, .1);
 }
+.text-container a {
+    position: relative;
+    color: var(--main-color);
+}
+.text-container a::after,
+.text-container a::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -3px;
+    width: 0;
+    height: 2px;
+    background: var(--main-color);
+    -webkit-transition: all .15s ease-in-out;
+    transition: all .15s ease-in-out;
+    -webkit-transition-delay: .15s;
+    transition-delay: .15s;
+}
+.text-container a::before {
+    margin-left: 1.5px;
+    margin-bottom: -1.5px;
+    background: rgba(150, 150, 150, .1);
+}
+.text-container a:hover::after,
+.text-container a:hover::before {
+    left: 0;
+    width: 100%;
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+}
 
 /* ABOUT PAGE */
 .flex-list {
@@ -187,36 +217,6 @@ a:hover {
 .flex-item .title {
     font-size: 1.25em;
     font-weight: bold;
-}
-.flex-item .link a {
-    position: relative;
-    color: var(--main-color);
-}
-.flex-item .link a::after,
-.flex-item .link a::before {
-    content: "";
-    position: absolute;
-    left: 50%;
-    bottom: -3px;
-    width: 0;
-    height: 2px;
-    background: var(--main-color);
-    -webkit-transition: all .15s ease-in-out;
-    transition: all .15s ease-in-out;
-    -webkit-transition-delay: .15s;
-    transition-delay: .15s;
-}
-.flex-item .link a::before {
-    margin-left: 1.5px;
-    margin-bottom: -1.5px;
-    background: rgba(150, 150, 150, .1);
-}
-.flex-item .link a:hover::after,
-.flex-item .link a:hover::before {
-    left: 0;
-    width: 100%;
-    -webkit-transition-delay: 0s;
-    transition-delay: 0s;
 }
 .flex-item .logo {
     width: 100px;
