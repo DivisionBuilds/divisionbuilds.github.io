@@ -2,7 +2,7 @@
 	"title": "Deadeye Sniper",
 	"author": "Zerthox",
 	"link": "https://github.com/Zerthox",
-	"date": "23/04/2017",
+	"date": "26/04/2017",
 	"tags": ["pvp", "sniper", "deadeye"],
 	"build": {
 		"weapons": {
@@ -15,18 +15,18 @@
 				"talent3": "unforgiving"
 			},
 			"secondary": {
-				"name": "MP7",
-				"text": "Competent, Fierce, Unforgiving",
-				"icon": "mp7",
+				"name": "M700",
+				"text": "Competent, Deadly, Prepared",
+				"icon": "m700",
 				"talent1": "competent",
-				"talent2": "fierce",
-				"talent3": "unforgiving"
+				"talent2": "deadly",
+				"talent3": "prepared"
 			}
 		},
 		"gear": {
 			"items": {
 				"chest": {
-					"name": "Vigorous Chest",
+					"name": "Reckless Chest",
 					"text": "Health, Skill Haste, Burn Resistance",
 					"type": "he",
 					"icon": "chest"
