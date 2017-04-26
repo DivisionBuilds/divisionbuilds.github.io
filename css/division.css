@@ -5,21 +5,21 @@
 }
 @font-face {
     font-family: Borda;
-    src: url(https://cdn.rawgit.com/Zerthox/font-hosting/master/Borda/Borda%20Medium.ttf) format("truetype");
+    src: url(https://cdn.rawgit.com/DivisionBuilds/divisionbuilds.github.io/master/fonts/Borda%20Medium.ttf) format("truetype");
 }
 @font-face {
     font-family: Borda;
-    src: url(https://cdn.rawgit.com/Zerthox/font-hosting/master/Borda/Borda%20DemiBold.ttf) format("truetype");
+    src: url(https://cdn.rawgit.com/DivisionBuilds/divisionbuilds.github.io/master/fonts/Borda%20DemiBold.ttf) format("truetype");
     font-weight: 600;
 }
 @font-face {
     font-family: Borda;
-    src: url(https://cdn.rawgit.com/Zerthox/font-hosting/master/Borda/Borda%20Bold.ttf) format("truetype");
+    src: url(https://cdn.rawgit.com/DivisionBuilds/divisionbuilds.github.io/master/fonts/Borda/Borda%20Bold.ttf) format("truetype");
     font-weight: 700;
 }
 @font-face {
     font-family: Borda;
-    src: url(https://cdn.rawgit.com/Zerthox/font-hosting/master/Borda/Borda%20Bold.ttf) format("truetype");
+    src: url(https://cdn.rawgit.com/DivisionBuilds/divisionbuilds.github.io/master/fonts/Borda/Borda%20Bold.ttf) format("truetype");
     font-weight: bold;
 }
 body {
