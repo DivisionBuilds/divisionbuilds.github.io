@@ -1,0 +1,108 @@
+{
+	"title": "Deadeye Sniper",
+	"author": "Zerthox",
+	"link": "https://github.com/Zerthox",
+	"date": "23/04/2017",
+	"tags": ["pvp", "sniper", "deadeye"],
+	"build": {
+		"weapons": {
+			"primary": {
+				"name": "Surplus SVD",
+				"text": "Competent, Deadly, Unforgiving",
+				"icon": "svd",
+				"talent1": "competent",
+				"talent2": "deadly",
+				"talent3": "unforgiving"
+			},
+			"secondary": {
+				"name": "MP7",
+				"text": "Competent, Fierce, Unforgiving",
+				"icon": "mp7",
+				"talent1": "competent",
+				"talent2": "fierce",
+				"talent3": "unforgiving"
+			}
+		},
+		"gear": {
+			"items": {
+				"chest": {
+					"name": "Vigorous Chest",
+					"text": "Health, Skill Haste, Burn Resistance",
+					"type": "he",
+					"icon": "chest"
+				},
+				"backpack": {
+					"name": "Specialized Backpack",
+					"text": "Health, Burn Resistance",
+					"type": "he",
+					"icon": "backpack"
+				},
+				"mask": {
+					"name": "DeadEYE Mask",
+					"text": "Health, Burn Resistance",
+					"type": "gearset",
+					"icon": "deadeye"
+				},
+				"gloves": {
+					"name": "DeadEYE Gloves",
+					"text": "Marksman Rifle Damage, Critical Hit Damage, Skill Haste",
+					"type": "gearset",
+					"icon": "deadeye"
+				},
+				"holster": {
+					"name": "DeadEYE Holster",
+					"text": "Health",
+					"type": "gearset",
+					"icon": "deadeye"
+				},
+				"knee-pads": {
+					"name": "DeadEYE Knee Pads",
+					"text": "Health, Burn Resistance, Shock Resistance, Disrupt Resistance",
+					"type": "gearset",
+					"icon": "deadeye"
+				}
+			},
+			"stats": {
+				"main-stats": {
+					"4x": {
+						"icon": "firearms",
+						"name": "Firearms Roll"
+					},
+					"1x": {
+						"icon": "electronics",
+						"name": "Electronics Roll"
+					}
+				},
+				"mods": {
+					"5x": {
+						"icon": "firearms",
+						"name": "Firearms Mod",
+						"text": "Health"
+					}
+				},
+				"performance": {
+					"4x": {
+						"icon": "first-aid",
+						"name": "First Aid Self Heal Mod"
+					}
+				}
+			}
+		},
+		"skills": {
+			"1": {
+				"name": "First Aid",
+				"text": "Booster Shot",
+				"icon": "booster-shot"
+			},
+			"2": {
+				"name": "Pulse",
+				"text": "Tactical Scanner",
+				"icon": "tactical-scanner"
+			},
+			"link": {
+				"name": "Survivor Link",
+				"icon": "survivor-link"
+			}
+		}
+	}
+}

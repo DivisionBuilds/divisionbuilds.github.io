@@ -1,0 +1,113 @@
+{
+	"title": "Frontline PvP DPS",
+	"author": "Zerthox",
+	"link": "https://github.com/Zerthox",
+	"date": "23/04/2017",
+	"tags": ["pvp", "dps", "shield"],
+	"build": {
+		"weapons": {
+			"primary": {
+				"name": "MP7",
+				"text": "Responsive, Fierce, Unforgiving",
+				"icon": "mp7",
+				"talent1": "responsive",
+				"talent2": "fierce",
+				"talent3": "unforgiving"
+			},
+			"secondary": {
+				"name": "PP-19",
+				"text": "Responsive, Fierce, Hurried",
+				"icon": "pp-19",
+				"talent1": "responsive",
+				"talent2": "fierce",
+				"talent3": "hurried"
+			}
+		},
+		"gear": {
+			"items": {
+				"chest": {
+					"name": "Vigorous Chest",
+					"text": "Health, Skill Haste, Burn Resistance",
+					"type": "he",
+					"icon": "chest"
+				},
+				"backpack": {
+					"name": "Specialized Backpack",
+					"text": "Health, Burn Resistance",
+					"type": "he",
+					"icon": "backpack"
+				},
+				"mask": {
+					"name": "D3-FNC Mask",
+					"text": "Health, Burn Resistance",
+					"type": "gearset",
+					"icon": "frontline"
+				},
+				"gloves": {
+					"name": "D3-FNC Gloves",
+					"text": "SMG Damage, Critical Hit Chance, Critical Hit Damage",
+					"type": "gearset",
+					"icon": "frontline"
+				},
+				"holster": {
+					"name": "D3-FNC Holster",
+					"text": "Health",
+					"type": "gearset",
+					"icon": "frontline"
+				},
+				"knee-pads": {
+					"name": "D3-FNC Knee Pads",
+					"text": "Health, Burn Resistance, Shock Resistance, Disrupt Resistance",
+					"type": "gearset",
+					"icon": "frontline"
+				}
+			},
+			"stats": {
+				"main-stats": {
+					"4x": {
+						"icon": "firearms",
+						"name": "Firearms Roll"
+					},
+					"1x": {
+						"icon": "electronics",
+						"name": "Electronics Roll"
+					}
+				},
+				"mods": {
+					"4x": {
+						"icon": "firearms",
+						"name": "Firearms Mod",
+						"text": "Health"
+					},
+					"1x": {
+						"icon": "stamina",
+						"name": "Stamina Mod",
+						"text": "Health"
+					}
+				},
+				"performance": {
+					"4x": {
+						"icon": "ballistic-shield",
+						"name": "Ballistic Shield Damage Resilience Mod"
+					}
+				}
+			}
+		},
+		"skills": {
+			"1": {
+				"name": "Ballistic Shield",
+				"text": "Reactive Targeting",
+				"icon": "reactive-targeting"
+			},
+			"2": {
+				"name": "Pulse",
+				"text": "Tactical Scanner",
+				"icon": "tactical-scanner"
+			},
+			"link": {
+				"name": "Recovery Link",
+				"icon": "recovery-link"
+			}
+		}
+	}
+}

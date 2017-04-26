@@ -1,0 +1,113 @@
+{
+	"title": "Tactician Healer",
+	"author": "Zerthox",
+	"link": "https://github.com/Zerthox",
+	"date": "23/04/2017",
+	"tags": ["pvp", "pve", "healer", "tactician", "skill power"],
+	"build": {
+		"weapons": {
+			"primary": {
+				"name": "Lightweight M4",
+				"text": "Talented, Competent, Skilled",
+				"icon": "m4",
+				"talent1": "talented",
+				"talent2": "competent",
+				"talent3": "skilled"
+			},
+			"secondary": {
+				"name": "Tenebrae",
+				"text": "Talented, Coolheaded, Lights Out",
+				"icon": "tenebrae",
+				"talent1": "talented",
+				"talent2": "coolheaded",
+				"talent3": "lights-out"
+			}
+		},
+		"gear": {
+			"items": {
+				"chest": {
+					"name": "Vigorous Chest",
+					"text": "Health, Skill Haste, Burn Resistance",
+					"type": "he",
+					"icon": "chest"
+				},
+				"backpack": {
+					"name": "Inventive Backpack",
+					"text": "Health, Burn Resistance",
+					"type": "he",
+					"icon": "backpack"
+				},
+				"mask": {
+					"name": "Tactician's Authority Mask",
+					"text": "Health, Burn Resistance",
+					"type": "gearset",
+					"icon": "tactician"
+				},
+				"gloves": {
+					"name": "Tactician's Authority Gloves",
+					"text": "Assault Rifle Damage, Skill Haste, Critical Hit Chance",
+					"type": "gearset",
+					"icon": "tactician"
+				},
+				"holster": {
+					"name": "Tactician's Authority Holster",
+					"text": "Skill Haste",
+					"type": "gearset",
+					"icon": "tactician"
+				},
+				"knee-pads": {
+					"name": "Tactician's Authority Knee Pads",
+					"text": "Health, Burn Resistance, Shock Resistance, Disrupt Resistance",
+					"type": "gearset",
+					"icon": "tactician"
+				}
+			},
+			"stats": {
+				"main-stats": {
+					"4x": {
+						"icon": "electronics",
+						"name": "Electronics Roll"
+					},
+					"1x": {
+						"icon": "firearms",
+						"name": "Firearms Roll"
+					}
+				},
+				"mods": {
+					"4x": {
+						"icon": "electronics",
+						"name": "Electronics Mod",
+						"text": "Health"
+					},
+					"1x": {
+						"icon": "electronics",
+						"name": "Electronics Mod",
+						"text": "Skill Haste"
+					}
+				},
+				"performance": {
+					"4x": {
+						"icon": "first-aid",
+						"name": "First Aid Ally Heal Mod"
+					}
+				}
+			}
+		},
+		"skills": {
+			"1": {
+				"name": "First Aid",
+				"text": "Defibrillator",
+				"icon": "defibrillator"
+			},
+			"2": {
+				"name": "Support Station",
+				"text": "Life Support",
+				"icon": "life-support"
+			},
+			"link": {
+				"name": "Recovery Link",
+				"icon": "recovery-link"
+			}
+		}
+	}
+}
