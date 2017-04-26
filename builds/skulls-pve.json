@@ -2,7 +2,7 @@
 	"title": "Skulls PvE DPS",
 	"author": "Zerthox",
 	"link": "https://github.com/Zerthox",
-	"date": "23/04/2017",
+	"date": "26/04/2017",
 	"tags": ["pve", "dps"],
 	"build": {
 		"weapons": {
@@ -95,9 +95,9 @@
 				"icon": "booster-shot"
 			},
 			"2": {
-				"name": "Pulse",
-				"text": "Tactical Scanner",
-				"icon": "tactical-scanner"
+				"name": "Support Station",
+				"text": "Life Support",
+				"icon": "life-support"
 			},
 			"link": {
 				"name": "Recovery Link",
