@@ -1,6 +1,6 @@
 $(document).ready(function() {
      $.ajax({
-          url: "https://github.com/DivisionBuilds/divisionbuilds.github.io/contents/builds",
+          url: "https://api.github.com/repos/DivisionBuilds/divisionbuilds.github.io/contents/builds",
           success: function(result) {
                for (i = 0; i < result.length; i++) {
                     var n = result[i].name;
