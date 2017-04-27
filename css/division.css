@@ -22,8 +22,7 @@
     font-weight: bold;
 }
 body {
-    height: 100vh;
-    width: 100vw;
+    min-height: 100vh;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
@@ -41,11 +40,10 @@ body {
 body::after {
     content: "";
     position: fixed;
-    top: -1%;
-    right: -1%;
-    margin-right: -18px;
-    bottom: -1%;
-    left: -1%;
+    top: -20px;
+    right: -20px;
+    bottom: -20px;
+    left: -20px;
     background-image: url(https://images4.alphacoders.com/773/773361.jpg);
     background-size: cover;
     background-position: center;
@@ -85,9 +83,9 @@ a:hover {
 
 /* MAIN */
 .main {
-    width: 90%;
+    width: 90vw;
     min-width: 500px;
-    max-height: 90%;
+    max-height: 90vh;
     margin: auto;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -346,22 +344,14 @@ a:hover {
 
 /* BUILD LIST */
 .build-list {
+    max-width: 820px;
+    margin: 40px auto 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
     -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    -webkit-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
-    margin-top: 40px;
 }
 .build-list:empty::after {
     content: "";
@@ -413,7 +403,7 @@ a:hover {
 .build-list .list-item {
     min-width: 350px;
     padding: 15px 20px;
-    margin: 5px 0;
+    margin: 35px 30px;
     color: hsla(0, 0%, 100%, .7);
     font-size: 1.25em;
     -webkit-transition: all .15s ease-in-out;
