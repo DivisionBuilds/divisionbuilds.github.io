@@ -164,6 +164,9 @@ a:hover {
     padding: 20px 40px;
     background: hsla(0, 0%, 50%, .1);
 }
+.text-container h1:not(:first-child) {
+    margin-top: 20px;
+}
 .text-container a {
     position: relative;
     color: var(--main-color);
@@ -205,7 +208,7 @@ a:hover {
     flex-direction: column;
 }
 .flex-item {
-    margin-top: 20px;
+    margin-bottom: 20px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
