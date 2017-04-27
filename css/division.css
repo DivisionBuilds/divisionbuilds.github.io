@@ -1,11 +1,10 @@
-:root {
-    --main-color: #ff7f00;
-    --background-blur: 5px;
-    --background-brightness: 40%;
-}
 @font-face {
     font-family: Borda;
-    src: url(https://cdn.rawgit.com/DivisionBuilds/divisionbuilds.github.io/master/fonts/Borda%20Medium.ttf) format("truetype");
+    src: url(https://cdn.rawgit.com/DivisionBuilds/divisionbuilds.github.io/master/fonts/Borda.eot);
+    src: url(https://cdn.rawgit.com/DivisionBuilds/divisionbuilds.github.io/master/fonts/Borda.eot?#iefix) format("embedded-opentype"),
+         url(https://cdn.rawgit.com/DivisionBuilds/divisionbuilds.github.io/master/fonts/Borda.woff) format("woff"),
+         url(https://cdn.rawgit.com/DivisionBuilds/divisionbuilds.github.io/master/fonts/Borda%20Medium.ttf) format("truetype"),
+         url(https://cdn.rawgit.com/DivisionBuilds/divisionbuilds.github.io/master/fonts/Borda.svg#ywftsvg) format("svg");
 }
 @font-face {
     font-family: Borda;
@@ -32,6 +31,7 @@ body {
     -ms-flex-direction: column;
     flex-direction: column;
     font-family: Borda;
+    background: #000;
     color: hsla(0, 0%, 100%, .5);
     text-shadow: 0 0 3px rgba(0, 0, 0, .3), 3px 3px 0 rgba(150, 150, 150, .1);
     overflow-x: hidden;
@@ -43,23 +43,47 @@ body::after {
     position: fixed;
     top: -1%;
     right: -1%;
+    margin-right: -18px;
     bottom: -1%;
     left: -1%;
     background-image: url(https://images4.alphacoders.com/773/773361.jpg);
     background-size: cover;
     background-position: center;
     z-index: -9999;
-    -webkit-filter: blur(var(--background-blur)) brightness(var(--background-brightness));
-    filter: blur(var(--background-blur)) brightness(var(--background-brightness));
+    -webkit-filter: blur(5px) brightness(40%);
+    filter: blur(5px) brightness(40%);
 }
 ::selection,
 ::-moz-selection {
-    color: var(--dark-bg);
+    color: #fff;
     background: hsla(0, 0%, 100%, .5);
 }
 a:hover {
     text-decoration: none;
 }
+
+/* SCROLLBAR */
+*::-webkit-scrollbar {
+    width: 14px;
+}
+*::-webkit-scrollbar-button {
+    display: none;
+}
+*::-webkit-scrollbar-thumb,
+*::-webkit-scrollbar-track-piece {
+    border: 4px solid transparent;
+    background-clip: padding-box !important;
+}
+*::-webkit-scrollbar-thumb {
+    background: rgba(170, 170, 170, .3);
+}
+*::-webkit-scrollbar-corner,
+*::-webkit-scrollbar-track,
+*::-webkit-scrollbar-track-piece {
+    background: transparent;
+}
+
+/* MAIN */
 .main {
     width: 90%;
     min-width: 500px;
@@ -117,7 +141,7 @@ a:hover {
 .main-header .title,
 .build-header .title {
     height: 100%;
-    color: var(--main-color);
+    color: #ff7f00;
     font-size: 4em;
     line-height: 40px;
     font-weight: bold;
@@ -171,7 +195,7 @@ a:hover {
 }
 .text-container a {
     position: relative;
-    color: var(--main-color);
+    color: #ff7f00;
 }
 .text-container a::after,
 .text-container a::before {
@@ -181,7 +205,7 @@ a:hover {
     bottom: -3px;
     width: 0;
     height: 2px;
-    background: var(--main-color);
+    background: #ff7f00;
     -webkit-transition: all .15s ease-in-out;
     transition: all .15s ease-in-out;
     -webkit-transition-delay: .15s;
@@ -285,7 +309,7 @@ a:hover {
     background-color: hsla(0, 0%, 100%, .3);
 }
 .tab-bar .tab-bar-item.selected {
-    background-color: var(--main-color);
+    background-color: #ff7f00;
     color: #fff;
 }
 .tab-bar .tab-bar-item:hover,
@@ -317,7 +341,7 @@ a:hover {
     transition-delay: 0s;
 }
 .tab-bar .tab-bar-item.selected::after {
-    background: var(--main-color) !important;
+    background: #ff7f00 !important;
 }
 
 /* BUILD LIST */
@@ -346,7 +370,7 @@ a:hover {
     left: 50%;
     border: 4px solid hsla(0, 0%, 100%, .1);
     border-radius: 50%;
-    border-top-color: var(--main-color);
+    border-top-color: #ff7f00;
     -webkit-animation: circle-spin .7s infinite linear;
     animation: circle-spin .7s infinite linear;
 }
@@ -404,7 +428,7 @@ a:hover {
 }
 .build-list .list-item .author {
     position: relative;
-    color: var(--main-color);
+    color: #ff7f00;
 }
 .build-list .list-item .author::after,
 .build-list .list-item .author::before {
@@ -414,7 +438,7 @@ a:hover {
     bottom: -3px;
     width: 0;
     height: 2px;
-    background: var(--main-color);
+    background: #ff7f00;
     -webkit-transition: all .15s ease-in-out;
     transition: all .15s ease-in-out;
     -webkit-transition-delay: .15s;
@@ -652,7 +676,7 @@ a:hover {
     flex: 1;
 }
 .error .error-title {
-    color: var(--main-color);
+    color: #ff7f00;
     font-size: 4em;
     line-height: 40px;
     font-weight: bold;
