@@ -143,11 +143,13 @@ a:hover {
 
 /* FOOTER */
 .footer {
-    margin: 5px 10px;
+    width: 100vw;
+    margin: 5px 0;
     font-size: 1.125em;
     text-align: right;
 }
 .footer a {
+    margin-right: 10px;
     color: hsla(0, 0%, 100%, .5);
     -webkit-transition: all .15s ease-in-out;
     transition: all .15s ease-in-out;
