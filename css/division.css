@@ -166,12 +166,12 @@ a:hover {
 /* FOOTER */
 .footer {
     width: 100vw;
-    margin: 5px 0;
+    margin-bottom: 10px;
     font-size: 1.125em;
     text-align: right;
 }
 .footer a {
-    margin-right: 10px;
+    margin-right: 20px;
     color: hsla(0, 0%, 100%, .5);
     -webkit-transition: all .15s ease-in-out;
     transition: all .15s ease-in-out;
