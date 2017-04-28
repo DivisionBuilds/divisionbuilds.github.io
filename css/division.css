@@ -86,10 +86,9 @@ a:hover {
 
 /* MAIN */
 .main {
-    width: 90vw;
+    width: 90%;
     min-width: 500px;
-    max-height: 90vh;
-    margin: auto;
+    margin: 40px auto 0;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
