@@ -183,7 +183,7 @@ a:hover {
 .text-container {
     width: 70%;
     min-width: 500px;
-    margin: 40px auto;
+    margin: 40px auto 0;
     padding: 20px 40px;
     background: hsla(0, 0%, 50%, .1);
 }
@@ -459,6 +459,90 @@ a:hover {
     opacity: .7;
 }
 
+/* SUBMIT PAGE */
+.submit {
+    max-height: 600px;
+    overflow-y: auto;
+}
+.submit > * {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 20px;
+}
+.submit > * > * {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin-right: 10px;
+}
+.submit > * > * div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+.submit > * > * div + div {
+    margin-top: 5px;
+}
+.submit > * > * div > :not(:last-child) {
+    margin-right: 10px;
+}
+.submit input,
+.submit .weapon .talents,
+.submit .gear .stats,
+.submit .performance > div,
+.submit .skills > * {
+    -webkit-flex-grow: 1;
+    -ms-flex-grow: 1;
+    flex-grow: 1;
+}
+.submit .confirm {
+    padding: 5px 10px;
+    background: linear-gradient(rgba(244, 255, 255, .2), rgba(244, 255, 255, .2) 0) no-repeat,
+                linear-gradient(rgba(244, 255, 255, .2), rgba(244, 255, 255, .2) 0) top right no-repeat,
+                linear-gradient(rgba(244, 255, 255, .2), rgba(244, 255, 255, .2) 0) bottom left no-repeat, 
+                linear-gradient(rgba(244, 255, 255, .2), rgba(244, 255, 255, .2) 0) bottom right no-repeat;
+    background-size: 2px 2px;
+    background-color: hsla(0, 0%, 100%, .1);
+    color: #fff;
+    outline: none;
+    border: none;
+    -webkit-transition: background-color .15s ease-in-out;
+    transition: background-color .15s ease-in-out;
+}
+.submit .confirm:hover {
+    background-color: hsla(0, 0%, 100%, .3);
+}
+.ui-state-active,
+.ui-widget-content .ui-state-active,
+.ui-widget-header .ui-state-active,
+a.ui-button:active,
+.ui-button:active,
+.ui-button.ui-state-active:hover,
+.ui-widget-content {
+    border-color: transparent !important;
+}
+.ui-widget-content {
+    background: #000;
+    color: #fff;
+    text-shadow: none;
+}
+.ui-state-active,
+.ui-widget-content .ui-state-active,
+.ui-widget-header .ui-state-active,
+a.ui-button:active,
+.ui-button:active,
+.ui-button.ui-state-active:hover {
+    background: #ff7f00;
+}
+.ui-menu-item-wrapper {
+    -webkit-transition: background .15s ease-in-out !important;
+    transition: background .15s ease-in-out !important;
+}
+
 /* SEARCH BAR */
 .search-bar {
     margin-left: auto;
@@ -467,6 +551,7 @@ a:hover {
     -ms-align-self: center;
     align-self: center;
 }
+input,
 .search-bar .search {
     padding: 3px 7px;
     background: hsla(0, 0%, 100%, .1);
@@ -683,12 +768,6 @@ a:hover {
     -webkit-mix-blend-mode: screen;
     -ms-mix-blend-mode: screen;
     mix-blend-mode: screen;
-}
-.build-content .weapons .icon.m60 {
-    background-position: 0 -260px;
-}
-.build-content .weapons .icon.m249 {
-    background-position: -250px -260px;
 }
 .build-content .weapons .icon.acr {
     background-image: url(../sprites/weapons/acr.png);
