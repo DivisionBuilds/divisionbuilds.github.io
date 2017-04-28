@@ -17,6 +17,7 @@ layout: division
 	    <link rel="stylesheet" href="css/division.css">
 	    <script type="text/javascript" src="js/jquery.min.js"></script>
 	    <script type="text/javascript" src="js/division.js"></script>
+	    {% if page.js %} <script type="text/javascript" src="js/division-{{page.js}}.js"></script> {% endif %}
 	</head>
   	<body>
 		{{ content }}
