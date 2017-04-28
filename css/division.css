@@ -542,6 +542,12 @@ a.ui-button:active,
     -webkit-transition: background .15s ease-in-out !important;
     transition: background .15s ease-in-out !important;
 }
+.alert {
+    color: #ff7f00;
+    font-size: 4em;
+    font-weight: bold;
+    text-align: center;
+}
 
 /* SEARCH BAR */
 .search-bar {
