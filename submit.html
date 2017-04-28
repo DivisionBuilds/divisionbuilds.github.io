@@ -3,182 +3,174 @@ layout: division
 js: submit
 title: Submit a build
 ---
-<a href="https://divisionbuilds.github.io/" class="back-button">
-    <svg fill="#FFFFFF" height="36" viewBox="0 0 24 24" width="36" xmlns="http://www.w3.org/2000/svg">
-        <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path>
-        <path d="M0 0h24v24H0z" fill="none"></path>
-    </svg>
-</a>
-<div class="main">
-    <div class="header">
-        <a href=".">
-            <div class="main-header">
-                <div class="title">Division Builds</div>
+<div class="header">
+    <a href=".">
+        <div class="main-header">
+            <div class="title">Division Builds</div>
+        </div>
+    </a>
+</div>
+<div class="text-container">
+    <h1>Submit a build</h1>
+    <form class="submit">
+        <div class="general">
+            <div class="name">
+                <label>Build Name:</label>
+                <input type="text" name="name">
             </div>
-        </a>
-    </div>
-    <div class="text-container">
-        <h1>Submit a build</h1>
-        <form class="submit">
-            <div class="general">
-                <div class="name">
-                    <label>Build Name:</label>
-                    <input type="text" name="name">
-                </div>
-                <div class="author">
-                    <label>Author Name:</label>
-                    <input type="text" name="author">
-                </div>
-                <div class="link">
-                    <label>Author Link:</label>
-                    <input type="text" name="link">
-                </div>
+            <div class="author">
+                <label>Author Name:</label>
+                <input type="text" name="author">
             </div>
-            <div class="weapon primary">
-                <div class="type">
-                    <label>Primary Weapon Type:</label>
-                    <input type="text" name="primary-type">
-                </div>
-                <div class="talents">
-                    <label>Primary Weapon Talents:</label>
-                    <div>
-                        <input type="text" name="primary-talent1">
-                        <input type="text" name="primary-talent2">
-                        <input type="text" name="primary-talent3">
-                    </div>
-                </div>
+            <div class="link">
+                <label>Author Link:</label>
+                <input type="text" name="link">
             </div>
-            <div class="weapon secondary">
-                <div class="type">
-                    <label>Secondary Weapon Type:</label>
-                    <input type="text" name="secondary-type">
-                </div>
-                <div class="talents">
-                    <label>Secondary Weapon Talents:</label>
-                    <div>
-                        <input type="text" name="secondary-talent3">
-                        <input type="text" name="secondary-talent3">
-                        <input type="text" name="secondary-talent3">
-                    </div>
-                </div>
+        </div>
+        <div class="weapon primary">
+            <div class="type">
+                <label>Primary Weapon Type:</label>
+                <input type="text" name="primary-type">
             </div>
-            <div class="gear chest">
-                <div class="type">
-                    <label>Chest:</label>
-                    <input type="text" name="chest">
-                </div>
-                <div class="stats">
-                    <label>Chest Stats:</label>
-                    <input type="text" name="chest-stats">
-                </div>
-            </div>
-            <div class="gear backpack">
-                <div class="type">
-                    <label>Backpack:</label>
-                    <input type="text" name="backpack">
-                </div>
-                <div class="stats">
-                    <label>Backpack Stats:</label>
-                    <input type="text" name="backpack-stats">
-                </div>
-            </div>
-            <div class="gear mask">
-                <div class="type">
-                    <label>Mask:</label>
-                    <input type="text" name="mask">
-                </div>
-                <div class="stats">
-                    <label>Mask Stats:</label>
-                    <input type="text" name="mask-stats">
-                </div>
-            </div>
-            <div class="gear gloves">
-                <div class="type">
-                    <label>Gloves:</label>
-                    <input type="text" name="gloves">
-                </div>
-                <div class="stats">
-                    <label>Gloves Stats:</label>
-                    <input type="text" name="gloves-stats">
-                </div>
-            </div>
-            <div class="gear holster">
-                <div class="type">
-                    <label>Holster:</label>
-                    <input type="text" name="holster">
-                </div>
-                <div class="stats">
-                    <label>Holster Stats:</label>
-                    <input type="text" name="holster-stats">
-                </div>
-            </div>
-            <div class="gear knee-pads">
-                <div class="type">
-                    <label>Knee Pads:</label>
-                    <input type="text" name="knee-pads">
-                </div>
-                <div class="stats">
-                    <label>Knee Pads Stats:</label>
-                    <input type="text" name="knee-pads-stats">
-                </div>
-            </div>
-            <div class="gear rolls">
+            <div class="talents">
+                <label>Primary Weapon Talents:</label>
                 <div>
-                    <label>Gear Main Stat Rolls:</label>
-                    <div>
-                        <input type="text" name="roll1">
-                        <input type="text" name="roll2">
-                        <input type="text" name="roll3">
-                        <input type="text" name="roll4">
-                        <input type="text" name="roll5">
-                    </div>
+                    <input type="text" name="primary-talent1">
+                    <input type="text" name="primary-talent2">
+                    <input type="text" name="primary-talent3">
                 </div>
             </div>
-            <div class="gear mods">
+        </div>
+        <div class="weapon secondary">
+            <div class="type">
+                <label>Secondary Weapon Type:</label>
+                <input type="text" name="secondary-type">
+            </div>
+            <div class="talents">
+                <label>Secondary Weapon Talents:</label>
                 <div>
-                    <label>Main Stat Mods:</label>
-                    <div class="major">
-                        <input type="text" name="mod1a">
-                        <input type="text" name="mod2a">
-                        <input type="text" name="mod3a">
-                        <input type="text" name="mod4a">
-                        <input type="text" name="mod5a">
-                    </div>
-                    <div class="minor">
-                        <input type="text" name="mod1b">
-                        <input type="text" name="mod2b">
-                        <input type="text" name="mod3b">
-                        <input type="text" name="mod4b">
-                        <input type="text" name="mod5b">
-                    </div>
+                    <input type="text" name="secondary-talent3">
+                    <input type="text" name="secondary-talent3">
+                    <input type="text" name="secondary-talent3">
                 </div>
             </div>
-            <div class="gear performance">
+        </div>
+        <div class="gear chest">
+            <div class="type">
+                <label>Chest:</label>
+                <input type="text" name="chest">
+            </div>
+            <div class="stats">
+                <label>Chest Stats:</label>
+                <input type="text" name="chest-stats">
+            </div>
+        </div>
+        <div class="gear backpack">
+            <div class="type">
+                <label>Backpack:</label>
+                <input type="text" name="backpack">
+            </div>
+            <div class="stats">
+                <label>Backpack Stats:</label>
+                <input type="text" name="backpack-stats">
+            </div>
+        </div>
+        <div class="gear mask">
+            <div class="type">
+                <label>Mask:</label>
+                <input type="text" name="mask">
+            </div>
+            <div class="stats">
+                <label>Mask Stats:</label>
+                <input type="text" name="mask-stats">
+            </div>
+        </div>
+        <div class="gear gloves">
+            <div class="type">
+                <label>Gloves:</label>
+                <input type="text" name="gloves">
+            </div>
+            <div class="stats">
+                <label>Gloves Stats:</label>
+                <input type="text" name="gloves-stats">
+            </div>
+        </div>
+        <div class="gear holster">
+            <div class="type">
+                <label>Holster:</label>
+                <input type="text" name="holster">
+            </div>
+            <div class="stats">
+                <label>Holster Stats:</label>
+                <input type="text" name="holster-stats">
+            </div>
+        </div>
+        <div class="gear knee-pads">
+            <div class="type">
+                <label>Knee Pads:</label>
+                <input type="text" name="knee-pads">
+            </div>
+            <div class="stats">
+                <label>Knee Pads Stats:</label>
+                <input type="text" name="knee-pads-stats">
+            </div>
+        </div>
+        <div class="gear rolls">
+            <div>
+                <label>Gear Main Stat Rolls:</label>
                 <div>
-                    <label>Performance Mods:</label>
-                    <div>
-                        <input type="text" name="performance1">
-                        <input type="text" name="performance2">
-                        <input type="text" name="performance3">
-                        <input type="text" name="performance4">
-                    </div>
+                    <input type="text" name="roll1">
+                    <input type="text" name="roll2">
+                    <input type="text" name="roll3">
+                    <input type="text" name="roll4">
+                    <input type="text" name="roll5">
                 </div>
             </div>
-            <div class="skills">
-                <div class="1">
-                    <label>Skill 1:</label>
-                    <input type="text" name="skill1">
+        </div>
+        <div class="gear mods">
+            <div>
+                <label>Main Stat Mods:</label>
+                <div class="major">
+                    <input type="text" name="mod1a">
+                    <input type="text" name="mod2a">
+                    <input type="text" name="mod3a">
+                    <input type="text" name="mod4a">
+                    <input type="text" name="mod5a">
                 </div>
-                <div class="2">
-                    <label>Skill 2:</label>
-                    <input type="text" name="skill2">
-                </div>
-                <div class="link">
-                    <label>Link:</label>
-                    <input type="text" name="link">
+                <div class="minor">
+                    <input type="text" name="mod1b">
+                    <input type="text" name="mod2b">
+                    <input type="text" name="mod3b">
+                    <input type="text" name="mod4b">
+                    <input type="text" name="mod5b">
                 </div>
             </div>
-            <input class="confirm" type="submit" value="Send">
-        </form>
-    </div>
+        </div>
+        <div class="gear performance">
+            <div>
+                <label>Performance Mods:</label>
+                <div>
+                    <input type="text" name="performance1">
+                    <input type="text" name="performance2">
+                    <input type="text" name="performance3">
+                    <input type="text" name="performance4">
+                </div>
+            </div>
+        </div>
+        <div class="skills">
+            <div class="1">
+                <label>Skill 1:</label>
+                <input type="text" name="skill1">
+            </div>
+            <div class="2">
+                <label>Skill 2:</label>
+                <input type="text" name="skill2">
+            </div>
+            <div class="link">
+                <label>Link:</label>
+                <input type="text" name="link">
+            </div>
+        </div>
+        <input class="confirm" type="submit" value="Send">
+    </form>
 </div>
