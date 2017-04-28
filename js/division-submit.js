@@ -217,16 +217,16 @@ $(document).ready(function() {
 				data: $(this).serialize(),
 				dataType: 'json',
 				beforeSend: function() {
-					$('.submit > *').hide();
-					$('.submit').append('<div class="alert loading">Establishing connection...</div>');
+					$('.text-container > *').hide();
+					$('.text-container').append('<div class="alert loading">Establishing connection...</div>');
 				},
 				success: function(data) {
-					$('.submit').find('.alert').remove();
-					$('.submit').append('<div class="alert success">Data transfer successful!</div>');
+					$('.text-container').find('.alert').remove();
+					$('.text-container').append('<div class="alert success">Data transfer successful!</div>');
 				},
 				error: function(err) {
-					$('.submit').find('.alert').remove();
-					$('.submit').append('<div class="alert error">Error! Something went wrong...</div>');
+					$('.text-container').find('.alert').remove();
+					$('.text-container').append('<div class="alert error">Error! Something went wrong...</div>');
 				}
 			});
 		}
