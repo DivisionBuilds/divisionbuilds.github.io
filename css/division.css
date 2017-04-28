@@ -21,8 +21,11 @@
     src: url(https://cdn.rawgit.com/DivisionBuilds/divisionbuilds.github.io/master/fonts/Borda%20Bold.ttf) format("truetype");
     font-weight: bold;
 }
+html,
 body {
-    min-height: 100vh;
+    height: 100%;
+}
+body {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
@@ -169,6 +172,9 @@ a:hover {
     margin-bottom: 10px;
     font-size: 1.125em;
     text-align: right;
+    -webkit-flex: none;
+    -ms-flex: none;
+    flex: none;
 }
 .footer a {
     color: hsla(0, 0%, 100%, .5);
