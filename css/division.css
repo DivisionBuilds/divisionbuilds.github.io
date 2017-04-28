@@ -543,10 +543,13 @@ a.ui-button:active,
     transition: background .15s ease-in-out !important;
 }
 .alert {
-    color: #ff7f00;
-    font-size: 4em;
-    font-weight: bold;
+    font-size: 2em;
+    font-weight: 600;
     text-align: center;
+}
+.alert.success,
+.alert.error {
+    color: #ff7f00;
 }
 
 /* SEARCH BAR */
