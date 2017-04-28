@@ -1,4 +1,3 @@
-var core = {};
 $(document).ready(function() {
     var s = window.location.search;
     if (s.length === 0) {
@@ -100,7 +99,8 @@ $(document).ready(function() {
 String.prototype.capitalize = function() {
     return this.charAt(0).toUpperCase() + this.slice(1);
 };
-core.showpage = function(page) {
+var build = {};
+build.showpage = function(page) {
     $(".selected").removeClass("selected");
     $(".build-content .visible").removeClass("visible");
     let e = $(".tab-bar-item:contains(" + page.capitalize() + ")");
@@ -113,7 +113,4 @@ core.showpage = function(page) {
         $(".tab-bar-item:contains(Weapons)").addClass("selected");
         $(".build-content .weapons").addClass("visible");
     }
-};
-core.alert = function(title, msg) {
-    $(".main").html("<div class='error'><div class='error-title'>" + title + "</div><div class='error-content'>" + msg + "</div></div>");
 };
