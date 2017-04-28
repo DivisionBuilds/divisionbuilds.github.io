@@ -21,11 +21,11 @@
     src: url(https://cdn.rawgit.com/DivisionBuilds/divisionbuilds.github.io/master/fonts/Borda%20Bold.ttf) format("truetype");
     font-weight: bold;
 }
-html,
-body {
+html {
     height: 100%;
 }
 body {
+    min-height: 100%;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
