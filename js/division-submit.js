@@ -203,22 +203,32 @@ $(document).ready(function() {
 });
 $('.submit').submit(function(e) {
 	e.preventDefault();
-	$.ajax({
-		url: '//formspree.io/divisionbuilds@gmail.com',
-		method: 'POST',
-		data: $(this).serialize(),
-		dataType: 'json',
-		beforeSend: function() {
-			$('.submit > *').hide();
-			$('.submit').append('<div class="alert loading">Establishing connection...</div>');
-		},
-		success: function(data) {
-			$('.submit').find('.alert').remove();
-			$('.submit').append('<div class="alert success">Data transfer successful!</div>');
-		},
-		error: function(err) {
-			$('.submit').find('.alert').remove();
-			$('.submit').append('<div class="alert error">Error!</div>');
+	var s = true;
+	$(".submit input").each(function() {
+		var v = $(this).val();
+		if (v.length === 0) {
+			s = false;
+			$(this).attr("placeholder", "Required");
 		}
 	});
+	if (s === true) {
+		$.ajax({
+			url: '//formspree.io/divisionbuilds@gmail.com',
+			method: 'POST',
+			data: $(this).serialize(),
+			dataType: 'json',
+			beforeSend: function() {
+				$('.submit > *').hide();
+				$('.submit').append('<div class="alert loading">Establishing connection...</div>');
+			},
+			success: function(data) {
+				$('.submit').find('.alert').remove();
+				$('.submit').append('<div class="alert success">Data transfer successful!</div>');
+			},
+			error: function(err) {
+				$('.submit').find('.alert').remove();
+				$('.submit').append('<div class="alert error">Error! Something went wrong...</div>');
+			}
+		});
+	}
 });
