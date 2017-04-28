@@ -12,3 +12,7 @@ $(document).ready(function() {
 	"https://images4.alphacoders.com/601/601859.jpg"];
 	$("head").append("<style>body::after{background-image:url(" + img[Math.floor(Math.random() * img.length)] + ");}</style>");
 });
+var core = {};
+core.alert = function(title, msg) {
+    $(".main").html("<div class='error'><div class='error-title'>" + title + "</div><div class='error-content'>" + msg + "</div></div>");
+};
