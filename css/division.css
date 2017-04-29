@@ -185,25 +185,25 @@ a:hover {
 }
 
 /* CONTAINER */
-.container {
+.main-container {
     width: 70%;
     min-width: 500px;
     margin: 40px auto 0;
     padding: 20px 40px;
     background: hsla(0, 0%, 50%, .1);
 }
-.container.submit {
+.main-container.submit {
     min-width: 850px;
 }
-.container h1:not(:first-child) {
+.main-container h1:not(:first-child) {
     margin-top: 20px;
 }
-.container a {
+.main-container a {
     position: relative;
     color: #ff7f00;
 }
-.container a::after,
-.container a::before {
+.main-container a::after,
+.main-container a::before {
     content: "";
     position: absolute;
     left: 50%;
@@ -216,13 +216,13 @@ a:hover {
     -webkit-transition-delay: .15s;
     transition-delay: .15s;
 }
-.container a::before {
+.main-container a::before {
     margin-left: 1.5px;
     margin-bottom: -1.5px;
     background: rgba(150, 150, 150, .1);
 }
-.container a:hover::after,
-.container a:hover::before {
+.main-container a:hover::after,
+.main-container a:hover::before {
     left: 0;
     width: 100%;
     -webkit-transition-delay: 0s;
