@@ -57,11 +57,11 @@ body::after {
 }
 ::selection {
     color: #fff;
-    background: hsla(0, 0%, 100%, .5);
+    background: hsla(0, 0%, 100%, .3);
 }
 ::-moz-selection {
     color: #fff;
-    background: hsla(0, 0%, 100%, .5);
+    background: hsla(0, 0%, 100%, .3);
 }
 a:hover {
     text-decoration: none;
