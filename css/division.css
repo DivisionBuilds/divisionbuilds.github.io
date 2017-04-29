@@ -504,6 +504,11 @@ a:hover {
     -ms-flex-grow: 1;
     flex-grow: 1;
 }
+.submit input::-webkit-input-placeholder,
+.submit input:-ms-input-placeholder,
+.submit input::-moz-placeholder {
+    color: #ff7f00;
+}
 .submit .confirm {
     padding: 5px 10px;
     background: linear-gradient(rgba(244, 255, 255, .2), rgba(244, 255, 255, .2) 0) no-repeat,
