@@ -279,6 +279,7 @@ a:hover {
 }
 .logo.myfonts {
     background-image: url(https://cdn.myfonts.net/s/images/logo/header_logo.svg);
+    background-size: 100px;
 }
 
 /* TAB BAR */
