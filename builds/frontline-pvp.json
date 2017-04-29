@@ -3,6 +3,7 @@
 	"author": "Zerthox",
 	"link": "https://github.com/Zerthox",
 	"date": "23/04/2017",
+	"patch": "1.6",
 	"tags": ["pvp", "dps", "shield"],
 	"build": {
 		"weapons": {
@@ -65,30 +66,30 @@
 			"stats": {
 				"main-stats": {
 					"4x": {
-						"icon": "firearms",
-						"name": "Firearms Roll"
+						"name": "Firearms Roll",
+						"icon": "firearms"
 					},
 					"1x": {
-						"icon": "electronics",
-						"name": "Electronics Roll"
+						"name": "Electronics Roll",
+						"icon": "electronics"
 					}
 				},
 				"mods": {
 					"4x": {
-						"icon": "firearms",
 						"name": "Firearms Mod",
-						"text": "Health"
+						"text": "Health",
+						"icon": "firearms"
 					},
 					"1x": {
-						"icon": "stamina",
 						"name": "Stamina Mod",
-						"text": "Health"
+						"text": "Health",
+						"icon": "stamina"
 					}
 				},
 				"performance": {
 					"4x": {
-						"icon": "ballistic-shield",
-						"name": "Ballistic Shield Damage Resilience Mod"
+						"name": "Ballistic Shield Damage Resilience Mod",
+						"icon": "ballistic-shield"
 					}
 				}
 			}
