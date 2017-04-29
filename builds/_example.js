@@ -1,8 +1,9 @@
 { // The file extension should be .json, this one is simply renamed to .js in order to allow comments
 	"title": "Your build title",
 	"author": "Your name",
-	"link": "https://yourwebsitelink.com", // Optional
-	"date": "The date you last updated the build (content wise)",
+	"link": "https://yourwebsitelink.com", // [OPTIONAL]
+	"date": "29/04/2017", // The date you last updated the build (content wise)
+	"patch": "1.6", // The patch this build is for [OPTIONAL]
 	"tags": ["tag1", "tag2", "tag3"], // Tags: pvp, pve, dps, healer, tank etc.
 	"build": {
 		"weapons": {
