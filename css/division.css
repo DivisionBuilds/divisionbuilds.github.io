@@ -192,7 +192,7 @@ a:hover {
     padding: 20px 40px;
     background: hsla(0, 0%, 50%, .1);
 }
-.main-container.submit {
+.main-container.wide {
     min-width: 850px;
 }
 .main-container h1:not(:first-child) {
