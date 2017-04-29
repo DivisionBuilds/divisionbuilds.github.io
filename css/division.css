@@ -277,6 +277,9 @@ a:hover {
 .logo.alphacoders {
     background-image: url(https://static.alphacoders.com/alpha_system_360.png);
 }
+.logo.myfonts {
+    background-image: url(https://cdn.myfonts.net/s/images/logo/header_logo.svg);
+}
 
 /* TAB BAR */
 .tab-bar {
