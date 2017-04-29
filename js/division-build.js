@@ -88,10 +88,8 @@ $(document).ready(function() {
                 });
             }
         });
-        $(".tab-bar-item").each(function() {
-            $(this).click(function() {
-                core.showpage($(this).text());
-            });
+        $(".tab-bar-item").click(function() {
+            core.showpage($(this).text());
         });
         core.showpage(window.location.hash.slice(1).toLowerCase());
     }
