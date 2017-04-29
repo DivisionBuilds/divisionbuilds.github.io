@@ -208,7 +208,10 @@ $(document).ready(function() {
 			if ($(this).attr("name") != "author-link" && v.length === 0) {
 				s = false;
 				$(this).attr("placeholder", "Required");
+				$(this).addClass("highlight");
 			}
+			else
+				$(this).removeClass("highlight);
 		});
 		if (s === true) {
 			$.ajax({
