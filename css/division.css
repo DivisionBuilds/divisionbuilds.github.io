@@ -511,13 +511,16 @@ a:hover {
     -ms-flex-grow: 1;
     flex-grow: 1;
 }
-.submit input::-webkit-input-placeholder {
+.submit .highlight {
+    box-shadow: 0 0 3px #ff7f00;
+}
+.submit .highlight::-webkit-input-placeholder {
     color: #ff7f00;
 }
-.submit input:-ms-input-placeholder {
+.submit .highlight:-ms-input-placeholder {
     color: #ff7f00;
 }
-.submit input::-moz-placeholder {
+.submit .highlight::-moz-placeholder {
     color: #ff7f00;
 }
 .submit .confirm {
