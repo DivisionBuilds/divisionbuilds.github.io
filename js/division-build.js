@@ -89,9 +89,9 @@ $(document).ready(function() {
             }
         });
         $(".tab-bar-item").click(function() {
-            core.showpage($(this).text());
+            build.showpage($(this).text());
         });
-        core.showpage(window.location.hash.slice(1).toLowerCase());
+        build.showpage(window.location.hash.slice(1).toLowerCase());
     }
 });
 String.prototype.capitalize = function() {
