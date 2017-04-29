@@ -125,6 +125,9 @@ a:hover {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
 }
+.main-header {
+    margin-bottom: 20px;
+}
 .main-header,
 .build-header {
     padding: 0 20px;
