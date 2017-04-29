@@ -529,6 +529,11 @@ a:hover {
 .submit .confirm:hover {
     background-color: hsla(0, 0%, 100%, .3);
 }
+.ui-autocomplete {
+    max-height: 216px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
 .ui-state-active,
 .ui-widget-content .ui-state-active,
 .ui-widget-header .ui-state-active,
@@ -552,6 +557,7 @@ a.ui-button:active,
     background: #ff7f00;
 }
 .ui-menu-item-wrapper {
+    border: none !important;
     -webkit-transition: background .15s ease-in-out !important;
     transition: background .15s ease-in-out !important;
 }
