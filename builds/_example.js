@@ -1,4 +1,4 @@
-{
+{ // The file extension should be .json, this one is simply renamed to .js in order to allow comment usage (and proper syntax highlighting)
 	"title": "Your build title",
 	"author": "Your name",
 	"link": "https://yourwebsitelink.com", // Optional
