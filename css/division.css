@@ -26,6 +26,7 @@ html {
 }
 body {
     min-height: 100%;
+    margin-right: -14px;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
