@@ -184,23 +184,26 @@ a:hover {
     color: hsla(0, 0%, 100%, .7);
 }
 
-/* TEXT */
-.text-container {
+/* CONTAINER */
+.container {
     width: 70%;
     min-width: 500px;
     margin: 40px auto 0;
     padding: 20px 40px;
     background: hsla(0, 0%, 50%, .1);
 }
-.text-container h1:not(:first-child) {
+.container.submit {
+    min-width: 850px;
+}
+.container h1:not(:first-child) {
     margin-top: 20px;
 }
-.text-container a {
+.container a {
     position: relative;
     color: #ff7f00;
 }
-.text-container a::after,
-.text-container a::before {
+.container a::after,
+.container a::before {
     content: "";
     position: absolute;
     left: 50%;
@@ -213,13 +216,13 @@ a:hover {
     -webkit-transition-delay: .15s;
     transition-delay: .15s;
 }
-.text-container a::before {
+.container a::before {
     margin-left: 1.5px;
     margin-bottom: -1.5px;
     background: rgba(150, 150, 150, .1);
 }
-.text-container a:hover::after,
-.text-container a:hover::before {
+.container a:hover::after,
+.container a:hover::before {
     left: 0;
     width: 100%;
     -webkit-transition-delay: 0s;
