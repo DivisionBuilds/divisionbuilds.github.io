@@ -55,7 +55,10 @@ body::after {
     -webkit-filter: blur(5px) brightness(40%);
     filter: blur(5px) brightness(40%);
 }
-::selection,
+::selection {
+    color: #fff;
+    background: hsla(0, 0%, 100%, .5);
+}
 ::-moz-selection {
     color: #fff;
     background: hsla(0, 0%, 100%, .5);
@@ -195,6 +198,7 @@ a:hover {
     margin: 40px auto 0;
     padding: 20px 40px;
     background: hsla(0, 0%, 50%, .1);
+    cursor: auto;
 }
 .main-container.wide {
     min-width: 850px;
