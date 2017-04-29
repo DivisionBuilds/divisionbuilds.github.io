@@ -4,7 +4,7 @@ $(document).ready(function() {
           success: function(result) {
                for (i = 0; i < result.length; i++) {
                     var n = result[i].name;
-                    if (n.slice(-5) === ".json") {
+                    if (n.slice(-5) === ".json" && n.slice(0, 1) != "_") {
                          $.ajax({
                          url: "https://raw.githubusercontent.com/DivisionBuilds/divisionbuilds.github.io/master/builds/" + n,
                          success: function(result) {
