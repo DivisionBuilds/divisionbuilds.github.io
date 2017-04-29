@@ -205,6 +205,7 @@ a:hover {
 .main-container a {
     position: relative;
     color: #ff7f00;
+    white-space: nowrap;
 }
 .main-container a::after,
 .main-container a::before {
