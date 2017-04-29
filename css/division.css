@@ -507,8 +507,12 @@ a:hover {
     -ms-flex-grow: 1;
     flex-grow: 1;
 }
-.submit input::-webkit-input-placeholder,
-.submit input:-ms-input-placeholder,
+.submit input::-webkit-input-placeholder {
+    color: #ff7f00;
+}
+.submit input:-ms-input-placeholder {
+    color: #ff7f00;
+}
 .submit input::-moz-placeholder {
     color: #ff7f00;
 }
