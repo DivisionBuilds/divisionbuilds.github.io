@@ -16,6 +16,8 @@ $(document).ready(function() {
                         $(".build-header .author").text(d.author);
                         if (d.hasOwnProperty("link"))
                             $(".build-header .info a").attr("href", d.link);
+                        if (d.hasOwnProperty("patch"))
+                            $(".build header .date").before(" for Patch " + d.patch);
                         if (d.hasOwnProperty("date"))
                             $(".build-header .date").text("Last updated: " + d.date);
                         $.each(d.build, function(key) {
