@@ -195,7 +195,7 @@ a:hover {
 .main-container {
     width: 70%;
     min-width: 500px;
-    margin: 40px auto 0;
+    margin: 40px auto;
     padding: 20px 40px;
     background: hsla(0, 0%, 50%, .1);
     cursor: auto;
