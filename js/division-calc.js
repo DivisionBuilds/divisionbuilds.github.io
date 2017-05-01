@@ -45,16 +45,18 @@ var calc = {
 	},
 	skillpower: function(electronics, talent, firearms = 0, stamina = 0) {
 		var s = electronics * 30;
-		if (typeof talent === "string") {
-			if (talent.toLowerCase() === "inventive") {
+		switch (talent) {
+			case "inventive": {
 				return s * 1.15;
-			}
-			else if (talent.toLowerCase() === "specialized") {
+				break;
+			},
+			case "specialized": {
 				return s + ((firearms + stamina) * 2);
+				break;
+			},
+			default: {
+				return s;
 			}
-		}
-		else {
-			return s;
 		}
 	}
 };
