@@ -37,6 +37,9 @@ var calc = {
 			return [min, max];
 		}
 	},
+	mitigation: functio (arm) {
+		return arm / 239;
+	}
 	toughness: function(health, mitigation) {
 		return health / ((100 - mitigation) / 100);
 	},
