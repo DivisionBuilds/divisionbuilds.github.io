@@ -201,7 +201,7 @@ $(document).ready(function() {
 	$(".rolls input, .mods .major input").autocomplete({source: stats});
 	$(".skills .1 input, .skills .2 input").autocomplete({source: skills});
 	$(".skills .link input").autocomplete({source: links});
-	$('.submit').submit(function(e) {
+	$(".submit").submit(function(e) {
 		e.preventDefault();
 		var s = true;
 		$(".submit input").each(function() {
@@ -216,21 +216,21 @@ $(document).ready(function() {
 		});
 		if (s === true) {
 			$.ajax({
-				url: '//formspree.io/divisionbuilds@gmail.com',
-				method: 'POST',
+				url: "//formspree.io/divisionbuilds@gmail.com",
+				method: "POST",
 				data: $(this).serialize(),
-				dataType: 'json',
+				dataType: "json",
 				beforeSend: function() {
-					$('.text-container > *').hide();
-					$('.text-container').append('<div class="alert loading">Establishing connection...</div>');
+					$(".text-container > *").hide();
+					$(".text-container").append('<div class="alert loading">Establishing connection...</div>');
 				},
 				success: function(data) {
-					$('.text-container').find('.alert').remove();
-					$('.text-container').append('<div class="alert success">Data transfer successful!</div>');
+					$(".text-container").find(".alert").remove();
+					$(".text-container").append('<div class="alert success">Data transfer successful!</div>');
 				},
 				error: function(err) {
-					$('.text-container').find('.alert').remove();
-					$('.text-container').append('<div class="alert error">Error! Something went wrong...</div>');
+					$(".text-container").find(".alert").remove();
+					$(".text-container").append('<div class="alert error">Error! Something went wrong...</div>');
 				}
 			});
 		}
