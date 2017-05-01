@@ -75,10 +75,15 @@
 					}
 				},
 				"mods": {
-					"5x": {
+					"4x": {
 						"name": "Firearms Mod",
 						"text": "Health",
 						"icon": "firearms"
+					},
+					"1x": {
+						"name": "Stamina Mod",
+						"text": "Health",
+						"icon": "stamina"
 					}
 				},
 				"performance": {
