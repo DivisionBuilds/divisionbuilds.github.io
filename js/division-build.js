@@ -5,8 +5,9 @@ $(document).ready(function() {
     }
     else {
         $.each(s.slice(1).split("&"), function() {
-            if (this.split("=")[0] === "id") {
+            if (this.split("=")[0] === "id")
             	build.loadURL(this.split("=")[1]);
+        });
         $(".tab-bar-item").click(function() {
             build.showpage($(this).text());
         });
@@ -113,5 +114,18 @@ var build = {
 	            }
 	        });
 	    });
+	},
+	calc: {
+		bulletdmg: function(base, firearms, ratio) {
+			return base + (firearms * ratio);
+		},
+		dps: function(base, firearms, ratio, chc, chd) {
+			return (base + (firearms * ratio)) * (1 + ((chd / 100 * chc) / 100));
+		},
+		pvpdmg: function(base, ead, arm) {
+			var pvpdmg_ratio = 0.42;
+			var pvpead_ratio = 0.3;
+			return (base * pvpdmg_ratio) / 100 * (100 - (arm / 100 * (100 - (ead * pvpead_ratio))));
+		}
 	}
 };
