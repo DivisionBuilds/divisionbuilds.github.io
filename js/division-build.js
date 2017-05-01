@@ -62,7 +62,7 @@ var build = {
 	        }
 	    });
 	},
-	loadData: function(data) {
+	loadData: function(d) {
 	    document.title = d.title + " - " + document.title;
 	    $("meta[name=description]").attr("content", d.title + " by " + d.author);
 	    $(".build-header .title").text(d.title);
@@ -114,18 +114,5 @@ var build = {
 	            }
 	        });
 	    });
-	},
-	calc: {
-		bulletdmg: function(base, firearms, ratio) {
-			return base + (firearms * ratio);
-		},
-		dps: function(base, firearms, ratio, chc, chd) {
-			return (base + (firearms * ratio)) * (1 + ((chd / 100 * chc) / 100));
-		},
-		pvpdmg: function(base, ead, arm) {
-			var pvpdmg_ratio = 0.42;
-			var pvpead_ratio = 0.3;
-			return (base * pvpdmg_ratio) / 100 * (100 - (arm / 100 * (100 - (ead * pvpead_ratio))));
-		}
 	}
 };
