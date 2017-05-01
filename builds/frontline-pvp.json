@@ -9,19 +9,19 @@
 		"weapons": {
 			"primary": {
 				"name": "MP7",
-				"text": "Responsive, Vicious, Unforgiving",
+				"text": "Responsive, Deadly, Unforgiving",
 				"icon": "mp7",
 				"talent1": "responsive",
-				"talent2": "vicious",
+				"talent2": "deadly",
 				"talent3": "unforgiving"
 			},
 			"secondary": {
 				"name": "PP-19",
-				"text": "Responsive, Vicious, Hurried",
+				"text": "Responsive, Deadly, Vicious",
 				"icon": "pp-19",
 				"talent1": "responsive",
-				"talent2": "vicious",
-				"talent3": "hurried"
+				"talent2": "deadly",
+				"talent3": "vicious"
 			}
 		},
 		"gear": {
