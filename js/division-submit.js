@@ -33,13 +33,14 @@ $(document).ready(function() {
 	    "T821",
 	    "Tec-9",
 	    "Tenebrae",
+	    "Thompson",
 	    "Tommy Gun",
 	    "UMP",
 	    "Urban MDR",
 	    "Vector"
 	];
 	var weapon_talents = [
-		"Ferocious",
+	    "Ferocious",
 	    "Destructive",
 	    "Harmful",
 	    "Responsive",
