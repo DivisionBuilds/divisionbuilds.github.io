@@ -212,7 +212,7 @@ $(document).ready(function() {
 				$(this).addClass("highlight");
 			}
 			else
-				$(this).removeClass("highlight);
+				$(this).removeClass("highlight");
 		});
 		if (s === true) {
 			$.ajax({
