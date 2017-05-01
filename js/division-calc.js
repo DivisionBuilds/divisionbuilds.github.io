@@ -44,7 +44,7 @@ var calc = {
 		var s = electronics * 30;
 		if (typeof talent === "string") {
 			if (talent.toLowerCase() === "inventive") {
-				return s * .15;
+				return s * 1.15;
 			}
 			else if (talent.toLowerCase() === "specialized") {
 				return s + ((firearms + stamina) * 2);
