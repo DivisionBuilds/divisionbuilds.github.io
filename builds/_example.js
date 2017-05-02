@@ -46,7 +46,7 @@
 				},
 				"holster": {
 					"name": "Nimble Holster", // Holster name/type
-					"rolls": "Health", // Holster roll (Only one, thus no array)
+					"rolls": ["Health"], // Holster rolls
 					"type": "he", // Type: "he", "exotic" or "gearset"
 					"icon": "holster" // "holster" if he/exotic, else gearset name
 				},
