@@ -512,7 +512,7 @@ a:hover {
     margin-right: 10px;
 }
 .submit input,
-.submit .weapon .talents,
+.submit .weapon .talent-icons,
 .submit .gear .stats,
 .submit .performance > div,
 .submit .skills > * {
@@ -686,7 +686,7 @@ input,
 .build-content .weapons .info {
     width: 250px;
 }
-.build-content .weapons .talents {
+.build-content .weapons .talent-icons {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1475,7 +1475,7 @@ input,
 
 /* MEDIA ADJUSTEMENTS */
 @media (max-width: 950px) {
-    .build-content .weapons .talents {
+    .build-content .weapons .talent-icons {
         display: none;
     }
 }
