@@ -65,12 +65,12 @@
 				"mods": {
 					"4x": {
 						"name": "Firearms Mod",
-						"text": "Health",
+						"text": "Critical Hit Damage",
 						"icon": "firearms"
 					},
 					"1x": {
 						"name": "Stamina Mod",
-						"text": "Health",
+						"text": "Critical Hit Damage",
 						"icon": "stamina"
 					}
 				},
