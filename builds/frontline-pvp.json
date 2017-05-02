@@ -21,9 +21,9 @@
 		"gear": {
 			"items": {
 				"chest": {
-					"name": "Vigorous Chest",
-					"rolls": ["Health", "Skill Haste", "Burn Resistance"],
-					"icon": "he"
+					"name": "D3-FNC Chest",
+					"rolls": ["Health", "Exotic Damage Resiliance", "Burn Resistance"],
+					"icon": "frontline"
 				},
 				"backpack": {
 					"name": "Specialized Backpack",
@@ -36,9 +36,9 @@
 					"icon": "frontline"
 				},
 				"gloves": {
-					"name": "D3-FNC Gloves",
+					"name": "Savage Gloves",
 					"rolls": ["SMG Damage", "Critical Hit Chance", "Critical Hit Damage"],
-					"icon": "frontline"
+					"icon": "he"
 				},
 				"holster": {
 					"name": "D3-FNC Holster",
