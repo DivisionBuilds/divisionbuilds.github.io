@@ -86,7 +86,7 @@ var build = {
 	                        else if (key === "icon")
 	                            $(".build-content .gear .items ." + t + "> .icon").addClass(value);
 	                        else if ($.isArray(value))
-	                        	$(".build-content ." + p + " ." + k + " ." + key).text(value.join(", "));
+	                        	$(".build-content .items ." + t + " ." + key).text(value.join(", "));
 	                        else
 	                            $(".build-content .gear .items ." + t + " ." + key).text(value);
 	                    });
