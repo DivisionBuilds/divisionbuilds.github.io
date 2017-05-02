@@ -93,7 +93,7 @@
 				"mod": "Scrambler" // Skill mod
 			},
 			"link": {
-				"name": "Survivor Link" // Link name
+				"mod": "Survivor Link" // Link mod
 			}
 		}
 	}
