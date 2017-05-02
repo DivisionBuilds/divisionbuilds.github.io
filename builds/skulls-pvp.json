@@ -9,56 +9,50 @@
 		"weapons": {
 			"primary": {
 				"name": "Lightweight M4",
-				"text": "Competent, Brutal, Unforgiving",
-				"icon": "m4",
-				"talent1": "competent",
-				"talent2": "brutal",
-				"talent3": "unforgiving"
+				"talents": ["Competent", "Brutal", "Unforgiving"],
+				"icon": "m4"
 			},
 			"secondary": {
 				"name": "MP7",
-				"text": "Competent, Responsive, Unforgiving",
-				"icon": "mp7",
-				"talent1": "competent",
-				"talent2": "responsive",
-				"talent3": "unforgiving"
+				"talents": ["Competent", "Responsive", "Unforgiving"],
+				"icon": "mp7"
 			}
 		},
 		"gear": {
 			"items": {
 				"chest": {
 					"name": "Vigorous Chest",
-					"text": "Health, Skill Haste, Burn Resistance",
+					"rolls": ["Health", "Skill Haste", "Burn Resistance"],
 					"type": "he",
 					"icon": "chest"
 				},
 				"backpack": {
 					"name": "Specialized Backpack",
-					"text": "Health, Burn Resistance",
+					"rolls": ["Health", "Burn Resistance"],
 					"type": "he",
 					"icon": "backpack"
 				},
 				"mask": {
 					"name": "Tenacious Mask",
-					"text": "Health, Burn Resistance",
+					"rolls": ["Health", "Burn Resistance"],
 					"type": "he",
 					"icon": "mask"
 				},
 				"gloves": {
 					"name": "Skulls MC Gloves",
-					"text": "Assault Rifle Damage, SMG Damage, Critical Hit Chance",
+					"rolls": ["Assault Rifle Damage", "SMG Damage", "Critical Hit Chance"],
 					"type": "exotic",
 					"icon": "gloves"
 				},
 				"holster": {
 					"name": "Nimble Holster",
-					"text": "Health",
+					"rolls": ["Health"],
 					"type": "he",
 					"icon": "holster"
 				},
 				"knee-pads": {
 					"name": "Shortbow Championship Knee Pads",
-					"text": "Health, Burn Resistance, Shock Resistance, Disrupt Resistance",
+					"rolls": ["Health", "Burn Resistance", "Shock Resistance", "Disrupt Resistance"],
 					"type": "exotic",
 					"icon": "knee-pads"
 				}
@@ -97,17 +91,14 @@
 		"skills": {
 			"1": {
 				"name": "First Aid",
-				"text": "Booster Shot",
-				"icon": "booster-shot"
+				"mod": "Booster Shot"
 			},
 			"2": {
 				"name": "Pulse",
-				"text": "Scrambler",
-				"icon": "scrambler"
+				"mod": "Scrambler"
 			},
 			"link": {
-				"name": "Survivor Link",
-				"icon": "survivor-link"
+				"name": "Survivor Link"
 			}
 		}
 	}
