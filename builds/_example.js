@@ -36,7 +36,7 @@
 					"name": "Tenacious Mask", // Mask name/type
 					"rolls": ["Health", "Burn Resistance"], // Mask rolls
 					"type": "he", // Type: "he", "exotic" or "gearset"
-					"icon": "mask" // "chemaskst" if he/exotic, else gearset name
+					"icon": "mask" // "mask" if he/exotic, else gearset name
 				},
 				"gloves": {
 					"name": "Skulls MC Gloves", // Gloves name/type
