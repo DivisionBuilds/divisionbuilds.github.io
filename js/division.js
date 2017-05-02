@@ -15,6 +15,9 @@ $(document).ready(function() {
 String.prototype.capitalize = function() {
     return this.charAt(0).toUpperCase() + this.slice(1);
 };
+String.prototype.classify = function() {
+    return this.toLowerCase().replace(/ /g, "-");
+};
 var core = {
 	alert: function(title, msg) {
     	$(".main").html("<div class='error'><div class='error-title'>" + title + "</div><div class='error-content'>" + msg + "</div></div>");
