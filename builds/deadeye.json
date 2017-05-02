@@ -23,37 +23,31 @@
 				"chest": {
 					"name": "Reckless Chest",
 					"rolls": ["Health", "Skill Haste", "Burn Resistance"],
-					"type": "he",
-					"icon": "chest"
+					"icon": "he"
 				},
 				"backpack": {
 					"name": "Specialized Backpack",
 					"rolls": ["Health", "Burn Resistance"],
-					"type": "he",
-					"icon": "backpack"
+					"icon": "he"
 				},
 				"mask": {
 					"name": "DeadEYE Mask",
 					"rolls": ["Health", "Burn Resistance"],
-					"type": "gearset",
 					"icon": "deadeye"
 				},
 				"gloves": {
 					"name": "DeadEYE Gloves",
 					"rolls": ["Marksman Rifle Damage", "Critical Hit Damage", "Skill Haste"],
-					"type": "gearset",
 					"icon": "deadeye"
 				},
 				"holster": {
 					"name": "DeadEYE Holster",
 					"rolls": ["Health"],
-					"type": "gearset",
 					"icon": "deadeye"
 				},
 				"knee-pads": {
 					"name": "DeadEYE Knee Pads",
 					"rolls": ["Health", "Burn Resistance", "Shock Resistance", "Disrupt Resistance"],
-					"type": "gearset",
 					"icon": "deadeye"
 				}
 			},
