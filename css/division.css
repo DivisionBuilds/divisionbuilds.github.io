@@ -520,7 +520,7 @@ a:hover {
     flex-grow: 1;
 }
 .submit .highlight {
-    box-shadow: 0 0 3px #ff7f00;
+    box-shadow: 0 0 0 1px #ff7f00;
 }
 .submit .highlight::-webkit-input-placeholder {
     color: #ff7f00;
