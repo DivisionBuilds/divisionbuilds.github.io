@@ -9,56 +9,50 @@
 		"weapons": {
 			"primary": {
 				"name": "Lightweight M4",
-				"text": "Talented, Competent, Skilled",
-				"icon": "m4",
-				"talent1": "talented",
-				"talent2": "competent",
-				"talent3": "skilled"
+				"talents": ["Talented", "Competent", "Skilled"],
+				"icon": "m4"
 			},
 			"secondary": {
 				"name": "Tenebrae",
-				"text": "Talented, Coolheaded, Lights Out",
-				"icon": "tenebrae",
-				"talent1": "talented",
-				"talent2": "coolheaded",
-				"talent3": "lights-out"
+				"talents": ["Talented", "Coolheaded", "Lights Out"],
+				"icon": "tenebrae"
 			}
 		},
 		"gear": {
 			"items": {
 				"chest": {
 					"name": "Vigorous Chest",
-					"text": "Health, Skill Haste, Burn Resistance",
+					"rolls": ["Health", "Skill Haste", "Burn Resistance"],
 					"type": "he",
 					"icon": "chest"
 				},
 				"backpack": {
 					"name": "Inventive Backpack",
-					"text": "Health, Burn Resistance",
+					"rolls": ["Health", "Burn Resistance"],
 					"type": "he",
 					"icon": "backpack"
 				},
 				"mask": {
 					"name": "Tactician's Authority Mask",
-					"text": "Health, Burn Resistance",
+					"rolls":  ["Health", "Burn Resistance"],
 					"type": "gearset",
 					"icon": "tactician"
 				},
 				"gloves": {
 					"name": "Tactician's Authority Gloves",
-					"text": "Assault Rifle Damage, Skill Haste, Critical Hit Chance",
+					"rolls": ["Assault Rifle Damage", "Skill Haste", "Critical Hit Chance"],
 					"type": "gearset",
 					"icon": "tactician"
 				},
 				"holster": {
 					"name": "Tactician's Authority Holster",
-					"text": "Skill Haste",
+					"rolls": ["Skill Haste"],
 					"type": "gearset",
 					"icon": "tactician"
 				},
 				"knee-pads": {
 					"name": "Tactician's Authority Knee Pads",
-					"text": "Health, Burn Resistance, Shock Resistance, Disrupt Resistance",
+					"rolls": ["Health", "Burn Resistance", "Shock Resistance", "Disrupt Resistance"],
 					"type": "gearset",
 					"icon": "tactician"
 				}
@@ -97,17 +91,14 @@
 		"skills": {
 			"1": {
 				"name": "First Aid",
-				"text": "Defibrillator",
-				"icon": "defibrillator"
+				"mod": "Defibrillator"
 			},
 			"2": {
 				"name": "Support Station",
-				"text": "Life Support",
-				"icon": "life-support"
+				"mod": "Life Support"
 			},
 			"link": {
-				"name": "Recovery Link",
-				"icon": "recovery-link"
+				"mod": "Recovery Link"
 			}
 		}
 	}
