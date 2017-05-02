@@ -23,38 +23,32 @@
 				"chest": {
 					"name": "Vigorous Chest",
 					"rolls": ["Health", "Skill Haste", "Burn Resistance"],
-					"type": "he",
-					"icon": "chest"
+					"icon": "he"
 				},
 				"backpack": {
 					"name": "Specialized Backpack",
 					"rolls": ["Health", "Burn Resistance"],
-					"type": "he",
-					"icon": "backpack"
+					"icon": "he"
 				},
 				"mask": {
 					"name": "Tenacious Mask",
 					"rolls": ["Health", "Burn Resistance"],
-					"type": "he",
-					"icon": "mask"
+					"icon": "he"
 				},
 				"gloves": {
 					"name": "Skulls MC Gloves",
 					"rolls": ["Assault Rifle Damage", "SMG Damage", "Critical Hit Chance"],
-					"type": "exotic",
-					"icon": "gloves"
+					"icon": "exotic"
 				},
 				"holster": {
 					"name": "Nimble Holster",
 					"rolls": ["Health"],
-					"type": "he",
-					"icon": "holster"
+					"icon": "he"
 				},
 				"knee-pads": {
 					"name": "Shortbow Championship Knee Pads",
 					"rolls": ["Health", "Burn Resistance", "Shock Resistance", "Disrupt Resistance"],
-					"type": "exotic",
-					"icon": "knee-pads"
+					"icon": "exotic"
 				}
 			},
 			"stats": {
