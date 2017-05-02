@@ -9,56 +9,50 @@
 		"weapons": {
 			"primary": {
 				"name": "MP7",
-				"text": "Responsive, Deadly, Unforgiving",
-				"icon": "mp7",
-				"talent1": "responsive",
-				"talent2": "deadly",
-				"talent3": "unforgiving"
+				"talents": ["Responsive", "Deadly", "Unforgiving"],
+				"icon": "mp7"
 			},
 			"secondary": {
 				"name": "PP-19",
-				"text": "Responsive, Deadly, Vicious",
-				"icon": "pp-19",
-				"talent1": "responsive",
-				"talent2": "deadly",
-				"talent3": "vicious"
+				"talents": ["Responsive", "Deadly", "Vicious"],
+				"icon": "pp-19"
 			}
 		},
 		"gear": {
 			"items": {
 				"chest": {
 					"name": "Vigorous Chest",
-					"text": "Health, Skill Haste, Burn Resistance",
+					"rolls": ["Health", "Skill Haste", "Burn Resistance"],
 					"type": "he",
 					"icon": "chest"
 				},
 				"backpack": {
 					"name": "Specialized Backpack",
-					"text": "Health, Burn Resistance",
+					"rolls": ["Health", "Burn Resistance"],
 					"type": "he",
 					"icon": "backpack"
 				},
 				"mask": {
 					"name": "D3-FNC Mask",
-					"text": "Health, Burn Resistance",
+					"rolls": ["Health", "Burn Resistance"],
 					"type": "gearset",
 					"icon": "frontline"
 				},
 				"gloves": {
 					"name": "D3-FNC Gloves",
-					"text": "SMG Damage, Critical Hit Chance, Critical Hit Damage",
+					"rolls": ["SMG Damage", "Critical Hit Chance", "Critical Hit Damage"],
 					"type": "gearset",
 					"icon": "frontline"
 				},
 				"holster": {
 					"name": "D3-FNC Holster",
-					"text": "Health",
+					"rolls": ["Health"],
 					"type": "gearset",
 					"icon": "frontline"
 				},
 				"knee-pads": {
 					"name": "D3-FNC Knee Pads",
-					"text": "Health, Burn Resistance, Shock Resistance, Disrupt Resistance",
+					"rolls": ["Health", "Burn Resistance", "Shock Resistance", "Disrupt Resistance"],
 					"type": "gearset",
 					"icon": "frontline"
 				}
@@ -97,17 +91,14 @@
 		"skills": {
 			"1": {
 				"name": "Ballistic Shield",
-				"text": "Reactive Targeting",
-				"icon": "reactive-targeting"
+				"mod": "Reactive Targeting"
 			},
 			"2": {
 				"name": "Pulse",
-				"text": "Tactical Scanner",
-				"icon": "tactical-scanner"
+				"mod": "Tactical Scanner"
 			},
 			"link": {
-				"name": "Recovery Link",
-				"icon": "recovery-link"
+				"mod": "Recovery Link"
 			}
 		}
 	}
