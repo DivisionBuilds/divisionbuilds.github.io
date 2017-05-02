@@ -772,7 +772,21 @@ input,
 .build-content .gear .icon.exotic {
     background-color: rgb(208, 92, 60);
 }
-.build-content .gear .icon.gearset {
+.build-content .gear .icon.striker::after,
+.build-content .gear .icon.hunters-faith::after,
+.build-content .gear .icon.nomad::after,
+.build-content .gear .icon.sentry::after,
+.build-content .gear .icon.tactician::after,
+.build-content .gear .icon.predators-mark::after,
+.build-content .gear .icon.final-measures::after,
+.build-content .gear .icon.lone-star::after,
+.build-content .gear .icon.defence::after,
+.build-content .gear .icon.frontline::after,
+.build-content .gear .icon.banshee::after,
+.build-content .gear .icon.reclaimer::after,
+.build-content .gear .icon.firecrest::after,
+.build-content .gear .icon.alphabridge::after,
+.build-content .gear .icon.deadeye::after {
     background-color: rgb(15, 211, 129);
 }
 .build-content .gear .stats .main-stats + .mods {
@@ -1179,30 +1193,47 @@ input,
     background-image: url(../sprites/items.png);
         background-size: 800px;
 }
-.build-content .gear .icon.holster::after {
+.build-content .gear .holster .icon.he::after,
+.build-content .gear .holster .icon.exotic::after {
     background-position: 0 -413px;
 }
-.build-content .gear .icon.chest::after {
+.build-content .gear .chest .icon.he::after,
+.build-content .gear .chest .icon.exotic::after {
     background-position: -103px -413px;
 }
-.build-content .gear .icon.nomad::after {
-    background-position: -200px -413px;
-}
-.build-content .gear .icon.backpack::after {
+.build-content .gear .backpack .icon.he::after,
+.build-content .gear .backpack .icon.exotic::after {
     background-position: -206px -413px;
 }
-.build-content .gear .icon.mask::after {
+.build-content .gear .mask .icon.he::after,
+.build-content .gear .mask .icon.exotic::after {
     background-position: -310px -413px;
 }
-.build-content .gear .icon.gloves::after {
+.build-content .gear .gloves .icon.he::after,
+.build-content .gear .gloves .icon.exotic::after {
     background-position: -516px -413px;
 }
-.build-content .gear .icon.knee-pads::after {
+.build-content .gear .knee-pads .icon.he::after,
+.build-content .gear .knee-pads .icon.exotic::after {
     background-position: -618px -413px;
 }
 
 /* GEAR SET ICONS */
-.build-content .gear .icon.gearset::after {
+.build-content .gear .icon.striker::after,
+.build-content .gear .icon.hunters-faith::after,
+.build-content .gear .icon.nomad::after,
+.build-content .gear .icon.sentry::after,
+.build-content .gear .icon.tactician::after,
+.build-content .gear .icon.predators-mark::after,
+.build-content .gear .icon.final-measures::after,
+.build-content .gear .icon.lone-star::after,
+.build-content .gear .icon.defence::after,
+.build-content .gear .icon.frontline::after,
+.build-content .gear .icon.banshee::after,
+.build-content .gear .icon.reclaimer::after,
+.build-content .gear .icon.firecrest::after,
+.build-content .gear .icon.alphabridge::after,
+.build-content .gear .icon.deadeye::after {
     background-image: url(../sprites/gearsets.png);
     background-size: 800px;
 }
