@@ -23,38 +23,32 @@
 				"chest": {
 					"name": "Vigorous Chest", // Chest name/type
 					"rolls": ["Health", "Skill Haste", "Burn Resistance"], // Chest rolls
-					"type": "he", // Type: "he", "exotic" or "gearset"
-					"icon": "chest" // "chest" if he/exotic, else gearset name
+					"icon": "he" // "he", "exotic" or gearset name
 				},
 				"backpack": {
 					"name": "Specialized Backpack", // Backpack name/type
 					"rolls": ["Health", "Burn Resistance"], // Backpack rolls
-					"type": "he", // Type: "he", "exotic" or "gearset"
-					"icon": "backpack" // "backpack" if he/exotic, else gearset name
+					"icon": "he" // "he", "exotic" or gearset name
 				},
 				"mask": {
 					"name": "Tenacious Mask", // Mask name/type
 					"rolls": ["Health", "Burn Resistance"], // Mask rolls
-					"type": "he", // Type: "he", "exotic" or "gearset"
-					"icon": "mask" // "mask" if he/exotic, else gearset name
+					"icon": "he" // "he", "exotic" or gearset name
 				},
 				"gloves": {
 					"name": "Skulls MC Gloves", // Gloves name/type
 					"rolls": ["Assault Rifle Damage", "SMG Damage", "Critical Hit Chance"], // Gloves rolls
-					"type": "exotic", // Type: "he", "exotic" or "gearset"
-					"icon": "gloves" // "gloves" if he/exotic, else gearset name
+					"icon": "exotic" // "he", "exotic" or gearset name
 				},
 				"holster": {
 					"name": "Nimble Holster", // Holster name/type
 					"rolls": ["Health"], // Holster rolls
-					"type": "he", // Type: "he", "exotic" or "gearset"
-					"icon": "holster" // "holster" if he/exotic, else gearset name
+					"icon": "he" // "he", "exotic" or gearset name
 				},
 				"knee-pads": {
 					"name": "Shortbow Championship Knee Pads", // Knee Pads name/type
 					"rolls": ["Health", "Burn Resistance", "Shock Resistance", "Disrupt Resistance"], // Knee Pads rolls
-					"type": "exotic", // Type: "he", "exotic" or "gearset"
-					"icon": "knee-pads" // "knee-pads" if he/exotic, else gearset name
+					"icon": "exotic" // "he", "exotic" or gearset name
 				}
 			},
 			"stats": {
