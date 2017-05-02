@@ -9,56 +9,50 @@
 		"weapons": {
 			"primary": {
 				"name": "Lightweight M4", // Primary weapon name
-				"text": "Competent, Brutal, Unforgiving", // Weapon talents & info
-				"icon": "m4", // Weapon icon
-				"talent1": "competent", // First talent
-				"talent2": "brutal", // Second talent
-				"talent3": "unforgiving" // Third (free) talent
+				"talents": ["Competent", "Brutal", "Unforgiving"], // Weapon talents
+				"icon": "m4" // Weapon icon
 			},
 			"secondary": {
 				"name": "MP7", // Secondary weapon name
-				"text": "Competent, Fierce, Unforgiving", // Weapon talents & info
-				"icon": "mp7", // Weapon icon
-				"talent1": "competent", // First talent
-				"talent2": "fierce", // Second talent
-				"talent3": "unforgiving" // Third (free) talent
+				"talents": ["Competent", "Fierce", "Unforgiving"], // Weapon talents
+				"icon": "mp7" // Weapon icon
 			}
 		},
 		"gear": {
 			"items": { // Gear pieces
 				"chest": {
 					"name": "Vigorous Chest", // Chest name/type
-					"text": "Health, Skill Haste, Burn Resistance", // Chest rolls
+					"rolls": ["Health", "Skill Haste", "Burn Resistance"], // Chest rolls
 					"type": "he", // Type: "he", "exotic" or "gearset"
 					"icon": "chest" // "chest" if he/exotic, else gearset name
 				},
 				"backpack": {
 					"name": "Specialized Backpack", // Backpack name/type
-					"text": "Health, Burn Resistance", // Backpack rolls
+					"rolls": ["Health", "Burn Resistance"], // Backpack rolls
 					"type": "he", // Type: "he", "exotic" or "gearset"
 					"icon": "backpack" // "backpack" if he/exotic, else gearset name
 				},
 				"mask": {
 					"name": "Tenacious Mask", // Mask name/type
-					"text": "Health, Burn Resistance", // Mask rolls
+					"rolls": ["Health", "Burn Resistance"], // Mask rolls
 					"type": "he", // Type: "he", "exotic" or "gearset"
 					"icon": "mask" // "chemaskst" if he/exotic, else gearset name
 				},
 				"gloves": {
 					"name": "Skulls MC Gloves", // Gloves name/type
-					"text": "Assault Rifle Damage, SMG Damage, Critical Hit Chance", // Gloves rolls
+					"rolls": ["Assault Rifle Damage", "SMG Damage", "Critical Hit Chance"], // Gloves rolls
 					"type": "exotic", // Type: "he", "exotic" or "gearset"
 					"icon": "gloves" // "gloves" if he/exotic, else gearset name
 				},
 				"holster": {
 					"name": "Nimble Holster", // Holster name/type
-					"text": "Health", // Holster rolls
+					"rolls": "Health", // Holster roll (Only one, thus no array)
 					"type": "he", // Type: "he", "exotic" or "gearset"
 					"icon": "holster" // "holster" if he/exotic, else gearset name
 				},
 				"knee-pads": {
 					"name": "Shortbow Championship Knee Pads", // Knee Pads name/type
-					"text": "Health, Burn Resistance, Shock Resistance, Disrupt Resistance", // Knee Pads rolls
+					"rolls": ["Health", "Burn Resistance", "Shock Resistance", "Disrupt Resistance"], // Knee Pads rolls
 					"type": "exotic", // Type: "he", "exotic" or "gearset"
 					"icon": "knee-pads" // "knee-pads" if he/exotic, else gearset name
 				}
@@ -92,17 +86,14 @@
 		"skills": {
 			"1": {
 				"name": "First Aid", // Skill name
-				"text": "Booster Shot", // Skill mod
-				"icon": "booster-shot" // Skill icon
+				"mod": "Booster Shot" // Skill mod
 			},
 			"2": {
 				"name": "Pulse", // Skill name
-				"text": "Scrambler", // Skill mod
-				"icon": "scrambler" // Skill icon
+				"mod": "Scrambler" // Skill mod
 			},
 			"link": {
-				"name": "Survivor Link", // Link name
-				"icon": "survivor-link" // Link icon
+				"name": "Survivor Link" // Link name
 			}
 		}
 	}
