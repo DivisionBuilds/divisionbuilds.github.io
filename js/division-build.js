@@ -104,10 +104,20 @@ var build = {
 	            }
 	            else {
 	                $.each(this, function(key, value) {
-	                    if (key.startsWith("talent"))
-	                        $(".build-content ." + p + " ." + k + " .talents .icon:eq(" + (key.slice(-1) - 1) + ")").addClass(value);
+	                    if (key === "talents") {
+	                        $(".build-content .weapons ." + k + " .talents").text(value.join(", "));
+	                        $(".build-content .weapons ." + k + " .talent-icons .icon").each(function(i) {
+	                        	$(this).addClass(value[i].classify());
+	                        });
+	                    }
 	                    else if (key === "icon")
 	                        $(".build-content ." + p + " ." + k + "> .icon").addClass(value);
+	                    else if (key === "mod") {
+	                    	$(".build-content ." + p + " ." + k + " .mod").text(value);
+	                    	$(".build-content ." + p + " ." + k + " .icon").addClass(value.classify());
+	                    }
+	                    else if ($.isArray(value))
+	                        $(".build-content ." + p + " ." + k + " ." + key).text(value.join(", "));
 	                    else
 	                        $(".build-content ." + p + " ." + k + " ." + key).text(value);
 	                });
