@@ -436,6 +436,9 @@ a:hover {
     font-size: 1.275em;
     font-weight: bold;
 }
+.build-list .list-item .info {
+	line-height: 1.5em;
+}
 .build-list .list-item .author {
     position: relative;
     color: #ff7f00;
