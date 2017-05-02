@@ -23,37 +23,31 @@
 				"chest": {
 					"name": "Vigorous Chest",
 					"rolls": ["Health", "Skill Haste", "Burn Resistance"],
-					"type": "he",
-					"icon": "chest"
+					"icon": "he"
 				},
 				"backpack": {
 					"name": "Inventive Backpack",
 					"rolls": ["Health", "Burn Resistance"],
-					"type": "he",
-					"icon": "backpack"
+					"icon": "he"
 				},
 				"mask": {
 					"name": "Tactician's Authority Mask",
 					"rolls":  ["Health", "Burn Resistance"],
-					"type": "gearset",
 					"icon": "tactician"
 				},
 				"gloves": {
 					"name": "Tactician's Authority Gloves",
 					"rolls": ["Assault Rifle Damage", "Skill Haste", "Critical Hit Chance"],
-					"type": "gearset",
 					"icon": "tactician"
 				},
 				"holster": {
 					"name": "Tactician's Authority Holster",
 					"rolls": ["Skill Haste"],
-					"type": "gearset",
 					"icon": "tactician"
 				},
 				"knee-pads": {
 					"name": "Tactician's Authority Knee Pads",
 					"rolls": ["Health", "Burn Resistance", "Shock Resistance", "Disrupt Resistance"],
-					"type": "gearset",
 					"icon": "tactician"
 				}
 			},
