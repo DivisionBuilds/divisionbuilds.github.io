@@ -206,7 +206,7 @@ $(document).ready(function() {
 		var s = true;
 		$(".submit input").each(function() {
 			var v = $(this).val();
-			if ($(this).attr("name") != "author-link" && v.length === 0) {
+			if ($(this).not(".optional") && v.length === 0) {
 				s = false;
 				$(this).attr("placeholder", "Required");
 				$(this).addClass("highlight");
