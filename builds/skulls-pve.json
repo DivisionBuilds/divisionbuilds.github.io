@@ -9,12 +9,12 @@
 		"weapons": {
 			"primary": {
 				"name": "Lightweight M4",
-				"TALENTS": ["Competent", "Brutal", "Destructive"],
+				"talents": ["Competent", "Brutal", "Destructive"],
 				"icon": "m4"
 			},
 			"secondary": {
 				"name": "M700",
-				"text": ["Brutal", "Prepared", "Destructive"],
+				"talents": ["Brutal", "Prepared", "Destructive"],
 				"icon": "m700"
 			}
 		},
