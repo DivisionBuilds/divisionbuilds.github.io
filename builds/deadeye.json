@@ -9,56 +9,50 @@
 		"weapons": {
 			"primary": {
 				"name": "Surplus SVD",
-				"text": "Competent, Deadly, Unforgiving",
-				"icon": "svd",
-				"talent1": "competent",
-				"talent2": "deadly",
-				"talent3": "unforgiving"
+				"talents": ["Competent", "Deadly", "Unforgiving"],
+				"icon": "svd"
 			},
 			"secondary": {
 				"name": "M700",
-				"text": "Competent, Deadly, Prepared",
-				"icon": "m700",
-				"talent1": "competent",
-				"talent2": "deadly",
-				"talent3": "prepared"
+				"talents": ["Competent", "Deadly", "Prepared"],
+				"icon": "m700"
 			}
 		},
 		"gear": {
 			"items": {
 				"chest": {
 					"name": "Reckless Chest",
-					"text": "Health, Skill Haste, Burn Resistance",
+					"rolls": ["Health", "Skill Haste", "Burn Resistance"],
 					"type": "he",
 					"icon": "chest"
 				},
 				"backpack": {
 					"name": "Specialized Backpack",
-					"text": "Health, Burn Resistance",
+					"rolls": ["Health", "Burn Resistance"],
 					"type": "he",
 					"icon": "backpack"
 				},
 				"mask": {
 					"name": "DeadEYE Mask",
-					"text": "Health, Burn Resistance",
+					"rolls": ["Health", "Burn Resistance"],
 					"type": "gearset",
 					"icon": "deadeye"
 				},
 				"gloves": {
 					"name": "DeadEYE Gloves",
-					"text": "Marksman Rifle Damage, Critical Hit Damage, Skill Haste",
+					"rolls": ["Marksman Rifle Damage", "Critical Hit Damage", "Skill Haste"],
 					"type": "gearset",
 					"icon": "deadeye"
 				},
 				"holster": {
 					"name": "DeadEYE Holster",
-					"text": "Health",
+					"rolls": ["Health"],
 					"type": "gearset",
 					"icon": "deadeye"
 				},
 				"knee-pads": {
 					"name": "DeadEYE Knee Pads",
-					"text": "Health, Burn Resistance, Shock Resistance, Disrupt Resistance",
+					"rolls": ["Health", "Burn Resistance", "Shock Resistance", "Disrupt Resistance"],
 					"type": "gearset",
 					"icon": "deadeye"
 				}
@@ -92,17 +86,14 @@
 		"skills": {
 			"1": {
 				"name": "First Aid",
-				"text": "Booster Shot",
-				"icon": "booster-shot"
+				"mod": "Booster Shot"
 			},
 			"2": {
 				"name": "Pulse",
-				"text": "Tactical Scanner",
-				"icon": "tactical-scanner"
+				"mod": "Tactical Scanner"
 			},
 			"link": {
-				"name": "Survivor Link",
-				"icon": "survivor-link"
+				"mod": "Survivor Link"
 			}
 		}
 	}
