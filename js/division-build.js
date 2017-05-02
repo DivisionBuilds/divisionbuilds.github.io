@@ -85,6 +85,8 @@ var build = {
 	                            $(".build-content .gear .items ." + t + " .icon").addClass(value);
 	                        else if (key === "icon")
 	                            $(".build-content .gear .items ." + t + "> .icon").addClass(value);
+	                        else if ($.isArray(value))
+	                        	$(".build-content ." + p + " ." + k + " ." + key).text(value.join(", "));
 	                        else
 	                            $(".build-content .gear .items ." + t + " ." + key).text(value);
 	                    });
@@ -116,8 +118,6 @@ var build = {
 	                    	$(".build-content ." + p + " ." + k + " .mod").text(value);
 	                    	$(".build-content ." + p + " ." + k + " .icon").addClass(value.classify());
 	                    }
-	                    else if ($.isArray(value))
-	                        $(".build-content ." + p + " ." + k + " ." + key).text(value.join(", "));
 	                    else
 	                        $(".build-content ." + p + " ." + k + " ." + key).text(value);
 	                });
