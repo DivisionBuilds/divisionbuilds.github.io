@@ -23,37 +23,31 @@
 				"chest": {
 					"name": "Vigorous Chest",
 					"rolls": ["Health", "Skill Haste", "Burn Resistance"],
-					"type": "he",
-					"icon": "chest"
+					"icon": "he"
 				},
 				"backpack": {
 					"name": "Specialized Backpack",
 					"rolls": ["Health", "Burn Resistance"],
-					"type": "he",
-					"icon": "backpack"
+					"icon": "he"
 				},
 				"mask": {
 					"name": "D3-FNC Mask",
 					"rolls": ["Health", "Burn Resistance"],
-					"type": "gearset",
 					"icon": "frontline"
 				},
 				"gloves": {
 					"name": "D3-FNC Gloves",
 					"rolls": ["SMG Damage", "Critical Hit Chance", "Critical Hit Damage"],
-					"type": "gearset",
 					"icon": "frontline"
 				},
 				"holster": {
 					"name": "D3-FNC Holster",
 					"rolls": ["Health"],
-					"type": "gearset",
 					"icon": "frontline"
 				},
 				"knee-pads": {
 					"name": "D3-FNC Knee Pads",
 					"rolls": ["Health", "Burn Resistance", "Shock Resistance", "Disrupt Resistance"],
-					"type": "gearset",
 					"icon": "frontline"
 				}
 			},
