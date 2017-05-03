@@ -124,9 +124,9 @@ var build = {
 	                    }
 	                    else if (key === "mods") {
 	                    	$.each(this, function(key, value) {
-	                    		$(".build-content .weapons ." + k + " ." + key + " .rolls span").each(function (i) {
-	                    			$(this).text(value[i]);
-	                    		});
+	                    		for (i = 0; i < value.length; i++)
+	                    			$(".build-content .weapons ." + k + " ." + key + " .rolls").append("<span>" + value[i] + "</span>");
+	                    		}
 	                    	});
 	                    }
 	                    else if (key === "icon")
