@@ -514,6 +514,7 @@ a:hover {
 .submit .weapon .talents,
 .submit .weapon.mods > div,
 .submit .gear .stats,
+.submit .rolls > div,
 .submit .performance > div,
 .submit .skills > * {
     -webkit-flex-grow: 1;
