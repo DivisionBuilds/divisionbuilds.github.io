@@ -206,6 +206,10 @@ a:hover {
 .main-container h1:not(:first-child) {
     margin-top: 20px;
 }
+.main-container p {
+    max-width: 750px;
+    text-align: justify;
+}
 .main-container a {
     position: relative;
     color: #ff7f00;
