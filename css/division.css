@@ -206,8 +206,7 @@ a:hover {
 .main-container h1:not(:first-child) {
     margin-top: 20px;
 }
-.main-container p {
-    max-width: 750px;
+.main-container.text p {
     text-align: justify;
 }
 .main-container a {
