@@ -18,6 +18,9 @@ String.prototype.capitalize = function() {
 String.prototype.classify = function() {
     return this.toLowerCase().replace(/ /g, "-");
 };
+Array.prototype.last = function() {
+    return this[this.length - 1];
+};
 var core = {
 	alert: function(title, msg) {
     	$(".main").html("<div class='error'><div class='error-title'>" + title + "</div><div class='error-content'>" + msg + "</div></div>");
