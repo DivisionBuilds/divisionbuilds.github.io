@@ -13,9 +13,9 @@
 				"icon": "m4"
 			},
 			"secondary": {
-				"name": "MP7",
+				"name": "MP5",
 				"talents": ["Competent", "Responsive", "Unforgiving"],
-				"icon": "mp7"
+				"icon": "mp5"
 			}
 		},
 		"gear": {
