@@ -678,12 +678,12 @@ input,
 }
 .build-content .weapons .secondary {
     position: relative;
-    margin-top: 40px;
+    margin-top: 80px;
 }
 .build-content .weapons .secondary::before {
     content: "";
     position: absolute;
-    top: -20px;
+    top: -40px;
     left: 10%;
     right: 10%;
     height: 2px;
