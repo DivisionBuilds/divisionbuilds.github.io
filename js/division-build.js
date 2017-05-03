@@ -124,7 +124,7 @@ var build = {
 	                    }
 	                    else if (key === "mods") {
 	                    	$.each(this, function(key, value) {
-	                    		for (i = 0; i < value.length; i++)
+	                    		for (i = 0; i < value.length; i++) {
 	                    			$(".build-content .weapons ." + k + " ." + key + " .rolls").append("<span>" + value[i] + "</span>");
 	                    		}
 	                    	});
