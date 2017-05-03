@@ -108,8 +108,8 @@ var build = {
 	                        if (t === "main-stats")
 	                        	v = value + " Roll";
 	                        else
-	                        	v = value + " Mod";
-	                        var s = '<div class="' + t + '"><div class="amount">' + key + '</div><div class="icon ' + (value.icon || value.classify()) + '"></div><div class="info"><div class="name">' + (value.name || v) + '</div>' + a + '</div></div>';
+	                        	v = (value.name || value) + " Mod";
+	                        var s = '<div class="' + t + '"><div class="amount">' + key + '</div><div class="icon ' + (value.icon || value.classify()) + '"></div><div class="info"><div class="name">' + v + '</div>' + a + '</div></div>';
 	                        $(".build-content .gear .stats").append(s);
 	                    });
 	                });
