@@ -2,7 +2,7 @@
 	"title": "Your build title",
 	"author": "Your name",
 	"link": "https://yourwebsitelink.com", // [OPTIONAL]
-	"date": "29/04/2017", // The date you last updated the build (content wise)
+	"date": "03/05/2017", // The date you last updated the build (content wise)
 	"patch": "1.6", // The patch this build is for [OPTIONAL]
 	"tags": ["tag1", "tag2", "tag3"], // Tags: "pvp", "pve", "dps", "healer", "tank" etc.
 	"build": {
