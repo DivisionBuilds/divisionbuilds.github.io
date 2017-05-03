@@ -282,6 +282,10 @@ a:hover {
     -webkit-filter: invert(100%);
     filter: invert(100%);
 }
+.logo.jekyll {
+    background-image: url(http://jekyllrb.com/img/logo-2x.png);
+    background-size: 100px;
+}
 .logo.ubisoft {
     background-image: url(https://ubistatic19-a.akamaihd.net/ubicomstatic/de-DE/global/css/images/ubi-mark.svg);
     background-position: 0 10px;
