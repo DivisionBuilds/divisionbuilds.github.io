@@ -511,7 +511,8 @@ a:hover {
     margin-right: 10px;
 }
 .submit input,
-.submit .weapon .talent-icons,
+.submit .weapon .talents,
+.submit .weapon.mods > div,
 .submit .gear .stats,
 .submit .performance > div,
 .submit .skills > * {
