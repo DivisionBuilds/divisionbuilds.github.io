@@ -55,7 +55,6 @@
 				"main-stats": {
 					"4x": "Firearms",
 					"1x": "Electronics"
-					}
 				},
 				"mods": {
 					"5x": ["Firearms", "Health"]
