@@ -9,7 +9,7 @@ $(document).ready(function() {
                          url: "https://raw.githubusercontent.com/DivisionBuilds/divisionbuilds.github.io/master/builds/" + n,
                          success: function(result) {
                               var u = this.url.split("/");
-                              $(".build-list").append('<a href="build?id=' + u[u.length - 1].slice(0, -5) + '"></a>');
+                              $(".build-list").append('<a href="build?id=' + u.last().slice(0, -5) + '"></a>');
                               var r = JSON.parse(result);
                               var s = '<div class="list-item"><div class="title">' + r.title + '</div><div class="info">';
                               if (r.hasOwnProperty("author"))
