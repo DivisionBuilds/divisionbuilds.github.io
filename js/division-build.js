@@ -6,7 +6,7 @@ $(document).ready(function() {
     else {
         $.each(s.slice(1).split("&"), function() {
             if (this.split("=")[0] === "id")
-            	build.loadURL(this.split("=")[1]);
+            	build.loadFile(this.split("=")[1]);
         });
         $(".tab-bar-item").click(function() {
             build.showpage($(this).text());
@@ -29,9 +29,9 @@ var build = {
 	        $(".build-content .weapons").addClass("visible");
 	    }
 	},
-	loadURL: function(file) {
+	loadURL: function(url) {
 		$.ajax({
-	        url: "https://raw.githubusercontent.com/DivisionBuilds/divisionbuilds.github.io/master/builds/" + file + ".json",
+	        url: url,
 	        success: function(result) {
 	            build.loadData(JSON.parse(result));
 	        },
@@ -61,6 +61,9 @@ var build = {
 				core.alert("Error loading build data", msg);
 	        }
 	    });
+	},
+	loadFile: function(file) {
+		build.loadURL("https://raw.githubusercontent.com/DivisionBuilds/divisionbuilds.github.io/master/builds/" + file + ".json")
 	},
 	loadData: function(d) {
 	    document.title = d.title + " - " + document.title;
