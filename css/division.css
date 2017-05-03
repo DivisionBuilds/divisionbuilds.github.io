@@ -676,11 +676,11 @@ input,
     opacity: .7;
     height: 100px;
 }
-.build-content .weapons .secondary {
+.build-content .weapons .secondary:not(.mods) {
     position: relative;
     margin-top: 80px;
 }
-.build-content .weapons .secondary::before {
+.build-content .weapons .secondary:not(.mods)::before {
     content: "";
     position: absolute;
     top: -40px;
