@@ -96,10 +96,17 @@ var build = {
 	                $.each(this, function(key, value) {
 	                    var t = key;
 	                    $.each(this, function(key, value) {
-	                        var s = '<div class="' + t + '"><div class="amount">' + key + '</div><div class="icon ' + value.icon + '"></div><div class="info"><div class="name">' + value.name + '</div>';
-	                        if (value.hasOwnProperty("text"))
-	                            s += '<div class="text">' + value.text + '</div>';
-	                        s += '</div></div>';
+	                    	if ($.isArray(value)) {
+	                    		a = '<div class="text">' + value[1] + '</div>';
+	                        	value = value[0];
+	                        }
+	                        else
+	                        	a = "";
+	                        if (t === "main-stats")
+	                        	v = value + " Roll";
+	                        else
+	                        	v = value + " Mod";
+	                        var s = '<div class="' + t + '"><div class="amount">' + key + '</div><div class="icon ' + (value.icon || value.classify()) + '"></div><div class="info"><div class="name">' + (value.name || v) + '</div>' + a + '</div></div>';
 	                        $(".build-content .gear .stats").append(s);
 	                    });
 	                });

@@ -53,30 +53,17 @@
 			},
 			"stats": {
 				"main-stats": {
-					"4x": {
-						"name": "Electronics Roll",
-						"icon": "electronics"
-					},
-					"1x": {
-						"name": "Firearms Roll",
-						"icon": "firearms"
-					}
+					"4x": "Electronics",
+					"1x": "Firearms"
 				},
 				"mods": {
-					"4x": {
-						"name": "Electronics Mod",
-						"text": "Health",
-						"icon": "electronics"
-					},
-					"1x": {
-						"name": "Electronics Mod",
-						"text": "Skill Haste",
-						"icon": "electronics"
+					"4x": ["Electronics", "Health"],
+					"1x": ["Electronics", "Skill Haste"]
 					}
 				},
 				"performance": {
 					"4x": {
-						"name": "First Aid Ally Heal Mod",
+						"name": "First Aid Ally Heal",
 						"icon": "first-aid"
 					}
 				}

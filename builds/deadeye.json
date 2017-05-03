@@ -53,25 +53,16 @@
 			},
 			"stats": {
 				"main-stats": {
-					"4x": {
-						"name": "Firearms Roll",
-						"icon": "firearms"
-					},
-					"1x": {
-						"name": "Electronics Roll",
-						"icon": "electronics"
+					"4x": "Firearms",
+					"1x": "Electronics"
 					}
 				},
 				"mods": {
-					"5x": {
-						"name": "Firearms Mod",
-						"text": "Health",
-						"icon": "firearms"
-					}
+					"5x": ["Firearms", "Health"]
 				},
 				"performance": {
 					"4x": {
-						"name": "First Aid Self Heal Mod",
+						"name": "First Aid Self Heal",
 						"icon": "first-aid"
 					}
 				}

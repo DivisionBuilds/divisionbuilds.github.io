@@ -53,26 +53,15 @@
 			},
 			"stats": {
 				"main-stats": {
-					"5x": {
-						"name": "Firearms Roll",
-						"icon": "firearms"
-					}
+					"5x": "Firearms"
 				},
 				"mods": {
-					"4x": {
-						"name": "Firearms Mod",
-						"text": "Critical Hit Damage",
-						"icon": "firearms"
-					},
-					"1x": {
-						"name": "Stamina Mod",
-						"text": "Critical Hit Damage",
-						"icon": "stamina"
-					}
+					"4x": ["Firearms", "Critical Hit Damage"],
+					"1x": ["Stamina", "Critical Hit Damage"]
 				},
 				"performance": {
 					"4x": {
-						"name": "Ballistic Shield Damage Resilience Mod",
+						"name": "Ballistic Shield Damage Resilience",
 						"icon": "ballistic-shield"
 					}
 				}
