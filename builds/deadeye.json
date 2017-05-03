@@ -10,11 +10,23 @@
 			"primary": {
 				"name": "Surplus SVD",
 				"talents": ["Competent", "Deadly", "Unforgiving"],
+				"mods": {
+					"magazine": ["Magazine Size", "Rate of Fire", "Critical Hit Damage"],
+					"underbarrel": ["Critical Hit Damage", "Reload Speed", "Stability"],
+					"muzzle": ["Critical Hit Damage", "Stability", "Accuracy"],
+					"scope": ["Critical Hit Damage", "Stability", "Accuracy"]
+				},
 				"icon": "svd"
 			},
 			"secondary": {
 				"name": "M700",
 				"talents": ["Competent", "Deadly", "Prepared"],
+				"mods": {
+					"magazine": ["Magazine Size", "Rate of Fire", "Critical Hit Damage"],
+					"underbarrel": ["Critical Hit Damage", "Reload Speed", "Accuracy"],
+					"muzzle": ["Critical Hit Damage", "Accuracy", "Stability"],
+					"scope": ["Critical Hit Damage", "Accuracy", "Stability"]
+				},
 				"icon": "m700"
 			}
 		},

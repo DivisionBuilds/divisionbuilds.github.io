@@ -10,11 +10,23 @@
 			"primary": {
 				"name": "MP7",
 				"talents": ["Responsive", "Deadly", "Unforgiving"],
+				"mods": {
+					"magazine": ["Magazine Size", "Rate of Fire", "Critical Hit Chance"],
+					"underbarrel": ["Critical Hit Damage", "Reload Speed", "Optimal Range"],
+					"muzzle": ["Critical Hit Damage", "Headshot Damage", "Critical Hit Chance"],
+					"scope": ["Critical Hit Damage", "Headshot Damage", "Critical Hit Chance"]
+				},
 				"icon": "mp7"
 			},
 			"secondary": {
 				"name": "PP-19",
 				"talents": ["Responsive", "Deadly", "Vicious"],
+				"mods": {
+					"magazine": ["Magazine Size", "Rate of Fire", "Critical Hit Chance"],
+					"underbarrel": ["Critical Hit Damage", "Reload Speed", "Optimal Range"],
+					"muzzle": ["Critical Hit Damage", "Headshot Damage", "Critical Hit Chance"],
+					"scope": ["Critical Hit Damage", "Headshot Damage", "Critical Hit Chance"]
+				},
 				"icon": "pp-19"
 			}
 		},

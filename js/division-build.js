@@ -122,6 +122,13 @@ var build = {
 	                        	$(this).addClass(value[i].classify());
 	                        });
 	                    }
+	                    else if (key === "mods") {
+	                    	$.each(this, function(key, value) {
+	                    		$(".build-content .weapons ." + k + " ." + key + " .rolls span").each(function (i) {
+	                    			$(this).text(value[i]);
+	                    		});
+	                    	});
+	                    }
 	                    else if (key === "icon")
 	                        $(".build-content ." + p + " ." + k + "> .icon").addClass(value);
 	                    else if (key === "mod") {

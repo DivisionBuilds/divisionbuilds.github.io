@@ -9,12 +9,24 @@
 		"weapons": {
 			"primary": {
 				"name": "Lightweight M4", // Primary weapon name
-				"talents": ["Competent", "Brutal", "Unforgiving"], // Weapon talents
+				"talents": ["Competent", "Brutal", "Unforgiving"], // Primary weapon talents
+				"mods": { // Primary weapon mods
+					"magazine": ["Magazine Size", "Rate of Fire", "Critical Hit Chance"], // Magazine rolls
+					"underbarrel": ["Reload Speed", "Critical Hit Damage", "Stability"], // Underbarrel rolls
+					"muzzle": ["Headshot Damage", "Critical Hit Chance", "Critical Hit Damage"], // Muzzle rolls
+					"scope": ["Headshot Damage", "Critical Hit Chance", "Critical Hit Damage"] // Scope rolls
+				},
 				"icon": "m4" // Weapon icon
 			},
 			"secondary": {
 				"name": "MP7", // Secondary weapon name
-				"talents": ["Competent", "Fierce", "Unforgiving"], // Weapon talents
+				"talents": ["Competent", "Fierce", "Unforgiving"], // Secondary weapon talents
+				"mods": { // Secondary weapon mods
+					"magazine": ["Magazine Size", "Rate of Fire", "Critical Hit Chance"], // Magazine rolls
+					"underbarrel": ["Reload Speed", "Critical Hit Damage", "Stability"], // Underbarrel rolls
+					"muzzle": ["Headshot Damage", "Critical Hit Chance", "Critical Hit Damage"], // Muzzle rolls
+					"scope": ["Headshot Damage", "Critical Hit Chance", "Critical Hit Damage"] // Scope rolls
+				},
 				"icon": "mp7" // Weapon icon
 			}
 		},

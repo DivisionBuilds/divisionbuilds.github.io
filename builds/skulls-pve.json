@@ -10,11 +10,23 @@
 			"primary": {
 				"name": "Lightweight M4",
 				"talents": ["Competent", "Brutal", "Destructive"],
+				"mods": {
+					"magazine": ["Magazine Size", "Rate of Fire", "Critical Hit Chance"],
+					"underbarrel": ["Reload Speed", "Critical Hit Damage", "Stability"],
+					"muzzle": ["Headshot Damage", "Critical Hit Chance", "Critical Hit Damage"],
+					"scope": ["Headshot Damage", "Critical Hit Chance", "Critical Hit Damage"]
+				},
 				"icon": "m4"
 			},
 			"secondary": {
 				"name": "M700",
 				"talents": ["Brutal", "Prepared", "Destructive"],
+				"mods": {
+					"magazine": ["Magazine Size", "Rate of Fire", "Critical Hit Chance"],
+					"underbarrel": ["Reload Speed", "Critical Hit Damage", "Accuracy"],
+					"muzzle": ["Headshot Damage", "Critical Hit Chance", "Critical Hit Damage"],
+					"scope": ["Headshot Damage", "Critical Hit Chance", "Critical Hit Damage"]
+				},
 				"icon": "m700"
 			}
 		},

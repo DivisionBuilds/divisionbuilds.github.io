@@ -676,6 +676,19 @@ input,
     opacity: .7;
     height: 100px;
 }
+.build-content .weapons .secondary {
+    position: relative;
+    margin-top: 40px;
+}
+.build-content .weapons .secondary::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: 10%;
+    right: 10%;
+    height: 2px;
+    background: hsla(0, 0%, 100%, .3);
+}
 .build-content .weapons .icon::before,
 .build-content .skills .icon::before {
     content: "";
@@ -699,6 +712,28 @@ input,
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+}
+.build-content .weapons .mods {
+    justify-content: space-between;
+}
+.build-content .weapons .mods > * {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.build-content .weapons .mods .rolls {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+.build-content .weapons .mods .icon {
+    margin-right: 10px;
 }
 .build-content .gear {
     -webkit-flex-direction: row;
@@ -802,7 +837,7 @@ input,
 .build-content .gear .stats .main-stats + .mods::before {
     content: "";
     position: absolute;
-    top: -2px;
+    top: -4px;
     left: 10%;
     right: 10%;
     height: 2px;
@@ -1174,6 +1209,26 @@ input,
     background-position: -300px 0;
 }
 
+/* WEAPON MOD ICONS */
+.build-content .weapons .mods .icon {
+    background-image: url(../sprites/items2.png);
+    background-size: 400px;
+    width: 50px;
+    height: 50px;
+}
+.build-content .weapons .mods .magazine .icon {
+    background-position: 0 -51.5px;
+}
+.build-content .weapons .mods .muzzle .icon {
+    background-position: -51.5px -51.5px;
+}
+.build-content .weapons .mods .scope .icon {
+    background-position: -103px -51.5px;
+}
+.build-content .weapons .mods .underbarrel .icon {
+    background-position: -154.5px -51.5px;
+}
+
 /* MAIN STAT ICONS */
 .build-content .gear .stats .main-stats .icon::after,
 .build-content .gear .stats .mods .icon::after {
@@ -1197,7 +1252,7 @@ input,
 .build-content .gear .items .icon.he::after,
 .build-content .gear .items .icon.exotic::after {
     background-image: url(../sprites/items.png);
-        background-size: 800px;
+    background-size: 800px;
 }
 .build-content .gear .holster .icon.he::after,
 .build-content .gear .holster .icon.exotic::after {
