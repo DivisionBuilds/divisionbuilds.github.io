@@ -69,11 +69,11 @@
 			},
 			"stats": {
 				"main-stats": {
-					"5x": "Firearms"
+					"4x": "Firearms",
+					"1x": "Electronics"
 				},
 				"mods": {
-					"4x": ["Firearms", "Health"],
-					"1x": ["Stamina", "Health"]
+					"5x": ["Firearms", "Health"]
 				},
 				"performance": {
 					"4x": {
