@@ -49,11 +49,11 @@ var calc = {
 			case "inventive": {
 				return s * 1.15;
 				break;
-			},
+			}
 			case "specialized": {
 				return s + ((firearms + stamina) * 2);
 				break;
-			},
+			}
 			default: {
 				return s;
 			}
