@@ -1,15 +1,19 @@
 {
-	"title": "Skulls PvE DPS",
+	"title": "Tactician Healer",
 	"author": "Zerthox",
 	"link": "https://github.com/Zerthox",
 	"date": "03/05/2017",
 	"patch": "1.6",
-	"tags": ["pve", "dps"],
+	"tags": ["pvp", "pve", "healer", "tactician", "skill power"],
 	"build": {
+		"general": [
+			"This build is heavily inspired by <a href='https://www.youtube.com/MarcoStyleNL'>MarcoStyle</a>'s Tactician Healer build, you can check out his video here: <a href='https://youtu.be/yNYRCNqS1nM'>Patch 1.6 Tactician Healer Build/Guide | Infinite Sustain</a>",
+			"Rolling Stability or Accuracy on the weapon mods does not really matter, feel free pick your preferred handling stat."
+		],
 		"weapons": {
 			"primary": {
 				"name": "Lightweight M4",
-				"talents": ["Competent", "Brutal", "Destructive"],
+				"talents": ["Talented", "Competent", "Skilled"],
 				"mods": {
 					"magazine": ["Magazine Size", "Rate of Fire", "Critical Hit Chance"],
 					"underbarrel": ["Reload Speed", "Critical Hit Damage", "Stability"],
@@ -19,15 +23,15 @@
 				"icon": "m4"
 			},
 			"secondary": {
-				"name": "M700",
-				"talents": ["Brutal", "Prepared", "Destructive"],
+				"name": "Tenebrae",
+				"talents": ["Talented", "Coolheaded", "Lights Out"],
 				"mods": {
 					"magazine": ["Magazine Size", "Rate of Fire", "Critical Hit Chance"],
-					"underbarrel": ["Reload Speed", "Critical Hit Damage", "Accuracy"],
+					"underbarrel": ["Reload Speed", "Critical Hit Damage", "Stability"],
 					"muzzle": ["Headshot Damage", "Critical Hit Chance", "Critical Hit Damage"],
 					"scope": ["Headshot Damage", "Critical Hit Chance", "Critical Hit Damage"]
 				},
-				"icon": "m700"
+				"icon": "tenebrae"
 			}
 		},
 		"gear": {
@@ -38,42 +42,43 @@
 					"icon": "he"
 				},
 				"backpack": {
-					"name": "Specialized Backpack",
+					"name": "Inventive Backpack",
 					"rolls": ["Health", "Burn Resistance"],
 					"icon": "he"
 				},
 				"mask": {
-					"name": "Refreshed Mask",
-					"rolls": ["Health", "Increased Kill XP"],
-					"icon": "he"
+					"name": "Tactician's Authority Mask",
+					"rolls":  ["Health", "Burn Resistance"],
+					"icon": "tactician"
 				},
 				"gloves": {
-					"name": "Skulls MC Gloves",
-					"rolls": ["Assault Rifle Damage", "Critical Hit Chance", "Critical Hit Damage"],
-					"icon": "exotic"
+					"name": "Tactician's Authority Gloves",
+					"rolls": ["Assault Rifle Damage", "Skill Haste", "Critical Hit Chance"],
+					"icon": "tactician"
 				},
 				"holster": {
-					"name": "Nimble Holster",
-					"rolls": ["Health"],
-					"icon": "he"
+					"name": "Tactician's Authority Holster",
+					"rolls": ["Skill Haste"],
+					"icon": "tactician"
 				},
 				"knee-pads": {
-					"name": "Accomplished Knee Pads",
-					"rolls": ["Health", "Damage to Elites", "Increased Kill XP", "Shock Resistance"],
-					"icon": "he"
+					"name": "Tactician's Authority Knee Pads",
+					"rolls": ["Health", "Burn Resistance", "Shock Resistance", "Disrupt Resistance"],
+					"icon": "tactician"
 				}
 			},
 			"stats": {
 				"main-stats": {
-					"4x": "Firearms",
-					"1x": "Electronics"
+					"4x": "Electronics",
+					"1x": "Firearms"
 				},
 				"mods": {
-					"5x": ["Firearms",  "Health"]
+					"4x": ["Electronics", "Health"],
+					"1x": ["Electronics", "Skill Haste"]
 				},
 				"performance": {
 					"4x": {
-						"name": "First Aid Self Heal",
+						"name": "First Aid Ally Heal",
 						"icon": "first-aid"
 					}
 				}
@@ -82,7 +87,7 @@
 		"skills": {
 			"1": {
 				"name": "First Aid",
-				"mod": "Booster Shot"
+				"mod": "Defibrillator"
 			},
 			"2": {
 				"name": "Support Station",

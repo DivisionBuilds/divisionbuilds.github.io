@@ -1,0 +1,100 @@
+{
+	"title": "Firecrest PvP DPS",
+	"author": "Zerthox",
+	"link": "https://github.com/Zerthox",
+	"date": "05/05/2017",
+	"patch": "1.6",
+	"tags": ["pvp", "dps"],
+	"build": {
+		"general": [
+			"This build tries to use the synergy between the Firecrest gearset, the Distracted talent on the Urban MDR and Shortbow Championship Knee Pads. Keep in mind that is more of an (experimental) niche build though.",
+			"Rolling Stability or Accuracy on the weapon mods does not really matter, feel free pick your preferred handling stat."
+		],
+		"weapons": {
+			"primary": {
+				"name": "Urban MDR",
+				"talents": ["Competent", "Brutal", "Distracted"],
+				"mods": {
+					"magazine": ["Magazine Size", "Rate of Fire", "Critical Hit Chance"],
+					"underbarrel": ["Reload Speed", "Critical Hit Damage", "Stability"],
+					"muzzle": ["Headshot Damage", "Critical Hit Chance", "Stability"],
+					"scope": ["Headshot Damage", "Critical Hit Chance", "Stability"]
+				},
+				"icon": "urban-mdr"
+			},
+			"secondary": {
+				"name": "Lightweight M4",
+				"talents": ["Competent", "Brutal", "Unforgiving"],
+				"mods": {
+					"magazine": ["Magazine Size", "Rate of Fire", "Critical Hit Chance"],
+					"underbarrel": ["Reload Speed", "Critical Hit Damage", "Stability"],
+					"muzzle": ["Headshot Damage", "Critical Hit Chance", "Stability"],
+					"scope": ["Headshot Damage", "Critical Hit Chance", "Stability"]
+				},
+				"icon": "m4"
+			}
+		},
+		"gear": {
+			"items": {
+				"chest": {
+					"name": "Firecrest Chest",
+					"rolls": ["Health", "Skill Haste", "Burn Resistance"],
+					"icon": "firecrest"
+				},
+				"backpack": {
+					"name": "Specialized Backpack",
+					"rolls": ["Health", "Burn Resistance"],
+					"icon": "he"
+				},
+				"mask": {
+					"name": "Firecrest Mask",
+					"rolls": ["Health", "Burn Resistance"],
+					"icon": "firecrest"
+				},
+				"gloves": {
+					"name": "Firecrest Gloves",
+					"rolls": ["Assault Rifle Damage", "Critical Hit Chance", "Skill Haste"],
+					"icon": "firecrest"
+				},
+				"holster": {
+					"name": "Firecrest Holster",
+					"rolls": ["Health"],
+					"icon": "firecrest"
+				},
+				"knee-pads": {
+					"name": "Shortbow Championship Knee Pads",
+					"rolls": ["Health", "Burn Resistance", "Shock Resistance", "Disrupt Resistance"],
+					"icon": "exotic"
+				}
+			},
+			"stats": {
+				"main-stats": {
+					"5x": "Firearms"
+				},
+				"mods": {
+					"4x": ["Firearms", "Health"],
+					"1x": ["Stamina", "Health"]
+				},
+				"performance": {
+					"4x": {
+						"name": "Seeker Mine Explosion Radius",
+						"icon": "seeker"
+					}
+				}
+			}
+		},
+		"skills": {
+			"1": {
+				"name": "First Aid",
+				"mod": "Booster Shot"
+			},
+			"2": {
+				"name": "Seeker Mine",
+				"mod": "Airburst"
+			},
+			"link": {
+				"mod": "Survivor Link"
+			}
+		}
+	}
+}
