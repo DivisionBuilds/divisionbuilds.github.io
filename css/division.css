@@ -199,6 +199,7 @@ a:hover {
     padding: 20px 40px;
     background: hsla(0, 0%, 50%, .1);
     cursor: auto;
+    font-size: 1.125em;
 }
 .main-container.wide {
     min-width: 850px;
