@@ -647,7 +647,7 @@ input,
     margin: 0 40px;
 }
 .build-content > :not(.visible) {
-    display: none;
+    display: none !important;
 }
 .build-content > * {
     display: -webkit-box;
@@ -658,7 +658,7 @@ input,
     flex-direction: column;
     margin: 0 auto;
 }
-.build-content > * > * {
+.build-content > :not(.general) > * {
     margin: 5px 0;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -670,7 +670,7 @@ input,
     -ms-flex-shrink: 0;
     flex-shrink: 0;
 }
-.build-content > * > * > * {
+.build-content > :not(.general) > * > * {
     margin: 5px;
 }
 .build-content .info {
