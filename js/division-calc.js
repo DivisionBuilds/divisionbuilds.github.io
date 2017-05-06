@@ -20,7 +20,7 @@ var calc = {
 			    chd = o.chd || 0,
 			    hsc = o.hsc || 0,
 			    hsd = o.hsd || 0;
-			return calc.bulletDMG({base: base, firearms: firearms, ratio: ratio, ead: ead, dte: dte, chc: chc, chd: chd, hsc: hsc, hsd: hsd}) * ((100 + (ead / 2)) / 100) * ((100 + dte) / 100);
+			return calc.bulletDMG(o) * ((100 + (ead / 2)) / 100) * ((100 + dte) / 100);
 		},
 		burstDPS: function(o) {
 			var base = o.base,
@@ -33,7 +33,7 @@ var calc = {
 			    chd = o.chd || 0,
 			    hsc = o.hsc || 0,
 			    hsd = o.hsd || 0;
-			var d = calc.pve.bulletDMG({base: base, firearms: firearms, ratio: ratio, ead: ead, dte: dte, chc: chc, chd: chd, hsc: hsc, hsd: hsd});
+			var d = calc.pve.bulletDMG(o);
 			return d * (rpm / 60);
 		},
 		DPS: function(o) {
@@ -49,7 +49,7 @@ var calc = {
 			    chd = o.chd || 0,
 			    hsc = o.hsc || 0,
 			    hsd = o.hsd || 0;
-			var d = calc.pve.bulletDMG({base: base, firearms: firearms, ratio: ratio, ead: ead, dte: dte, chc: chc, chd: chd, hsc: hsc, hsd: hsd});
+			var d = calc.pve.bulletDMG(o);
 			return (d * magsize) / (magsize / (rpm / 60) + reloadtime);
 		}
 	},
@@ -65,7 +65,7 @@ var calc = {
 			    hsd = o.hsd || 0,
 			    pvpdmg_ratio = o.pvpdmg_ratio || 0.42,
 			    pvpead_ratio = o.pvpead_ratio || 0.3;
-			var a = (calc.bulletDMG({base: base, firearms: firearms, ratio: ratio, chc: chc, chd: chd, hsc: hsc, hsd: hsd}) * pvpdmg_ratio) / 100;
+			var a = (calc.bulletDMG(o) * pvpdmg_ratio) / 100;
 			var min = a * (100 - (35 / 100 * (100 - (ead * pvpead_ratio))));
 			var max = a * (100 - (30 / 100 * (100 - (ead * pvpead_ratio))));
 			return [min, max];
@@ -80,7 +80,7 @@ var calc = {
 			    chd = o.chd || 0,
 			    hsc = o.hsc || 0,
 			    hsd = o.hsd || 0;
-			var d = calc.pvp.bulletDMG({base: base, firearms: firearms, ratio: ratio, ead: ead, chc: chc, chd: chd, hsc: hsc, hsd: hsd});
+			var d = calc.pvp.bulletDMG(o);
 			var min = d[0] * (rpm / 60);
 			var max = d[1] * (rpm / 60);
 			return [min, max];
@@ -97,7 +97,7 @@ var calc = {
 			    chd = o.chd || 0,
 			    hsc = o.hsc || 0,
 			    hsd = o.hsd || 0;
-			var d = calc.pvp.bulletDMG({base: base, firearms: firearms, ratio: ratio, ead: ead, chc: chc, chd: chd, hsc: hsc, hsd: hsd});
+			var d = calc.pvp.bulletDMG(o);
 			var min = (d[0] * magsize) / (magsize / (rpm / 60) + reloadtime);
 			var max = (d[1] * magsize) / (magsize / (rpm / 60) + reloadtime); 
 			return [min, max];
