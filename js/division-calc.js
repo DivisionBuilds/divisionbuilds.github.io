@@ -1,5 +1,7 @@
 var calc = {
 	bulletDMG: function(o) {
+		// Required: base, firearms, ratio
+		// Optional: chc, chd, hsc, hsd
 		var base = o.base,
 		    firearms = o.firearms,
 		    ratio = o.ratio,
@@ -11,6 +13,8 @@ var calc = {
 	},
 	pve: {
 		bulletDMG: function(o) {
+		// Required: base, firearms, ratio
+		// Optional: ead, dte, chc, chd, hsc, hsd
 			var base = o.base,
 			    firearms = o.firearms,
 			    ratio = o.ratio,
@@ -23,6 +27,8 @@ var calc = {
 			return calc.bulletDMG(o) * ((100 + (ead / 2)) / 100) * ((100 + dte) / 100);
 		},
 		burstDPS: function(o) {
+		// Required: base, rpm, firearms, ratio
+		// Optional: ead, dte, chc, chd, hsc, hsd
 			var base = o.base,
 				rpm = o.rpm,
 			    firearms = o.firearms,
@@ -37,6 +43,8 @@ var calc = {
 			return d * (rpm / 60);
 		},
 		DPS: function(o) {
+		// Required: base, rpm, magsize, reloadtime, firearms, ratio
+		// Optional: ead, dte, chc, chd, hsc, hsd
 			var base = o.base,
 				rpm = o.rpm,
 				magsize = o.magsize,
@@ -55,6 +63,8 @@ var calc = {
 	},
 	pvp: {
 		bulletDMG: function(o) {
+		// Required: base, firearms, ratio
+		// Optional: ead, chc, chd, hsc, hsd, pvpdmg_ratio, pvpead_ratio
 			var base = o.base,
 			    firearms = o.firearms,
 			    ratio = o.ratio,
@@ -71,6 +81,8 @@ var calc = {
 			return [min, max];
 		},
 		burstDPS: function(o) {
+		// Required: base, rpm, firearms, ratio
+		// Optional: ead, chc, chd, hsc, hsd, pvpdmg_ratio, pvpead_ratio
 			var base = o.base,
 				rpm = o.rpm,
 			    firearms = o.firearms,
@@ -86,6 +98,8 @@ var calc = {
 			return [min, max];
 		},
 		DPS: function(o) {
+		// Required: base, rpm, magsize, reloadtime, firearms, ratio
+		// Optional: ead, chc, chd, hsc, hsd, pvpdmg_ratio, pvpead_ratio
 			var base = o.base,
 				rpm = o.rpm,
 				magsize = o.magsize,
@@ -107,11 +121,14 @@ var calc = {
 		return arm / 239;
 	},
 	toughness: function(o) {
+		// Required: health, mitigation
 		var health = o.health || 200000,
 			mitigation = o.mitigation || 0;
 		return health / ((100 - mitigation) / 100);
 	},
 	skillpower: function(o) {
+		// Required: electronics
+		// Optional: talent, firearms, stamina
 		var firearms = o.firearms || 2674,
 			stamina = o.stamina || 2674;
 		var s = o.electronics * 30;
