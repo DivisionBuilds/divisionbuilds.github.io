@@ -108,7 +108,7 @@ var calc = {
 	},
 	toughness: function(o) {
 		var health = o.health || 200000,
-			mitigation = o.mitigaion || 0;
+			mitigation = o.mitigation || 0;
 		return health / ((100 - mitigation) / 100);
 	},
 	skillpower: function(o) {
