@@ -128,11 +128,12 @@ var calc = {
 	},
 	skillpower: function(o) {
 		// Required: electronics
-		// Optional: talent, firearms, stamina
-		var firearms = o.firearms || 2674,
+		// Optional: talent ("inventive" or "specialized"), firearms, stamina
+		var talent = o.talent.toLowerCase() || "",
+			firearms = o.firearms || 2674,
 			stamina = o.stamina || 2674;
 		var s = o.electronics * 30;
-		switch (o.talent) {
+		switch (talent) {
 			case "inventive": {
 				return s * 1.15;
 				break;
