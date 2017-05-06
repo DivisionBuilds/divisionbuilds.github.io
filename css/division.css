@@ -499,13 +499,22 @@ a:hover {
     margin-bottom: 20px;
 }
 .submit > * > * {
+
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
-    margin-right: 10px;
+}
+.submit > :not(.general) > * {
+    width: 100%;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+.submit > * > * + * {
+    margin-left: 10px;
 }
 .submit > * > * div {
     display: -webkit-box;
@@ -515,8 +524,8 @@ a:hover {
 .submit > * > * div + div {
     margin-top: 5px;
 }
-.submit > * > * div > :not(:last-child) {
-    margin-right: 10px;
+.submit > * > * div > * + * {
+    margin-left: 10px;
 }
 .submit input,
 .submit .weapon .talents,
@@ -525,9 +534,12 @@ a:hover {
 .submit .rolls > div,
 .submit .performance > div,
 .submit .skills > * {
-    -webkit-flex-grow: 1;
-    -ms-flex-grow: 1;
-    flex-grow: 1;
+    -webkit-flex-grow: 2;
+    -ms-flex-grow: 2;
+    flex-grow: 2;
+}
+.submit input {
+    min-width: 0;
 }
 .submit .highlight {
     box-shadow: 0 0 0 1px #ff7f00;
