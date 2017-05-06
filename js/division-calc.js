@@ -112,8 +112,8 @@ var calc = {
 		return health / ((100 - mitigation) / 100);
 	},
 	skillpower: function(o) {
-		var firearms = o.firearms || 0,
-			stamina = o.stamina || 0;
+		var firearms = o.firearms || 2674,
+			stamina = o.stamina || 2674;
 		var s = o.electronics * 30;
 		switch (o.talent) {
 			case "inventive": {
