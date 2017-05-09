@@ -2,7 +2,7 @@
 	"title": "Firecrest PvP DPS",
 	"author": "Zerthox",
 	"link": "https://github.com/Zerthox",
-	"date": "05/05/2017",
+	"date": "09/05/2017",
 	"patch": "1.6",
 	"tags": ["pvp", "dps", "seeker"],
 	"build": {
@@ -17,8 +17,8 @@
 				"mods": {
 					"magazine": ["Magazine Size", "Rate of Fire", "Critical Hit Chance"],
 					"underbarrel": ["Reload Speed", "Critical Hit Damage", "Stability"],
-					"muzzle": ["Headshot Damage", "Critical Hit Chance", "Stability"],
-					"scope": ["Headshot Damage", "Critical Hit Chance", "Stability"]
+					"muzzle": ["Critical Hit Damage", "Headshot Damage", "Critical Hit Chance"],
+					"scope": ["Critical Hit Damage", "Headshot Damage", "Critical Hit Chance"]
 				},
 				"icon": "urban-mdr"
 			},
@@ -28,8 +28,8 @@
 				"mods": {
 					"magazine": ["Magazine Size", "Rate of Fire", "Critical Hit Chance"],
 					"underbarrel": ["Reload Speed", "Critical Hit Damage", "Stability"],
-					"muzzle": ["Headshot Damage", "Critical Hit Chance", "Stability"],
-					"scope": ["Headshot Damage", "Critical Hit Chance", "Stability"]
+					"muzzle": ["Critical Hit Damage", "Headshot Damage", "Critical Hit Chance"],
+					"scope": ["Critical Hit Damage", "Headshot Damage", "Critical Hit Chance"]
 				},
 				"icon": "m4"
 			}
