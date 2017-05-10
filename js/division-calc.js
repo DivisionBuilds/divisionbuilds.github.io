@@ -2,9 +2,9 @@ var calc = {
 	bulletDMG: function(o) {
 		// Required: base, firearms, ratio
 		// Optional: chc, chd, hsc, hsd
-		var base = o.base,
-		    firearms = o.firearms,
-		    ratio = o.ratio,
+		var base = o.base || 0,
+		    firearms = o.firearms || 0,
+		    ratio = o.ratio || 0,
 		    chc = o.chc || 0,
 		    chd = o.chd || 0,
 		    hsc = o.hsc || 0,
@@ -26,13 +26,29 @@ var calc = {
 			    hsd = o.hsd || 0;
 			return calc.bulletDMG(o) * ((100 + (ead / 2)) / 100) * ((100 + dte) / 100);
 		},
+		burstDMG: function(o) {
+		// Required: base, magsize, firearms, ratio
+		// Optional: ead, dte, chc, chd, hsc, hsd
+			var base = o.base || 0,
+				magsize = o.magsize || 1,
+			    firearms = o.firearms || 0,
+			    ratio = o.ratio || 0,
+			    ead = o.ead || 0,
+			    dte = o.dte || 0,
+			    chc = o.chc || 0,
+			    chd = o.chd || 0,
+			    hsc = o.hsc || 0,
+			    hsd = o.hsd || 0;
+			var d = calc.pve.bulletDMG(o);
+			return d * magsize;
+		},
 		burstDPS: function(o) {
 		// Required: base, rpm, firearms, ratio
 		// Optional: ead, dte, chc, chd, hsc, hsd
-			var base = o.base,
-				rpm = o.rpm,
-			    firearms = o.firearms,
-			    ratio = o.ratio,
+			var base = o.base || 0,
+				rpm = o.rpm || 0,
+			    firearms = o.firearms || 0,
+			    ratio = o.ratio || 0,
 			    ead = o.ead || 0,
 			    dte = o.dte || 0,
 			    chc = o.chc || 0,
@@ -45,12 +61,12 @@ var calc = {
 		DPS: function(o) {
 		// Required: base, rpm, magsize, reloadtime, firearms, ratio
 		// Optional: ead, dte, chc, chd, hsc, hsd
-			var base = o.base,
-				rpm = o.rpm,
-				magsize = o.magsize,
-				reloadtime = o.reloadtime,
-			    firearms = o.firearms,
-			    ratio = o.ratio,
+			var base = o.base || 0,
+				rpm = o.rpm || 0,
+				magsize = o.magsize || 1,
+				reloadtime = o.reloadtime || 1,
+			    firearms = o.firearms || 0,
+			    ratio = o.ratio || 0,
 			    ead = o.ead || 0,
 			    dte = o.dte || 0,
 			    chc = o.chc || 0,
@@ -65,9 +81,9 @@ var calc = {
 		bulletDMG: function(o) {
 		// Required: base, firearms, ratio
 		// Optional: ead, chc, chd, hsc, hsd, pvpdmg_ratio, pvpead_ratio
-			var base = o.base,
-			    firearms = o.firearms,
-			    ratio = o.ratio,
+			var base = o.base || 0,
+			    firearms = o.firearms || 0,
+			    ratio = o.ratio || 0,
 			    ead = o.ead || 0,
 			    chc = o.chc || 0,
 			    chd = o.chd || 0,
@@ -81,23 +97,40 @@ var calc = {
 			var ls = a * (100 - (35 / 100 * (100 - (ead * pvpead_ratio))));
 			return {min: min, max: max, ls: ls};
 		},
-		burstDPS: function(o) {
-		// Required: base, rpm, firearms, ratio
+		burstDMG: function(o) {
+		// Required: base, magsize, firearms, ratio
 		// Optional: ead, chc, chd, hsc, hsd, pvpdmg_ratio, pvpead_ratio
-			var base = o.base,
-				rpm = o.rpm,
-			    firearms = o.firearms,
-			    ratio = o.ratio,
+			var base = o.base || 0,
+				magsize = o.magsize || 1,
+			    firearms = o.firearms || 0,
+			    ratio = o.ratio || 0,
 			    ead = o.ead || 0,
 			    chc = o.chc || 0,
 			    chd = o.chd || 0,
 			    hsc = o.hsc || 0,
 			    hsd = o.hsd || 0;
 			var d = calc.pvp.bulletDMG(o);
-			console.log(d);
 			var a = {};
 			$.each(d, function(key, value) {
-				console.log(value);
+				a[key] = value * magsize;
+			});
+			return a;
+		},
+		burstDPS: function(o) {
+		// Required: base, rpm, firearms, ratio
+		// Optional: ead, chc, chd, hsc, hsd, pvpdmg_ratio, pvpead_ratio
+			var base = o.base || 0,
+				rpm = o.rpm || 0,
+			    firearms = o.firearms || 0,
+			    ratio = o.ratio || 0,
+			    ead = o.ead || 0,
+			    chc = o.chc || 0,
+			    chd = o.chd || 0,
+			    hsc = o.hsc || 0,
+			    hsd = o.hsd || 0;
+			var d = calc.pvp.bulletDMG(o);
+			var a = {};
+			$.each(d, function(key, value) {
 				a[key] = value * (rpm / 60);
 			});
 			return a;
@@ -105,19 +138,18 @@ var calc = {
 		DPS: function(o) {
 		// Required: base, rpm, magsize, reloadtime, firearms, ratio
 		// Optional: ead, chc, chd, hsc, hsd, pvpdmg_ratio, pvpead_ratio
-			var base = o.base,
-				rpm = o.rpm,
-				magsize = o.magsize,
-				reloadtime = o.reloadtime,
-			    firearms = o.firearms,
-			    ratio = o.ratio,
+			var base = o.base || 0,
+				rpm = o.rpm || 0,
+				magsize = o.magsize || 1,
+				reloadtime = o.reloadtime || 1,
+			    firearms = o.firearms || 0,
+			    ratio = o.ratio || 0,
 			    ead = o.ead || 0,
 			    chc = o.chc || 0,
 			    chd = o.chd || 0,
 			    hsc = o.hsc || 0,
 			    hsd = o.hsd || 0;
 			var d = calc.pvp.bulletDMG(o);
-			console.log(d);
 			var a = {};
 			$.each(d, function(key, value) {
 				a[key] = (value * magsize) / (magsize / (rpm / 60) + reloadtime);

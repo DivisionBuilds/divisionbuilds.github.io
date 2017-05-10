@@ -1,0 +1,104 @@
+---
+layout: division
+js: calc-damage
+title: Damage Calculator
+---
+<div class="header">
+    <a href=".">
+        <div class="main-header">
+            <div class="title">Division Builds</div>
+        </div>
+    </a>
+</div>
+<div class="main-container wide">
+    <h1>Damage Calculator</h1>
+    <p>Calculate your estimated bullet damage, burst damage and DPS.</p>
+    <div class="flex-row flex-align-center">
+        <div class="flex-list">
+            <h2>Setup</h2> 
+            <div class="flex-item">
+                <label>Base damage:</label><input type="number" min="0" class="base">
+            </div>
+            <div class="flex-item">
+                <label>RPM:</label><input type="number" min="0" class="rpm">
+            </div>
+            <div class="flex-item">
+                <label>Magazine size:</label><input type="number" min="1" class="magsize">
+            </div>
+            <div class="flex-item">
+                <label>Reload time (Seconds):</label><input type="number" min="1" class="reloadtime">
+            </div>
+            <div class="flex-item">
+                <label>Firearms:</label><input type="number" min="0" class="firearms">
+            </div>
+            <div class="flex-item">
+                <label>Firearms ratio:</label><input type="number" min="0" class="ratio">
+            </div>
+            <div class="flex-item">
+                <label>Enemy Armor Damage (%):</label><input type="number" value="0" min="0" class="ead">
+            </div>
+            <div class="flex-item">
+                <label>Damage to Elites (%):</label><input type="number" value="0" min="0" class="dte">
+            </div>
+            <div class="flex-item">
+                <label>Critical Hit Chance (%):</label><input type="number" value="0" min="0" max="0" class="chc">
+            </div>
+            <div class="flex-item">
+                <label>Critical Hit Damage (%):</label><input type="number" value="0" min="0" class="chd">
+            </div>
+            <div class="flex-item">
+                <label>Headshot Chance (%):</label><input type="number" value="0" min="0" max="0" class="hsc">
+            </div>
+            <div class="flex-item">
+                <label>Headshot Damage (%):</label><input type="number" value="0" min="0" class="hsd">
+            </div>
+        </div>
+        <div class="output list">
+            <div class="item raw">
+            <h2>Raw</h2>
+            <div class="stats">
+                <div class="bulletDMG">
+                    <div>Bullet damage:</div><div class="value">0</div>
+                </div>
+                <div class="avgbulletDMG">
+                    <div>Average bullet damage:</div><div class="value">0</div>
+                </div>
+            </div>
+            </div>
+            <div class="item pve">
+                <h2>PvE</h2>
+                <div class="stats">
+                    <div class="pve-bulletDMG">
+                        <div>Average PvE bullet damage:</div><div class="value">0</div>
+                    </div>
+                    <div class="pve-burstDPS">
+                        <div>PvE Burst DPS:</div><div class="value">0</div>
+                    </div>
+                    <div class="pve-burstDMG">
+                        <div>PvE Burst Damage per magazine:</div><div class="value">0</div>
+                    </div>
+                    <div class="pve-DPS">
+                        <div>PvE DPS:</div><div class="value">0</div>
+                    </div>
+                </div>
+            </div>
+            <div class="item pvp">
+                <h2>PvP</h2>
+                <div class="stats">
+                    <div class="pvp-bulletDMG">
+                        <div>Average PvP bullet damage:</div><div class="value range"><span>0</span> - <span>0</span></div>
+                    </div>
+                    <div class="pvp-burstDPS">
+                        <div>PvP Burst DPS:</div><div class="value range"><span>0</span> - <span>0</span></div>
+                    </div>
+                    <div class="pvp-burstDMG">
+                        <div>PvP Burst Damage per magazine:</div><div class="value range"><span>0</span> - <span>0</span></div>
+                    </div>
+                    <div class="pvp-DPS">
+                        <div>PvP DPS:</div><div class="value range"><span>0</span> - <span>0</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

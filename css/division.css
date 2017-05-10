@@ -67,7 +67,7 @@ a:hover {
     text-decoration: none;
 }
 label {
-    margin-right: 3px;
+    margin-right: 5px;
 }
 
 /* SCROLLBAR */
@@ -124,6 +124,9 @@ label {
     -ms-flex-direction: column;
     flex-direction: column;
 }
+.flex-row .flex-list {
+    margin-right: 20px;
+}
 .flex-align-center {
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -138,6 +141,10 @@ label {
     -ms-flex-align: center;
     align-items: center;
     font-size: 1.125em;
+}
+.flex-item input {
+    width: 150px;
+    margin-left: auto;
 }
 
 /* BACK BUTTON */
@@ -276,6 +283,21 @@ label {
     width: 100%;
     -webkit-transition-delay: 0s;
     transition-delay: 0s;
+}
+.flex-list.links a {
+    color: hsla(0, 0%, 100%, .5);
+}
+.flex-list.links a::after,
+.flex-list.links a::before {
+    display: none;
+}
+.flex-list.links .flex-item {
+    padding: 10px 15px;
+    -webkit-transition: background .15s ease-in-out;
+    transition: background .15s ease-in-out;
+}
+.flex-list.links .flex-item:hover {
+    background: hsla(0, 0%, 50%, .3);
 }
 
 /* ABOUT PAGE */
@@ -920,6 +942,40 @@ input,
     margin: auto;
     font-size: 5em;
 }
+.output.list {
+    font-size: 1.25em;
+    margin: auto;
+}
+.output.list .item {
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    background: hsla(0, 0%, 50%, .1);
+}
+.output.list .item + .item {
+    margin-top: 10px;
+}
+.output.list .item .stats {
+    display: flex;
+    flex-direction: column;
+}
+.output.list .item .stats > * + * {
+    margin-top: 5px;
+}
+.output .value {
+    text-align: right;
+}
+.output .value.range {
+    display: flex;
+    justify-content: space-between;
+}
+.output .value.range span:first-child {
+    margin-right: 5px;
+}
+.output .value.range span:last-child {
+    margin-left: 5px;
+}
+
 
 /* WEAPON ICONS */
 .build-content .weapons .icon.weapon {
