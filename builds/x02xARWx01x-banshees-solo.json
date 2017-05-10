@@ -23,7 +23,7 @@
 			},
 			"secondary": {
 				"name": "SASG-12",
-				"talents": ["Responsive", "Coolheaded", "Unforgiving"],
+				"talents": ["Responsive", "Competent", "Unforgiving"],
 				"mods": {
 					"magazine": ["Magazine Size", "Critical Hit Chance", "Critical Hit Damage"],
 					"underbarrel": ["Critical Hit Damage", "Optimal Range", "Reload Speed"],
