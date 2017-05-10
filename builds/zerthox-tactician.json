@@ -48,7 +48,7 @@
 				},
 				"mask": {
 					"name": "Tactician's Authority Mask",
-					"rolls":  ["Health", "Burn Resistance"],
+					"rolls":  ["Skill Power", "Burn Resistance"],
 					"icon": "tactician"
 				},
 				"gloves": {
