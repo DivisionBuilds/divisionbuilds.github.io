@@ -247,6 +247,7 @@ label {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    font-size: 1.25em;
 }
 .nav-bar > * + * {
     margin-left: 5px;
