@@ -66,6 +66,9 @@ body::after {
 a:hover {
     text-decoration: none;
 }
+label {
+    margin-right: 3px;
+}
 
 /* SCROLLBAR */
 *::-webkit-scrollbar {
@@ -102,6 +105,39 @@ a:hover {
     -webkit-flex: 1;
     -ms-flex: 1;
     flex: 1;
+}
+
+/* GENERAL FLEX */
+.flex-row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+}
+.flex-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+.flex-align-center {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.flex-item {
+    margin-bottom: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    font-size: 1.125em;
 }
 
 /* BACK BUTTON */
@@ -243,24 +279,6 @@ a:hover {
 }
 
 /* ABOUT PAGE */
-.flex-list {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-}
-.flex-item {
-    margin-bottom: 20px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    font-size: 1.125em;
-}
 .flex-item .title {
     font-size: 1.25em;
     font-weight: bold;
@@ -895,6 +913,12 @@ input,
 .error .error-content {
     margin-top: 10px;
     font-size: 1.5em;
+}
+
+/* CALCULATOR */
+.output {
+    margin: auto;
+    font-size: 5em;
 }
 
 /* WEAPON ICONS */

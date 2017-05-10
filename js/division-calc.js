@@ -130,7 +130,7 @@ var calc = {
 	},
 	toughness: function(o) {
 		// Required: health, mitigation
-		var health = o.health || 200000,
+		var health = o.health || 0,
 			mitigation = o.mitigation || 0;
 		return health / ((100 - mitigation) / 100);
 	},
