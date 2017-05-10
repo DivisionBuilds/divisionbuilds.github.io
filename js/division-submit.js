@@ -68,7 +68,6 @@ $(document).ready(function() {
 	    "Balanced",
 	    "Adept",
 	    "Capable",
-	    "Competent",
 	    "Stable",
 	    "Accurate",
 	    "Commanding",
@@ -221,16 +220,16 @@ $(document).ready(function() {
 				data: $(this).serialize(),
 				dataType: "json",
 				beforeSend: function() {
-					$(".text-container > *").hide();
-					$(".text-container").append('<div class="alert loading">Establishing connection...</div>');
+					$(".main-container > *").hide();
+					$(".main-container").append('<div class="alert loading">Establishing connection...</div>');
 				},
 				success: function(data) {
-					$(".text-container").find(".alert").remove();
-					$(".text-container").append('<div class="alert success">Data transfer successful!</div>');
+					$(".main-container").find(".alert").remove();
+					$(".main-container").append('<div class="alert success">Data transfer successful!</div>');
 				},
 				error: function(err) {
-					$(".text-container").find(".alert").remove();
-					$(".text-container").append('<div class="alert error">Error! Something went wrong...</div>');
+					$(".main-container").find(".alert").remove();
+					$(".main-container").append('<div class="alert error">Error! Something went wrong...</div>');
 				}
 			});
 		}
