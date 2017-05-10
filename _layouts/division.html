@@ -32,6 +32,28 @@ layout: division
 		</a>
 		{% endif %}
 		<div class="main">
+			{% if page.id != "build" and page.id != 404 %}
+			<div class="header">
+			    <a href="/.">
+			        <div class="main-header">
+			            <div class="title">Division Builds</div>
+			        </div>
+			    </a>
+			    <div class="nav-bar">
+				    <a href="/submit">
+				    	<div class="button">Submit a build</div>
+				    </a>
+				    <a href="/calc">
+				    	<div class="button">Calculators</div>
+				    </a>
+			    </div>
+			    {% if page.id == "index" %}
+			    <div class="search-bar">
+			        <input class="search" type="text" placeholder="Search">
+			    </div>
+			    {% endif %}
+			</div>
+			{% endif %}
 			{{ content }}
 		</div>
 		<div class="footer">

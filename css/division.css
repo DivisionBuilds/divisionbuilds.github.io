@@ -157,7 +157,24 @@ label {
     margin-left: auto;
 }
 
-/* BACK BUTTON */
+/* BUTTONS */
+.button {
+    padding: 5px 10px;
+    background: linear-gradient(rgba(244, 255, 255, .2), rgba(244, 255, 255, .2) 0) no-repeat,
+                linear-gradient(rgba(244, 255, 255, .2), rgba(244, 255, 255, .2) 0) top right no-repeat,
+                linear-gradient(rgba(244, 255, 255, .2), rgba(244, 255, 255, .2) 0) bottom left no-repeat, 
+                linear-gradient(rgba(244, 255, 255, .2), rgba(244, 255, 255, .2) 0) bottom right no-repeat;
+    background-size: 2px 2px;
+    background-color: hsla(0, 0%, 100%, .1);
+    color: #fff;
+    outline: none;
+    border: none;
+    -webkit-transition: background-color .15s ease-in-out;
+    transition: background-color .15s ease-in-out;
+}
+.button:hover {
+    background-color: hsla(0, 0%, 100%, .3);
+}
 .back-button {
     position: absolute;
     height: 36px;
@@ -180,9 +197,9 @@ label {
     -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-}
-.main-header {
-    margin-bottom: 20px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
 }
 .main-header,
 .build-header {
@@ -223,6 +240,16 @@ label {
     margin-left: .5em;
     font-size: .75em;
     opacity: .3;
+}
+
+/* NAV BAR */
+.nav-bar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+.nav-bar > * + * {
+    margin-left: 5px;
 }
 
 /* FOOTER */
@@ -602,23 +629,6 @@ label {
 }
 .submit .highlight::-moz-placeholder {
     color: #ff7f00;
-}
-.submit .confirm {
-    padding: 5px 10px;
-    background: linear-gradient(rgba(244, 255, 255, .2), rgba(244, 255, 255, .2) 0) no-repeat,
-                linear-gradient(rgba(244, 255, 255, .2), rgba(244, 255, 255, .2) 0) top right no-repeat,
-                linear-gradient(rgba(244, 255, 255, .2), rgba(244, 255, 255, .2) 0) bottom left no-repeat, 
-                linear-gradient(rgba(244, 255, 255, .2), rgba(244, 255, 255, .2) 0) bottom right no-repeat;
-    background-size: 2px 2px;
-    background-color: hsla(0, 0%, 100%, .1);
-    color: #fff;
-    outline: none;
-    border: none;
-    -webkit-transition: background-color .15s ease-in-out;
-    transition: background-color .15s ease-in-out;
-}
-.submit .confirm:hover {
-    background-color: hsla(0, 0%, 100%, .3);
 }
 
 /* SUBMIT ALERT */
