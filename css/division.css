@@ -577,6 +577,7 @@ label {
     margin-left: 10px;
 }
 .submit input,
+.submit .tags,
 .submit .weapon .talents,
 .submit .weapon.mods > div,
 .submit .gear .stats,
@@ -681,7 +682,7 @@ a.ui-button:active,
     margin: 0;
 }
 
-/* SEARCH BAR */
+/* SEARCH BAR & INPUTS */
 .search-bar {
     margin-left: auto;
     margin-right: 5%;
@@ -690,6 +691,7 @@ a.ui-button:active,
     align-self: center;
 }
 input,
+textarea,
 .search-bar .search {
     padding: 3px 7px;
     background: hsla(0, 0%, 100%, .1);
