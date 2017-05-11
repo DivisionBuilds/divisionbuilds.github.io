@@ -6,6 +6,10 @@
 	"patch": "1.6", // The patch this build is for [OPTIONAL]
 	"tags": ["tag1", "tag2", "tag3"], // Tags: "pvp", "pve", "dps", "healer", "tank" etc.
 	"build": {
+		"general": [ // You build description/info
+			"Your build description and some information.", // May include links
+			"Another description paragraph."
+		],
 		"weapons": {
 			"primary": {
 				"name": "Lightweight M4", // Primary weapon name
