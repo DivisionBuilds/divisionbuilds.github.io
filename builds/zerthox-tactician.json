@@ -2,7 +2,7 @@
 	"title": "Tactician Healer",
 	"author": "Zerthox",
 	"link": "https://github.com/Zerthox",
-	"date": "03/05/2017",
+	"date": "11/05/2017",
 	"patch": "1.6",
 	"tags": ["pvp", "pve", "healer", "tactician", "skill power"],
 	"build": {
@@ -24,7 +24,7 @@
 			},
 			"secondary": {
 				"name": "Tenebrae",
-				"talents": ["Talented", "Coolheaded", "Lights Out"],
+				"talents": ["Talented", "Competent", "Lights Out"],
 				"mods": {
 					"magazine": ["Magazine Size", "Rate of Fire", "Critical Hit Chance"],
 					"underbarrel": ["Reload Speed", "Critical Hit Damage", "Stability"],
@@ -69,12 +69,12 @@
 			},
 			"stats": {
 				"main-stats": {
-					"4x": "Electronics",
-					"1x": "Firearms"
+					"5x": "Electronics"
 				},
 				"mods": {
-					"4x": ["Electronics", "Health"],
-					"1x": ["Electronics", "Skill Haste"]
+					"3x": ["Electronics", "Health"],
+					"1x": ["Electronics", "Skill Haste"],
+					"1x": ["Firearms", "Health"]
 				},
 				"performance": {
 					"4x": {
