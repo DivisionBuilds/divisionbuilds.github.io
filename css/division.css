@@ -274,7 +274,6 @@ label {
 
 /* CONTAINER */
 .main-container {
-    width: 70%;
     min-width: 500px;
     margin: 40px auto;
     padding: 20px 40px;
@@ -339,9 +338,13 @@ label {
 }
 
 /* DISQUS */
-.general #disqus_thread {
-    min-width: 500px;
+.general {
     width: 70%;
+}
+.general #disqus_thread {
+    width: 100%;
+    min-width: 500px;
+    max-width: 800px;
     margin: 0 auto;
 }
 #disqus_thread {
