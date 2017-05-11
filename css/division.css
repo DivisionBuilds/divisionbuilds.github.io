@@ -63,6 +63,9 @@ body::after {
     color: #fff;
     background: hsla(0, 0%, 100%, .3);
 }
+a {
+    color: #ff7f00;
+}
 a:hover {
     text-decoration: none;
 }
