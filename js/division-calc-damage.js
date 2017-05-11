@@ -1,6 +1,6 @@
 $(document).ready(function() {
 	$("head").append("<script src='/js/division-calc.js'></script>");
-    $("input").on("keyup", function() {
+    $("input").on("keyup change", function() {
     	var o = {};
     	$("input").each(function() {
     		o[$(this).attr("class")] = parseFloat($(this).val());
