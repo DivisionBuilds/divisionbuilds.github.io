@@ -338,6 +338,19 @@ label {
     background: hsla(0, 0%, 50%, .3);
 }
 
+/* DISQUS */
+.general #disqus_thread {
+    min-width: 500px;
+    width: 70%;
+    margin: 0 auto;
+}
+#disqus_thread {
+    -webkit-flex-grow: 1;
+    -ms-flex-grow: 1;
+    flex-grow: 1;
+    margin-top: 40px;
+}
+
 /* ABOUT PAGE */
 .flex-item .title {
     font-size: 1.25em;
