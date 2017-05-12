@@ -865,6 +865,9 @@ textarea,
     flex-shrink: 0;
     margin: 0 auto;
 }
+.build-content .gear > * + * {
+    margin-left: 10px;
+}
 .build-content .gear > * > * {
     display: -webkit-box;
     display: -ms-flexbox;
