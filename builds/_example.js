@@ -68,19 +68,16 @@
 				}
 			},
 			"stats": {
-				"main-stats": { // Main stat rolls on your gear pieces (Chest, Backpack, mask, Gloves, Knee pads => Total: 5)
-					"4x": "Firearms", // Amount & type of roll ("Firearms", "Stamina" or "Electronics")
-					"1x": "Electronics" // Amount & type of roll ("Firearms", "Stamina" or "Electronics")
-				},
-				"mods": { // Main stat mods on your gear (2x Chest, 1x Backpack, 1x Mask, 1x Knee Pads => Total: 5)
-					"5x": ["Firearms", "Health"] // Amount & mod rolls
-				},
-				"performance": { // Performance mods on your gear (2x Backpack, 1x Holster, 1x Knee Pads => Total: 4)
-					"4x": { // Amount of this type of Performance Mod
-						"name": "First Aid Self Heal", // Performance mod name
-						"icon": "first-aid" // Icon of the skill you modify
-					}
-				}
+				"main-stats": [ // Main stat rolls on your gear pieces (Chest, Backpack, mask, Gloves, Knee pads => Total: 5)
+					["4x", "Firearms"], // Amount & type of roll ("Firearms", "Stamina" or "Electronics")
+					["1x", "Electronics"] // Amount & type of roll ("Firearms", "Stamina" or "Electronics")
+				],
+				"mods": [ // Main stat mods on your gear (2x Chest, 1x Backpack, 1x Mask, 1x Knee Pads => Total: 5)
+					["5x", "Firearms", "Health"] // Amount & mod rolls
+				],
+				"performance": [ // Performance mods on your gear (2x Backpack, 1x Holster, 1x Knee Pads => Total: 4)
+					["4x", "First Aid Self Heal", "first-aid"] // Amount, type of mod & skill the mod affects (used for icon)
+				]
 			}
 		},
 		"skills": {
