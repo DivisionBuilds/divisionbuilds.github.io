@@ -10,7 +10,7 @@ var calc = {
 		    hsc = o.hsc || 0,
 		    hsd = o.hsd || 0,
 		    hsmulti = o.hsdmulti || 0;
-		return (base + (firearms * ratio)) * (1 + ((chd / 100 * chc) / 100)) * (1 + (((hsd + 100 * hsmulti) / 100 * hsc) / 100));
+		return (base + (firearms * ratio)) * (1 + ((chd / 100 * chc) / 100)) * (hsmulti + ((hsd / 100 * hsc) / 100));
 	},
 	pve: {
 		bulletDMG: function(o) {
