@@ -67,19 +67,16 @@
 				}
 			},
 			"stats": {
-				"main-stats": {
-					"5x": "Firearms"
-				},
-				"mods": {
-					"4x": ["Firearms", "Critical Hit Damage"],
-					"1x": ["Stamina", "Critical Hit Damage"]
-				},
-				"performance": {
-					"4x": {
-						"name": "Ballistic Shield Damage Resilience",
-						"icon": "ballistic-shield"
-					}
-				}
+				"main-stats": [
+					["5x", "Firearms"]
+				],
+				"mods": [
+					["4x", "Firearms", "Critical Hit Damage"],
+					["1x", "Stamina", "Critical Hit Damage"]
+				],
+				"performance": [
+					["4x", "Ballistic Shield Damage Resilience", "ballistic-shield"]
+				]
 			}
 		},
 		"skills": {

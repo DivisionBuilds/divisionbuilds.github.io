@@ -68,19 +68,16 @@
 				}
 			},
 			"stats": {
-				"main-stats": {
-					"4x": "Firearms",
-					"1x": "Electronics"
-				},
-				"mods": {
-					"5x": ["Firearms", "Health"]
-				},
-				"performance": {
-					"4x": {
-						"name": "Seeker Mine Explosion Radius",
-						"icon": "seeker"
-					}
-				}
+				"main-stats": [
+					["4x", "Firearms"],
+					["1x", "Electronics"]
+				],
+				"mods": [
+					["5x", "Firearms", "Health"]
+				],
+				"performance": [
+					["4x", "Seeker Mine Explosion Radius", "seeker"]
+				]
 			}
 		},
 		"skills": {

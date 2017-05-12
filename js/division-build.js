@@ -100,19 +100,21 @@ var build = {
 		            }
 		            else if (k === "stats") {
 		                $.each(this, function(key, value) {
-		                    var t = key;
-		                    $.each(this, function(key, value) {
-		                    	if ($.isArray(value)) {
-		                    		a = '<div class="text">' + value[1] + '</div>';
-		                        	value = value[0];
-		                        }
+		                	var t = key;
+		                    $.each(this, function(i) {
+		                        if (t === "main-stats")
+		                        	v = this[1] + " Roll";
+		                        else
+		                        	v = this[1] + " Mod";
+		                        if (t === "mods")
+		                        	a = this[2];
 		                        else
 		                        	a = "";
-		                        if (t === "main-stats")
-		                        	v = value + " Roll";
+		                        if (t === "performance")
+		                        	i = this[2];
 		                        else
-		                        	v = (value.name || value) + " Mod";
-		                        $(".build-content .gear .stats").append('<div class="' + t + '"><div class="amount">' + key + '</div><div class="icon ' + (value.icon || value.classify()) + '"></div><div class="info"><div class="name">' + v + '</div>' + a + '</div></div>');
+		                        	i = this[1].classify();
+		                        $(".build-content .gear .stats").append('<div class="' + t + '"><div class="amount">' + this[0] + '</div><div class="icon ' + i + '"></div><div class="info"><div class="name">' + v + '</div>' + a + '</div></div>');
 		                    });
 		                });
 		            }

@@ -68,20 +68,17 @@
 				}
 			},
 			"stats": {
-				"main-stats": {
-					"5x": "Electronics"
-				},
-				"mods": {
-					"3x": ["Electronics", "Health"],
-					"1x": ["Electronics", "Skill Haste"],
-					"1x": ["Firearms", "Health"]
-				},
-				"performance": {
-					"4x": {
-						"name": "First Aid Ally Heal",
-						"icon": "first-aid"
-					}
-				}
+				"main-stats": [
+					["5x", "Electronics"]
+				],
+				"mods": [
+					["3x", "Electronics", "Health"],
+					["1x", "Electronics", "Skill Haste"],
+					["1x", "Firearms", "Health"]
+				],
+				"performance": [
+					["4x", "First Aid Ally Heal", "first-aid"]
+				]
 			}
 		},
 		"skills": {

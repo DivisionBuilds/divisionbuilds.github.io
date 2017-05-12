@@ -70,20 +70,17 @@
 				}
 			},
 			"stats": {
-				"main-stats": {
-					"4x": "Firearms",
-					"1x": "Electronics"
-				},
-				"mods": {
-					"4x": ["Firearms", "Health"],
-					"1x": ["Stamina", "Health"]
-				},
-				"performance": {
-					"4x": {
-						"name": "First Aid Self Heal",
-						"icon": "first-aid"
-					}
-				}
+				"main-stats": [
+					["4x", "Firearms"],
+					["1x", "Electronics"]
+				],
+				"mods": [
+					["4x", "Firearms", "Health"],
+					["1x", "Stamina", "Health"]
+				],
+				"performance": [
+					["4x", "First Aid Self Heal", "first-aid"]
+				]
 			}
 		},
 		"skills": {
