@@ -9,7 +9,7 @@ var calc = {
 		    chd = o.chd || 0,
 		    hsc = o.hsc || 0,
 		    hsd = o.hsd || 0,
-		    hsmulti = o.hsdmulti || 0;
+		    hsmulti = o.hsdmulti || 1;
 		return (base + (firearms * ratio)) * (1 + ((chd / 100 * chc) / 100)) * (hsmulti + ((hsd / 100 * hsc) / 100));
 	},
 	pve: {
