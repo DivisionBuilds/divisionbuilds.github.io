@@ -5,7 +5,7 @@ $(document).ready(function() {
     	$("input").each(function() {
     		o[$(this).attr("class")] = parseFloat($(this).val());
     	});
-    	$(".bulletDMG .value").text(Math.round(calc.bulletDMG({base: o.base, firearms: o.firearms, ratio: o.ratio})));
+    	$(".bulletDMG .value").text(Math.round(calc.bulletDMG({base: o.base, firearms: o.firearms, ratio: o.ratio, increase: o.increase})));
     	$(".avgbulletDMG .value").text(Math.round(calc.bulletDMG(o)));
     	$(".pve-bulletDMG .value").text(Math.round(calc.pve.bulletDMG(o)));
     	$(".pve-burstDMG .value").text(Math.round(calc.pve.burstDMG(o)));
