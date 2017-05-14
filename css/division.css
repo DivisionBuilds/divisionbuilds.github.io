@@ -127,6 +127,9 @@ label {
     -ms-flex-direction: column;
     flex-direction: column;
 }
+.flex-list.margin {
+    margin: 20px auto;
+}
 .flex-row .flex-list {
     margin-right: 20px;
 }
