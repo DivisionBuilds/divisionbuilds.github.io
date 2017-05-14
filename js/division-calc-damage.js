@@ -19,9 +19,9 @@ $(document).ready(function() {
     	$(".pvp-burstDPS .value span:eq(1)").text(Math.round(calc.pvp.burstDPS(o).max));
     	$(".pvp-DPS .value span:eq(0)").text(Math.round(calc.pvp.DPS(o).min));
     	$(".pvp-DPS .value span:eq(1)").text(Math.round(calc.pvp.DPS(o).max));
-        $(".ls-bulletDMG .value span:eq(0)").text(Math.round(calc.pvp.bulletDMG(o).ls));
-        $(".ls-burstDMG .value span:eq(0)").text(Math.round(calc.pvp.burstDMG(o).ls));
-        $(".ls-burstDPS .value span:eq(0)").text(Math.round(calc.pvp.burstDPS(o).ls));
-        $(".ls-DPS .value span:eq(0)").text(Math.round(calc.pvp.DPS(o).ls));
+        $(".ls-bulletDMG .value").text(Math.round(calc.pvp.bulletDMG(o).ls));
+        $(".ls-burstDMG .value").text(Math.round(calc.pvp.burstDMG(o).ls));
+        $(".ls-burstDPS .value").text(Math.round(calc.pvp.burstDPS(o).ls));
+        $(".ls-DPS .value").text(Math.round(calc.pvp.DPS(o).ls));
     });
 });
