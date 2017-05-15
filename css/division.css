@@ -311,6 +311,9 @@ label {
     color: #ff7f00;
     white-space: nowrap;
 }
+.main-container.text a {
+    margin: 0 5px;
+}
 .main-container a::after,
 .main-container a::before {
     content: "";
