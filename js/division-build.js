@@ -79,21 +79,24 @@ var build = {
 	    $.each(d.build, function(key, value) {
 	        var p = key;
 	        if (p === "general")
-	        	$(".general .main-container").html("<p>" + value.join("</p>") + "</p>");
+	        	$(".general .main-container").html("<p>" + value.join("</p><p>") + "</p>");
 	        else if (p === "weapons") {
             	$.each(this, function(key, value) {
             		var k = key;
             		var s = '<div class="' + k + '"><div class="icon weapon ' + value.icon + '"></div><div class="info"><div class="name">' + value.name + '</div><div class="talents text">' + value.talents.join(", ") + '</div></div><div class="talent-icons"></div></div>';
+            		if (value.hasOwnProperty("mods"))
 						s += '<div class="' + k + ' mods"><div class="magazine"><div class="icon"></div><div class="rolls"></div></div><div class="underbarrel"><div class="icon"></div><div class="rolls"></div></div><div class="muzzle"><div class="icon"></div><div class="rolls"></div></div><div class="scope"><div class="icon"></div><div class="rolls"></div></div></div>';
             		$(".build-content .weapons").append(s);
             		$.each(value.talents, function(i) {
             			$(".build-content ." + k + " .talent-icons").append('<div class="icon weapon-talent ' + this.classify() + '"></div>');
                     });
-                    $.each(value.mods, function(key, value) {
-                    	$.each(this, function(i) {
-                    		$(".build-content .weapons ." + k + " ." + key + " .rolls").append("<span>" + this + "</span>");
-                    	});
-                    });
+					if (value.hasOwnProperty("mods")) {
+	                    $.each(value.mods, function(key, value) {
+	                    	$.each(this, function(i) {
+	                    		$(".build-content .weapons ." + k + " ." + key + " .rolls").append("<span>" + this + "</span>");
+	                    	});
+	                    });
+                	}
             	});
             }
 	        else {
@@ -119,6 +122,8 @@ var build = {
 		                	var t = key;
 		                    $.each(this, function(i) {
 		                        if (t === "main-stats")
+		                        	v = this[1];
+		                        else if (t === "main-rolls")
 		                        	v = this[1] + " Roll";
 		                        else
 		                        	v = this[1] + " Mod";
