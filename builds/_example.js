@@ -32,6 +32,14 @@
 					"scope": ["Headshot Damage", "Critical Hit Chance", "Critical Hit Damage"] // Scope rolls
 				},
 				"icon": "mp7" // Weapon icon
+			},
+			"sidearm": {
+				"name": "93R", // Sidearm weapon name
+				"talents": ["Coolheaded", "Expert"], // Sidearm weapon talents
+				"mods": { // Sidearm weapon mods
+					"muzzle": ["Critical Hit Chance", "Headshot Damage", "Critical Hit Damage"] // Muzzle rolls
+				},
+				"icon": "93r" // Weapon icon
 			}
 		},
 		"gear": {
