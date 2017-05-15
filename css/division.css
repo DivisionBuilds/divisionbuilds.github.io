@@ -904,6 +904,9 @@ textarea,
     text-align: center;
     direction: rtl;
 }
+.build-content .gear .stats .main-stats .amount {
+    width: 70px;
+}
 .build-content .gear .icon {
     position: relative;
     width: 120px;
