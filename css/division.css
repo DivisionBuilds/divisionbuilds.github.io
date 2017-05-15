@@ -298,21 +298,14 @@ label {
 .main-container.text p {
     text-align: justify;
 }
-.main-container p {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-}
 .main-container iframe {
+    display: block;
     margin: 0 auto;
 }
 .main-container a {
     position: relative;
     color: #ff7f00;
     white-space: nowrap;
-}
-.main-container.text a {
-    margin: 0 5px;
 }
 .main-container a::after,
 .main-container a::before {
