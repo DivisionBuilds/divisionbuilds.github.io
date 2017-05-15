@@ -76,10 +76,16 @@
 				}
 			},
 			"stats": {
-				"main-stats": [ // Main stat rolls on your gear pieces (Chest, Backpack, mask, Gloves, Knee pads => Total: 5)
+				"main-rolls": [ // Main stat rolls on your gear pieces (Chest, Backpack, mask, Gloves, Knee pads => Total: 5)
 					["4x", "Firearms"], // Amount & type of roll ("Firearms", "Stamina" or "Electronics")
 					["1x", "Electronics"] // Amount & type of roll ("Firearms", "Stamina" or "Electronics")
 				],
+				/* ALTERNATIVE: Approximate amount of each stat
+				"main-stats": [
+					["8000", "Firearms"], // Amount of Firearms points
+					["3000", "Stamina"] // Amount of Stamina points
+					["4000", "Electronics"] // Amount of electronics points
+				], */
 				"mods": [ // Main stat mods on your gear (2x Chest, 1x Backpack, 1x Mask, 1x Knee Pads => Total: 5)
 					["5x", "Firearms", "Health"] // Amount & mod rolls
 				],
