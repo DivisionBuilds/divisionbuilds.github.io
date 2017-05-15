@@ -298,6 +298,14 @@ label {
 .main-container.text p {
     text-align: justify;
 }
+.main-container p {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+.main-container iframe {
+    margin: 0 auto;
+}
 .main-container a {
     position: relative;
     color: #ff7f00;
@@ -894,6 +902,7 @@ textarea,
     width: 35px;
     font-size: 2.5em;
     text-align: center;
+    direction: rtl;
 }
 .build-content .gear .icon {
     position: relative;
@@ -947,11 +956,11 @@ textarea,
 .build-content .gear .icon.deadeye {
     background-color: rgb(15, 211, 129);
 }
-.build-content .gear .stats .main-stats + .mods {
+.build-content .gear .stats .mods {
     position: relative;
     margin-top: 6px;
 }
-.build-content .gear .stats .main-stats + .mods::before {
+.build-content .gear .stats .mods::before {
     content: "";
     position: absolute;
     top: -4px;
