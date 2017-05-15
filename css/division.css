@@ -789,11 +789,11 @@ textarea,
     opacity: .7;
     height: 100px;
 }
-.build-content .weapons .secondary:not(.mods) {
+.build-content .weapons > * + :not(.mods) {
     position: relative;
     margin-top: 80px;
 }
-.build-content .weapons .secondary:not(.mods)::before {
+.build-content .weapons > * + :not(.mods)::before {
     content: "";
     position: absolute;
     top: -40px;
@@ -819,6 +819,7 @@ textarea,
     width: 250px;
 }
 .build-content .weapons .talent-icons {
+    margin-left: auto;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

@@ -80,6 +80,22 @@ var build = {
 	        var p = key;
 	        if (p === "general")
 	        	$(".general .main-container").html("<p>" + value.join("</p>") + "</p>");
+	        else if (p === "weapons") {
+            	$.each(this, function(key, value) {
+            		var k = key;
+            		var s = '<div class="' + k + '"><div class="icon weapon ' + value.icon + '"></div><div class="info"><div class="name">' + value.name + '</div><div class="talents text">' + value.talents.join(", ") + '</div></div><div class="talent-icons"></div></div>';
+						s += '<div class="' + k + ' mods"><div class="magazine"><div class="icon"></div><div class="rolls"></div></div><div class="underbarrel"><div class="icon"></div><div class="rolls"></div></div><div class="muzzle"><div class="icon"></div><div class="rolls"></div></div><div class="scope"><div class="icon"></div><div class="rolls"></div></div></div>';
+            		$(".build-content .weapons").append(s);
+            		$.each(value.talents, function(i) {
+            			$(".build-content ." + k + " .talent-icons").append('<div class="icon weapon-talent ' + this.classify() + '"></div>');
+                    });
+                    $.each(value.mods, function(key, value) {
+                    	$.each(this, function(i) {
+                    		$(".build-content .weapons ." + k + " ." + key + " .rolls").append("<span>" + this + "</span>");
+                    	});
+                    });
+            	});
+            }
 	        else {
 		        $.each(this, function(key) {
 		            var k = key;
@@ -120,20 +136,7 @@ var build = {
 		            }
 		            else {
 		                $.each(this, function(key, value) {
-		                    if (key === "talents") {
-		                        $(".build-content .weapons ." + k + " .talents").text(value.join(", "));
-		                        $(".build-content .weapons ." + k + " .talent-icons .icon").each(function(i) {
-		                        	$(this).addClass(value[i].classify());
-		                        });
-		                    }
-		                    else if (key === "mods") {
-		                    	$.each(this, function(key, value) {
-		                    		for (i = 0; i < value.length; i++) {
-		                    			$(".build-content .weapons ." + k + " ." + key + " .rolls").append("<span>" + value[i] + "</span>");
-		                    		}
-		                    	});
-		                    }
-		                    else if (key === "icon")
+		                    if (key === "icon")
 		                        $(".build-content ." + p + " ." + k + "> .icon").addClass(value);
 		                    else if (key === "mod") {
 		                    	$(".build-content ." + p + " ." + k + " .mod").text(value);
