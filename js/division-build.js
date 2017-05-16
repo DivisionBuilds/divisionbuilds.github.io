@@ -70,8 +70,10 @@ var build = {
 	    $("meta[name=description]").attr("content", d.title + " by " + d.author);
 	    $(".build-header .title").text(d.title);
 	    $(".build-header .author").text(d.author);
-	    if (d.hasOwnProperty("link"))
+	    if (d.hasOwnProperty("link")) {
 	        $(".build-header .info a").attr("href", d.link);
+	        $(".build-header .info a").attr("target", "_blank");
+	    }
 	    if (d.hasOwnProperty("patch"))
 	        $(".build-header .date").before(" for Patch " + d.patch);
 	    if (d.hasOwnProperty("date"))

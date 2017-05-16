@@ -12,8 +12,12 @@ $(document).ready(function() {
                               $(".build-list").append('<a href="build?id=' + u.last().slice(0, -5) + '"></a>');
                               var r = JSON.parse(result);
                               var s = '<div class="list-item"><div class="title">' + r.title + '</div><div class="info">';
-                              if (r.hasOwnProperty("author"))
-                                   s += 'Author: <a href="' + (r.link || "") + '" target="_blank"><span class="author">' + r.author + '</span></a>';
+                              if (r.hasOwnProperty("author")) {
+                                   s += 'Author: <a';
+                                   if (r.hasOwnProperty("link"))
+                                        s += ' href="' + r.link + '" target="_blank"';
+                                   s += '><span class="author">' + r.author + '</span></a>';
+                              }
                               else
                                    s += 'Author: <i>Unknown</i>';
                               if (r.hasOwnProperty("date"))
