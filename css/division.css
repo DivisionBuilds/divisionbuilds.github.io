@@ -1406,6 +1406,7 @@ textarea,
 
 /* MAIN STAT ICONS */
 .build-content .gear .stats .main-stats .icon::after,
+.build-content .gear .stats .main-rolls .icon::after,
 .build-content .gear .stats .mods .icon::after {
     background-image: url(../sprites/stats.png);
     width: 64px;
