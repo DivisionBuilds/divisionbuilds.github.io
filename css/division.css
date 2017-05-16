@@ -1182,6 +1182,44 @@ textarea,
 .build-content .weapons .icon.vector {
     background-image: url(../sprites/weapons/vector.png);
 }
+.build-content .weapons .icon.\39 3r {
+    background-image: url(../sprites/weapons/93r.png);
+}
+.build-content .weapons .icon.m9,
+.build-content .weapons .icon.damascus {
+    background-image: url(../sprites/weapons/m9.png);
+}
+.build-content .weapons .icon.rhino {
+    background-image: url(../sprites/weapons/rhino.png);
+}
+.build-content .weapons .icon.golden-rhino,
+.build-content .weapons .icon.goldenrhino {
+    background-image: url(../sprites/weapons/golden-rhino.png);
+}
+.build-content .weapons .icon.m1911,
+.build-content .weapons .icon.centurion {
+    background-image: url(../sprites/weapons/m1911.png);
+}
+.build-content .weapons .icon.magnum {
+    background-image: url(../sprites/weapons/magnum.png);
+}
+.build-content .weapons .icon.pf45 {
+    background-image: url(../sprites/weapons/pf45.png);
+}
+.build-content .weapons .icon.px4,
+.build-content .weapons .icon.px4-storm {
+    background-image: url(../sprites/weapons/px4.png);
+}
+.build-content .weapons .icon.sawedoff,
+.build-content .weapons .icon.sawed-off,
+.build-content .weapons .icon.double-barrel-sawedoff,
+.build-content .weapons .icon.double-barrel-sawed-off {
+    background-image: url(../sprites/weapons/sawed-off.png);
+}
+.build-content .weapons .icon.x45,
+.build-content .weapons .icon.x-45 {
+    background-image: url(../sprites/weapons/x45.png);
+}
 
 /* WEAPON TALENT ICONS */
 .build-content .weapons .icon.weapon-talent {
