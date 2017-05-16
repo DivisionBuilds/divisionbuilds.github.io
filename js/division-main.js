@@ -13,7 +13,7 @@ $(document).ready(function() {
                               var r = JSON.parse(result);
                               var s = '<div class="list-item"><div class="title">' + r.title + '</div><div class="info">';
                               if (r.hasOwnProperty("author"))
-                                   s += 'Author: <a href="' + r.link + '" target="_blank"><span class="author">' + r.author + '</span></a>';
+                                   s += 'Author: <a href="' + (r.link || "") + '" target="_blank"><span class="author">' + r.author + '</span></a>';
                               else
                                    s += 'Author: <i>Unknown</i>';
                               if (r.hasOwnProperty("date"))
