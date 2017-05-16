@@ -955,11 +955,11 @@ textarea,
 .build-content .gear .icon.deadeye {
     background-color: rgb(15, 211, 129);
 }
-.build-content .gear .stats .mods {
+.build-content .gear .stats :not(.mods) + .mods {
     position: relative;
     margin-top: 6px;
 }
-.build-content .gear .stats .mods::before {
+.build-content .gear .stats :not(.mods) + .mods::before {
     content: "";
     position: absolute;
     top: -4px;
