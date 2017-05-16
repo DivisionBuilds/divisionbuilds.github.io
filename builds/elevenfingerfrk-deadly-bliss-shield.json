@@ -20,10 +20,10 @@
                 "name": "M700 Carbon",
                 "talents": ["Destructive", "Deadly", "Elevated"],
                 "mods": {
-                    "Extended magazine": ["Magazine Size", "Rate of Fire", "Critical Hit Damage"],
-                    "Small grip": ["Critican Hit Damage", "Accuracy", "Stability"],
-                    "SR-7 Suppressor": ["Critical Hit Damage", "Optimal Range", "Critical Hit Chance"],
-                    "C79 scope": ["Accuracy", "Critical Hit Chance", "Critical Hit Damage"]
+                    "magazine": ["Magazine Size", "Rate of Fire", "Critical Hit Damage"],
+                    "underbarrel": ["Critican Hit Damage", "Accuracy", "Stability"],
+                    "muzzle": ["Critical Hit Damage", "Optimal Range", "Critical Hit Chance"],
+                    "scope": ["Accuracy", "Critical Hit Chance", "Critical Hit Damage"]
                 },
                 "icon": "m700"
             },
@@ -31,10 +31,10 @@
                 "name": "Urban MDR",
                 "talents": ["Destructive", "Fierce", "Distracted"],
                 "mods": {
-                    "Extended magazine": ["Magazine Size", "Reload Speed", "Critical Hit Damage"],
-                    "Vertical grip": ["Optimal Range", "Reload Speed", "Accuracy"],
-                    "SR-7 Suppressor": ["Stability", "Critical Hit Chance", "Critical Hit Damage"],
-                    "CQBSS scope": ["Optimal Range", "Headshot Damage", "Critical Hit Damage"]
+                    "Emagazine": ["Magazine Size", "Reload Speed", "Critical Hit Damage"],
+                    "underbarrel": ["Optimal Range", "Reload Speed", "Accuracy"],
+                    "muzzle": ["Stability", "Critical Hit Chance", "Critical Hit Damage"],
+                    "scope": ["Optimal Range", "Headshot Damage", "Critical Hit Damage"]
                 },
                 "icon": "urban-mdr"
             }
