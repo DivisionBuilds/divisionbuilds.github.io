@@ -71,8 +71,8 @@
 					["5x", "Firearms"]
 				],
 				"mods": [
-					["4x", "Firearms", "Critical Hit Damage"],
-					["1x", "Stamina", "Critical Hit Damage"]
+					["4x", "Firearms", "Critical Hit Chance"],
+					["1x", "Stamina", "Critical Hit Chance"]
 				],
 				"performance": [
 					["4x", "Ballistic Shield Damage Resilience", "ballistic-shield"]
