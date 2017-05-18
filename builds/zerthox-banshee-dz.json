@@ -50,22 +50,22 @@
 				"mask": {
 					"name": "Banshee's Shadow Mask",
 					"rolls": ["Health", "Burn Resistance"],
-					"icon": "he"
+					"icon": "banshee"
 				},
 				"gloves": {
 					"name": "Banshee's Shadow Gloves",
 					"rolls": ["Assault Rifle Damage", "SMG Damage", "Critical Hit Chance"],
-					"icon": "exotic"
+					"icon": "banshee"
 				},
 				"holster": {
 					"name": "Banshee's Shadow Holster",
 					"rolls": ["Health"],
-					"icon": "he"
+					"icon": "banshee"
 				},
 				"knee-pads": {
 					"name": "Banshee's Shadow Knee Pads",
 					"rolls": ["Health", "Burn Resistance", "Shock Resistance", "Disrupt Resistance"],
-					"icon": "exotic"
+					"icon": "banshee"
 				}
 			},
 			"stats": {
