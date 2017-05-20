@@ -50,7 +50,7 @@
 				},
 				"mask": {
 					"name": "Refreshed Mask",
-					"rolls": ["Health", "Increased Kill XP"],
+					"rolls": ["Skill Power", "Increased Kill XP"],
 					"icon": "he"
 				},
 				"gloves": {

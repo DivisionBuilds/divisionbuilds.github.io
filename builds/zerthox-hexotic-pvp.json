@@ -50,7 +50,7 @@
 				},
 				"mask": {
 					"name": "Tenacious Mask",
-					"rolls": ["Health", "Burn Resistance"],
+					"rolls": ["Skill Power", "Burn Resistance"],
 					"icon": "he"
 				},
 				"gloves": {
