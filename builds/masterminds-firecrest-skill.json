@@ -82,7 +82,7 @@
 					["1x", "Stamina"]
 				],
 				"mods": [
-					["5x", "Electronics", "Health"],
+					["5x", "Electronics", "Health"]
 				],
 				"performance": [
 					["4x", "Turret Damage", "turret"]
