@@ -4,7 +4,7 @@
 	"link": "https://github.com/Zerthox",
 	"date": "18/05/2017",
 	"patch": "1.6",
-	"tags": ["pvp", "dps", "darkzone"],
+	"tags": ["pvp", "dps", "darkzone", "solo", "group"],
 	"build": {
 		"general": [
 			"This is a DPS build for the Darkzone. The Banshee 4 piece bonus only applies in the Darkzone. It is designed to be useful for solo and group play.",
