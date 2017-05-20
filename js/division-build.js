@@ -87,13 +87,14 @@ var build = {
             		var k = key;
             		var s = '<div class="' + k + '"><div class="icon weapon ' + value.icon + '"></div><div class="info"><div class="name">' + value.name + '</div><div class="talents text">' + value.talents.join(", ") + '</div></div><div class="talent-icons"></div></div>';
             		if (value.hasOwnProperty("mods"))
-						s += '<div class="' + k + ' mods"><div class="magazine"><div class="icon"></div><div class="rolls"></div></div><div class="underbarrel"><div class="icon"></div><div class="rolls"></div></div><div class="muzzle"><div class="icon"></div><div class="rolls"></div></div><div class="scope"><div class="icon"></div><div class="rolls"></div></div></div>';
+						s += '<div class="' + k + ' mods"></div>';
             		$(".build-content .weapons").append(s);
             		$.each(value.talents, function(i) {
             			$(".build-content ." + k + " .talent-icons").append('<div class="icon weapon-talent ' + this.classify() + '"></div>');
                     });
 					if (value.hasOwnProperty("mods")) {
 	                    $.each(value.mods, function(key, value) {
+	                    	$(".build-content .weapons .mods." + k).append("<div class='" + key + "'><div class='icon'></div><div class='rolls'></div></div>");
 	                    	$.each(this, function(i) {
 	                    		$(".build-content .weapons ." + k + " ." + key + " .rolls").append("<span>" + this + "</span>");
 	                    	});
