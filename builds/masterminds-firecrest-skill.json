@@ -34,7 +34,7 @@
 				"icon": "hungry-hog"
 			},
 			"sidearm": {
-                "name": "93r",
+                "name": "93R",
                 "talents": ["Responsive", "Expert"],
                 "mods": {
                     "muzzle": ["Small Surpressor"]
