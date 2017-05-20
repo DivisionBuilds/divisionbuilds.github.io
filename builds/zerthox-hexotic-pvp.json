@@ -4,7 +4,7 @@
 	"link": "https://github.com/Zerthox",
 	"date": "09/05/2017",
 	"patch": "1.6",
-	"tags": ["pvp", "dps"],
+	"tags": ["pvp", "dps", "solo", "group"],
 	"build": {
 		"general": [
 			"This is a DPS build for PvP. It is designed to be useful for solo and group play.",
