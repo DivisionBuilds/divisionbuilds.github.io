@@ -1100,7 +1100,9 @@ textarea,
 .build-content .weapons .icon.m44 {
     background-image: url(/sprites/weapons/m44.png);
 }
-.build-content .weapons .icon.m60 {
+.build-content .weapons .icon.m60,
+.build-content .weapons .icon.hungryhog,
+.build-content .weapons .icon.hungry-hog {
     background-image: url(/sprites/weapons/m60.png);
 }
 .build-content .weapons .icon.m249 {
