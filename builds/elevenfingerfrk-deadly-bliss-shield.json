@@ -31,7 +31,7 @@
                 "name": "Urban MDR",
                 "talents": ["Destructive", "Fierce", "Distracted"],
                 "mods": {
-                    "Emagazine": ["Magazine Size", "Reload Speed", "Critical Hit Damage"],
+                    "magazine": ["Magazine Size", "Reload Speed", "Critical Hit Damage"],
                     "underbarrel": ["Optimal Range", "Reload Speed", "Accuracy"],
                     "muzzle": ["Stability", "Critical Hit Chance", "Critical Hit Damage"],
                     "scope": ["Optimal Range", "Headshot Damage", "Critical Hit Damage"]
