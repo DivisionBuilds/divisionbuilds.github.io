@@ -55,6 +55,16 @@ body::after {
     -webkit-filter: blur(5px) brightness(40%);
     filter: blur(5px) brightness(40%);
 }
+body::before {
+    content: "BETA";
+    position: fixed;
+    top: 0;
+    left: 5px;
+    font-size: 2em;
+    color: hsla(0, 0%, 100%, .3);
+    font-weight: bold;
+    text-shadow: none;
+}
 ::selection {
     color: #fff;
     background: hsla(0, 0%, 100%, .3);
