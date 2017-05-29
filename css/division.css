@@ -41,6 +41,7 @@ body {
     overflow-y: auto;
     cursor: default;
 }
+body:after,
 body::after {
     content: "";
     position: fixed;
@@ -55,6 +56,7 @@ body::after {
     -webkit-filter: blur(5px) brightness(40%);
     filter: blur(5px) brightness(40%);
 }
+body:before,
 body::before {
     content: "BETA";
     position: fixed;
@@ -317,7 +319,9 @@ label {
     color: #ff7f00;
     white-space: nowrap;
 }
+.main-container a:after,
 .main-container a::after,
+.main-container a:before,
 .main-container a::before {
     content: "";
     position: absolute;
@@ -331,12 +335,15 @@ label {
     -webkit-transition-delay: .15s;
     transition-delay: .15s;
 }
+.main-container a:before,
 .main-container a::before {
     margin-left: 1.5px;
     margin-bottom: -1.5px;
     background: rgba(150, 150, 150, .1);
 }
+.main-container a:hover:after,
 .main-container a:hover::after,
+.main-container a:hover:before,
 .main-container a:hover::before {
     left: 0;
     width: 100%;
@@ -351,7 +358,9 @@ label {
 .flex-list.links a {
     color: hsla(0, 0%, 100%, .5);
 }
+.flex-list.links a:after,
 .flex-list.links a::after,
+.flex-list.links a:before,
 .flex-list.links a::before {
     display: none;
 }
@@ -464,7 +473,9 @@ label {
     -webkit-transition-delay: 0s;
     transition-delay: 0s;
 }
+.tab-bar .tab-bar-item:before,
 .tab-bar .tab-bar-item::before,
+.tab-bar .tab-bar-item:after,
 .tab-bar .tab-bar-item::after {
     content: "";
     position: absolute;
@@ -479,14 +490,18 @@ label {
     -webkit-transition-delay: .15s;
     transition-delay: .15s;
 }
+.tab-bar .tab-bar-item:hover:before,
 .tab-bar .tab-bar-item:hover::before,
+.tab-bar .tab-bar-item.selected:before,
 .tab-bar .tab-bar-item.selected::before,
+.tab-bar .tab-bar-item.selected:after,
 .tab-bar .tab-bar-item.selected::after {
     width: 100%;
     left: 0;
     -webkit-transition-delay: 0s;
     transition-delay: 0s;
 }
+.tab-bar .tab-bar-item.selected:after,
 .tab-bar .tab-bar-item.selected::after {
     background: #ff7f00 !important;
 }
@@ -505,6 +520,7 @@ label {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
 }
+.build-list:empty:after,
 .build-list:empty::after {
     content: "";
     width: 50px;
@@ -575,7 +591,9 @@ label {
     position: relative;
     color: #ff7f00;
 }
+.build-list .list-item .author:after,
 .build-list .list-item .author::after,
+.build-list .list-item .author:before,
 .build-list .list-item .author::before {
     content: "";
     position: absolute;
@@ -589,12 +607,15 @@ label {
     -webkit-transition-delay: .15s;
     transition-delay: .15s;
 }
+.build-list .list-item .author:before,
 .build-list .list-item .author::before {
     margin-left: 1.5px;
     margin-bottom: -1.5px;
     background: rgba(150, 150, 150, .1);
 }
+.build-list .list-item .author:hover:after,
 .build-list .list-item .author:hover::after,
+.build-list .list-item .author:hover:before,
 .build-list .list-item .author:hover::before {
     left: 0;
     width: 100%;
@@ -684,6 +705,7 @@ label {
     font-weight: 600;
     text-align: center;
 }
+.alert.loading:after,
 .alert.loading::after {
     content: "";
     display: block;
@@ -810,6 +832,7 @@ textarea,
     position: relative;
     margin-top: 80px;
 }
+.build-content .weapons > * + :not(.mods):before,
 .build-content .weapons > * + :not(.mods)::before {
     content: "";
     position: absolute;
@@ -819,7 +842,9 @@ textarea,
     height: 2px;
     background: hsla(0, 0%, 100%, .3);
 }
+.build-content .weapons .icon:before,
 .build-content .weapons .icon::before,
+.build-content .skills .icon:before,
 .build-content .skills .icon::before {
     content: "";
     position: absolute;
@@ -927,6 +952,7 @@ textarea,
     -ms-flex-shrink: 0;
     flex-shrink: 0;
 }
+.build-content .gear .icon:after,
 .build-content .gear .icon::after {
     content: "";
     position: absolute;
@@ -939,10 +965,12 @@ textarea,
     background: linear-gradient(rgba(244, 255, 255, .5), rgba(244, 255, 255, .5) 0) no-repeat, linear-gradient(rgba(244, 255, 255, .5), rgba(244, 255, 255, .5) 0) top right no-repeat, linear-gradient(rgba(244, 255, 255, .5), rgba(244, 255, 255, .5) 0) bottom left no-repeat, linear-gradient(rgba(244, 255, 255, .5), rgba(244, 255, 255, .5) 0) bottom right no-repeat;
     background-size: 3px 3px;
 }
+.build-content .gear .items .icon:after,
 .build-content .gear .items .icon::after {
     -webkit-filter: drop-shadow(3px 3px 0 rgba(200, 200, 200, .3));
     filter: drop-shadow(3px 3px 0 rgba(200, 200, 200, .3));
 }
+.build-content .gear .stats .icon:after,
 .build-content .gear .stats .icon::after {
     -webkit-filter: drop-shadow(3px 3px 0 hsla(0, 0%, 100%, .07));
     filter: drop-shadow(3px 3px 0 hsla(0, 0%, 100%, .07));
@@ -974,6 +1002,7 @@ textarea,
     position: relative;
     margin-top: 6px;
 }
+.build-content .gear .stats :not(.mods) + .mods:before,
 .build-content .gear .stats :not(.mods) + .mods::before {
     content: "";
     position: absolute;
@@ -1460,8 +1489,11 @@ textarea,
 }
 
 /* MAIN STAT ICONS */
+.build-content .gear .stats .main-stats .icon:after,
 .build-content .gear .stats .main-stats .icon::after,
+.build-content .gear .stats .main-rolls .icon:after,
 .build-content .gear .stats .main-rolls .icon::after,
+.build-content .gear .stats .mods .icon:after,
 .build-content .gear .stats .mods .icon::after {
     background-image: url(/sprites/stats.png);
     width: 64px;
@@ -1469,129 +1501,166 @@ textarea,
     top: 23px;
     left: 28px;
 }
+.build-content .gear .stats .icon.firearms:after,
 .build-content .gear .stats .icon.firearms::after {
     background-position: 0 0;
 }
+.build-content .gear .stats .icon.stamina:after,
 .build-content .gear .stats .icon.stamina::after {
     background-position: -64px 0;
 }
+.build-content .gear .stats .icon.electronics:after,
 .build-content .gear .stats .icon.electronics::after {
     background-position: -128px 0;
 }
 
 /* GEAR ICONS */
+.build-content .gear .items .icon.he:after,
 .build-content .gear .items .icon.he::after,
+.build-content .gear .items .icon.exotic:after,
 .build-content .gear .items .icon.exotic::after {
     background-image: url(/sprites/items.png);
     background-size: 800px;
 }
+.build-content .gear .holster .icon.he:after,
 .build-content .gear .holster .icon.he::after,
+.build-content .gear .holster .icon.exotic:after,
 .build-content .gear .holster .icon.exotic::after {
     background-position: 0 -413px;
 }
+.build-content .gear .chest .icon.he:after,
 .build-content .gear .chest .icon.he::after,
+.build-content .gear .chest .icon.exotic:after,
 .build-content .gear .chest .icon.exotic::after {
     background-position: -103px -413px;
 }
+.build-content .gear .backpack .icon.he:after,
 .build-content .gear .backpack .icon.he::after,
+.build-content .gear .backpack .icon.exotic:after,
 .build-content .gear .backpack .icon.exotic::after {
     background-position: -206px -413px;
 }
+.build-content .gear .mask .icon.he:after,
 .build-content .gear .mask .icon.he::after,
+.build-content .gear .mask .icon.exotic:after,
 .build-content .gear .mask .icon.exotic::after {
     background-position: -310px -413px;
 }
+.build-content .gear .gloves .icon.he:after,
 .build-content .gear .gloves .icon.he::after,
+.build-content .gear .gloves .icon.exotic:after,
 .build-content .gear .gloves .icon.exotic::after {
     background-position: -516px -413px;
 }
+.build-content .gear .knee-pads .icon.he:after,
 .build-content .gear .knee-pads .icon.he::after,
+.build-content .gear .knee-pads .icon.exotic:after,
 .build-content .gear .knee-pads .icon.exotic::after {
     background-position: -618px -413px;
 }
 
 /* GEAR SET ICONS */
+.build-content .gear .icon.striker:after,
 .build-content .gear .icon.striker::after,
+.build-content .gear .icon.hunters-faith:after,
 .build-content .gear .icon.hunters-faith::after,
+.build-content .gear .icon.nomad:after,
 .build-content .gear .icon.nomad::after,
+.build-content .gear .icon.sentry:after,
 .build-content .gear .icon.sentry::after,
+.build-content .gear .icon.tactician:after,
 .build-content .gear .icon.tactician::after,
+.build-content .gear .icon.predators-mark:after,
 .build-content .gear .icon.predators-mark::after,
+.build-content .gear .icon.final-measures:after,
 .build-content .gear .icon.final-measures::after,
+.build-content .gear .icon.lone-star:after,
 .build-content .gear .icon.lone-star::after,
+.build-content .gear .icon.defence:after,
 .build-content .gear .icon.defence::after,
+.build-content .gear .icon.frontline:after,
 .build-content .gear .icon.frontline::after,
+.build-content .gear .icon.banshee:after,
 .build-content .gear .icon.banshee::after,
+.build-content .gear .icon.reclaimer:after,
 .build-content .gear .icon.reclaimer::after,
+.build-content .gear .icon.firecrest:after,
 .build-content .gear .icon.firecrest::after,
+.build-content .gear .icon.alphabridge:after,
 .build-content .gear .icon.alphabridge::after,
+.build-content .gear .icon.deadeye:after,
 .build-content .gear .icon.deadeye::after {
     background-image: url(/sprites/gearsets.png);
     background-size: 800px;
 }
+.build-content .gear .icon.striker:after,
 .build-content .gear .icon.striker::after {
     background-position: 0 0;
 }
+.build-content .gear .icon.hunters-faith:after,
 .build-content .gear .icon.hunters-faith::after {
     background-position: -100px 0;
 }
+.build-content .gear .icon.nomad:after,
 .build-content .gear .icon.nomad::after {
     background-position: -200px 0;
 }
+.build-content .gear .icon.sentry:after,
 .build-content .gear .icon.sentry::after {
     background-position: -300px 0;
 }
+.build-content .gear .icon.tactician:after,
 .build-content .gear .icon.tactician::after {
     background-position: -400px 0;
 }
+.build-content .gear .icon.predators-mark:after,
 .build-content .gear .icon.predators-mark::after {
     background-position: -500px 0;
 }
+.build-content .gear .icon.final-measures:after,
 .build-content .gear .icon.final-measures::after {
     background-position: -600px 0;
 }
+.build-content .gear .icon.lone-star:after,
 .build-content .gear .icon.lone-star::after {
     background-position: -700px 0;
 }
-/*.build-content .gear .icon.::after {
-    background-position: 0 -100px;
-}*/
+.build-content .gear .icon.defence:after,
 .build-content .gear .icon.defence::after,
+.build-content .gear .icon.frontline:after,
 .build-content .gear .icon.frontline::after {
     background-position: -100px -100px;
 }
-/*.build-content .gear .icon.::after {
-    background-position: -200px -100px;
-}
-.build-content .gear .icon.::after {
-    background-position: -300px -100px;
-}*/
+.build-content .gear .icon.banshee:after ,
 .build-content .gear .icon.banshee::after {
     background-position: -400px -100px;
 }
-/*.build-content .gear .icon.::after {
-    background-position: -500px -100px;
-}*/
+.build-content .gear .icon.reclaimer:after,
 .build-content .gear .icon.reclaimer::after {
     background-position: -600px -100px;
 }
+.build-content .gear .icon.firecrest:after,
 .build-content .gear .icon.firecrest::after {
     background-position: -700px -100px;
 }
+.build-content .gear .icon.alphabridge:after,
 .build-content .gear .icon.alphabridge::after {
     background-position: 0 -200px;
 }
+.build-content .gear .icon.deadeye:after,
 .build-content .gear .icon.deadeye::after {
     background-position: -100px -200px;
 }
 
 /* SKILL ICONS */
 .build-content .skills .icon,
+.build-content .gear .stats .performance .icon:after,
 .build-content .gear .stats .performance .icon::after {
     width: 100px;
     background-image: url(/sprites/skills.png);
     background-size: 800px;
 }
+.build-content .gear .stats .performance .icon:after,
 .build-content .gear .stats .performance .icon::after {
     width: 75px;
     height: 75px;
@@ -1601,8 +1670,10 @@ textarea,
 }
 .build-content .skills .icon.shield,
 .build-content .skills .icon.ballistic-shield,
+.build-content .gear .stats .performance .icon.shield:after,
 .build-content .gear .stats .performance .icon.shield::after,
-.build-content .gear .stats .performance .icon.ballistic-shield::after, {
+.build-content .gear .stats .performance .icon.ballistic-shield:after
+.build-content .gear .stats .performance .icon.ballistic-shield::after {
     background-position: 0 0;
 }
 .build-content .skills .icon.assault-shield {
@@ -1618,6 +1689,7 @@ textarea,
 .build-content .skills .icon.pulse {
     background-position: 0 -103px;
 }
+.build-content .gear .stats .performance .icon.pulse:after,
 .build-content .gear .stats .performance .icon.pulse::after {
     background-position: 0 -77.25px;
 }
@@ -1638,7 +1710,9 @@ textarea,
 .build-content .skills .icon.seeker-mine {
     background-position: 0 -206px;
 }
+.build-content .gear .stats .performance .icon.seeker:after,
 .build-content .gear .stats .performance .icon.seeker::after,
+.build-content .gear .stats .performance .icon.seeker-mine:after,
 .build-content .gear .stats .performance .icon.seeker-mine::after {
     background-position: 0 -154.5px;
 }
@@ -1655,6 +1729,7 @@ textarea,
 .build-content .skills .icon.first-aid {
     background-position: 0 -309px;
 }
+.build-content .gear .stats .performance .icon.first-aid:after,
 .build-content .gear .stats .performance .icon.first-aid::after {
     background-position: 0 -231.75px;
 }
@@ -1670,6 +1745,7 @@ textarea,
 .build-content .skills .icon.smart-cover {
     background-position: 0 -412px;
 }
+.build-content .gear .stats .performance .icon.smart-cover:after,
 .build-content .gear .stats .performance .icon.smart-cover::after {
     background-position: 0 -309px;
 }
@@ -1685,6 +1761,7 @@ textarea,
 .build-content .skills .icon.mobile-cover {
     background-position: 0 -515px;
 }
+.build-content .gear .stats .performance .icon.mobile-cover:after,
 .build-content .gear .stats .performance .icon.mobile-cover::after {
     background-position: 0 -386.25px;
 }
@@ -1701,7 +1778,9 @@ textarea,
 .build-content .skills .icon.sticky-bomb {
     background-position: 0 -618px;
 }
+.build-content .gear .stats .performance .icon.sticky:after,
 .build-content .gear .stats .performance .icon.sticky::after,
+.build-content .gear .stats .performance .icon.sticky-bomb:after,
 .build-content .gear .stats .performance .icon.sticky-bomb::after {
     background-position: 0 -463.5px;
 }
@@ -1737,20 +1816,31 @@ textarea,
 .build-content .skills .icon.orange-link,
 .build-content .skills .icon.survivor-link,
 .build-content .skills .icon.blue-link,
+.build-content .gear .stats .performance .icon.support-station:after,
 .build-content .gear .stats .performance .icon.support-station::after,
+.build-content .gear .stats .performance .icon.heal-station:after,
 .build-content .gear .stats .performance .icon.heal-station::after,
+.build-content .gear .stats .performance .icon.turret:after,
 .build-content .gear .stats .performance .icon.turret::after,
+.build-content .gear .stats .performance .icon.green-link:after,
 .build-content .gear .stats .performance .icon.green-link::after,
+.build-content .gear .stats .performance .icon.recovery-link:after,
 .build-content .gear .stats .performance .icon.recovery-link::after,
+.build-content .gear .stats .performance .icon.tactical-link:after,
 .build-content .gear .stats .performance .icon.tactical-link::after,
+.build-content .gear .stats .performance .icon.orange-link:after,
 .build-content .gear .stats .performance .icon.orange-link::after,
+.build-content .gear .stats .performance .icon.survivor-link:after,
 .build-content .gear .stats .performance .icon.survivor-link::after,
+.build-content .gear .stats .performance .icon.blue-link:after,
 .build-content .gear .stats .performance .icon.blue-link::after {
     background-image: url(/sprites/skills2.png);
 }
 .build-content .skills .icon.support-station,
 .build-content .skills .icon.heal-station,
+.build-content .gear .stats .performance .icon.support-station:after,
 .build-content .gear .stats .performance .icon.support-station::after,
+.build-content .gear .stats .performance .icon.heal-station:after,
 .build-content .gear .stats .performance .icon.heal-station::after {
     background-position: 0 0;
 }
@@ -1768,6 +1858,7 @@ textarea,
 .build-content .skills .icon.turret {
     background-position: 0 -309px;
 }
+.build-content .gear .stats .performance .icon.turret:after,
 .build-content .gear .stats .performance .icon.turret::after {
     background-position: 0 -231.75px;
 }
