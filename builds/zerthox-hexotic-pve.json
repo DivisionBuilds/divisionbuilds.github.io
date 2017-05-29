@@ -2,7 +2,7 @@
 	"title": "Hexotic PvE DPS",
 	"author": "Zerthox",
 	"link": "https://github.com/Zerthox",
-	"date": "03/05/2017",
+	"date": "29/05/2017",
 	"patch": "1.6",
 	"tags": ["pve", "dps", "solo", "group"],
 	"build": {
@@ -60,7 +60,7 @@
 				},
 				"holster": {
 					"name": "Nimble Holster",
-					"rolls": ["Health"],
+					"rolls": ["Skill Haste"],
 					"icon": "he"
 				},
 				"knee-pads": {
@@ -75,7 +75,7 @@
 					["1x", "Electronics"]
 				],
 				"mods": [
-					["5x", "Firearms", "Health"]
+					["5x", "Firearms", "Skill Haste"]
 				],
 				"performance": [
 					["4x", "First Aid Self Heal", "first-aid"]
