@@ -6,7 +6,7 @@ $(document).ready(function() {
                     var n = result[i].name;
                     if (n.slice(-5) === ".json" && n.slice(0, 1) != "_") {
                          $.ajax({
-                         url: "https://raw.githubusercontent.com/DivisionBuilds/divisionbuilds.github.io/master/builds/" + n,
+                         url: "/builds/" + n,
                          success: function(result) {
                               var u = this.url.split("/");
                               $(".build-list").append('<a href="build?id=' + u.last().slice(0, -5) + '"></a>');

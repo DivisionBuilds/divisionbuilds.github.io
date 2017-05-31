@@ -18,7 +18,7 @@ var build = {
 	showpage: function(page) {
 	    $(".selected").removeClass("selected");
 	    $(".build-content .visible").removeClass("visible");
-	    let e = $(".tab-bar-item:contains(" + page.capitalize() + ")");
+	    var e = $(".tab-bar-item:contains(" + page.capitalize() + ")");
 	    if (e.length === 1) {
 	        e.addClass("selected");
 	        $(".build-content ." + page.toLowerCase()).addClass("visible");
@@ -33,7 +33,7 @@ var build = {
 		$.ajax({
 	        url: url,
 	        success: function(result) {
-	            build.loadData(JSON.parse(result));
+	            build.loadData(result);
 	        },
 	        error: function(jqXHR, exception) {
 	            var msg = '';
@@ -63,7 +63,7 @@ var build = {
 	    });
 	},
 	loadFile: function(file) {
-		build.loadURL("https://raw.githubusercontent.com/DivisionBuilds/divisionbuilds.github.io/master/builds/" + file + ".json")
+		build.loadURL("/builds/" + file + ".json")
 	},
 	loadData: function(d) {
 	    document.title = d.title + " - " + document.title;
@@ -78,6 +78,14 @@ var build = {
 	        $(".build-header .date").before(" for Patch " + d.patch);
 	    if (d.hasOwnProperty("date"))
 	        $(".build-header .date").text("Last updated: " + d.date);
+	    $(".tab-bar-item").each(function() {
+	    	var e = $(this),
+	    		t = e.text().toLowerCase();
+	    	if (!d.build.hasOwnProperty(t)) {
+	    		e.remove();
+	    		$("." + t).remove();
+	    	}
+	    });
 	    $.each(d.build, function(key, value) {
 	        var p = key;
 	        if (p === "general")
@@ -89,8 +97,17 @@ var build = {
             		if (value.hasOwnProperty("mods"))
 						s += '<div class="' + k + ' mods"></div>';
             		$(".build-content .weapons").append(s);
+            		var r = {};
+            		$.ajax({
+				        url: "/data/weapon-talents.json",
+				        success: function(result) {
+				        	r = result;
+				    	}
+				    });
             		$.each(value.talents, function(i) {
-            			$(".build-content ." + k + " .talent-icons").append('<div class="icon weapon-talent ' + this.classify() + '"></div>');
+            			e = $(".build-content ." + k + " .talent-icons");
+            			e.append('<div class="icon weapon-talent ' + this.classify() + '" tooltip="' + r[k] + '"></div>');
+
                     });
 					if (value.hasOwnProperty("mods")) {
 	                    $.each(value.mods, function(key, value) {
