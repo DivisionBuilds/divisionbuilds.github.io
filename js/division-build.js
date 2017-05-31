@@ -147,7 +147,7 @@ var build = {
 		                        	v = this[1] + " Roll";
 		                        else
 		                        	v = this[1] + " Mod";
-		                        if (t === "mods")
+		                        if (t === "mods" && typeof this[2] != "undefined")
 		                        	a = this[2];
 		                        else
 		                        	a = "";
