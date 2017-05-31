@@ -594,7 +594,7 @@ label {
     }
 }
 .build-list .list-item {
-    min-width: 350px;
+    width: 350px;
     padding: 15px 20px;
     margin: 35px 30px;
     color: hsla(0, 0%, 100%, .7);
