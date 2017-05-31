@@ -1,24 +1,24 @@
 @font-face {
     font-family: Borda;
-    src: url(https://cdn.rawgit.com/DivisionBuilds/divisionbuilds.github.io/master/fonts/Borda.eot);
-    src: url(https://cdn.rawgit.com/DivisionBuilds/divisionbuilds.github.io/master/fonts/Borda.eot?#iefix) format("embedded-opentype"),
-         url(https://cdn.rawgit.com/DivisionBuilds/divisionbuilds.github.io/master/fonts/Borda.woff) format("woff"),
-         url(https://cdn.rawgit.com/DivisionBuilds/divisionbuilds.github.io/master/fonts/Borda%20Medium.ttf) format("truetype"),
-         url(https://cdn.rawgit.com/DivisionBuilds/divisionbuilds.github.io/master/fonts/Borda.svg#ywftsvg) format("svg");
+    src: url(/fonts/Borda.eot);
+    src: url(/fonts/Borda.eot?#iefix) format("embedded-opentype"),
+         url(/fonts/Borda.woff) format("woff"),
+         url(/fonts/Borda%20Medium.ttf) format("truetype"),
+         url(/fonts/Borda.svg#ywftsvg) format("svg");
 }
 @font-face {
     font-family: Borda;
-    src: url(https://cdn.rawgit.com/DivisionBuilds/divisionbuilds.github.io/master/fonts/Borda%20DemiBold.ttf) format("truetype");
+    src: url(/fonts/Borda%20DemiBold.ttf) format("truetype");
     font-weight: 600;
 }
 @font-face {
     font-family: Borda;
-    src: url(https://cdn.rawgit.com/DivisionBuilds/divisionbuilds.github.io/master/fonts/Borda%20Bold.ttf) format("truetype");
+    src: url(/fonts/Borda%20Bold.ttf) format("truetype");
     font-weight: 700;
 }
 @font-face {
     font-family: Borda;
-    src: url(https://cdn.rawgit.com/DivisionBuilds/divisionbuilds.github.io/master/fonts/Borda%20Bold.ttf) format("truetype");
+    src: url(/fonts/Borda%20Bold.ttf) format("truetype");
     font-weight: bold;
 }
 html {
