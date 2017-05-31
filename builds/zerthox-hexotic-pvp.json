@@ -2,13 +2,14 @@
 	"title": "Hexotic PvP DPS",
 	"author": "Zerthox",
 	"link": "https://github.com/Zerthox",
-	"date": "29/05/2017",
+	"date": "31/05/2017",
 	"patch": "1.6",
 	"tags": ["pvp", "dps", "solo", "group"],
 	"build": {
 		"general": [
 			"This is a DPS build for PvP. It is designed to be useful for solo and group play.",
 			"It can be used with literally any weapon in the game, I suggest running with at least one Assault Rifle or SMG in PvP though.",
+			"If you feel like you are too squishy, switch the Skill Haste on the Holster for Health. If you want even more Toughness, get Health instead of Skill Haste on the Gear Mods aswell.",
 			"Rolling Stability or Accuracy on the weapon mods does not really matter, feel free pick your preferred handling stat. But the Optimal Range on the underbarrel is for SMGs more beneficial that Stability or Accuracy in my opinion.",
 			"If you want to have a similiar build for PvE, I suggest checking out my <a href='build?id=zerthox-hexotic-pve'>Skulls PvE DPS</a> build."
 		],
@@ -40,7 +41,7 @@
 			"items": {
 				"chest": {
 					"name": "Vigorous Chest",
-					"rolls": ["Health", "Skill Haste", "Burn Resistance"],
+					"rolls": ["Health", "Skill Haste", "Ammo Capacity"],
 					"icon": "he"
 				},
 				"backpack": {

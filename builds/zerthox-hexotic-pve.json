@@ -2,12 +2,13 @@
 	"title": "Hexotic PvE DPS",
 	"author": "Zerthox",
 	"link": "https://github.com/Zerthox",
-	"date": "29/05/2017",
+	"date": "30/05/2017",
 	"patch": "1.6",
 	"tags": ["pve", "dps", "solo", "group"],
 	"build": {
 		"general": [
 			"This is a DPS build for PvE, but with some survivability and skill power in order to sustain without having to rely on teammates.",
+			"If you feel like you are too squishy, switch the Skill Haste on the Holster for Health. If you want even more Toughness, get Health instead of Skill Haste on the Gear Mods aswell.",
 			"It can be used with literally any weapon in the game, I suggest running with an assault rifle due to the Enemy Armor Damage and an bolt-action sniper for one hit headshots though.",
 			"If you feel like you need it you can run with Stability or Accuracy instead of Critical Hit Damage on the weapon mods.",
 			"If you want to have a similiar build for PvP, I suggest checking out my <a href='build?id=zerthox-hexotic-pvp'>Skulls PvP DPS</a> build."
@@ -40,7 +41,7 @@
 			"items": {
 				"chest": {
 					"name": "Vigorous Chest",
-					"rolls": ["Health", "Skill Haste", "Burn Resistance"],
+					"rolls": ["Health", "Skill Haste", "Ammo Capacity"],
 					"icon": "he"
 				},
 				"backpack": {
@@ -50,7 +51,7 @@
 				},
 				"mask": {
 					"name": "Refreshed Mask",
-					"rolls": ["Skill Power", "Increased Kill XP"],
+					"rolls": ["Skill Power", "Damage to Elites"],
 					"icon": "he"
 				},
 				"gloves": {
