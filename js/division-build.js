@@ -32,8 +32,8 @@ var build = {
 	loadURL: function(url) {
 		$.ajax({
 	        url: url,
-	        success: function(result) {
-	            build.loadData(result);
+	        success: function(r) {
+	            build.loadData(r);
 	        },
 	        error: function(jqXHR, exception) {
 	            var msg = '';
@@ -97,17 +97,8 @@ var build = {
             		if (value.hasOwnProperty("mods"))
 						s += '<div class="' + k + ' mods"></div>';
             		$(".build-content .weapons").append(s);
-            		var r = {};
-            		$.ajax({
-				        url: "/data/weapon-talents.json",
-				        success: function(result) {
-				        	r = result;
-				    	}
-				    });
             		$.each(value.talents, function(i) {
-            			e = $(".build-content ." + k + " .talent-icons");
-            			e.append('<div class="icon weapon-talent ' + this.classify() + '" tooltip="' + r[k] + '"></div>');
-
+            			$(".build-content ." + k + " .talent-icons").append('<div class="icon weapon-talent ' + this.classify() + '"></div>');
                     });
 					if (value.hasOwnProperty("mods")) {
 	                    $.each(value.mods, function(key, value) {
@@ -118,6 +109,15 @@ var build = {
 	                    });
                 	}
             	});
+            	$.ajax({
+			        url: "/data/weapon-talents.json",
+			        success: function(r) {
+			        	$(".build-content .talent-icons .icon").each(function() {
+							$(this).append("<span class='tooltip'>" + r[$(this).attr("class").split(" ").last()] + "</span>");
+			        	});
+			        	tooltips.follow(true);
+		        	}
+			    });
             }
 	        else {
 		        $.each(this, function(key) {
