@@ -7,10 +7,9 @@ $(document).ready(function() {
                     if (n.slice(-5) === ".json" && n.slice(0, 1) != "_") {
                          $.ajax({
                          url: "/builds/" + n,
-                         success: function(result) {
+                         success: function(r) {
                               var u = this.url.split("/");
                               $(".build-list").append('<a href="build?id=' + u.last().slice(0, -5) + '"></a>');
-                              var r = JSON.parse(result);
                               var s = '<div class="list-item"><div class="title">' + r.title + '</div><div class="info">';
                               if (r.hasOwnProperty("author")) {
                                    s += 'Author: <a';
