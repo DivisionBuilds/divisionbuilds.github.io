@@ -38,8 +38,10 @@ body {
     color: hsla(0, 0%, 100%, .5);
     text-shadow: 0 0 3px rgba(0, 0, 0, .3), 3px 3px 0 rgba(150, 150, 150, .1);
     overflow-x: hidden;
-    overflow-y: auto;
+    overflow-y: scroll;
     cursor: default;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
 }
 body:after,
 body::after {
@@ -56,16 +58,10 @@ body::after {
     -webkit-filter: blur(5px) brightness(40%);
     filter: blur(5px) brightness(40%);
 }
-body:before,
-body::before {
-    content: "BETA";
-    position: fixed;
-    top: 0;
-    left: 5px;
-    font-size: 2em;
-    color: hsla(0, 0%, 100%, .3);
-    font-weight: bold;
-    text-shadow: none;
+body > * {
+	-webkit-transition: opacity .3s ease-in-out;
+	-ms-transition: opacity .3s ease-in-out;
+	transition: opacity .3s ease-in-out;
 }
 ::selection {
     color: #fff;
@@ -200,11 +196,28 @@ label {
     top: 40px;
     right: 40px;
     opacity: .5;
-    -webkit-transition: all .15s ease-in-out;
-    transition: all .15s ease-in-out;
+    -webkit-transition: opacity .15s ease-in-out;
+    transition: opacity .15s ease-in-out;
+    z-index: 10;
 }
 .back-button:hover {
     opacity: .7;
+}
+.beta {
+    position: fixed;
+    top: 0;
+    left: 5px;
+    font-size: 2em;
+    color: hsla(0, 0%, 100%, .3);
+    font-weight: bold;
+    text-shadow: none;
+    -webkit-transition: all .15s ease-in-out;
+    transition: all .15s ease-in-out;
+    cursor: pointer;
+    z-index: 11;
+}
+.beta:hover {
+    color: hsla(0, 0%, 100%, .7);
 }
 
 /* HEADER */
@@ -218,6 +231,8 @@ label {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+	-webkit-animation: fade-in .5s ease-in-out;
+	animation: fade-in .5s ease-in-out;
 }
 .main-header,
 .build-header {
@@ -300,6 +315,8 @@ label {
     background: hsla(0, 0%, 50%, .1);
     cursor: auto;
     font-size: 1.125em;
+    -webkit-animation: fade-in .5s ease-in-out;
+    animation: fade-in .5s ease-in-out;
 }
 .main-container.wide {
     min-width: 850px;
@@ -534,37 +551,45 @@ label {
 }
 @-webkit-keyframes circle-spin {
     0% {
-        -webkit-transform: rotate(0deg);
-        transform: rotate(0deg);
+        -webkit-transform: rotate(0);
+        -ms-transform: rotate(0);
+        transform: rotate(0);
     }
     25% {
         -webkit-transform: rotate(60deg);
+        -ms-transform: rotate(60deg);
         transform: rotate(60deg);
     }
     75% {
         -webkit-transform: rotate(300deg);
+        -ms-transform: rotate(300deg);
         transform: rotate(300deg);
     }
     100% {
         -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
         transform: rotate(360deg);
     }
 }
 @keyframes circle-spin {
     0% {
-        -webkit-transform: rotate(0deg);
-        transform: rotate(0deg);
+        -webkit-transform: rotate(0);
+        -ms-transform: rotate(0);
+        transform: rotate(0);
     }
     25% {
         -webkit-transform: rotate(60deg);
+        -ms-transform: rotate(60deg);
         transform: rotate(60deg);
     }
     75% {
         -webkit-transform: rotate(300deg);
+        -ms-transform: rotate(300deg);
         transform: rotate(300deg);
     }
     100% {
         -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
         transform: rotate(360deg);
     }
 }
@@ -576,6 +601,8 @@ label {
     font-size: 1.25em;
     -webkit-transition: all .15s ease-in-out;
     transition: all .15s ease-in-out;
+    -webkit-animation: fade-in .5s ease-in-out;
+    animation: fade-in .5s ease-in-out;
 }
 .build-list .list-item:hover {
     background: hsla(0, 0%, 100%, .1);
@@ -800,6 +827,21 @@ textarea,
     -ms-flex-direction: column;
     flex-direction: column;
     margin: 0 auto;
+	-webkit-animation: fade-in .5s ease-in-out;
+	animation: fade-in .5s ease-in-out;
+}
+.build-content .weapons {
+	-webkit-animation: none;
+	animation: none;
+}
+.build-content .weapons .mods,
+.build-content .weapons > :not(.mods) > * {
+	-webkit-animation: fade-in .5s ease-in-out;
+	animation: fade-in .5s ease-in-out;
+}
+.build-content .weapons > :not(.mods) > .icon {
+	-webkit-animation: fade-in-7 .5s ease-in-out;
+	animation: fade-in-7 .5s ease-in-out;
 }
 .build-content > :not(.general) > * {
     margin: 5px 0;
@@ -1052,6 +1094,59 @@ textarea,
 .error .error-content {
     margin-top: 10px;
     font-size: 1.5em;
+}
+
+/* MODALS */
+.modal-wrapper {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+.backdrop {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+.modal {
+	position: relative;
+    min-width: 250px;
+    max-width: 750px;
+    margin: auto;
+    padding: 20px 40px;
+    background: hsla(0, 0%, 50%, .1);
+    cursor: auto;
+    font-size: 1.125em;
+    -webkit-animation: fade-in .3s ease-in-out;
+    animation: fade-in .3s ease-in-out;
+}
+.modal .close {
+	position: absolute;
+    top: 10px;
+    right: 10px;
+    height: 36px;
+    width: 36px;
+    opacity: .5;
+    -webkit-transition: all .15s ease-in-out;
+    transition: all .15s ease-in-out;
+    cursor: pointer;
+}
+.modal .close:hover {
+    opacity: .7;
+}
+.modal h1 {
+	color: #ff7f00;
+	font-size: 2.5em;
+	font-weight: bold;
+}
+.modal p {
+	font-size: 1.125em;
 }
 
 /* CALCULATOR */
@@ -1566,7 +1661,7 @@ textarea,
 .build-content .weapons .icon.glutton::before,
 .build-content .weapons .icon.glutton:after,
 .build-content .weapons .icon.glutton::after {
-    background-position: -600px -600px;
+    background-position: -700px -600px;
 }
 .build-content .weapons .icon.valkyrie:before,
 .build-content .weapons .icon.valkyrie::before,
@@ -2047,6 +2142,40 @@ textarea,
 .build-content .skills .icon.survivor-link,
 .build-content .skills .icon.blue-link  {
     background-position: -206px -515px;
+}
+
+/* GENERAL ANIMATION KEYFRAMES */
+@-webkit-keyframes fade-in {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+@keyframes fade-in {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+@-webkit-keyframes fade-in-7 {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: .7;
+	}
+}
+@keyframes fade-in-7 {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: .7;
+	}
 }
 
 /* MEDIA ADJUSTEMENTS */
