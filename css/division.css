@@ -1204,14 +1204,40 @@ textarea,
     position: fixed;
     margin-top: 5px;
     margin-left: 5px;
-    width: 200px;
+    padding: 5px 10px;
     background: rgba(0, 0, 0, .9);
     border-left: 2px solid #ff7f00;
-    padding: 5px;
+    font-size: 1em;
     z-index: 100;
+}
+.build-content .tooltip {
+    max-width: 300px;
+}
+.items .icon.he ~ .tooltip {
+	border-color: rgb(180, 139, 55);
+}
+.items .icon.he ~ .tooltip h1 {
+	color: rgb(180, 139, 55);
+}
+.items .icon.exotic ~ .tooltip {
+	border-color: rgb(208, 92, 60);
+}
+.items .icon.exotic ~ .tooltip h1 {
+	color: rgb(208, 92, 60);
+}
+.items .icon:not(.he):not(.exotic) ~ .tooltip {
+	border-color: rgb(15, 211, 129);
+}
+.items .icon:not(.he):not(.exotic) ~ .tooltip h1 {
+	color: rgb(15, 211, 129);
 }
 :not(:hover) > .tooltip {
 	display: none;
+}
+.tooltip h1 {
+    font-size: 1.2em;
+	font-weight: bold;
+	color: #ff7f00;
 }
 
 /* WEAPON ICONS */
