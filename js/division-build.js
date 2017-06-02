@@ -109,15 +109,6 @@ var build = {
 	                    });
                 	}
             	});
-            	$.ajax({
-			        url: "/data/weapon-talents.json",
-			        success: function(r) {
-			        	$(".build-content .talent-icons .icon").each(function() {
-							$(this).append("<span class='tooltip'>" + r[$(this).attr("class").split(" ").last()] + "</span>");
-			        	});
-			        	tooltips.follow(true);
-		        	}
-			    });
             }
 	        else {
 		        $.each(this, function(key) {
@@ -126,9 +117,7 @@ var build = {
 		                $.each(this, function(key, value) {
 		                    var t = key;
 		                    $.each(this, function(key, value) {
-		                        if (key === "type")
-		                            $(".build-content .gear .items ." + t + " .icon").addClass(value);
-		                        else if (key === "icon")
+		                        if (key === "icon")
 		                            $(".build-content .gear .items ." + t + "> .icon").addClass(value);
 		                        else if ($.isArray(value))
 		                        	$(".build-content .items ." + t + " ." + key).text(value.join(", "));
@@ -174,5 +163,52 @@ var build = {
 		        });
 	  		}
 	    });
+		$.ajax({
+	        url: "/data/weapon_talents.json",
+	        success: function(r) {
+	        	$(".build-content .talent-icons .icon").each(function() {
+	        		var t = $(this).attr("class").split(" ").last();
+					$(this).append("<span class='tooltip'><h1>" + t.capitalize() + "</h1>" + r[t] + "</span>");
+	        	});
+        	}
+	    });
+	    $.ajax({
+	        url: "/data/gear_talents.json",
+	        success: function(r) {
+	        	$(".build-content .items").children().each(function() {
+	        		var e = $(this).find(".icon"),
+	        			n = $(this).find(".name").text(),
+	        			t = "";
+	        		if (e.hasClass("he") || e.hasClass("exotic")) {
+	        			if (e.hasClass("he"))
+	        				t = n.split(" ")[0];
+	        			else if (e.hasClass("exotic")) {
+		        			var k = n.split(" ")[0].split("'")[0];
+		        			t = n;
+		        		}
+	        			$(this).append("<span class='tooltip'><h1>" + t.capitalize() + "</h1>" + r[k || t] + "</span>");
+	        		}
+					
+	        	});
+        	}
+	    });
+	    $.ajax({
+	        url: "/data/gearsets.json",
+	        success: function(r) {
+	        	$(".build-content .items").children().each(function() {
+		        	var e = $(this).find(".icon");
+	        		if (!e.hasClass("he") && !e.hasClass("exotic")) {
+	        			var g = e.attr("class").split(" ").last();
+	        				t = r[g].name;
+	        				b = r[g].bonuses;
+	        			$(this).append("<span class='tooltip'><h1>" + t + "</h1></span>");
+	        			for (var i = 0; i < b.length; i++) {
+	        				$(this).find(".tooltip").append("<p>" + b[i] + "</p>");
+	        			}
+	        		}
+	        	});
+        	}
+	    });
+	    tooltips.follow(true);
 	}
 };
