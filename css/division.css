@@ -327,11 +327,18 @@ label {
 .main-container.text p {
     text-align: justify;
 }
+.main-container ul {
+	margin-left: 20px;
+	margin-bottom: 10px;
+}
 .main-container iframe {
     display: block;
     margin: 0 auto;
 }
-.main-container a {
+
+/* LINKS */
+.main-container a,
+.modal a {
     position: relative;
     color: #ff7f00;
     white-space: nowrap;
@@ -339,7 +346,11 @@ label {
 .main-container a:after,
 .main-container a::after,
 .main-container a:before,
-.main-container a::before {
+.main-container a::before,
+.modal a:after,
+.modal a::after,
+.modal a:before,
+.modal a::before {
     content: "";
     position: absolute;
     left: 50%;
@@ -353,7 +364,9 @@ label {
     transition-delay: .15s;
 }
 .main-container a:before,
-.main-container a::before {
+.main-container a::before,
+.modal a:before,
+.modal a::before {
     margin-left: 1.5px;
     margin-bottom: -1.5px;
     background: rgba(150, 150, 150, .1);
@@ -361,7 +374,11 @@ label {
 .main-container a:hover:after,
 .main-container a:hover::after,
 .main-container a:hover:before,
-.main-container a:hover::before {
+.main-container a:hover::before,
+.modal a:hover:after,
+.modal a:hover::after,
+.modal a:hover:before,
+.modal a:hover::before {
     left: 0;
     width: 100%;
     -webkit-transition-delay: 0s;
