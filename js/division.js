@@ -17,15 +17,8 @@ $(document).ready(function() {
 		core.modal("DivisionBuilds.github.io is in BETA", "This page is still work in progress. If you encounter any issues, please submit them!");
 	})
 });
-String.prototype.capitalize = function() {
-    return this.charAt(0).toUpperCase() + this.slice(1);
-}
-String.prototype.classify = function() {
-    return this.toLowerCase().replace(/ /g, "-");
-}
-Array.prototype.last = function() {
-    return this[this.length - 1];
-}
+
+// CORE FUNCTIONS
 var core = {
 	alert: function(title, msg) {
 		$(".back-button").hide();
@@ -41,6 +34,8 @@ var core = {
 		});
 	}
 };
+
+// TOOLTIP FUNCTIONS
 var tooltips = {
 	follow: function(a) {
 		if (a) {
@@ -52,3 +47,15 @@ var tooltips = {
 		else $(document).off("mousemove");
 	}
 };
+
+// JS UTILS
+// Source: github.com/Zerthox/JS-Utils
+String.prototype.capitalize = function() {
+    return this.charAt(0).toUpperCase() + this.slice(1);
+}
+String.prototype.classify = function() {
+    return this.toLowerCase().replace(/ /g, "-");
+}
+Array.prototype.last = function() {
+    return this[this.length - 1];
+}
