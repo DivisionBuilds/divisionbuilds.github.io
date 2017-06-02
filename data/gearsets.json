@@ -1,0 +1,114 @@
+{
+    "alphabridge": {
+        "name": "AlphaBridge",
+        "bonuses": [
+            "+ 100% Health Regen",
+            "+ 5.0% Weapon Damage",
+            "If your Primary and Secondary Weapon is of the same category, they share the free talent. All talent requirements are ignored for all weapon talents."
+        ]
+    },
+    "banshee": {
+        "name": "Banshee",
+        "bonuses": [
+            "+ 20% Looted DZ Funds",
+            "+ 10% Damage to targets out of cover",
+            "While Rogue, all ammo is completely refilled every 30 seconds. Damage taken from non rogue players reduced by 10%. While not Rogue, Damage to Rogue players is increased by 10%.<br>This bonus is increased to 20% for 10 minutes after being killed by a rogue."
+        ]
+    },
+    "deadeye": {
+        "name": "DeadEYE",
+        "bonuses": [
+            "+ 40.0% Initial Bullet Stability",
+            "+ 20% Marksmanrifle Critical Hit Damage",
+            "When zoomed, Marksman Rifles lose headshot damage bonus, but gain 100% critical strike chance."
+        ]
+    },
+    "firecrest": {
+        "name": "Firecrest",
+        "bonuses": [
+            "+ 3 Incendiery Granade Capacity",
+            "+ 50.0% Flame Turret Range<br>+ 30.0% Flame Turret Damage",
+            "Your weapon damage is increased by 15% against burning targets."
+        ]
+    },
+    "final-measures": {
+        "name": "Final Measures",
+        "bonuses": [
+            "+ 25.0% Exotic Damage Resilience",
+            "+ 15% Protection from Elites",
+            "When in range of hostile grenades or mortars, defuses them and adds grenades to your inventory. Can only happen once every 8 seconds."
+        ]
+    },
+    "frontline": {
+        "name": "D3-FNC",
+        "bonuses": [
+            "+ 15% Protection from Elites",
+            "+ 30.0% Ballistic Shield Health",
+            "Allows using an SMG if one is equipped when Ballistic Shield is deployed. Only Master Rank shield mod is active."
+        ]
+    },
+    "hunters-faith": {
+        "name": "Hunters Faith",
+        "bonuses": [
+            "+ 20.0% Optimal Range",
+            "+ 10.0% Headshot Damage",
+            "Hitting an enemy with a bullet grants you and your group temporary protection. The further your shot, the more protection. Each group member’s protection disappears after getting hit by one hostile bullet."
+        ]
+    },
+    "lone-star": {
+        "name": "Lone Star",
+        "bonuses": [
+            "+ 100% Ammo Capacity",
+            "+ 8% LMG Damage<br>+ 8% Shotgun Damage",
+            "When the weapon is holstered, it is instantly reloaded."
+        ]
+    },
+    "nomad": {
+        "name": "Nomad",
+        "bonuses": [
+            "+ 15% Health on Kill",
+            "Grants a constant small amount of healing, allowing the user to regenerate all segments of the health bar during combat.",
+            "When receiving fatal damage, you are instead healed to full health. Can occur once every 4 minutes."
+        ]
+    },
+    "predators-mark": {
+        "name": "Predators Mark",
+        "bonuses": [
+            "+ 10% Reload Speed",
+            "+ 8% Assault Rifle Damage<br>+ 8% SMG Damage",
+            "Hit 10 shots without switching target to make the target bleed for 50% of damage already done by those bullets."
+        ]
+    },
+    "reclaimer": {
+        "name": "Reclaimer",
+        "bonuses": [
+            "+ 30.0% Support Station range",
+            "+ 50.0% Support Station duration",
+            "Support station gains the benefit of the Life Support, Immunizer and Ammo Cache mods at the same time."
+        ]
+    },
+    "sentry": {
+        "name": "Sentrys Call",
+        "bonuses": [
+            "+ 30.0% Accuracy",
+            "+ 10.0% Headshot Damage",
+            "Headshots using semi-automatic weapons mark the enemy, increasing the damage inflicted on the target by 5% for a duration of 30 seconds each. A target can receive up to three marks."
+        ]
+    },
+    "striker": {
+        "name": "Striker",
+        "bonuses": [
+            "+ 20.0% Stability",
+            "+ 10.0% Enemy Armor Damage",
+            "Every consecutive hit deals 1% more damage. Stacks up to 100%. Missing shots drop bonus by 2%. Bonus is reduced by 1% every second."
+        ]
+    },
+    "tactician": {
+        "name": "Tactician",
+        "bonuses": [
+            "+ 15% Skill Haste",
+            "+ 10% Skill Power",
+            "Every bullet you and your group lands on a hostile adds 0.2% skill power to you for a max of 30% bonus. Bonus consumes the skill power buff on skill use."
+        ]
+    }
+}
