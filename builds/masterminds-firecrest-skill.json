@@ -45,7 +45,7 @@
 		"gear": {
 			"items": {
 				"chest": {
-					"name": "Barrest Bulletproof Vest",
+					"name": "Barrets Bulletproof Vest",
 					"rolls": ["Health", "Skill Haste", "Ammo Capacity"],
 					"icon": "exotic"
 				},
