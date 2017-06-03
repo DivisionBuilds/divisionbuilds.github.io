@@ -452,8 +452,8 @@ label {
 }
 .logo.ubisoft {
     background-image: url(https://ubistatic19-a.akamaihd.net/ubicomstatic/de-DE/global/css/images/ubi-mark.svg);
-    background-position: 0 10px;
-    background-size: 115px;
+    background-position: 30% 0;
+    background-size: 200px;
 }
 .logo.alphacoders {
     background-image: url(https://static.alphacoders.com/alpha_system_360.png);
