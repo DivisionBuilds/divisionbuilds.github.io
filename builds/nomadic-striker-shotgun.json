@@ -16,7 +16,7 @@
 		"weapons": {
 			"primary": {
 				"name": "Black Market SASG-12",
-				"talents": ["Destructive", "Sustained", "Predatory"],
+				"talents": ["Destructive", "Unforgiving", "Predatory"],
 				"icon": "sasg-12"
 			},
 			"secondary": {
