@@ -14,7 +14,7 @@ $(document).ready(function() {
 	];
 	$("head").append("<style>body::after{background-image:url(" + img[Math.floor(Math.random() * img.length)] + ");}</style>");
 	$(".beta").click(function() {
-		core.modal("DivisionBuilds.github.io is in BETA", "<p>This page is still work in progress. If you encounter any issues, please submit them!</p><p>If you want to know more about the development process, check out the <a href='/to-do'>To-Do-List</a> and <a href='https://twitter.com/Division_Builds'>@Division_Builds</a> on Twitter.");
+		core.modal("DivisionBuilds.github.io is in BETA", "<p>This website is still work in progress. If you encounter any issues, please submit them!</p><p>If you want to know more about the development process, check out the <a href='/to-do'>To-Do-List</a> and <a href='https://twitter.com/Division_Builds'>@Division_Builds</a> on Twitter.");
 	})
 });
 
