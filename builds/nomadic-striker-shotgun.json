@@ -29,7 +29,7 @@
 			"items": {
 				"chest": {
 					"name": "Vest of the Nomad",
-					"rolls": ["Health", "Health on Kill", "Ammo"],
+					"rolls": ["Health", "Health on Kill", "Ammo Capacity"],
 					"icon": "nomad"
 				},
 				"backpack": {
