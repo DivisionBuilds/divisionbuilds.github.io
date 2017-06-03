@@ -21,16 +21,16 @@
 			},
 			"secondary": {
 				"name": "Tactical Super 90 SBS",
-				"talents": ["Destructive", "Predatory", "Responsive"],
+				"talents": ["Predatory", "Swift", "Destructive"],
 				"icon": "super-90"
 			}
 		},
 		"gear": {
 			"items": {
 				"chest": {
-					"name": "Striker's Chest",
-					"rolls": ["Health", "Health on Kill", "Kill XP"],
-					"icon": "striker"
+					"name": "Vest of the Nomad",
+					"rolls": ["Health", "Health on Kill", "Ammo"],
+					"icon": "nomad"
 				},
 				"backpack": {
 					"name": "Nomad Backpack",
@@ -43,9 +43,9 @@
 					"icon": "striker"
 				},
 				"gloves": {
-					"name": "Nomad Gloves",
-					"rolls": ["Shotgun Damage", "Health on Kill", "Critical Hit Chance"],
-					"icon": "nomad"
+					"name": "Striker's Gloves",
+					"rolls": ["Shotgun Damage", "Health on Kill", "Enemy Armor Damage"],
+					"icon": "striker"
 				},
 				"holster": {
 					"name": "Striker's Holster",
