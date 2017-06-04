@@ -110,6 +110,24 @@ var build = {
                 	}
             	});
             }
+            else if (p === "skills") {
+            	$.each(this, function(key) {
+        			var k = key;
+        			var s = '<div class="' + k + '"><div class="icon skill ' + this.mod.classify() + '"></div><div class="info">';
+        			if (this.hasOwnProperty("name"))
+        				s += '<div class="name">' + this.name + '</div><div class="mod text">' + this.mod + '</div>';
+        			else
+        				s += '<div class="mod name">' + this.mod + '</div>';
+        			s += '</div></div>';
+        			$(".build-content .skills").append(s);
+            	});
+            }
+            else if (p === "talents") {
+            	$(".build-content .skills").append('<div class="talents"></div>');
+            	$.each(this, function(index, value) {
+        			$(".build-content .skills .talents").append('<div><div class="icon talent ' + value.classify() + '"></div><div class="info"><div class="name">' + value + '</div></div></div>');
+            	});
+            }
 	        else {
 		        $.each(this, function(key) {
 		            var k = key;
@@ -146,18 +164,6 @@ var build = {
 		                        	i = this[1].classify();
 		                        $(".build-content .gear .stats").append('<div class="' + t + '"><div class="amount">' + this[0] + '</div><div class="icon ' + i + '"></div><div class="info"><div class="name">' + v + '</div>' + a + '</div></div>');
 		                    });
-		                });
-		            }
-		            else {
-		                $.each(this, function(key, value) {
-		                    if (key === "icon")
-		                        $(".build-content ." + p + " ." + k + "> .icon").addClass(value);
-		                    else if (key === "mod") {
-		                    	$(".build-content ." + p + " ." + k + " .mod").text(value);
-		                    	$(".build-content ." + p + " ." + k + " .icon").addClass(value.classify());
-		                    }
-		                    else
-		                        $(".build-content ." + p + " ." + k + " ." + key).text(value);
 		                });
 		            }
 		        });

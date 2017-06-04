@@ -1083,6 +1083,32 @@ textarea,
 .build-content > :not(.weapons) .icon {
     margin-right: 30px;
 }
+.build-content .skills .talents {
+	position: relative;
+	margin-top: 40px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+.build-content .skills .talents::before {
+    content: "";
+    position: absolute;
+    top: -25px;
+    left: -10%;
+    right: -10%;
+    height: 2px;
+    background: hsla(0, 0%, 100%, .3);
+}
+.build-content .skills .talents > * + * {
+	margin-left: 30px;
+}
+.build-content .skills .talents .icon {
+	margin: auto;
+}
+.build-content .skills .talents .info {
+	margin-top: 10px;
+	text-align: center;
+}
 
 /* ERRORS */
 .error {
@@ -1953,7 +1979,7 @@ textarea,
 }
 
 /* SKILL ICONS */
-.build-content .skills .icon,
+.build-content .skills .icon.skill,
 .build-content .gear .stats .performance .icon:after,
 .build-content .gear .stats .performance .icon::after {
     width: 100px;
@@ -2185,6 +2211,85 @@ textarea,
 .build-content .skills .icon.survivor-link,
 .build-content .skills .icon.blue-link  {
     background-position: -206px -515px;
+}
+
+/* SKILL ICONS */
+.build-content .skills .icon.talent {
+    width: 100px;
+    background-image: url(/sprites/talents.png);
+    background-size: 800px;
+}
+.build-content .skills .icon.critical-save {
+    background-position: 0 0;
+}
+.build-content .skills .icon.combat-medic {
+    background-position: -103px 0;
+}
+.build-content .skills .icon.adrenaline {
+    background-position: -206px 0;
+}
+.build-content .skills .icon.strike-back {
+    background-position: -309px 0;
+}
+.build-content .skills .icon.battle-buddy {
+    background-position: -412px 0;
+}
+.build-content .skills .icon.triage {
+    background-position: -515px 0;
+}
+.build-content .skills .icon.shrapnel {
+    background-position: -618px 0;
+}
+.build-content .skills .icon.shock-and-awe {
+    background-position: 0 -103px;
+}
+.build-content .skills .icon.fear-tactics {
+    background-position: -103px -103px;
+}
+.build-content .skills .icon.wildfire {
+    background-position: -206px -103px;
+}
+.build-content .skills .icon.tactical-advantage {
+    background-position: -309px -103px;
+}
+.build-content .skills .icon.evasive-action {
+    background-position: -412px -103px;
+}
+.build-content .skills .icon.police-up {
+    background-position: -515px -103px;
+}
+.build-content .skills .icon.tech-support {
+    background-position: -618px -103px;
+}
+.build-content .skills .icon.death-by-proxy {
+    background-position: 0 -206px;
+}
+.build-content .skills .icon.demolition-expert {
+    background-position: -103px -206px;
+}
+.build-content .skills .icon.steady-hands {
+    background-position: -206px -206px;
+}
+.build-content .skills .icon.on-the-move {
+    background-position: -309px -206px;
+}
+.build-content .skills .icon.one-is-none {
+    background-position: -412px -206px;
+}
+.build-content .skills .icon.precision {
+    background-position: -515px -206px;
+}
+.build-content .skills .icon.stopping-power {
+    background-position: -618px -206px;
+}
+.build-content .skills .icon.chain-reaction {
+    background-position: 0 -306px;
+}
+.build-content .skills .icon.desperate-times {
+    background-position: -103px -306px;
+}
+.build-content .skills .icon.repo-reaper {
+    background-position: -206px -306px;
 }
 
 /* GENERAL ANIMATION KEYFRAMES */
