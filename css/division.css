@@ -1092,6 +1092,7 @@ textarea,
 .build-content .skills * + .talents {
 	margin-top: 40px;
 }
+.build-content .skills * + .talents:before,
 .build-content .skills * + .talents::before {
     content: "";
     position: absolute;
