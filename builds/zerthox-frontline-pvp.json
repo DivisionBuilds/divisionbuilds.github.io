@@ -2,7 +2,7 @@
 	"title": "Frontline PvP DPS",
 	"author": "Zerthox",
 	"link": "https://github.com/Zerthox",
-	"date": "25/05/2017",
+	"date": "05/06/2017",
 	"patch": "1.6",
 	"tags": ["pvp", "dps", "shield"],
 	"build": {
@@ -23,7 +23,7 @@
 			},
 			"secondary": {
 				"name": "PP-19",
-				"talents": ["Responsive", "Deadly", "Vicious"],
+				"talents": ["Responsive", "Deadly", "Hurried"],
 				"mods": {
 					"magazine": ["Magazine Size", "Rate of Fire", "Critical Hit Chance"],
 					"underbarrel": ["Critical Hit Damage", "Reload Speed", "Optimal Range"],
@@ -91,6 +91,7 @@
 			"link": {
 				"mod": "Recovery Link"
 			}
-		}
+		},
+		"talents": ["On the Move", "Critical Save", "Precision", "One is None"]
 	}
 }
