@@ -93,6 +93,7 @@
 			"link": {
 				"mod": "Recovery Link"
 			}
-		}
+		},
+		"talents": ["Triage", "Strike Back", "Combat Medic", "Death by Proxy"]
 	}
 }
