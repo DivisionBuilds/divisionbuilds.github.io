@@ -95,6 +95,7 @@
 			"link": {
 				"mod": "Recovery Link"
 			}
-		}
+		},
+		"talents": ["Triage", "Strike Back", "On the Move", "One is None"]
 	}
 }
