@@ -1085,12 +1085,14 @@ textarea,
 }
 .build-content .skills .talents {
 	position: relative;
-	margin-top: 40px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
 }
-.build-content .skills .talents::before {
+.build-content .skills * + .talents {
+	margin-top: 40px;
+}
+.build-content .skills * + .talents::before {
     content: "";
     position: absolute;
     top: -25px;
