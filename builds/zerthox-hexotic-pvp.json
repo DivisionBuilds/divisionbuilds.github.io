@@ -96,6 +96,7 @@
 			"link": {
 				"mod": "Survivor Link"
 			}
-		}
+		},
+		"talents": ["Triage", "Strike Back", "On the Move", "Critical Save"]
 	}
 }
