@@ -2216,7 +2216,7 @@ textarea,
     background-position: -206px -515px;
 }
 
-/* SKILL ICONS */
+/* TALENT ICONS */
 .build-content .skills .icon.talent {
     width: 100px;
     background-image: url(/sprites/talents.png);
@@ -2252,7 +2252,7 @@ textarea,
 .build-content .skills .icon.wildfire {
     background-position: -206px -103px;
 }
-.build-content .skills .icon.tactical-advantage {
+.build-content .skills .icon.tactical-advance {
     background-position: -309px -103px;
 }
 .build-content .skills .icon.evasive-action {
