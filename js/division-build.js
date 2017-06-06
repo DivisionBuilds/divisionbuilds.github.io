@@ -181,37 +181,49 @@ var build = {
 	    $.ajax({
 	        url: "/data/gear_talents.json",
 	        success: function(r) {
-	        	$(".build-content .items").children().each(function() {
-	        		var e = $(this).find(".icon"),
-	        			n = $(this).find(".name").text(),
-	        			t = "";
-	        		if (e.hasClass("he") || e.hasClass("exotic")) {
-	        			if (e.hasClass("he"))
-	        				t = n.split(" ")[0];
-	        			else if (e.hasClass("exotic")) {
-		        			var k = n.split(" ")[0].split("'")[0];
-		        			t = n;
-		        		}
-	        			$(this).append("<span class='tooltip'><h1>" + t.capitalize() + "</h1>" + r[k || t] + "</span>");
+	        	$(".build-content .items .icon.he, .build-content .items .icon.exotic").each(function() {
+        			var e = $(this),
+        				n = $(this).parent().find(".name").text(),
+        				t = "";
+        			if (e.hasClass("he"))
+        				t = n.split(" ")[0];
+        			else if (e.hasClass("exotic")) {
+	        			var k = n.split(" ")[0].split("'")[0];
+	        			t = n;
 	        		}
-					
+        			$(this).parent().append("<span class='tooltip'><h1>" + t.capitalize() + "</h1>" + r[k || t] + "</span>");
 	        	});
         	}
 	    });
 	    $.ajax({
 	        url: "/data/gearsets.json",
 	        success: function(r) {
-	        	$(".build-content .items").children().each(function() {
-		        	var e = $(this).find(".icon");
-	        		if (!e.hasClass("he") && !e.hasClass("exotic")) {
-	        			var g = e.attr("class").split(" ").last();
-	        				t = r[g].name;
-	        				b = r[g].bonuses;
-	        			$(this).append("<span class='tooltip'><h1>" + t + "</h1></span>");
-	        			for (var i = 0; i < b.length; i++) {
-	        				$(this).find(".tooltip").append("<p>" + b[i] + "</p>");
-	        			}
-	        		}
+	        	$(".build-content .items .icon:not(.he):not(.exotic)").each(function() {
+		        	var g = $(this).attr("class").split(" ").last();
+        				t = r[g].name;
+        				b = r[g].bonuses;
+        			$(this).parent().append("<span class='tooltip'><h1>" + t + "</h1></span>");
+        			for (var i = 0; i < b.length; i++) {
+        				$(this).parent().find(".tooltip").append("<p>" + b[i] + "</p>");
+        			}
+	        	});
+        	}
+	    });
+	    $.ajax({
+	        url: "/data/skills.json",
+	        success: function(r) {
+	        	$(".build-content .skills").children(":not(.talents)").each(function() {
+		        	var n = $(this).find(".info > :last-child").text();
+        			$(this).append("<span class='tooltip'><h1>" + n + "</h1>" + r[n] + "</span>");
+	        	});
+        	}
+	    });
+	    $.ajax({
+	        url: "/data/talents.json",
+	        success: function(r) {
+	        	$(".build-content .skills .talents").children().each(function() {
+		        	var n = $(this).find(".name").text();
+        			$(this).append("<span class='tooltip'><h1>" + n + "</h1>" + r[n] + "</span>");
 	        	});
         	}
 	    });
