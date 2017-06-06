@@ -50,12 +50,34 @@ var tooltips = {
 
 // JS UTILS
 // Source: github.com/Zerthox/JS-Utils
-String.prototype.capitalize = function() {
-    return this.charAt(0).toUpperCase() + this.slice(1);
-}
-String.prototype.classify = function() {
-    return this.toLowerCase().replace(/ /g, "-");
-}
-Array.prototype.last = function() {
-    return this[this.length - 1];
-}
+Object.defineProperty(String.prototype, "capitalize", {
+	value: function() {
+	    return this.charAt(0).toUpperCase() + this.slice(1);
+	},
+	configurable: true,
+	enumberable: false
+});
+
+Object.defineProperty(String.prototype, "classify", {
+	value: function() {
+	    return this.toLowerCase().replace(/ /g, "-");
+	},
+	configurable: true,
+	enumberable: false
+});
+
+Object.defineProperty(Array.prototype, "last", {
+	value: function(i = 0) {
+	    return this[this.length - i - 1];
+	},
+	configurable: true,
+	enumberable: false
+});
+
+Object.defineProperty(String.prototype, "replaceAll", {
+	value: function(s = "", r = "") {
+		return this.split(s).join(r);
+	},
+	configurable: true,
+	enumberable: false
+});
