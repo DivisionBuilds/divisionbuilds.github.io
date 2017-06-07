@@ -158,8 +158,9 @@ var build = {
 		                        	a = this[2];
 		                        else
 		                        	a = "";
-		                        if (t === "performance")
-		                        	i = this[2];
+		                        if (t === "performance") {
+		                        	i = "skill after " + this[2];
+		                        }
 		                        else
 		                        	i = this[1].classify();
 		                        $(".build-content .gear .stats").append('<div class="' + t + '"><div class="amount">' + this[0] + '</div><div class="icon ' + i + '"></div><div class="info"><div class="name">' + v + '</div>' + a + '</div></div>');
