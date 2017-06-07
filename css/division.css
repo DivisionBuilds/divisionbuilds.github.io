@@ -1296,7 +1296,7 @@ textarea,
 }
 
 /* WEAPON ICONS */
-.build-content .weapons .icon.weapon {
+.icon.weapon.weapon {
     width: 250px;
     background-size: auto;
     background-position: 0 -15px;
@@ -1304,505 +1304,498 @@ textarea,
     -ms-mix-blend-mode: screen;
     mix-blend-mode: screen;
 }
-.build-content .weapons .icon.acr {
+.icon.weapon.acr {
     background-image: url(/sprites/weapons/acr.png);
 }
-.build-content .weapons .icon.ak,
-.build-content .weapons .icon.ak47,
-.build-content .weapons .icon.ak-47 {
+.icon.weapon.ak,
+.icon.weapon.ak47,
+.icon.weapon.ak-47 {
     background-image: url(/sprites/weapons/ak-47.png);
 }
-.build-content .weapons .icon.aug {
+.icon.weapon.aug {
     background-image: url(/sprites/weapons/aug.png);
 }
-.build-content .weapons .icon.bullfrog,
-.build-content .weapons .icon.famas {
+.icon.weapon.bullfrog,
+.icon.weapon.famas {
     background-image: url(/sprites/weapons/bullfrog.png);
 }
-.build-content .weapons .icon.double-barrel,
-.build-content .weapons .icon.double-barrel-shotgun {
+.icon.weapon.double-barrel,
+.icon.weapon.double-barrel-shotgun {
     background-image: url(/sprites/weapons/double-barrel.png);
 }
-.build-content .weapons .icon.fal {
+.icon.weapon.fal {
     background-image: url(/sprites/weapons/fal.png);
 }
-.build-content .weapons .icon.g36 {
+.icon.weapon.g36 {
     background-image: url(/sprites/weapons/g36.png);
 }
-.build-content .weapons .icon.historian {
+.icon.weapon.historian {
     background-image: url(/sprites/weapons/historian.png);
 }
-.build-content .weapons .icon.l86 {
+.icon.weapon.l86 {
     background-image: url(/sprites/weapons/l86.png);
 }
-.build-content .weapons .icon.m1a {
+.icon.weapon.m1a {
     background-image: url(/sprites/weapons/m1a.png);
 }
-.build-content .weapons .icon.m4 {
+.icon.weapon.m4 {
     background-image: url(/sprites/weapons/m4.png);
 }
-.build-content .weapons .icon.m44 {
+.icon.weapon.m44 {
     background-image: url(/sprites/weapons/m44.png);
 }
-.build-content .weapons .icon.m60,
-.build-content .weapons .icon.hungryhog,
-.build-content .weapons .icon.hungry-hog {
+.icon.weapon.m60,
+.icon.weapon.hungryhog,
+.icon.weapon.hungry-hog {
     background-image: url(/sprites/weapons/m60.png);
 }
-.build-content .weapons .icon.m249 {
+.icon.weapon.m249 {
     background-image: url(/sprites/weapons/m249.png);
 }
-.build-content .weapons .icon.m700 {
+.icon.weapon.m700 {
     background-image: url(/sprites/weapons/m700.png);
 }
-.build-content .weapons .icon.m870 {
+.icon.weapon.m870 {
     background-image: url(/sprites/weapons/m870.png);
 }
-.build-content .weapons .icon.mg5 {
+.icon.weapon.mg5 {
     background-image: url(/sprites/weapons/mg5.png);
 }
-.build-content .weapons .icon.mp5 {
+.icon.weapon.mp5 {
     background-image: url(/sprites/weapons/mp5.png);
 }
-.build-content .weapons .icon.mp7 {
+.icon.weapon.mp7 {
     background-image: url(/sprites/weapons/mp7.png);
 }
-.build-content .weapons .icon.p416 {
+.icon.weapon.p416 {
     background-image: url(/sprites/weapons/p416.png);
 }
-.build-content .weapons .icon.pp19,
-.build-content .weapons .icon.pp-19 {
+.icon.weapon.pp19,
+.icon.weapon.pp-19 {
     background-image: url(/sprites/weapons/pp-19.png);
 }
-.build-content .weapons .icon.rpk,
-.build-content .weapons .icon.rpk-74 {
+.icon.weapon.rpk,
+.icon.weapon.rpk-74 {
     background-image: url(/sprites/weapons/rpk.png);
 }
-.build-content .weapons .icon.sa58,
-.build-content .weapons .icon.sa-58 {
+.icon.weapon.sa58,
+.icon.weapon.sa-58 {
     background-image: url(/sprites/weapons/sa-58.png);
 }
-.build-content .weapons .icon.sasg,
-.build-content .weapons .icon.sasg12,
-.build-content .weapons .icon.sasg-12 {
+.icon.weapon.sasg,
+.icon.weapon.sasg12,
+.icon.weapon.sasg-12 {
     background-image: url(/sprites/weapons/sasg-12.png);
 }
-.build-content .weapons .icon.scarh,
-.build-content .weapons .icon.scar-h {
+.icon.weapon.scarh,
+.icon.weapon.scar-h {
     background-image: url(/sprites/weapons/scar-h.png);
 }
-.build-content .weapons .icon.scarl,
-.build-content .weapons .icon.scar-l {
+.icon.weapon.scarl,
+.icon.weapon.scar-l {
     background-image: url(/sprites/weapons/scar-l.png);
 }
-.build-content .weapons .icon.showstopper {
+.icon.weapon.showstopper {
     background-image: url(/sprites/weapons/showstopper.png);
 }
-.build-content .weapons .icon.srs {
+.icon.weapon.srs {
     background-image: url(/sprites/weapons/srs.png);
 }
-.build-content .weapons .icon.super90,
-.build-content .weapons .icon.super-90 {
+.icon.weapon.super90,
+.icon.weapon.super-90 {
     background-image: url(/sprites/weapons/super-90.png);
 }
-.build-content .weapons .icon.svd {
+.icon.weapon.svd {
     background-image: url(/sprites/weapons/svd.png);
 }
-.build-content .weapons .icon.t821 {
+.icon.weapon.t821 {
     background-image: url(/sprites/weapons/t821.png);
 }
-.build-content .weapons .icon.tec9,
-.build-content .weapons .icon.tec-9 {
+.icon.weapon.tec9,
+.icon.weapon.tec-9 {
     background-image: url(/sprites/weapons/tec-9.png);
 }
-.build-content .weapons .icon.tenebrae {
+.icon.weapon.tenebrae {
     background-image: url(/sprites/weapons/tenebrae.png);
 }
-.build-content .weapons .icon.ump {
+.icon.weapon.ump {
     background-image: url(/sprites/weapons/ump.png);
 }
-.build-content .weapons .icon.mdr,
-.build-content .weapons .icon.urban-mdr {
+.icon.weapon.mdr,
+.icon.weapon.urban-mdr {
     background-image: url(/sprites/weapons/urban-mdr.png);
 }
-.build-content .weapons .icon.vector {
+.icon.weapon.vector {
     background-image: url(/sprites/weapons/vector.png);
 }
-.build-content .weapons .icon.\39 3r {
+.icon.weapon.\39 3r {
     background-image: url(/sprites/weapons/93r.png);
 }
-.build-content .weapons .icon.m9,
-.build-content .weapons .icon.damascus {
+.icon.weapon.m9,
+.icon.weapon.damascus {
     background-image: url(/sprites/weapons/m9.png);
 }
-.build-content .weapons .icon.rhino {
+.icon.weapon.rhino {
     background-image: url(/sprites/weapons/rhino.png);
 }
-.build-content .weapons .icon.golden-rhino,
-.build-content .weapons .icon.goldenrhino {
+.icon.weapon.golden-rhino,
+.icon.weapon.goldenrhino {
     background-image: url(/sprites/weapons/golden-rhino.png);
 }
-.build-content .weapons .icon.m1911,
-.build-content .weapons .icon.centurion {
+.icon.weapon.m1911,
+.icon.weapon.centurion {
     background-image: url(/sprites/weapons/m1911.png);
 }
-.build-content .weapons .icon.magnum {
+.icon.weapon.magnum {
     background-image: url(/sprites/weapons/magnum.png);
 }
-.build-content .weapons .icon.pf45 {
-    background-image: url(/sprites/weapons/pf45.png);
-}
-.build-content .weapons .icon.px4,
-.build-content .weapons .icon.px4-storm {
-    background-image: url(/sprites/weapons/px4.png);
-}
-.build-content .weapons .icon.sawedoff,
-.build-content .weapons .icon.sawed-off,
-.build-content .weapons .icon.double-barrel-sawedoff,
-.build-content .weapons .icon.double-barrel-sawed-off {
+.icon.weapon.sawedoff,
+.icon.weapon.sawed-off,
+.icon.weapon.double-barrel-sawedoff,
+.icon.weapon.double-barrel-sawed-off {
     background-image: url(/sprites/weapons/sawed-off.png);
 }
-.build-content .weapons .icon.x45,
-.build-content .weapons .icon.x-45 {
+.icon.weapon.x45,
+.icon.weapon.x-45 {
     background-image: url(/sprites/weapons/x45.png);
 }
 
 /* WEAPON TALENT ICONS */
-.build-content .weapons .icon.weapon-talent {
+.icon.weapon-talent {
     position: relative;
     width: 100px;
     margin: 0 5px;
 }
-.build-content .weapons .icon.weapon-talent:before,
-.build-content .weapons .icon.weapon-talent::before,
-.build-content .weapons .icon.weapon-talent:after,
-.build-content .weapons .icon.weapon-talent::after {
+.icon.weapon-talent:before,
+.icon.weapon-talent::before,
+.icon.weapon-talent:after,
+.icon.weapon-talent::after {
     background-image: url(/sprites/weapon-talents.png);
     background-size: 800px;
 }
-.build-content .weapons .icon.ferocious:before,
-.build-content .weapons .icon.ferocious::before,
-.build-content .weapons .icon.ferocious:after,
-.build-content .weapons .icon.ferocious::after {
+.icon.weapon-talent.ferocious:before,
+.icon.weapon-talent.ferocious::before,
+.icon.weapon-talent.ferocious:after,
+.icon.weapon-talent.ferocious::after {
     background-position: 0 0;
 }
-.build-content .weapons .icon.destructive:before,
-.build-content .weapons .icon.destructive::before,
-.build-content .weapons .icon.destructive:after,
-.build-content .weapons .icon.destructive::after {
+.icon.weapon-talent.destructive:before,
+.icon.weapon-talent.destructive::before,
+.icon.weapon-talent.destructive:after,
+.icon.weapon-talent.destructive::after {
     background-position: -100px 0;
 }
-.build-content .weapons .icon.harmful:before,
-.build-content .weapons .icon.harmful::before,
-.build-content .weapons .icon.harmful:after,
-.build-content .weapons .icon.harmful::after {
+.icon.weapon-talent.harmful:before,
+.icon.weapon-talent.harmful::before,
+.icon.weapon-talent.harmful:after,
+.icon.weapon-talent.harmful::after {
     background-position: -200px 0;
 }
-.build-content .weapons .icon.responsive:before,
-.build-content .weapons .icon.responsive::before,
-.build-content .weapons .icon.responsive:after,
-.build-content .weapons .icon.responsive::after {
+.icon.weapon-talent.responsive:before,
+.icon.weapon-talent.responsive::before,
+.icon.weapon-talent.responsive:after,
+.icon.weapon-talent.responsive::after {
     background-position: -300px 0;
 }
-.build-content .weapons .icon.deadly:before,
-.build-content .weapons .icon.deadly::before,
-.build-content .weapons .icon.deadly:after,
-.build-content .weapons .icon.deadly::after {
+.icon.weapon-talent.deadly:before,
+.icon.weapon-talent.deadly::before,
+.icon.weapon-talent.deadly:after,
+.icon.weapon-talent.deadly::after {
     background-position: -400px 0;
 }
-.build-content .weapons .icon.fierce:before,
-.build-content .weapons .icon.fierce::before,
-.build-content .weapons .icon.fierce:after,
-.build-content .weapons .icon.fierce::after {
+.icon.weapon-talent.fierce:before,
+.icon.weapon-talent.fierce::before,
+.icon.weapon-talent.fierce:after,
+.icon.weapon-talent.fierce::after {
     background-position: -500px 0;
 }
-.build-content .weapons .icon.self-preserved:before,
-.build-content .weapons .icon.self-preserved::before,
-.build-content .weapons .icon.self-preserved:after,
-.build-content .weapons .icon.self-preserved::after {
+.icon.weapon-talent.self-preserved:before,
+.icon.weapon-talent.self-preserved::before,
+.icon.weapon-talent.self-preserved:after,
+.icon.weapon-talent.self-preserved::after {
     background-position: -600px 0;
 }
-.build-content .weapons .icon.trained:before,
-.build-content .weapons .icon.trained::before,
-.build-content .weapons .icon.trained:after,
-.build-content .weapons .icon.trained::after {
+.icon.weapon-talent.trained:before,
+.icon.weapon-talent.trained::before,
+.icon.weapon-talent.trained:after,
+.icon.weapon-talent.trained::after {
     background-position: -700px 0;
 }
-.build-content .weapons .icon.unforgiving:before,
-.build-content .weapons .icon.unforgiving::before,
-.build-content .weapons .icon.unforgiving:after,
-.build-content .weapons .icon.unforgiving::after {
+.icon.weapon-talent.unforgiving:before,
+.icon.weapon-talent.unforgiving::before,
+.icon.weapon-talent.unforgiving:after,
+.icon.weapon-talent.unforgiving::after {
     background-position: 0 -100px;
 }
-.build-content .weapons .icon.prepared:before,
-.build-content .weapons .icon.prepared::before,
-.build-content .weapons .icon.prepared:after,
-.build-content .weapons .icon.prepared::after {
+.icon.weapon-talent.prepared:before,
+.icon.weapon-talent.prepared::before,
+.icon.weapon-talent.prepared:after,
+.icon.weapon-talent.prepared::after {
     background-position: -100px -100px;
 }
-.build-content .weapons .icon.swift:before,
-.build-content .weapons .icon.swift::before,
-.build-content .weapons .icon.swift:after,
-.build-content .weapons .icon.swift::after {
+.icon.weapon-talent.swift:before,
+.icon.weapon-talent.swift::before,
+.icon.weapon-talent.swift:after,
+.icon.weapon-talent.swift::after {
     background-position: -200px -100px;
 }
-.build-content .weapons .icon.intense:before,
-.build-content .weapons .icon.intense::before,
-.build-content .weapons .icon.intense:after,
-.build-content .weapons .icon.intense::after {
+.icon.weapon-talent.intense:before,
+.icon.weapon-talent.intense::before,
+.icon.weapon-talent.intense:after,
+.icon.weapon-talent.intense::after {
     background-position: -300px -100px;
 }
-.build-content .weapons .icon.vicious:before,
-.build-content .weapons .icon.vicious::before,
-.build-content .weapons .icon.vicious:after,
-.build-content .weapons .icon.vicious::after {
+.icon.weapon-talent.vicious:before,
+.icon.weapon-talent.vicious::before,
+.icon.weapon-talent.vicious:after,
+.icon.weapon-talent.vicious::after {
     background-position: -400px -100px;
 }
-.build-content .weapons .icon.toxic:before,
-.build-content .weapons .icon.toxic::before,
-.build-content .weapons .icon.toxic:after,
-.build-content .weapons .icon.toxic::after {
+.icon.weapon-talent.toxic:before,
+.icon.weapon-talent.toxic::before,
+.icon.weapon-talent.toxic:after,
+.icon.weapon-talent.toxic::after {
     background-position: -500px -100px;
 }
-.build-content .weapons .icon.brutal:before,
-.build-content .weapons .icon.brutal::before,
-.build-content .weapons .icon.brutal:after,
-.build-content .weapons .icon.brutal::after {
+.icon.weapon-talent.brutal:before,
+.icon.weapon-talent.brutal::before,
+.icon.weapon-talent.brutal:after,
+.icon.weapon-talent.brutal::after {
     background-position: -600px -100px;
 }
-.build-content .weapons .icon.skilled:before,
-.build-content .weapons .icon.skilled::before,
-.build-content .weapons .icon.skilled:after,
-.build-content .weapons .icon.skilled::after {
+.icon.weapon-talent.skilled:before,
+.icon.weapon-talent.skilled::before,
+.icon.weapon-talent.skilled:after,
+.icon.weapon-talent.skilled::after {
     background-position: -700px -100px;
 }
-.build-content .weapons .icon.coolheaded:before,
-.build-content .weapons .icon.coolheaded::before,
-.build-content .weapons .icon.coolheaded:after,
-.build-content .weapons .icon.coolheaded::after {
+.icon.weapon-talent.coolheaded:before,
+.icon.weapon-talent.coolheaded::before,
+.icon.weapon-talent.coolheaded:after,
+.icon.weapon-talent.coolheaded::after {
     background-position: -100px -200px;
 }
-.build-content .weapons .icon.talented:before,
-.build-content .weapons .icon.talented::before,
-.build-content .weapons .icon.talented:after,
-.build-content .weapons .icon.talented::after {
+.icon.weapon-talent.talented:before,
+.icon.weapon-talent.talented::before,
+.icon.weapon-talent.talented:after,
+.icon.weapon-talent.talented::after {
     background-position: -200px -200px;
 }
-.build-content .weapons .icon.meticulous:before,
-.build-content .weapons .icon.meticulous::before,
-.build-content .weapons .icon.meticulous:after,
-.build-content .weapons .icon.meticulous::after {
+.icon.weapon-talent.meticulous:before,
+.icon.weapon-talent.meticulous::before,
+.icon.weapon-talent.meticulous:after,
+.icon.weapon-talent.meticulous::after {
     background-position: -300px -200px;
 }
-.build-content .weapons .icon.determined:before,
-.build-content .weapons .icon.determined::before,
-.build-content .weapons .icon.determined:after,
-.build-content .weapons .icon.determined::after {
+.icon.weapon-talent.determined:before,
+.icon.weapon-talent.determined::before,
+.icon.weapon-talent.determined:after,
+.icon.weapon-talent.determined::after {
     background-position: -500px -200px;
 }
-.build-content .weapons .icon.predatory:before,
-.build-content .weapons .icon.predatory::before,
-.build-content .weapons .icon.predatory:after,
-.build-content .weapons .icon.predatory::after {
+.icon.weapon-talent.predatory:before,
+.icon.weapon-talent.predatory::before,
+.icon.weapon-talent.predatory:after,
+.icon.weapon-talent.predatory::after {
     background-position: -600px -200px;
 }
-.build-content .weapons .icon.sustained:before,
-.build-content .weapons .icon.sustained::before,
-.build-content .weapons .icon.sustained:after,
-.build-content .weapons .icon.sustained::after {
+.icon.weapon-talent.sustained:before,
+.icon.weapon-talent.sustained::before,
+.icon.weapon-talent.sustained:after,
+.icon.weapon-talent.sustained::after {
     background-position: -700px -200px;
 }
-.build-content .weapons .icon.provident:before,
-.build-content .weapons .icon.provident::before,
-.build-content .weapons .icon.provident:after,
-.build-content .weapons .icon.provident::after {
+.icon.weapon-talent.provident:before,
+.icon.weapon-talent.provident::before,
+.icon.weapon-talent.provident:after,
+.icon.weapon-talent.provident::after {
     background-position: 0 -300px;
 }
-.build-content .weapons .icon.proficient:before,
-.build-content .weapons .icon.proficient::before,
-.build-content .weapons .icon.proficient:after,
-.build-content .weapons .icon.proficient::after {
+.icon.weapon-talent.proficient:before,
+.icon.weapon-talent.proficient::before,
+.icon.weapon-talent.proficient:after,
+.icon.weapon-talent.proficient::after {
     background-position: -100px -300px;
 }
-.build-content .weapons .icon.balanced:before,
-.build-content .weapons .icon.balanced::before,
-.build-content .weapons .icon.balanced:after,
-.build-content .weapons .icon.balanced::after {
+.icon.weapon-talent.balanced:before,
+.icon.weapon-talent.balanced::before,
+.icon.weapon-talent.balanced:after,
+.icon.weapon-talent.balanced::after {
     background-position: -200px -300px;
 }
-.build-content .weapons .icon.adept:before,
-.build-content .weapons .icon.adept::before,
-.build-content .weapons .icon.adept:after,
-.build-content .weapons .icon.adept::after {
+.icon.weapon-talent.adept:before,
+.icon.weapon-talent.adept::before,
+.icon.weapon-talent.adept:after,
+.icon.weapon-talent.adept::after {
     background-position: -300px -300px;
 }
-.build-content .weapons .icon.capable:before,
-.build-content .weapons .icon.capable::before,
-.build-content .weapons .icon.capable:after,
-.build-content .weapons .icon.capable::after {
+.icon.weapon-talent.capable:before,
+.icon.weapon-talent.capable::before,
+.icon.weapon-talent.capable:after,
+.icon.weapon-talent.capable::after {
     background-position: -400px -300px;
 }
-.build-content .weapons .icon.competent:before,
-.build-content .weapons .icon.competent::before,
-.build-content .weapons .icon.competent:after,
-.build-content .weapons .icon.competent::after {
+.icon.weapon-talent.competent:before,
+.icon.weapon-talent.competent::before,
+.icon.weapon-talent.competent:after,
+.icon.weapon-talent.competent::after {
     background-position: -500px -300px;
 }
-.build-content .weapons .icon.stable:before,
-.build-content .weapons .icon.stable::before,
-.build-content .weapons .icon.stable:after,
-.build-content .weapons .icon.stable::after {
+.icon.weapon-talent.stable:before,
+.icon.weapon-talent.stable::before,
+.icon.weapon-talent.stable:after,
+.icon.weapon-talent.stable::after {
     background-position: -600px -300px;
 }
-.build-content .weapons .icon.accurate:before,
-.build-content .weapons .icon.accurate::before,
-.build-content .weapons .icon.accurate:after,
-.build-content .weapons .icon.accurate::after {
+.icon.weapon-talent.accurate:before,
+.icon.weapon-talent.accurate::before,
+.icon.weapon-talent.accurate:after,
+.icon.weapon-talent.accurate::after {
     background-position: -700px -300px;
 }
-.build-content .weapons .icon.commanding:before,
-.build-content .weapons .icon.commanding::before,
-.build-content .weapons .icon.commanding:after,
-.build-content .weapons .icon.commanding::after {
+.icon.weapon-talent.commanding:before,
+.icon.weapon-talent.commanding::before,
+.icon.weapon-talent.commanding:after,
+.icon.weapon-talent.commanding::after {
     background-position: 0 -400px;
 }
-.build-content .weapons .icon.dominant:before,
-.build-content .weapons .icon.dominant::before,
-.build-content .weapons .icon.dominant:after,
-.build-content .weapons .icon.dominant::after {
+.icon.weapon-talent.dominant:before,
+.icon.weapon-talent.dominant::before,
+.icon.weapon-talent.dominant:after,
+.icon.weapon-talent.dominant::after {
     background-position: -100px -400px;
 }
-.build-content .weapons .icon.expert:before,
-.build-content .weapons .icon.expert::before,
-.build-content .weapons .icon.expert:after,
-.build-content .weapons .icon.expert::after {
+.icon.weapon-talent.expert:before,
+.icon.weapon-talent.expert::before,
+.icon.weapon-talent.expert:after,
+.icon.weapon-talent.expert::after {
     background-position: -700px -400px;
 }
-.build-content .weapons .icon.disciplined:before,
-.build-content .weapons .icon.disciplined::before,
-.build-content .weapons .icon.disciplined:after,
-.build-content .weapons .icon.disciplined::after {
+.icon.weapon-talent.disciplined:before,
+.icon.weapon-talent.disciplined::before,
+.icon.weapon-talent.disciplined:after,
+.icon.weapon-talent.disciplined::after {
     background-position: 0 -500px;
 }
-.build-content .weapons .icon.weapon-talent.showstopper:before,
-.build-content .weapons .icon.weapon-talent.showstopper::before,
-.build-content .weapons .icon.weapon-talent.showstopper:after,
-.build-content .weapons .icon.weapon-talent.showstopper::after {
+.icon.weapon-talent.showstopper:before,
+.icon.weapon-talent.showstopper::before,
+.icon.weapon-talent.showstopper:after,
+.icon.weapon-talent.showstopper::after {
     background-position: -300px -500px;
 }
-.build-content .weapons .icon.hurried:before,
-.build-content .weapons .icon.hurried::before,
-.build-content .weapons .icon.hurried:after,
-.build-content .weapons .icon.hurried::after {
+.icon.weapon-talent.hurried:before,
+.icon.weapon-talent.hurried::before,
+.icon.weapon-talent.hurried:after,
+.icon.weapon-talent.hurried::after {
     background-position: -400px -500px;
 }
-.build-content .weapons .icon.distracted:before,
-.build-content .weapons .icon.distracted::before,
-.build-content .weapons .icon.distracted:after,
-.build-content .weapons .icon.distracted::after {
+.icon.weapon-talent.distracted:before,
+.icon.weapon-talent.distracted::before,
+.icon.weapon-talent.distracted:after,
+.icon.weapon-talent.distracted::after {
     background-position: -500px -500px;
 }
-.build-content .weapons .icon.focused:before,
-.build-content .weapons .icon.focused::before,
-.build-content .weapons .icon.focused:after,
-.build-content .weapons .icon.focused::after {
+.icon.weapon-talent.focused:before,
+.icon.weapon-talent.focused::before,
+.icon.weapon-talent.focused:after,
+.icon.weapon-talent.focused::after {
     background-position: -600px -500px;
 }
-.build-content .weapons .icon.carefree:before,
-.build-content .weapons .icon.carefree::before,
-.build-content .weapons .icon.carefree:after,
-.build-content .weapons .icon.carefree::after {
+.icon.weapon-talent.carefree:before,
+.icon.weapon-talent.carefree::before,
+.icon.weapon-talent.carefree:after,
+.icon.weapon-talent.carefree::after {
     background-position: -700px -500px;
 }
-.build-content .weapons .icon.ambusher:before,
-.build-content .weapons .icon.ambusher::before,
-.build-content .weapons .icon.ambusher:after,
-.build-content .weapons .icon.ambusher::after {
+.icon.weapon-talent.ambusher:before,
+.icon.weapon-talent.ambusher::before,
+.icon.weapon-talent.ambusher:after,
+.icon.weapon-talent.ambusher::after {
     background-position: -100px -600px;
 }
-.build-content .weapons .icon.elevated:before,
-.build-content .weapons .icon.elevated::before,
-.build-content .weapons .icon.elevated:after,
-.build-content .weapons .icon.elevated::after {
+.icon.weapon-talent.elevated:before,
+.icon.weapon-talent.elevated::before,
+.icon.weapon-talent.elevated:after,
+.icon.weapon-talent.elevated::after {
     background-position: -200px -600px;
 }
-.build-content .weapons .icon.uncomplicated:before,
-.build-content .weapons .icon.uncomplicated::before,
-.build-content .weapons .icon.uncomplicated:after,
-.build-content .weapons .icon.uncomplicated::after {
+.icon.weapon-talent.uncomplicated:before,
+.icon.weapon-talent.uncomplicated::before,
+.icon.weapon-talent.uncomplicated:after,
+.icon.weapon-talent.uncomplicated::after {
     background-position: -300px -600px;
 }
-.build-content .weapons .icon.weapon-talent.caduceus:before,
-.build-content .weapons .icon.weapon-talent.caduceus::before,
-.build-content .weapons .icon.weapon-talent.caduceus:after,
-.build-content .weapons .icon.weapon-talent.caduceus::after {
+.icon.weapon-talent.caduceus:before,
+.icon.weapon-talent.caduceus::before,
+.icon.weapon-talent.caduceus:after,
+.icon.weapon-talent.caduceus::after {
     background-position: -600px -600px;
 }
-.build-content .weapons .icon.glutton:before,
-.build-content .weapons .icon.glutton::before,
-.build-content .weapons .icon.glutton:after,
-.build-content .weapons .icon.glutton::after {
+.icon.weapon-talent.glutton:before,
+.icon.weapon-talent.glutton::before,
+.icon.weapon-talent.glutton:after,
+.icon.weapon-talent.glutton::after {
     background-position: -700px -600px;
 }
-.build-content .weapons .icon.valkyrie:before,
-.build-content .weapons .icon.valkyrie::before,
-.build-content .weapons .icon.valkyrie:after,
-.build-content .weapons .icon.valkyrie::after {
+.icon.weapon-talent.valkyrie:before,
+.icon.weapon-talent.valkyrie::before,
+.icon.weapon-talent.valkyrie:after,
+.icon.weapon-talent.valkyrie::after {
     background-position: 0 -700px;
 }
-.build-content .weapons .icon.lights-out:before,
-.build-content .weapons .icon.lights-out::before,
-.build-content .weapons .icon.lights-out:after,
-.build-content .weapons .icon.lights-out::after {
+.icon.weapon-talent.lights-out:before,
+.icon.weapon-talent.lights-out::before,
+.icon.weapon-talent.lights-out:after,
+.icon.weapon-talent.lights-out::after {
     background-position: -100px -700px;
 }
-.build-content .weapons .icon.center-mass:before,
-.build-content .weapons .icon.center-mass::before,
-.build-content .weapons .icon.center-mass:after,
-.build-content .weapons .icon.center-mass::after {
+.icon.weapon-talent.center-mass:before,
+.icon.weapon-talent.center-mass::before,
+.icon.weapon-talent.center-mass:after,
+.icon.weapon-talent.center-mass::after {
     background-position: -200px -700px;
 }
-.build-content .weapons .icon.boomstick:before,
-.build-content .weapons .icon.boomstick::before,
-.build-content .weapons .icon.boomstick:after,
-.build-content .weapons .icon.boomstick::after {
+.icon.weapon-talent.boomstick:before,
+.icon.weapon-talent.boomstick::before,
+.icon.weapon-talent.boomstick:after,
+.icon.weapon-talent.boomstick::after {
     background-position: -300px -700px;
 }
-.build-content .weapons .icon.quickdraw:before,
-.build-content .weapons .icon.quickdraw::before,
-.build-content .weapons .icon.quickdraw:after,
-.build-content .weapons .icon.quickdraw::after {
+.icon.weapon-talent.quickdraw:before,
+.icon.weapon-talent.quickdraw::before,
+.icon.weapon-talent.quickdraw:after,
+.icon.weapon-talent.quickdraw::after {
     background-position: -400px -700px;
 }
-.build-content .weapons .icon.weapon-talent.pakhan:before,
-.build-content .weapons .icon.weapon-talent.pakhan::before,
-.build-content .weapons .icon.weapon-talent.pakhan:after,
-.build-content .weapons .icon.weapon-talent.pakhan::after {
+.icon.weapon-talent.pakhan:before,
+.icon.weapon-talent.pakhan::before,
+.icon.weapon-talent.pakhan:after,
+.icon.weapon-talent.pakhan::after {
     background-position: -500px -700px;
 }
-.build-content .weapons .icon.weapon-talent.midas:before,
-.build-content .weapons .icon.weapon-talent.midas::before,
-.build-content .weapons .icon.weapon-talent.midas:after,
-.build-content .weapons .icon.weapon-talent.midas::after {
+.icon.weapon-talent.midas:before,
+.icon.weapon-talent.midas::before,
+.icon.weapon-talent.midas:after,
+.icon.weapon-talent.midas::after {
     background-position: -700px -700px;
 }
-.build-content .weapons .icon.free-republic,
-.build-content .weapons .icon.history-repeats:before,
-.build-content .weapons .icon.history-repeats::before,
-.build-content .weapons .icon.history-repeats:after,
-.build-content .weapons .icon.history-repeats::after {
+.icon.weapon-talent.free-republic,
+.icon.weapon-talent.history-repeats:before,
+.icon.weapon-talent.history-repeats::before,
+.icon.weapon-talent.history-repeats:after,
+.icon.weapon-talent.history-repeats::after {
     background-image: url(/sprites/weapon-talents2.png);
 }
-.build-content .weapons .icon.free-republic:before,
-.build-content .weapons .icon.free-republic::before,
-.build-content .weapons .icon.free-republic:after,
-.build-content .weapons .icon.free-republic::after {
+.icon.weapon-talent.free-republic:before,
+.icon.weapon-talent.free-republic::before,
+.icon.weapon-talent.free-republic:after,
+.icon.weapon-talent.free-republic::after {
     background-position: 0 0;
 }
-.build-content .weapons .icon.history-repeats:before,
-.build-content .weapons .icon.history-repeats::before,
-.build-content .weapons .icon.history-repeats:after,
-.build-content .weapons .icon.history-repeats::after {
+.icon.weapon-talent.history-repeats:before,
+.icon.weapon-talent.history-repeats::before,
+.icon.weapon-talent.history-repeats:after,
+.icon.weapon-talent.history-repeats::after {
     background-position: -300px 0;
 }
 
@@ -1827,28 +1820,28 @@ textarea,
 }
 
 /* MAIN STAT ICONS */
-.build-content .gear .stats .main-stats .icon:after,
-.build-content .gear .stats .main-stats .icon::after,
-.build-content .gear .stats .main-rolls .icon:after,
-.build-content .gear .stats .main-rolls .icon::after,
-.build-content .gear .stats .mods .icon:after,
-.build-content .gear .stats .mods .icon::after {
+.icon.firearms:after,
+.icon.firearms::after,
+.icon.stamina:after,
+.icon.stamina::after,
+.icon.electronics:after,
+.icon.electronics::after {
     background-image: url(/sprites/stats.png);
     width: 64px;
     height: 64px;
     top: 23px;
     left: 28px;
 }
-.build-content .gear .stats .icon.firearms:after,
-.build-content .gear .stats .icon.firearms::after {
+.icon.firearms:after,
+.icon.firearms::after {
     background-position: 0 0;
 }
-.build-content .gear .stats .icon.stamina:after,
-.build-content .gear .stats .icon.stamina::after {
+.icon.stamina:after,
+.icon.stamina::after {
     background-position: -64px 0;
 }
-.build-content .gear .stats .icon.electronics:after,
-.build-content .gear .stats .icon.electronics::after {
+.icon.electronics:after,
+.icon.electronics::after {
     background-position: -128px 0;
 }
 
@@ -1898,444 +1891,449 @@ textarea,
 }
 
 /* GEAR SET ICONS */
-.build-content .gear .icon.striker:after,
-.build-content .gear .icon.striker::after,
-.build-content .gear .icon.hunters-faith:after,
-.build-content .gear .icon.hunters-faith::after,
-.build-content .gear .icon.nomad:after,
-.build-content .gear .icon.nomad::after,
-.build-content .gear .icon.sentry:after,
-.build-content .gear .icon.sentry::after,
-.build-content .gear .icon.tactician:after,
-.build-content .gear .icon.tactician::after,
-.build-content .gear .icon.predators-mark:after,
-.build-content .gear .icon.predators-mark::after,
-.build-content .gear .icon.final-measures:after,
-.build-content .gear .icon.final-measures::after,
-.build-content .gear .icon.lone-star:after,
-.build-content .gear .icon.lone-star::after,
-.build-content .gear .icon.defence:after,
-.build-content .gear .icon.defence::after,
-.build-content .gear .icon.frontline:after,
-.build-content .gear .icon.frontline::after,
-.build-content .gear .icon.banshee:after,
-.build-content .gear .icon.banshee::after,
-.build-content .gear .icon.reclaimer:after,
-.build-content .gear .icon.reclaimer::after,
-.build-content .gear .icon.firecrest:after,
-.build-content .gear .icon.firecrest::after,
-.build-content .gear .icon.alphabridge:after,
-.build-content .gear .icon.alphabridge::after,
-.build-content .gear .icon.deadeye:after,
-.build-content .gear .icon.deadeye::after {
+.icon.striker:after,
+.icon.striker::after,
+.icon.hunters-faith:after,
+.icon.hunters-faith::after,
+.icon.nomad:after,
+.icon.nomad::after,
+.icon.sentry:after,
+.icon.sentry::after,
+.icon.tactician:after,
+.icon.tactician::after,
+.icon.predators-mark:after,
+.icon.predators-mark::after,
+.icon.final-measures:after,
+.icon.final-measures::after,
+.icon.lone-star:after,
+.icon.lone-star::after,
+.icon.defence:after,
+.icon.defence::after,
+.icon.frontline:after,
+.icon.frontline::after,
+.icon.banshee:after,
+.icon.banshee::after,
+.icon.reclaimer:after,
+.icon.reclaimer::after,
+.icon.firecrest:after,
+.icon.firecrest::after,
+.icon.alphabridge:after,
+.icon.alphabridge::after,
+.icon.deadeye:after,
+.icon.deadeye::after {
     background-image: url(/sprites/gearsets.png);
     background-size: 800px;
 }
-.build-content .gear .icon.striker:after,
-.build-content .gear .icon.striker::after {
+.icon.striker:after,
+.icon.striker::after {
     background-position: 0 0;
 }
-.build-content .gear .icon.hunters-faith:after,
-.build-content .gear .icon.hunters-faith::after {
+.icon.hunters-faith:after,
+.icon.hunters-faith::after {
     background-position: -100px 0;
 }
-.build-content .gear .icon.nomad:after,
-.build-content .gear .icon.nomad::after {
+.icon.nomad:after,
+.icon.nomad::after {
     background-position: -200px 0;
 }
-.build-content .gear .icon.sentry:after,
-.build-content .gear .icon.sentry::after {
+.icon.sentry:after,
+.icon.sentry::after {
     background-position: -300px 0;
 }
-.build-content .gear .icon.tactician:after,
-.build-content .gear .icon.tactician::after {
+.icon.tactician:after,
+.icon.tactician::after {
     background-position: -400px 0;
 }
-.build-content .gear .icon.predators-mark:after,
-.build-content .gear .icon.predators-mark::after {
+.icon.predators-mark:after,
+.icon.predators-mark::after {
     background-position: -500px 0;
 }
-.build-content .gear .icon.final-measures:after,
-.build-content .gear .icon.final-measures::after {
+.icon.final-measures:after,
+.icon.final-measures::after {
     background-position: -600px 0;
 }
-.build-content .gear .icon.lone-star:after,
-.build-content .gear .icon.lone-star::after {
+.icon.lone-star:after,
+.icon.lone-star::after {
     background-position: -700px 0;
 }
-.build-content .gear .icon.defence:after,
-.build-content .gear .icon.defence::after,
-.build-content .gear .icon.frontline:after,
-.build-content .gear .icon.frontline::after {
+.icon.defence:after,
+.icon.defence::after,
+.icon.frontline:after,
+.icon.frontline::after {
     background-position: -100px -100px;
 }
-.build-content .gear .icon.banshee:after ,
-.build-content .gear .icon.banshee::after {
+.icon.banshee:after ,
+.icon.banshee::after {
     background-position: -400px -100px;
 }
-.build-content .gear .icon.reclaimer:after,
-.build-content .gear .icon.reclaimer::after {
+.icon.reclaimer:after,
+.icon.reclaimer::after {
     background-position: -600px -100px;
 }
-.build-content .gear .icon.firecrest:after,
-.build-content .gear .icon.firecrest::after {
+.icon.firecrest:after,
+.icon.firecrest::after {
     background-position: -700px -100px;
 }
-.build-content .gear .icon.alphabridge:after,
-.build-content .gear .icon.alphabridge::after {
+.icon.alphabridge:after,
+.icon.alphabridge::after {
     background-position: 0 -200px;
 }
-.build-content .gear .icon.deadeye:after,
-.build-content .gear .icon.deadeye::after {
+.icon.deadeye:after,
+.icon.deadeye::after {
     background-position: -100px -200px;
 }
 
 /* SKILL ICONS */
-.build-content .skills .icon.skill,
-.build-content .gear .stats .performance .icon:after,
-.build-content .gear .stats .performance .icon::after {
+.icon.skill,
+.icon.skill.after:after,
+.icon.skill.after::after {
     width: 100px;
     background-image: url(/sprites/skills.png);
     background-size: 800px;
 }
-.build-content .gear .stats .performance .icon:after,
-.build-content .gear .stats .performance .icon::after {
+.icon.skill.after,
+.icon.skill.after {
+    background-image: none;
+}
+.icon.skill.after:after,
+.icon.skill.after::after {
     width: 75px;
     height: 75px;
     top: 17.5px;
     left: 22.5px;
     background-size: 600px;
 }
-.build-content .skills .icon.shield,
-.build-content .skills .icon.ballistic-shield,
-.build-content .gear .stats .performance .icon.shield:after,
-.build-content .gear .stats .performance .icon.shield::after,
-.build-content .gear .stats .performance .icon.ballistic-shield:after
-.build-content .gear .stats .performance .icon.ballistic-shield::after {
+.icon.skill.shield,
+.icon.skill.ballistic-shield,
+.icon.skill.after.shield:after,
+.icon.skill.after.shield::after,
+.icon.skill.after.ballistic-shield:after
+.icon.skill.after.ballistic-shield::after {
     background-position: 0 0;
 }
-.build-content .skills .icon.assault-shield {
+.icon.skill.assault-shield {
     background-position: -103px 0;
 }
-.build-content .skills .icon.pulse-shield,
-.build-content .skills .icon.reactive-targeting {
+.icon.skill.pulse-shield,
+.icon.skill.reactive-targeting {
     background-position: -206px 0;
 }
-.build-content .skills .icon.kinetic-breaker {
+.icon.skill.kinetic-breaker {
     background-position: -309px 0;
 }
-.build-content .skills .icon.pulse {
+.icon.skill.pulse {
     background-position: 0 -103px;
 }
-.build-content .gear .stats .performance .icon.pulse:after,
-.build-content .gear .stats .performance .icon.pulse::after {
+.icon.skill.after.pulse:after,
+.icon.skill.after.pulse::after {
     background-position: 0 -77.25px;
 }
-.build-content .skills .icon.recon-pack,
-.build-content .skills .icon.recon-pulse {
+.icon.skill.recon-pack,
+.icon.skill.recon-pulse {
     background-position: -103px -103px;
 }
-.build-content .skills .icon.tactical-scanner,
-.build-content .skills .icon.tactical-pulse,
-.build-content .skills .icon.damage-pulse {
+.icon.skill.tactical-scanner,
+.icon.skill.tactical-pulse,
+.icon.skill.damage-pulse {
     background-position: -206px -103px;
 }
-.build-content .skills .icon.scrambler,
-.build-content .skills .icon.conceal-pulse {
+.icon.skill.scrambler,
+.icon.skill.conceal-pulse {
     background-position: -309px -103px;
 }
-.build-content .skills .icon.seeker,
-.build-content .skills .icon.seeker-mine {
+.icon.skill.seeker,
+.icon.skill.seeker-mine {
     background-position: 0 -206px;
 }
-.build-content .gear .stats .performance .icon.seeker:after,
-.build-content .gear .stats .performance .icon.seeker::after,
-.build-content .gear .stats .performance .icon.seeker-mine:after,
-.build-content .gear .stats .performance .icon.seeker-mine::after {
+.icon.skill.after.seeker:after,
+.icon.skill.after.seeker::after,
+.icon.skill.after.seeker-mine:after,
+.icon.skill.after.seeker-mine::after {
     background-position: 0 -154.5px;
 }
-.build-content .skills .icon.cluster {
+.icon.skill.cluster {
     background-position: -103px -206px;
 }
-.build-content .skills .icon.gas-charge {
+.icon.skill.gas-charge {
     background-position: -206px -206px;
 }
-.build-content .skills .icon.airburst,
-.build-content .skills .icon.fire-seeker {
+.icon.skill.airburst,
+.icon.skill.fire-seeker {
     background-position: -309px -206px;
 }
-.build-content .skills .icon.first-aid {
+.icon.skill.first-aid {
     background-position: 0 -309px;
 }
-.build-content .gear .stats .performance .icon.first-aid:after,
-.build-content .gear .stats .performance .icon.first-aid::after {
+.icon.skill.after.first-aid:after,
+.icon.skill.after.first-aid::after {
     background-position: 0 -231.75px;
 }
-.build-content .skills .icon.overdose {
+.icon.skill.overdose {
     background-position: -103px -309px;
 }
-.build-content .skills .icon.defibrillator {
+.icon.skill.defibrillator {
     background-position: -206px -309px;
 }
-.build-content .skills .icon.booster-shot {
+.icon.skill.booster-shot {
     background-position: -309px -309px;
 }
-.build-content .skills .icon.smart-cover {
+.icon.skill.smart-cover {
     background-position: 0 -412px;
 }
-.build-content .gear .stats .performance .icon.smart-cover:after,
-.build-content .gear .stats .performance .icon.smart-cover::after {
+.icon.skill.after.smart-cover:after,
+.icon.skill.after.smart-cover::after {
     background-position: 0 -309px;
 }
-.build-content .skills .icon.trapper {
+.icon.skill.trapper {
     background-position: -103px -412px;
 }
-.build-content .skills .icon.recharger {
+.icon.skill.recharger {
     background-position: -206px -412px;
 }
-.build-content .skills .icon.concealment {
+.icon.skill.concealment {
     background-position: -309px -412px;
 }
-.build-content .skills .icon.mobile-cover {
+.icon.skill.mobile-cover {
     background-position: 0 -515px;
 }
-.build-content .gear .stats .performance .icon.mobile-cover:after,
-.build-content .gear .stats .performance .icon.mobile-cover::after {
+.icon.skill.after.mobile-cover:after,
+.icon.skill.after.mobile-cover::after {
     background-position: 0 -386.25px;
 }
-.build-content .skills .icon.extension {
+.icon.skill.extension {
     background-position: -103px -515px;
 }
-.build-content .skills .icon.countermeasures {
+.icon.skill.countermeasures {
     background-position: -206px -515px;
 }
-.build-content .skills .icon.blast-shield {
+.icon.skill.blast-shield {
     background-position: -309px -515px;
 }
-.build-content .skills .icon.sticky,
-.build-content .skills .icon.sticky-bomb {
+.icon.skill.sticky,
+.icon.skill.sticky-bomb {
     background-position: 0 -618px;
 }
-.build-content .gear .stats .performance .icon.sticky:after,
-.build-content .gear .stats .performance .icon.sticky::after,
-.build-content .gear .stats .performance .icon.sticky-bomb:after,
-.build-content .gear .stats .performance .icon.sticky-bomb::after {
+.icon.skill.after.sticky:after,
+.icon.skill.after.sticky::after,
+.icon.skill.after.sticky-bomb:after,
+.icon.skill.after.sticky-bomb::after {
     background-position: 0 -463.5px;
 }
-.build-content .skills .icon.bfb,
-.build-content .skills .icon.damage-sticky {
+.icon.skill.bfb,
+.icon.skill.damage-sticky {
     background-position: -103px -618px;
 }
-.build-content .skills .icon.flashbang,
-.build-content .skills .icon.flash-sticky {
+.icon.skill.flashbang,
+.icon.skill.flash-sticky {
     background-position: -206px -618px;
 }
-.build-content .skills .icon.disruptor,
-.build-content .skills .icon.disrupt-sticky {
+.icon.skill.disruptor,
+.icon.skill.disrupt-sticky {
     background-position: -309px -618px;
 }
-.build-content .skills .icon.support-station,
-.build-content .skills .icon.heal-station,
-.build-content .skills .icon.life-support,
-.build-content .skills .icon.revive-station,
-.build-content .skills .icon.immunizer,
-.build-content .skills .icon.ammo-cache,
-.build-content .skills .icon.ammo-station,
-.build-content .skills .icon.turret,
-.build-content .skills .icon.active-sensor,
-.build-content .skills .icon.pulse-turret,
-.build-content .skills .icon.dragonbreath,
-.build-content .skills .icon.fire-turret,
-.build-content .skills .icon.zapper,
-.build-content .skills .icon.shock-turret,
-.build-content .skills .icon.green-link,
-.build-content .skills .icon.recovery-link,
-.build-content .skills .icon.tactical-link,
-.build-content .skills .icon.orange-link,
-.build-content .skills .icon.survivor-link,
-.build-content .skills .icon.blue-link,
-.build-content .gear .stats .performance .icon.support-station:after,
-.build-content .gear .stats .performance .icon.support-station::after,
-.build-content .gear .stats .performance .icon.heal-station:after,
-.build-content .gear .stats .performance .icon.heal-station::after,
-.build-content .gear .stats .performance .icon.turret:after,
-.build-content .gear .stats .performance .icon.turret::after,
-.build-content .gear .stats .performance .icon.green-link:after,
-.build-content .gear .stats .performance .icon.green-link::after,
-.build-content .gear .stats .performance .icon.recovery-link:after,
-.build-content .gear .stats .performance .icon.recovery-link::after,
-.build-content .gear .stats .performance .icon.tactical-link:after,
-.build-content .gear .stats .performance .icon.tactical-link::after,
-.build-content .gear .stats .performance .icon.orange-link:after,
-.build-content .gear .stats .performance .icon.orange-link::after,
-.build-content .gear .stats .performance .icon.survivor-link:after,
-.build-content .gear .stats .performance .icon.survivor-link::after,
-.build-content .gear .stats .performance .icon.blue-link:after,
-.build-content .gear .stats .performance .icon.blue-link::after {
+.icon.skill.support-station,
+.icon.skill.heal-station,
+.icon.skill.life-support,
+.icon.skill.revive-station,
+.icon.skill.immunizer,
+.icon.skill.ammo-cache,
+.icon.skill.ammo-station,
+.icon.skill.turret,
+.icon.skill.active-sensor,
+.icon.skill.pulse-turret,
+.icon.skill.dragonbreath,
+.icon.skill.fire-turret,
+.icon.skill.zapper,
+.icon.skill.shock-turret,
+.icon.skill.green-link,
+.icon.skill.recovery-link,
+.icon.skill.tactical-link,
+.icon.skill.orange-link,
+.icon.skill.survivor-link,
+.icon.skill.blue-link,
+.icon.skill.after.support-station:after,
+.icon.skill.after.support-station::after,
+.icon.skill.after.heal-station:after,
+.icon.skill.after.heal-station::after,
+.icon.skill.after.turret:after,
+.icon.skill.after.turret::after,
+.icon.skill.after.green-link:after,
+.icon.skill.after.green-link::after,
+.icon.skill.after.recovery-link:after,
+.icon.skill.after.recovery-link::after,
+.icon.skill.after.tactical-link:after,
+.icon.skill.after.tactical-link::after,
+.icon.skill.after.orange-link:after,
+.icon.skill.after.orange-link::after,
+.icon.skill.after.survivor-link:after,
+.icon.skill.after.survivor-link::after,
+.icon.skill.after.blue-link:after,
+.icon.skill.after.blue-link::after {
     background-image: url(/sprites/skills2.png);
 }
-.build-content .skills .icon.support-station,
-.build-content .skills .icon.heal-station,
-.build-content .gear .stats .performance .icon.support-station:after,
-.build-content .gear .stats .performance .icon.support-station::after,
-.build-content .gear .stats .performance .icon.heal-station:after,
-.build-content .gear .stats .performance .icon.heal-station::after {
+.icon.skill.support-station,
+.icon.skill.heal-station,
+.icon.skill.after.support-station:after,
+.icon.skill.after.support-station::after,
+.icon.skill.after.heal-station:after,
+.icon.skill.after.heal-station::after {
     background-position: 0 0;
 }
-.build-content .skills .icon.immunizer {
+.icon.skill.immunizer {
     background-position: -103px 0;
 }
-.build-content .skills .icon.life-support,
-.build-content .skills .icon.revive-station {
+.icon.skill.life-support,
+.icon.skill.revive-station {
     background-position: -206px 0;
 }
-.build-content .skills .icon.ammo-cache,
-.build-content .skills .icon.ammo-station {
+.icon.skill.ammo-cache,
+.icon.skill.ammo-station {
     background-position: -309px 0;
 }
-.build-content .skills .icon.turret {
+.icon.skill.turret {
     background-position: 0 -309px;
 }
-.build-content .gear .stats .performance .icon.turret:after,
-.build-content .gear .stats .performance .icon.turret::after {
+.icon.skill.after.turret:after,
+.icon.skill.after.turret::after {
     background-position: 0 -231.75px;
 }
-.build-content .skills .icon.zapper,
-.build-content .skills .icon.shock-turret {
+.icon.skill.zapper,
+.icon.skill.shock-turret {
     background-position: -103px -309px;
 }
-.build-content .skills .icon.active-sensor,
-.build-content .skills .icon.pulse-turret {
+.icon.skill.active-sensor,
+.icon.skill.pulse-turret {
     background-position: -206px -309px;
 }
-.build-content .skills .icon.dragonbreath,
-.build-content .skills .icon.fire-turret {
+.icon.skill.dragonbreath,
+.icon.skill.fire-turret {
     background-position: -309px -309px;
 }
-.build-content .skills .icon.green-link,
-.build-content .skills .icon.recovery-link {
+.icon.skill.green-link,
+.icon.skill.recovery-link {
     background-position: 0 -515px;
 }
-.build-content .skills .icon.tactical-link,
-.build-content .skills .icon.orange-link  {
+.icon.skill.tactical-link,
+.icon.skill.orange-link  {
     background-position: -103px -515px;
 }
-.build-content .skills .icon.survivor-link,
-.build-content .skills .icon.blue-link  {
+.icon.skill.survivor-link,
+.icon.skill.blue-link  {
     background-position: -206px -515px;
 }
 
 /* TALENT ICONS */
-.build-content .skills .icon.talent {
+.icon.talent {
     width: 100px;
     background-image: url(/sprites/talents.png);
     background-size: 800px;
 }
-.build-content .skills .icon.critical-save {
+.icon.talent.critical-save {
     background-position: 0 0;
 }
-.build-content .skills .icon.combat-medic {
+.icon.talent.combat-medic {
     background-position: -103px 0;
 }
-.build-content .skills .icon.adrenaline {
+.icon.talent.adrenaline {
     background-position: -206px 0;
 }
-.build-content .skills .icon.strike-back {
+.icon.talent.strike-back {
     background-position: -309px 0;
 }
-.build-content .skills .icon.battle-buddy {
+.icon.talent.battle-buddy {
     background-position: -412px 0;
 }
-.build-content .skills .icon.triage {
+.icon.talent.triage {
     background-position: -515px 0;
 }
-.build-content .skills .icon.shrapnel {
+.icon.talent.shrapnel {
     background-position: -618px 0;
 }
-.build-content .skills .icon.shock-and-awe {
+.icon.talent.shock-and-awe {
     background-position: 0 -103px;
 }
-.build-content .skills .icon.fear-tactics {
+.icon.talent.fear-tactics {
     background-position: -103px -103px;
 }
-.build-content .skills .icon.wildfire {
+.icon.talent.wildfire {
     background-position: -206px -103px;
 }
-.build-content .skills .icon.tactical-advance {
+.icon.talent.tactical-advance {
     background-position: -309px -103px;
 }
-.build-content .skills .icon.evasive-action {
+.icon.talent.evasive-action {
     background-position: -412px -103px;
 }
-.build-content .skills .icon.police-up {
+.icon.talent.police-up {
     background-position: -515px -103px;
 }
-.build-content .skills .icon.tech-support {
+.icon.talent.tech-support {
     background-position: -618px -103px;
 }
-.build-content .skills .icon.death-by-proxy {
+.icon.talent.death-by-proxy {
     background-position: 0 -206px;
 }
-.build-content .skills .icon.demolition-expert {
+.icon.talent.demolition-expert {
     background-position: -103px -206px;
 }
-.build-content .skills .icon.steady-hands {
+.icon.talent.steady-hands {
     background-position: -206px -206px;
 }
-.build-content .skills .icon.on-the-move {
+.icon.talent.on-the-move {
     background-position: -309px -206px;
 }
-.build-content .skills .icon.one-is-none {
+.icon.talent.one-is-none {
     background-position: -412px -206px;
 }
-.build-content .skills .icon.precision {
+.icon.talent.precision {
     background-position: -515px -206px;
 }
-.build-content .skills .icon.stopping-power {
+.icon.talent.stopping-power {
     background-position: -618px -206px;
 }
-.build-content .skills .icon.chain-reaction {
+.icon.talent.chain-reaction {
     background-position: 0 -306px;
 }
-.build-content .skills .icon.desperate-times {
+.icon.talent.desperate-times {
     background-position: -103px -306px;
 }
-.build-content .skills .icon.repo-reaper {
+.icon.talent.repo-reaper {
     background-position: -206px -306px;
 }
 
+
 /* GENERAL ANIMATION KEYFRAMES */
 @-webkit-keyframes fade-in {
-	from {
-		opacity: 0;
-	}
-	to {
-		opacity: 1;
-	}
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 @keyframes fade-in {
-	from {
-		opacity: 0;
-	}
-	to {
-		opacity: 1;
-	}
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 @-webkit-keyframes fade-in-7 {
-	from {
-		opacity: 0;
-	}
-	to {
-		opacity: .7;
-	}
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: .7;
+    }
 }
 @keyframes fade-in-7 {
-	from {
-		opacity: 0;
-	}
-	to {
-		opacity: .7;
-	}
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: .7;
+    }
 }
 
 /* MEDIA ADJUSTEMENTS */
