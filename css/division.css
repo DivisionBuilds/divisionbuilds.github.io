@@ -321,8 +321,17 @@ label {
 .main-container.wide {
     min-width: 850px;
 }
+.main-container h1 {
+	font-size: 2em;
+}
 .main-container h1:not(:first-child) {
     margin-top: 20px;
+}
+.main-container h3 {
+	font-size: 1.5em;
+}
+.main-container h3 {
+	font-size: 1.3em;
 }
 .main-container.text p {
     text-align: justify;
