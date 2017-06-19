@@ -54,7 +54,7 @@
 				},
 				"knee-pads": {
 					"name": "Striker's Knee Pads",
-					"rolls": ["Critical Hit Damage", "Burn Resistance", "Blind-Deaf Resistance", "Damage to Elites"],
+					"rolls": ["Health", "Burn Resistance", "Disorient Resistance", "Damage to Elites"],
 					"icon": "striker"
 				}
 			},
