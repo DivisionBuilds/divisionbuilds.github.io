@@ -11,7 +11,7 @@ var calc = {
 		    hsd = o.hsd || 0,
 		    hsmulti = o.hsdmulti || 1,
 		    increase = o.increase || 0;
-		return (base + (firearms * ratio)) * (1 + ((chd / 100 * chc) / 100)) * (hsmulti + ((hsd / 100 * hsc) / 100)) * (1 + (increase / 100));
+		return (base + (firearms * ratio)) * (1 + ((chd / 100 * chc) / 100)) * (1 + (((hsmulti - 1) + hsd / 100) * hsc / 100)) * (1 + (increase / 100));
 	},
 	pve: {
 		bulletDMG: function(o) {
