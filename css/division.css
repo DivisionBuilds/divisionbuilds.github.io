@@ -156,7 +156,8 @@ label {
     -ms-flex-align: end;
     align-items: flex-end;
 }
-.flex-item {
+.flex-item,
+.flex-child {
     margin-bottom: 20px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -164,11 +165,16 @@ label {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+}
+.flex-item {
     font-size: 1.125em;
 }
-.flex-item input {
+.flex-item * + input {
     width: 150px;
     margin-left: auto;
+}
+.flex-item button + button {
+	margin-left: 5px;
 }
 
 /* BUTTONS */
@@ -183,6 +189,9 @@ label {
     color: #fff;
     outline: none;
     border: none;
+    -webkit-align-self: flex-start;
+    -ms-align-self: flex-start;
+    align-self: flex-start;
     -webkit-transition: background-color .15s ease-in-out;
     transition: background-color .15s ease-in-out;
 }
@@ -1211,7 +1220,7 @@ textarea,
 }
 .output.list {
     font-size: 1.25em;
-    margin: auto;
+    margin: 0 auto;
 }
 .output.list .item {
     padding: 10px 20px;
