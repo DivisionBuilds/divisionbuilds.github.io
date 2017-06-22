@@ -2072,7 +2072,7 @@ textarea,
 }
 .icon.skill.after,
 .icon.skill.after {
-    background-image: none;
+    background-image: none !important;
 }
 .icon.skill.after:after,
 .icon.skill.after::after {
