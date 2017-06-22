@@ -15,10 +15,10 @@ var calc = {
 			r = (1 + (chd / 100 * chc / 100) + ((hsmulti - 1 + hsd / 100) * hsc / 100));
 		if (increase instanceof Array) {
 			for (var i = 0; i < increase.length; i++)
-				r  += b * (1 + (increase[i] / 100)) - b;
-			return r;
+				r  *= (1 + increase[i] / 100);
+			return b * r;
 		}
-		else return  r  + b * (1 + (increase / 100)) - b;
+		else return  b * (r + increase / 100);
 	},
 	pve: {
 		bulletDMG: function(o) {
