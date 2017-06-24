@@ -1112,6 +1112,9 @@ textarea,
 .build-content .gear .icon::after {
     content: "";
     position: absolute;
+}
+.build-content .gear .items .icon:after,
+.build-content .gear .items .icon::after {
     top: 5px;
     right: 10px;
     bottom: 5px;
