@@ -2436,7 +2436,7 @@ textarea,
 }
 @-webkit-keyframes selected-bar-item-delay {
 	0%, 50% {
-		background-color: hsla(0, 0%, 100%, .1);
+		background-color: hsla(0, 0%, 100%, .3);
     	color: hsla(0, 0%, 100%, .5);
 	}
 	100% {
@@ -2446,7 +2446,7 @@ textarea,
 }
 @keyframes selected-bar-item-delay {
 	0%, 50% {
-		background-color: hsla(0, 0%, 100%, .1);
+		background-color: hsla(0, 0%, 100%, .3);
     	color: hsla(0, 0%, 100%, .5);
 	}
 	100% {
