@@ -37,7 +37,7 @@
 			"items": {
 				"chest": {
 					"name": "Reckless Chest",
-					"rolls": ["Health", "Exotic Damage Resiliance", "Burn Resistance"],
+					"rolls": ["Health", "Exotic Damage Resiliance", "Ammo Capacity"],
 					"icon": "he"
 				},
 				"backpack": {
@@ -47,7 +47,7 @@
 				},
 				"mask": {
 					"name": "D3-FNC Mask",
-					"rolls": ["Health", "Burn Resistance"],
+					"rolls": ["Skill Power", "Burn Resistance"],
 					"icon": "frontline"
 				},
 				"gloves": {

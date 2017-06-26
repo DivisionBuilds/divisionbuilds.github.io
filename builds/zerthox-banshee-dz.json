@@ -39,7 +39,7 @@
 			"items": {
 				"chest": {
 					"name": "Vigorous Chest",
-					"rolls": ["Health", "Skill Haste", "Burn Resistance"],
+					"rolls": ["Health", "Skill Haste", "Ammo Capacity"],
 					"icon": "he"
 				},
 				"backpack": {
@@ -49,7 +49,7 @@
 				},
 				"mask": {
 					"name": "Banshee's Shadow Mask",
-					"rolls": ["Health", "Burn Resistance"],
+					"rolls": ["Skill Power", "Burn Resistance"],
 					"icon": "banshee"
 				},
 				"gloves": {

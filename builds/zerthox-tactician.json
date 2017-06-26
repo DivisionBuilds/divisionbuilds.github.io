@@ -38,7 +38,7 @@
 			"items": {
 				"chest": {
 					"name": "Vigorous Chest",
-					"rolls": ["Health", "Skill Haste", "Burn Resistance"],
+					"rolls": ["Health", "Skill Haste", "Ammo Capacity"],
 					"icon": "he"
 				},
 				"backpack": {

@@ -38,7 +38,7 @@
 			"items": {
 				"chest": {
 					"name": "Reckless Chest",
-					"rolls": ["Health", "Skill Haste", "Burn Resistance"],
+					"rolls": ["Health", "Skill Haste", "Ammo Capacity"],
 					"icon": "he"
 				},
 				"backpack": {
@@ -48,7 +48,7 @@
 				},
 				"mask": {
 					"name": "DeadEYE Mask",
-					"rolls": ["Health", "Burn Resistance"],
+					"rolls": ["Skill Power", "Burn Resistance"],
 					"icon": "deadeye"
 				},
 				"gloves": {

@@ -38,7 +38,7 @@
 			"items": {
 				"chest": {
 					"name": "Firecrest Chest",
-					"rolls": ["Health", "Skill Haste", "Burn Resistance"],
+					"rolls": ["Health", "Skill Haste", "Ammo Capacity"],
 					"icon": "firecrest"
 				},
 				"backpack": {
@@ -48,7 +48,7 @@
 				},
 				"mask": {
 					"name": "Firecrest Mask",
-					"rolls": ["Health", "Burn Resistance"],
+					"rolls": ["Skill Power", "Burn Resistance"],
 					"icon": "firecrest"
 				},
 				"gloves": {
