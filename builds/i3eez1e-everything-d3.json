@@ -1,0 +1,100 @@
+{
+	"title": "Everything D3 Build",
+	"author": "I3EEZ1E",
+	"date": "25/06/2017",
+	"patch": "1.6",
+	"tags": ["dps", "shield"],
+	"build": {
+		"weapons": {
+			"primary": {
+				"name": "MP5",
+				"talents": ["Deadly", "Brutal", "Responsive"],
+				"mods": {
+					"magazine": ["Extended Magazine"],
+					"underbarrel": ["PRO Red Dot"],
+					"muzzle": ["Lout Vent Brake"],
+					"scope": ["Small Grip"]
+				},
+				"icon": "mp5"
+			},
+			"secondary": {
+				"name": "M700",
+				"talents": ["Brutal", "Prepared", "Elevated"],
+				"mods": {
+					"magazine": ["Extended Magazine"],
+					"underbarrel": ["VX-1 Scope"],
+					"muzzle": ["Omega Rifle Supressor"],
+					"scope": ["Small Grip"]
+				},
+				"icon": "m700"
+			},
+			"sidearm": {
+				"name": "Damascus",
+				"talents": ["Brutal", "Quickdraw"],
+				"mods": {
+					"muzzle": ["Loud Vent Brake"]
+				},
+				"icon": "damascus"
+			}
+		},
+		"gear": {
+			"items": {
+				"chest": {
+					"name": "Reckless Chest",
+					"rolls": ["Health", "Enemy Armor Damage", "Ammo Capacity"],
+					"icon": "he"
+				},
+				"backpack": {
+					"name": "D3-FNC Backpack",
+					"rolls": ["Skill Power", "Ammo Capacity"],
+					"icon": "frontline"
+				},
+				"mask": {
+					"name": "D3-FNC Mask",
+					"rolls": ["Skill Power", "Burn Resistance"],
+					"icon": "frontline"
+				},
+				"gloves": {
+					"name": "Savage Gloves",
+					"rolls": ["SMG Damage", "Critical Hit Chance", "Critical Hit Damage"],
+					"icon": "he"
+				},
+				"holster": {
+					"name": "D3-FNC Holster",
+					"rolls": ["Reload Speed"],
+					"icon": "frontline"
+				},
+				"knee-pads": {
+					"name": "D3-FNC Knee Pads",
+					"rolls": ["Skill Power", "Burn Resistance", "Disrupt Resistance", "Bleed Resistance"],
+					"icon": "frontline"
+				}
+			},
+			"stats": {
+				"main-rolls": [
+					["4x", "Firearms"],
+					["1x", "Electronics"]
+				],
+				"mods": [
+					["5x", "Firearms", "Skill Power"]
+				],
+				"performance": [
+					["4x", "Ballistic Shield Damage", "ballistic-shield"]
+				]
+			}
+		},
+		"skills": {
+			"1": {
+				"name": "First Aid",
+				"mod": "Overdose"
+			},
+			"2": {
+				"name": "Ballistic Shield",
+				"mod": "Assault Shield"
+			},
+			"link": {
+				"mod": "Recovery Link"
+			}
+		}
+	}
+}
