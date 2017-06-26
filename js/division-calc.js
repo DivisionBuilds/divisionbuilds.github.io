@@ -98,8 +98,25 @@ var calc = {
 			return a;
 		}
 	},
-	mitigation: function(arm) {
-		return arm / 239;
+	mitigation: function(arm, wt = 5) {
+		switch (wt) {
+			case 1:
+				return arm / 820;
+				break;
+			case 2:
+				return arm / 127.64;
+				break;
+			case 3:
+				return arm / 155.43;
+				break;
+			case 4:
+				return arm / 192.76;
+				break;
+			case 5:
+			default:
+				return arm / 239.06;
+				break;
+		}
 	},
 	toughness: function(o) {
 		// Required: health, mitigation
