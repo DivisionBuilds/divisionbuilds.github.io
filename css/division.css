@@ -2093,14 +2093,14 @@ textarea,
 .icon.skill.after.ballistic-shield::after {
     background-position: 0 0;
 }
-.icon.skill.assault-shield {
+.icon.skill.kinetic-breaker {
     background-position: -103px 0;
 }
 .icon.skill.pulse-shield,
 .icon.skill.reactive-targeting {
     background-position: -206px 0;
 }
-.icon.skill.kinetic-breaker {
+.icon.skill.assault-shield {
     background-position: -309px 0;
 }
 .icon.skill.pulse {
