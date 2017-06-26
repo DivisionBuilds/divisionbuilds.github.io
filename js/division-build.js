@@ -66,7 +66,7 @@ var build = {
 		build.loadURL("/builds/" + file + ".json")
 	},
 	loadData: function(d) {
-	    document.title = d.title + " - " + document.title;
+	    $(document).attr("title", d.title + " - " + document.title);
 	    $("meta[name=description]").attr("content", d.title + " by " + d.author);
 	    $(".build-header .title").text(d.title);
 	    $(".build-header .author").text(d.author);
@@ -82,8 +82,12 @@ var build = {
 	    	var e = $(this),
 	    		t = e.text().toLowerCase();
 	    	if (!d.build.hasOwnProperty(t)) {
-	    		e.remove();
-	    		$("." + t).remove();
+	    		if (t === "general")
+	    			$(".general .main-container").remove();
+	    		else {
+	    			e.remove();
+	    			$("." + t).remove();
+	    		}
 	    	}
 	    });
 	    $.each(d.build, function(key, value) {
