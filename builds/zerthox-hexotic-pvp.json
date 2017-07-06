@@ -2,7 +2,7 @@
 	"title": "Hexotic PvP DPS",
 	"author": "Zerthox",
 	"link": "https://github.com/Zerthox",
-	"date": "18/06/2017",
+	"date": "06/07/2017",
 	"patch": "1.6",
 	"tags": ["pvp", "dps", "solo", "group"],
 	"build": {
@@ -20,7 +20,7 @@
 				"talents": ["Competent", "Responsive", "Unforgiving"],
 				"mods": {
 					"magazine": ["Magazine Size", "Rate of Fire", "Critical Hit Chance"],
-					"underbarrel": ["Reload Speed", "Critical Hit Damage", "Accuracy"],
+					"underbarrel": ["Critical Hit Damage", "Reload Speed", "Accuracy"],
 					"muzzle": ["Critical Hit Damage", "Headshot Damage", "Critical Hit Chance"],
 					"scope": ["Critical Hit Damage", "Headshot Damage", "Critical Hit Chance"]
 				},
