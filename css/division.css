@@ -451,6 +451,7 @@ label {
     -webkit-flex: none;
     -ms-flex: none;
     flex: none;
+    z-index: 1;
 }
 .footer a {
     color: hsla(0, 0%, 100%, .5);
