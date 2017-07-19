@@ -6,9 +6,9 @@ title: Base Roll Calculator
 <div class="main-container wide">
     <h1>Base Roll Calculator</h1>
     <p>Calculate the estimated base damage rolls of your weapons.</p>
-    <p>If you don't know the Firearms scaling of your weapon, you can look it up here: <a href="https://docs.google.com/spreadsheets/d/1JTLivI7FDB0HeHIX0GePMLJd4bD-xarH3ZpNxPCX218/pubhtml" target="_blank">The Division Gear Attribute Sheet</a></p>
+    <p>If you do not know the Firearms scaling of your weapon, you can find it here: <a href="https://docs.google.com/spreadsheets/d/1JTLivI7FDB0HeHIX0GePMLJd4bD-xarH3ZpNxPCX218/pubhtml" target="_blank">The Division Gear Attribute Sheet</a></p>
     <div class="flex-row flex-align-start">
-        <div class="flex-list margin">
+        <div class="flex-list">
             <h2>Setup</h2> 
             <div class="flex-item">
                 <label>Bullet damage:</label><input type="number" min="0" class="dmg">
@@ -20,7 +20,7 @@ title: Base Roll Calculator
                 <label>Firearms scaling:</label><input type="number" min="0" class="scaling">
             </div>
             <div class="flex-item">
-                <label>Gloves Weapon Type Damage:</label><input type="number" min="0" class="gloves">
+                <label>Gloves Weapon Type Damage:</label><input type="number" value="0" min="0" class="gloves">
             </div>
             <div class="flex-item">
                 <label>All Weapon Damage (%):</label><input type="number" value="0" min="0" class="awd">
@@ -29,16 +29,7 @@ title: Base Roll Calculator
                 <label>Weapon Type Damage (%):</label><input type="number" value="0" min="0" class="wtd">
             </div>
         </div>
-        <div class="output list">
-            <div class="item">
-                <h2>Raw</h2>
-                <div class="stats">
-                    <div class="baseDMG">
-                        <div>Base damage roll:</div><div class="value">0</div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <div class="output">0</div>
     </div>
 </div>
 {% include noscript-calc.html %}

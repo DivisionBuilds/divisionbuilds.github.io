@@ -10,6 +10,6 @@ var page = {
         $("input").each(function() {
             o[$(this).attr("class")] = parseFloat($(this).val());
         });
-        $(".baseDMG .value").text(calc.baseDMG(o));
+        $(".output").text(Math.round(calc.baseDMG(o));
     }
 };
