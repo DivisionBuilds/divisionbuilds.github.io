@@ -98,6 +98,15 @@ var calc = {
 			return a;
 		}
 	},
+	baseDMG: function(o) {
+		var dmg = o.dmg,
+			firearms = o.firearms,
+			ratio = o.ratio,
+			gloves = o.gloves || 0,
+			awd = o.awd || 0,
+			wtd = o.wtd || 0;
+		return Math.round(dmg / (1 + awd / 100) / (1 + wtd / 100)) - gloves - firearms * ratio;
+	},
 	mitigation: function(arm, wt = 5) {
 		switch (wt) {
 			case 1:
