@@ -99,6 +99,8 @@ var calc = {
 		}
 	},
 	baseDMG: function(o) {
+	// Required: dmg, firearms, ratio
+	// Optional: gloves, awd, wtd
 		var dmg = o.dmg,
 			firearms = o.firearms,
 			ratio = o.ratio,
