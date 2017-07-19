@@ -101,9 +101,9 @@ var calc = {
 	baseDMG: function(o) {
 	// Required: dmg, firearms, scaling
 	// Optional: gloves, awd, wtd
-		var dmg = o.dmg,
-			firearms = o.firearms,
-			scaling = o.scaling,
+		var dmg = o.dmg || 0,
+			firearms = o.firearms || 0,
+			scaling = o.scaling || 0,
 			gloves = o.gloves || 0,
 			awd = o.awd || 0,
 			wtd = o.wtd || 0;
