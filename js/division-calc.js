@@ -143,17 +143,14 @@ var calc = {
 			stamina = o.stamina || 2674;
 		var s = o.electronics * 30;
 		switch (talent) {
-			case "inventive": {
+			case "inventive":
 				return s * 1.15;
 				break;
-			}
-			case "specialized": {
+			case "specialized":
 				return s + ((firearms + stamina) * 2);
 				break;
-			}
-			default: {
+			default:
 				return s;
-			}
 		}
 	}
 };
