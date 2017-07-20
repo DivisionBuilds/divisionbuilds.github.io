@@ -15,7 +15,7 @@ var calc = {
 			r = (1 + (chd / 100 * chc / 100) + ((hsmulti - 1 + hsd / 100) * hsc / 100));
 		if (increase instanceof Array) {
 			for (var i = 0; i < increase.length; i++)
-				r  *= (1 + increase[i] / 100);
+				r  *= (1 + (increase[i] || 0) / 100);
 			return b * r;
 		}
 		else return  b * (r + increase / 100);
