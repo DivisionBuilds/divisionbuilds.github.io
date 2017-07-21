@@ -106,7 +106,7 @@ $(document).ready(function() {
 		"Sentry",
 		"Tactician",
 		"Predator",
-		"Final Measures",
+		"Final Measure",
 		"Lone Star",
 		"Frontline",
 		"Banshee",

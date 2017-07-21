@@ -451,7 +451,7 @@ label {
     -webkit-flex: none;
     -ms-flex: none;
     flex: none;
-    z-index: 1;
+    z-index: 1s;
 }
 .footer a {
     color: hsla(0, 0%, 100%, .5);
@@ -1147,7 +1147,7 @@ textarea,
 .build-content .gear .icon.sentry,
 .build-content .gear .icon.tactician,
 .build-content .gear .icon.predators-mark,
-.build-content .gear .icon.final-measures,
+.build-content .gear .icon.final-measure,
 .build-content .gear .icon.lone-star,
 .build-content .gear .icon.defence,
 .build-content .gear .icon.frontline,
@@ -1986,8 +1986,8 @@ textarea,
 .icon.tactician::after,
 .icon.predators-mark:after,
 .icon.predators-mark::after,
-.icon.final-measures:after,
-.icon.final-measures::after,
+.icon.final-measure:after,
+.icon.final-measure::after,
 .icon.lone-star:after,
 .icon.lone-star::after,
 .icon.defence:after,
@@ -2031,8 +2031,8 @@ textarea,
 .icon.predators-mark::after {
     background-position: -500px 0;
 }
-.icon.final-measures:after,
-.icon.final-measures::after {
+.icon.final-measure:after,
+.icon.final-measure::after {
     background-position: -600px 0;
 }
 .icon.lone-star:after,

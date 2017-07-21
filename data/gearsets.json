@@ -31,8 +31,8 @@
             "Your weapon damage is increased by 15% against burning targets."
         ]
     },
-    "final-measures": {
-        "name": "Final Measures",
+    "final-measure": {
+        "name": "Final Measure",
         "bonuses": [
             "+ 25.0% Exotic Damage Resilience",
             "+ 15% Protection from Elites",
