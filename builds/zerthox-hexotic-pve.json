@@ -4,7 +4,7 @@
 	"link": "https://github.com/Zerthox",
 	"date": "30/05/2017",
 	"patch": "1.6",
-	"tags": ["pve", "dps", "solo", "group"],
+	"tags": ["pve", "dps", "solo", "group", "hexotic"],
 	"build": {
 		"general": [
 			"This is a DPS build for PvE, but with some survivability and skill power in order to sustain without having to rely on teammates.",

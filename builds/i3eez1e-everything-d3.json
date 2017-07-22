@@ -3,7 +3,7 @@
 	"author": "I3EEZ1E",
 	"date": "25/06/2017",
 	"patch": "1.6",
-	"tags": ["dps", "shield"],
+	"tags": ["dps", "d3-fnc", "shield"],
 	"build": {
 		"weapons": {
 			"primary": {

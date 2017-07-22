@@ -4,7 +4,7 @@
 	"link": "https://github.com/Zerthox",
 	"date": "05/06/2017",
 	"patch": "1.6",
-	"tags": ["pvp", "dps", "shield"],
+	"tags": ["pvp", "dps", "d3-fnc", "shield"],
 	"build": {
 		"general": [
 			"This build tries to go in a different direction with a shield build. Instead of going for survivability or utility it has high Firearms and tries to output high damage while having survivability through the shield. Keep in mind that this is more of a niche build though."
