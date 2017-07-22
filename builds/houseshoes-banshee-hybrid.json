@@ -75,7 +75,7 @@
 				}
 			},
 			"stats": {
-				"main-rolls": [
+				"main-stats": [
 					["6000", "Firearms"],
 					["3000", "Stamina"],
 					["6000", "Electronics"]
