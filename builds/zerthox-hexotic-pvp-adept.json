@@ -10,9 +10,9 @@
 			"This is a DPS build for PvP. It is designed to be useful for solo and group play.",
 			"It can be used with literally any weapon in the game, I suggest running with at least one Assault Rifle or SMG in PvP though.",
 			"This build uses Adept stacking. Currently the Adept talent can be stacked up to 5 times with enough Skill Haste which grants you a total of 37.5 Critical Hit Chance.",
-			"If you do not want to use Adept stacking, check out the normal version of this build: <a href='build?id=zerthox-hexotic-pvp'>Skulls PvP DPS</a>.",
+			"If you do not want to use Adept stacking, check out the normal version of this build: <a href='build?id=zerthox-hexotic-pvp'>Hexotic PvP DPS</a>.",
 			"Rolling Stability or Accuracy on the weapon mods does not really matter, feel free pick your preferred handling stat. But the Optimal Range on the underbarrel is for SMGs more beneficial that Stability or Accuracy in my opinion.",
-			"If you want to have a similiar build for PvE, I suggest checking out my <a href='build?id=zerthox-hexotic-pve'>Skulls PvE DPS</a> build."
+			"If you want to have a similiar build for PvE, I suggest checking out my <a href='build?id=zerthox-hexotic-pve'>Hexotic PvE DPS</a> build."
 		],
 		"weapons": {
 			"primary": {
