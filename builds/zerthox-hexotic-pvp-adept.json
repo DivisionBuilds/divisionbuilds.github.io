@@ -39,7 +39,7 @@
 			},
 			"sidearm": {
 				"name": "Double Barrel Sawed Off",
-				"talents": ["Responsive", "Deadly", "Predatory"],
+				"talents": ["Competent", "Deadly", "Predatory"],
 				"icon": "sawed-off"
 			}
 		},
