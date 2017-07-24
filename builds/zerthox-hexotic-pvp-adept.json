@@ -2,7 +2,7 @@
 	"title": "Hexotic PvP Adept Stacking",
 	"author": "Zerthox",
 	"link": "https://github.com/Zerthox",
-	"date": "06/07/2017",
+	"date": "24/07/2017",
 	"patch": "1.6",
 	"tags": ["pvp", "dps", "solo", "group", "hexotic"],
 	"build": {
@@ -36,6 +36,11 @@
 					"scope": ["Critical Hit Damage", "Headshot Damage", "Critical Hit Chance"]
 				},
 				"icon": "mp5"
+			},
+			"sidearm": {
+				"name": "Double Barrel Sawed Off",
+				"talents": ["Responsive", "Deadly", "Predatory"],
+				"icon": "sawed-off"
 			}
 		},
 		"gear": {
