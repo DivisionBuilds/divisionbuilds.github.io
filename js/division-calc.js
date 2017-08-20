@@ -60,9 +60,9 @@ var calc = {
 			    pvphsd_scaling = o.pvphsd_scaling || 0.8;
 			o.hsmodifier = o.hsmodifier || 0.8;
 			var a = (calc.bulletDMG(o) * pvpdmg_scaling) / 100;
-			var min = a * (100 - (calc.mitigation(8008) / 100 * (100 - (ead * pvpead_scaling))));
-			var max = a * (100 - (calc.mitigation(6814) / 100 * (100 - (ead * pvpead_scaling))));
-			var ls = a * (100 - (35 / 100 * (100 - (ead * pvpead_scaling))));
+			var min = a * (100 - Math.max(0, (calc.mitigation(8008) / 100 * (100 - (ead * pvpead_scaling)))));
+			var max = a * (100 - Math.max(0, (calc.mitigation(6814) / 100 * (100 - (ead * pvpead_scaling)))));
+			var ls = a * (100 - Math.max(0, (35 / 100 * (100 - (ead * pvpead_scaling)))));
 			return {min: min, max: max, ls: ls};
 		},
 		burstDMG: function(o) {
