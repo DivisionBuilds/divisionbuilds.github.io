@@ -1,7 +1,6 @@
 var calc = {
 	bulletDMG: function(o) {
 		// Required: base, firearms, scaling
-		// Optional: chc, chd, hsc, hsd, hsmulti, increase
 		var base = o.base || 0,
 		    firearms = o.firearms || 0,
 		    scaling = o.scaling || 0,
@@ -12,7 +11,6 @@ var calc = {
 		    hsmulti = o.hsmulti || 1,
 		    increase = o.increase || 0;
 		var b = (base + (firearms * scaling)),
-			r = (1 + (chd / 100 * chc / 100) + ((hsmulti - 1 + hsd / 100) * hsc / 100));
 		if (increase instanceof Array) {
 			for (var i = 0; i < increase.length; i++)
 				r  *= (1 + (increase[i] || 0) / 100);
@@ -23,26 +21,22 @@ var calc = {
 	pve: {
 		bulletDMG: function(o) {
 		// Required: base, firearms, scaling
-		// Optional: ead, dte, chc, chd, hsc, hsd, hsmulti, increase
 			var ead = o.ead || 0,
 			    dte = o.dte || 0;
 			return calc.bulletDMG(o) * (1 + ead / 100) * (1 + dte / 100);
 		},
 		burstDMG: function(o) {
 		// Required: base, magsize, firearms, scaling
-		// Optional: ead, dte, chc, chd, hsc, hsd, hsmulti, increase
 			var magsize = o.magsize || 1;
 			return calc.pve.bulletDMG(o) * magsize;
 		},
 		burstDPS: function(o) {
 		// Required: base, rpm, firearms, scaling
-		// Optional: ead, dte, chc, chd, hsc, hsd, hsmulti, increase
 			var rpm = o.rpm || 0;
 			return calc.pve.bulletDMG(o) * (rpm / 60);
 		},
 		DPS: function(o) {
 		// Required: base, rpm, magsize, reloadtime, firearms, scaling
-		// Optional: ead, dte, chc, chd, hsc, hsd, hsmulti, increase
 			var rpm = o.rpm || 0,
 				magsize = o.magsize || 1,
 				reloadtime = o.reloadtime || 1;
@@ -52,11 +46,11 @@ var calc = {
 	pvp: {
 		bulletDMG: function(o) {
 		// Required: base, firearms, scaling
-		// Optional: ead, chc, chd, hsc, hsd, hsmulti, increase, pvpdmg_scaling, pvpead_scaling
 			var ead = o.ead || 0,
 			    pvpdmg_scaling = o.pvpdmg_scaling || 0.42,
 			    pvpead_scaling = o.pvpead_scaling || 0.3,
-				a = (calc.bulletDMG(o) * pvpdmg_scaling) / 100;
+			    pvphsd_scaling = o.pvphsd_scaling || 0.8;
+			var a = (calc.bulletDMG(o) * pvpdmg_scaling) / 100;
 			var min = a * (100 - (calc.mitigation(8008) / 100 * (100 - (ead * pvpead_scaling))));
 			var max = a * (100 - (calc.mitigation(6814) / 100 * (100 - (ead * pvpead_scaling))));
 			var ls = a * (100 - (35 / 100 * (100 - (ead * pvpead_scaling))));
@@ -64,7 +58,6 @@ var calc = {
 		},
 		burstDMG: function(o) {
 		// Required: base, magsize, firearms, scaling
-		// Optional: ead, chc, chd, hsc, hsd, hsmulti, increase, pvpdmg_scaling, pvpead_scaling
 			var magsize = o.magsize || 1,
 				d = calc.pvp.bulletDMG(o),
 				a = {};
@@ -75,7 +68,6 @@ var calc = {
 		},
 		burstDPS: function(o) {
 		// Required: base, rpm, firearms, scaling
-		// Optional: ead, chc, chd, hsc, hsd, hsmulti, increase, pvpdmg_scaling, pvpead_scaling
 			var rpm = o.rpm || 0,
 				d = calc.pvp.bulletDMG(o),
 				a = {};
@@ -86,7 +78,6 @@ var calc = {
 		},
 		DPS: function(o) {
 		// Required: base, rpm, magsize, reloadtime, firearms, scaling
-		// Optional: ead, chc, chd, hsc, hsd, hsmulti, increase, pvpdmg_scaling, pvpead_scaling
 			var rpm = o.rpm || 0,
 				magsize = o.magsize || 1,
 				reloadtime = o.reloadtime || 1,
