@@ -1,0 +1,108 @@
+---
+layout: build
+title: "Your build title"
+author: "Your name"
+link: "https://yourwebsitelink.com"
+date: "01/01/2017" # The date you last updated the build (content wise)
+tags: # Tags: "pvp", "pve", "dps", "healer", "tank" etc.
+    - "tag1"
+    - "tag2"
+    - "tag3"
+build: 
+    general: # You build description/info, may include links
+        - "Your build description and some information."
+        - "Another description paragraph."
+    weapons: 
+        primary: # Weapon slot: primary, secondary or sidearm
+            name: "Lightweight M4" # Weapon name
+            talents: # Wweapon talents
+                - "Talented"
+                - "Competent"
+                - "Determined"
+            mods: # Weapon mods
+                magazine: # Magazine rolls
+                    - "Magazine Size"
+                    - "Rate of Fire"
+                    - "Critical Hit Chance"
+                underbarrel: # Underbarrel rolls
+                    - "Reload Speed"
+                    - "Critical Hit Damage"
+                    - "Stability"
+                muzzle: # Muzzle rolls
+                    - "Headshot Damage"
+                    - "Critical Hit Chance"
+                    - "Critical Hit Damage"
+                scope: # Scope rolls
+                    - "Headshot Damage"
+                    - "Critical Hit Chance"
+                    - "Critical Hit Damage"
+            icon: "m4" # Weapon icon
+    gear: 
+        items: # Gear pieces
+            chest: 
+                name: "Vigorous Chest" # Chest name/type
+                rolls: # Chest rolls
+                    - "Health"
+                    - "Skill Haste"
+                    - "Ammo Capacity"
+                icon: "he" # "he", "exotic" or gearset name
+            backpack: 
+                name: "Inventive Backpack" # Backpack name/type
+                rolls:  # Backpack rolls
+                    - "Health"
+                    - "Burn Resistance"
+                icon: "he" # "he", "exotic" or gearset name
+            mask: 
+                name: "Tactician's Authority Mask" # Mask name/type
+                rolls:  # Mask rolls
+                    - "Skill Power"
+                    - "Burn Resistance"
+                icon: "tactician" # "he", "exotic" or gearset name
+            gloves: 
+                name: "Tactician's Authority Gloves" # Gloves name/type
+                rolls:  # Gloves rolls
+                    - "Assault Rifle Damage"
+                    - "Skill Haste"
+                    - "Critical Hit Chance"
+                icon: "tactician" # "he", "exotic" or gearset name
+            holster: 
+                name: "Tactician's Authority Holster" # Holster name/type
+                rolls:  # Holster rolls
+                    - "Skill Haste"
+                icon: "tactician" # "he", "exotic" or gearset name
+            "knee-pads": 
+                name: "Tactician's Authority Knee Pads" # Knee Pads name/type
+                rolls:  # Knee Pads rolls
+                    - "Health"
+                    - "Burn Resistance"
+                    - "Shock Resistance"
+                    - "Disrupt Resistance"
+                icon: "tactician" # "he", "exotic" or gearset name
+        rolls: # Main stat rolls on your gear pieces (Chest, Backpack, mask, Gloves, Knee pads => Total: 5)
+            - [5x, Electronics] # Amount & type of roll ("Firearms", "Stamina" or "Electronics")
+        # ALTERNATIVE: Approximate amount of each stat
+        # stats: 
+        #     - ["3000", "Firearms"]
+        #     - ["2800", "Stamina"]
+        #     - ["9200", "Electronics"]
+        mods: # Main stat mods on your gear (2x Chest, 1x Backpack, 1x Mask, 1x Knee Pads => Total: 5)
+            - [3x, Electronics, "Health"] # Amount & mod rolls
+            - [1x, Electronics, "Skill Haste"] # Amount & mod rolls
+            - [1x, Firearms, "Health"] # Amount & mod rolls
+        performance: # Performance mods on your gear (2x Backpack, 1x Holster, 1x Knee Pads => Total: 4)
+            - [4x, "First Aid Ally Heal", "first-aid"] # Amount, type of mod & skill the mod affects (used for icon)
+    skills: 
+        1: # First skill
+            name: "First Aid" # Skill name
+            mod: "Defibrillator" # Skill mod
+        2: # Second skill
+            name: "Support Station" # Skill name
+            mod: "Life Support" # Skill mod
+        link: # Link
+            name: "Recovery Link" # Link name
+    talents: # Talents
+    - "Triage"
+    - "Strike Back"
+    - "Combat Medic"
+    - "Death by Proxy"
+---
