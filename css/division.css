@@ -767,6 +767,7 @@ label {
     padding: 3px 5px;
     background: hsla(0, 0%, 100%, .1);
     opacity: .7;
+    white-space: nowrap;
 }
 
 /* SUBMIT PAGE */
