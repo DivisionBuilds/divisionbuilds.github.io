@@ -8,7 +8,7 @@ js: main
     <div class="build-list">
         {% for f in site.pages %}
         {% if f.layout == 'build' and f.path contains '1.7' %}
-        <a href="{{f.url}}">
+        <a href="{{f.url | remove: '.html'}}">
             <div class="list-item">
                 <div class="title">{{f.title}}</div>
                 <div class="info">
@@ -31,7 +31,7 @@ js: main
     <div class="build-list">
         {% for f in site.pages %}
         {% if f.layout == 'build' and f.path contains '1.6' %}
-        <a href="{{f.url}}">
+        <a href="{{f.url | remove: '.html'}}">
             <div class="list-item">
                 <div class="title">{{f.title}}</div>
                 <div class="info">
