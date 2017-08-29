@@ -1,0 +1,32 @@
+{
+	"ar": {
+		"bonus": {
+			"type": "EAD",
+			"range": [17.5, 24]
+		}
+	},
+	"lmg": {
+		"bonus": {
+			"type": "OOC",
+			"range": [11, 15]
+		}
+	},
+	"shotgun": {
+		"bonus": {
+			"type": "Stagger",
+			"range": [296, 362]
+		}
+	},
+	"sniper": {
+		"bonus": {
+			"type": "Stagger",
+			"range": [141, 172]
+		}
+	},
+	"smg": {
+		"bonus": {
+			"type": "CHC",
+			"range": [18, 22]
+		}
+	}
+}

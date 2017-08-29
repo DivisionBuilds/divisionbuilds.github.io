@@ -1,0 +1,76 @@
+{
+  	"chest": {
+  		"armor": [1704, 2003],
+    	"main": [1114, 1272],
+	    "health": [14184, 16674],
+	    "edr": [9, 11],
+	    "ead": [3, 4],
+	    "all_resist": [4, 4],
+	    "health_on_kill": [4, 5],
+	    "skill_haste": [7, 9]
+    },
+    "backpack": {
+    	"armor": [1135, 1334],
+		"main": [1114, 1272],
+    	"health": [11347, 13339],
+    	"skill_power": [11347, 13339],
+    	"chd": [7, 9],
+    	"stability": [14, 16.5],
+    	"resist": [14, 17]
+    },
+    "mask": {
+    	"armor": [852, 1001],
+		"main": [1114, 1272],
+		"chc": [3, 4],
+		"skill_power": [8532, 10030],
+		"edr": [9, 11],
+		"ead": [6.5, 8],
+		"all_resist": [4, 4],
+		"health_on_kill": [4, 5],
+		"dte": [9, 11],
+		"resist": [14, 17]
+    },
+    "gloves": {
+    	"armor": [852, 1001],
+		"main": [1114, 1272],
+		"ar_dmg": [1135, 1334],
+		"shotgun_dmg": [1135, 1334],
+		"lmg_dmg": [1135, 1334],
+		"sniper_dmg": [3982, 4681],
+		"smg_dmg": [852, 1001],
+		"chc": [5, 6],
+		"chd": [14, 17],
+		"ead": [6.5, 8],
+		"health_on_kill": [4, 5],
+		"skill_haste": [7, 9]
+    },
+    "holster": {
+		"armor": [852, 1001],
+		"main": [1114, 1272],
+		"health": [7092, 8337],
+		"chc": [3, 4],
+		"skill_haste": [6, 7],
+		"reload_speed": [17.5, 20.5]
+    },
+    "knee_pads": {
+		"armor": [1419, 1668],
+		"main": [1114, 1272],
+		"health": [14184, 16674],
+		"skill_power": [11347, 13339],
+		"edr": [6.5, 8],
+		"ead": [3, 4],
+		"all_resist": [3, 3],
+		"chd": [7, 9],
+		"dte": [12, 14],
+		"resist": [27, 33]
+    },
+    "mods": {
+    	"main": [228, 267],
+    	"health": [2837, 3335],
+    	"skill_power": [2837, 3335],
+    	"chc": [1, 1],
+    	"all_resist": [2, 2],
+    	"edr": [2, 2.5],
+    	"skill_haste": [2, 3]
+    }
+}
