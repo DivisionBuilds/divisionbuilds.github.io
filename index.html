@@ -3,14 +3,51 @@ layout: division
 id: index
 js: main
 ---
-<div class="build-list"></div>
-<noscript>
-	<style>
-        .build-list{
-            display: none;
-        }
-    </style>
-    <div class="main-container text">
-        You need to enable JavaScript in order to load the build list.
+<div class="build-container">
+    <h1>Patch 1.7</h1>
+    <div class="build-list">
+        {% for f in site.pages %}
+        {% if f.layout == 'build' and f.path contains '1.7' %}
+        <a href="{{f.url}}">
+            <div class="list-item">
+                <div class="title">{{f.title}}</div>
+                <div class="info">
+                    Author: <span class="author">{{f.author}}</span>
+                    <span class="date">Last updated: {{f.date}}</span>
+                </div>
+                {% if f.tags %}
+                <div class="tags">
+                    {% for t in f.tags %}
+                    <span class="tag">{{t}}</span>
+                    {% endfor %}
+                </div>
+                {% endif %}
+            </div>
+        </a>
+        {% endif %}
+        {% endfor %}
     </div>
-</noscript>
+    <h1>Patch 1.6</h1>
+    <div class="build-list">
+        {% for f in site.pages %}
+        {% if f.layout == 'build' and f.path contains '1.6' %}
+        <a href="{{f.url}}">
+            <div class="list-item">
+                <div class="title">{{f.title}}</div>
+                <div class="info">
+                    Author: <span class="author">{{f.author}}</span>
+                    <span class="date">Last updated: {{f.date}}</span>
+                </div>
+                {% if f.tags %}
+                <div class="tags">
+                    {% for t in f.tags %}
+                    <span class="tag">{{t}}</span>
+                    {% endfor %}
+                </div>
+                {% endif %}
+            </div>
+        </a>
+        {% endif %}
+        {% endfor %}
+    </div>
+</div>
