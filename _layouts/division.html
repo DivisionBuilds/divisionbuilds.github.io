@@ -26,20 +26,7 @@ layout: division
 			            <div class="title">Division Builds</div>
 			        </div>
 			    </a>
-			    <div class="nav-bar">
-				    <a href="/.">
-				    	<div class="nav-bar-item{% if current.last == nil or current.last == 'index.html' %} active{% endif %}">Home</div>
-				    </a>
-				    <a href="/submit">
-				    	<div class="nav-bar-item{% if current.last == 'submit.html' %} active{% endif %}">Submit a build</div>
-				    </a>
-				    <a href="/calc">
-				    	<div class="nav-bar-item{% if current.last == 'calc.html' or current contains 'calc' %} active{% endif %}">Calculators</div>
-				    </a>
-				    <a href="/feedback">
-				    	<div class="nav-bar-item{% if current.last == 'feedback.html' %} active{% endif %}">Feedback</div>
-				    </a>
-				</div>
+			    {% include navbar.html %}
 				{% if page.id == "index" %}
 			   <div class="search-bar">
 			        <input class="search" type="text" placeholder="Search">
