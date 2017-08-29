@@ -286,6 +286,7 @@ label {
 
 /* NAV BAR */
 .nav-bar {
+	padding: 5px 0;
 	margin-right: 5px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -504,7 +505,8 @@ label {
 
 /* LINKS */
 .main-container a,
-.modal a {
+.modal a,
+.error a {
     position: relative;
     color: #ff7f00;
     white-space: nowrap;
@@ -516,7 +518,11 @@ label {
 .modal a:after,
 .modal a::after,
 .modal a:before,
-.modal a::before {
+.modal a::before,
+.error a:after,
+.error a::after,
+.error a:before,
+.error a::before {
     content: "";
     position: absolute;
     left: 50%;
@@ -532,7 +538,9 @@ label {
 .main-container a:before,
 .main-container a::before,
 .modal a:before,
-.modal a::before {
+.modal a::before,
+.error a:before,
+.error a::before {
     margin-left: 1.5px;
     margin-bottom: -1.5px;
     background: rgba(150, 150, 150, .1);
@@ -544,7 +552,11 @@ label {
 .modal a:hover:after,
 .modal a:hover::after,
 .modal a:hover:before,
-.modal a:hover::before {
+.modal a:hover::before,
+.error a:hover:after,
+.error a:hover::after,
+.error a:hover:before,
+.error a:hover::before {
     left: 0;
     width: 100%;
     -webkit-transition-delay: 0s;
@@ -630,18 +642,48 @@ label {
 }
 
 /* BUILD LIST */
-.build-list {
+.build-container {
+    width: 100%;
     max-width: 1230px;
     margin: 40px auto 0;
+}
+.build-container h1 {
+    position: relative;
+    font-size: 2.25em;
+    font-weight: 600;
+    -webkit-transition: all .15s ease-in-out;
+    transition: all .15s ease-in-out;
+    -webkit-animation: fade-in .5s ease-in-out;
+    animation: fade-in .5s ease-in-out;
+}
+.build-container h1:first-child {
+    color: #ff7f00;
+}
+.build-container h1::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    top: 50%;
+    right: 0;
+    left: 130px;
+    margin-top: -1px;
+    background-color: hsla(0, 0%, 100%, .1);
+}
+.build-container h1:first-child::after {
+    background-color: #ff7f00;
+    opacity: .3;
+}
+.build-list {
+	margin: 0 auto;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-justify-content: center;
-    -ms-justify-content: center;
-    justify-content: center;
     -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    -webkit-justify-content: center;
+    -ms-justify-content: center;
+    justify-content: center;
 }
 .build-list:empty:after,
 .build-list:empty::after {
@@ -2472,4 +2514,14 @@ textarea,
         -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     }
+}
+@media (max-width: 1355px) {
+	.build-list {
+		max-width: 820px;
+	}
+}
+@media (max-width: 920px) {
+	.build-list {
+		max-width: 410px;
+	}
 }
