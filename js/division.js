@@ -22,8 +22,15 @@ $(document).ready(function() {
 var core = {
 	alert: function(title, msg) {
 		$(".back-button").hide();
-		$(".main").children().hide();
-    	$(".main").append("<div class='error'><div class='error-title'>" + title + "</div><div class='error-content'>" + msg + "</div></div>");
+		if ($(".main .error").length === 0) {
+			$(".main").children().hide();
+    		$(".main").append("<div class='error'><div class='error-title'>" + title + "</div><div class='error-content'>" + msg + "</div></div>");
+    	}
+    	else {
+    		$(".main > :not(.error)").hide();
+    		$(".error .error-title").html(title);
+    		$(".error .error-content").html(msg);
+    	}
 	},
 	modal: function(title, text, opacity = .1) {
 		$("body > :not(.footer)").css({opacity: opacity, "pointer-events": "none"});
