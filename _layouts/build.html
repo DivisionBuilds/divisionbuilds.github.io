@@ -1,0 +1,210 @@
+---
+layout: build
+---
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+	    {% include header.html %}
+	    <script type="text/javascript" src="/js/division-build.js"></script>
+	</head>
+  	<body>
+  		<div class="beta">BETA</div>
+		<a href="/." class="back-button">
+		    <svg fill="#FFFFFF" height="36" viewBox="0 0 24 24" width="36" xmlns="http://www.w3.org/2000/svg">
+			<path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
+			<path d="M0 0h24v24H0z" fill="none" />
+		    </svg>
+		</a>
+		<div class="main">
+			{% assign path = page.path | split: '/' %}
+			<div class="header">
+			    <div class="build-header">
+			        <div class="title">{{page.title}}</div>
+			        <div class="info">by <a{% if page.link %} href="{{page.link}}" target="_blank"{% endif %}><span class="author">{{page.author}}</span></a> for Patch {{path[1]}}<span class="date">Last updated: {{page.date}}</span>
+			        </div>
+			    </div>
+			    <div class="tab-bar">
+			    	{% for c in page.build %}
+			    	{% if c[0] != 'talents' %}
+			    	<div class="tab-bar-item{% if forloop.index == 1 %} selected{% endif %}">{{ c[0] | capitalize }}</div>
+			    	{% endif %}
+			    	{% endfor %}
+			    </div>
+			</div>
+			<div class="build-content">
+				{% for c in page.build %}
+				{% if c[0] != 'talents' %}
+				<div class="{{ c[0] }}{% if forloop.index == 1 %} visible{% endif %}">
+				{% if c[0] == 'general' %}
+					<div class="main-container text">
+						{% for i in page.build.general %}
+						<p>{{i}}</p>
+						{% endfor %}
+					</div>
+					{% include disqus.html %}
+				{% endif %}
+				{% if c[0] == 'weapons' %}
+			    	{% for i in page.build.weapons %}
+			    	<div class="{{i[0]}}">
+			    		<div class="icon weapon {{i[1].icon}}"></div>
+			    		<div class="info">
+			    			<div class="name">{{i[1].name}}</div>
+			    			<div class="talents text">{{i[1].talents | join: ', '}}</div>
+			    		</div>
+			    		<div class="talent-icons">
+			    			{% for t in i[1].talents %}
+			    			{% assign n = t | downcase | replace: ' ', '-' %}
+			    			<div class="icon weapon-talent {{n}}">
+			    				<span class="tooltip">
+			    					<h1>{{t}}</h1>
+			    					{{site.data.weapon_talents[n]}}
+			    				</span>
+			    			</div>
+			    			{% endfor %}
+			    		</div>
+			    	</div>
+			    	{% if i[1].mods %}
+			    	<div class="{{i[0]}} mods">
+			    		{% for m in i[1].mods %}
+			    		<div class="{{m[0]}}">
+			    			<div class="icon"></div>
+			    			<div class="rolls">
+			    				{% for r in m[1] %}
+			    				<span>{{r}}</span>
+			    				{% endfor %}
+			    			</div>
+			    		</div>
+			    		{% endfor %}
+			    	</div>
+			    	{% endif %}
+			    	{% endfor %}
+			    {% endif %}
+			    {% if c[0] == 'gear' %}
+			    	{% if page.build.gear.items %}
+			        <div class="items">
+			        	{% for i in page.build.gear.items %}
+			        	{% assign n = i[1].name %}
+			        	{% assign t = i[1].icon %}
+						<div class="{{i[0]}}">
+			                <div class="icon {{t}}"></div>
+			                <div class="info">
+			                    <div class="name">{{n}}</div>
+			                    <div class="rolls text">{{i[1].rolls | join: ', '}}</div>
+			                </div>
+			                <span class="tooltip">
+			                {% if t == 'he' or t == 'exotic' %}
+		    					{% assign k = n | split: ' ' | first %}
+		    					<h1>{{n}}</h1>
+		    					{{site.data.gear_talents[k]}}
+		    				{% else %}
+		    					<h1>{{site.data.gearsets[t].name}}</h1>
+		    					{% for b in site.data.gearsets[t].bonuses %}
+		    					<p>{{b}}</p>
+		    					{% endfor %}
+		    				{% endif %}
+		    				</span>
+			            </div>
+						{% endfor %}
+			        </div>
+			        {% endif %}
+			        <div class="stats">
+			        	{% if page.build.gear.rolls %}
+				        	{% for i in page.build.gear.rolls %}
+				        	<div class="main-rolls">
+				        		<div class="amount">{{i[0]}}</div>
+				        		<div class="icon {{i[1] | downcase}}"></div>
+				        		<div class="info">
+				        			<div class="name">{{i[1]}} Roll</div>
+				        		</div>
+				        	</div>
+				        	{% endfor %}
+			        	{% elsif page.build.gear.stats %}
+				        	{% for i in page.build.gear.rolls %}
+				        	<div class="main-stats">
+				        		<div class="amount">{{i[0]}}</div>
+				        		<div class="icon {{i[1] | downcase}}"></div>
+				        		<div class="info">
+				        			<div class="name">{{i[1]}}</div>
+				        		</div>
+				        	</div>
+					        {% endfor %}
+			        	{% endif %}
+			        	{% if page.build.gear.mods %}
+				        	{% for i in page.build.gear.mods %}
+					        	<div class="mods">
+					        		<div class="amount">{{i[0]}}</div>
+					        		<div class="icon {{i[1] | downcase}}"></div>
+					        		<div class="info">
+					        			<div class="name">{{i[1]}} Mod</div>
+					        			{{i[2]}}
+					        		</div>
+					        	</div>
+					        {% endfor %}
+				        {% endif %}
+				        {% if page.build.gear.performance %}
+					        {% for i in page.build.gear.performance %}
+					        	<div class="performance">
+					        		<div class="amount">{{i[0]}}</div>
+					        		<div class="icon skill after {{i[2] | downcase}}"></div>
+					        		<div class="info">
+					        			<div class="name">{{i[1]}} Mod</div>
+					        		</div>
+					        	</div>
+					        {% endfor %}
+					    {% endif %}
+			        </div>
+			    {% endif %}
+			    {% if c[0] == 'skills' %}
+			    	{% for i in page.build.skills %}
+			    	<div class="{{i[0]}}">
+			    	{% assign m = i[1].mod %}
+			    	{% assign n = i[1].name %}
+			    		{% if m %}
+			    		<div class="icon skill {{m | downcase | replace: ' ', '-'}}"></div>
+			    		{% else %}
+			    		<div class="icon skill {{n | downcase | replace: ' ', '-'}}"></div>
+			    		{% endif %}
+			    		<div class="info">
+			    			<div class="name">{{i[1].name}}</div>
+			    			{% if m %}
+			    			<div class="mod text"></div>
+			    			{% endif %}
+			    		</div>
+			    		<span class="tooltip">
+			    			{% if m %}
+	    					<h1>{{m}}</h1>
+	    					{{site.data.skills[m]}}
+	    					{% else %}
+	    					<h1>{{n}}</h1>
+	    					{{site.data.skills[n]}}
+	    					{% endif %}
+	    				</span>
+			    	</div>
+			    	{% endfor %}
+			    	{% if page.build.talents %}
+				    <div class="talents">
+				    	{% for i in page.build.talents %}
+				    	<div>
+				    		<div class="icon talent {{i | downcase | replace: ' ', '-'}}"></div>
+				    		<div class="info">
+				    			<div class="name">{{i}}</div>
+				    		</div>
+				    		<span class="tooltip">
+		    					<h1>{{i}}</h1>
+		    					{{site.data.talents[i]}}
+	    					</span>
+				    	</div>
+				    	{% endfor %}
+				    </div>
+				    {% endif %}
+			    {% endif %}
+			    </div>
+			    {% endif %}
+			    {% endfor %}
+			</div>
+		</div>
+		<div class="footer">
+			<a href="/contribution">Contribute</a> | <a href="/about">About</a> | <a href="https://github.com/DivisionBuilds/divisionbuilds.github.io">Github</a>
+		</div>
+	</body>
+</html>
