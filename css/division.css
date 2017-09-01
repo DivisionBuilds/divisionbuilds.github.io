@@ -1445,6 +1445,9 @@ textarea,
 .icon.weapon.famas {
     background-image: url(/sprites/weapons/bullfrog.png);
 }
+.icon.weapon.cassidy {
+    background-image: url(/sprites/weapons/cassidy.png);
+}
 .icon.weapon.double-barrel,
 .icon.weapon.double-barrel-shotgun {
     background-image: url(/sprites/weapons/double-barrel.png);
