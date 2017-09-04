@@ -2,56 +2,99 @@
 layout: division
 js: calc-damage
 title: Damage Calculator
+info: "Calculate your estimated bullet damage, burst damage and DPS."
 ---
 <div class="main-container wide">
-    <h1>Damage Calculator</h1>
-    <p>Calculate your estimated bullet damage, burst damage and DPS.</p>
-    <p>If you are using the values from your ingame Character Stats screen, leave the Firearms scaling at 0 and the Headshot base multiplier at 1.</p>
+    <h1>{{page.title}}</h1>
+    <p>{{page.info}}</p>
+    <p>If you are using the values from your ingame Character Stats screen, leave the Gloves damage and the Firearms scaling at 0 and the Headshot base multiplier at 1.</p>
     <div class="flex-row flex-align-start">
         <div class="flex-list margin">
             <h2>Setup</h2> 
             <div class="flex-item">
-                <label>Base damage:</label><input type="number" min="0" class="base">
+                <label>Base damage:
+                    <span class="tooltip">The base damage roll of your gun.</span>
+                </label><input type="number" min="0" class="base">
             </div>
             <div class="flex-item">
-                <label>RPM:</label><input type="number" min="0" class="rpm">
+                <label>Gloves damage:
+                    <span class="tooltip">The damage roll on your gloves.<br>Leave this at 0 when already included in the base damage.</span>
+                </label><input type="number" value="0" min="0" class="gloves">
             </div>
             <div class="flex-item">
-                <label>Magazine size:</label><input type="number" value="1" min="1" class="magsize">
+                <label>RPM:<span class="tooltip">The RPM of your gun.</span></label><input type="number" min="0" class="rpm">
             </div>
             <div class="flex-item">
-                <label>Reload time (Seconds):</label><input type="number" value="1" min="1" class="reloadtime">
+                <label>Magazine size:<span class="tooltip">The Magazine size of your gun.</span></label><input type="number" value="1" min="1" class="magsize">
             </div>
             <div class="flex-item">
-                <label>Firearms:</label><input type="number" min="0" class="firearms">
+                <label>Reload time (Seconds):<span class="tooltip">Reload time of your gun in seconds.</span></label><input type="number" value="1" min="1" class="reloadtime">
             </div>
             <div class="flex-item">
-                <label>Firearms scaling:</label><input type="number" value="0" min="0" class="scaling">
+                <label>Firearms:<span class="tooltip">The amount of Firearms your build has.</span></label><input type="number" min="0" class="firearms">
             </div>
             <div class="flex-item">
-                <label>Enemy Armor Damage (%):</label><input type="number" value="0" min="0" class="ead">
+                <label>Firearms scaling:
+                    <span class="tooltip">The Firearms scaling of your gun.<br>Leave this at 0 when already included in the base damage.</span>
+                </label><input type="number" value="0" min="0" class="scaling">
             </div>
             <div class="flex-item">
-                <label>Damage to Elites (%):</label><input type="number" value="0" min="0" class="dte">
+                <label>Enemy Armor Damage (%):
+                    <span class="tooltip">Your total amount of Enemy Armor Damage.<br>Leave this at 0 to see damage against unarmored opponents.</span>
+                </label><input type="number" value="0" min="0" class="ead">
             </div>
             <div class="flex-item">
-                <label>Critical Hit Chance (%):</label><input type="number" value="0" min="0" max="100" class="chc">
+                <label>Damage to Elites (%):
+                    <span class="tooltip">Your total amount of Damage to Elites.<br>Leave this at 0 to see damage against normal opponents.</span>
+                </label><input type="number" value="0" min="0" class="dte">
             </div>
             <div class="flex-item">
-                <label>Critical Hit Damage (%):</label><input type="number" value="0" min="0" class="chd">
+                <label>Critical Hit Chance (%):
+                    <span class="tooltip">Your total amount of Critical Hit Chance.<br>Leave this at 0 to see the damage of a normal bullet.<br>Put 100 here to see the damage of a Critical Hit or if you are using 4 or more pieces of DeadEYE in cover.</span>
+                </label><input type="number" value="0" min="0" max="100" class="chc">
             </div>
             <div class="flex-item">
-                <label>Headshot base multiplier:</label><input type="number" value="1" min="1" class="hsmulti">
+                <label>Critical Hit Damage (%):
+                    <span class="tooltip">Your total amount of Critical Hit Damage.</span>
+                </label><input type="number" value="0" min="0" class="chd">
             </div>
             <div class="flex-item">
-                <label>Headshot Chance (%):</label><input type="number" value="0" min="0" max="100" class="hsc">
+                <label>Base Headshot Multiplier:
+                    <span class="tooltip">The Base Headshot Multiplier of your gun.<br>Leave this at 1 when already included in the Headshot Damage.</span>
+                </label><input type="number" value="1" min="1" class="hsmulti">
             </div>
             <div class="flex-item">
-                <label>Headshot Damage (%):</label><input type="number" value="0" min="0" class="hsd">
+                <label>Headshot Chance (%):
+                    <span class="tooltip">The chance of getting a Headshot.<br>Leave this at 0 to see the damage of a normal bullet.<br>Put 100 here to see the damage of a Headshot.</span>
+                </label><input type="number" value="0" min="0" max="100" class="hsc">
+            </div>
+            <div class="flex-item">
+                <label>Headshot Damage (%):
+                    <span class="tooltip">Your total amount of Headshot damage.</span>
+                </label><input type="number" value="0" min="0" class="hsd">
+            </div>
+            <div class="flex-item">
+                <label>All Weapons Damage (%):
+                    <span class="tooltip">Your total amount of All Weapons Damage.<br>The All Weapons Damage stat can be increased by weapon talents, player gear, player skills and player talents.</span>
+                </label><input type="number" value="0" min="0" class="awd">
+            </div>
+            <div class="flex-item">
+                <label>Weapon Type Damage (%):
+                    <span class="tooltip">Your total amount of Weapon Type Damage for your gun.<br>Examples are 3/5 piece gearset bonuses from Predator's Mark and LoneStar.</span>
+                </label><input type="number" value="0" min="0" class="wtd">
+            </div>
+            <div class="flex-item">
+                <label>Out of Cover Damage (%):
+                    <span class="tooltip">Your total amount of Out of Cover Damage.<br>Leave this at 0 to see the damage against enemies in cover.<br>The only sources of Out of Cover Damage are LMGs and the Banshee gearset right now.</span>
+                </label><input type="number" value="0" min="0" class="ooc">
             </div>
             <div class="flex-item">
                 <div class="append">
-                    <div class="flex-child"><label>Other Damage increases (%):</label></div>
+                    <div class="flex-child">
+                        <label>Multiplicative Damage increases (%):
+                            <span class="tooltip">Any damage increases from multiplicative talents.<br>Examples: Responsive, Prepared, 4 piece Firecrest, 4 piece Sentry etc.</span>
+                        </label>
+                    </div>
                     <div class="flex-child"><input type="number" value="0" min="0" class="increase"></div>
                 </div>
             </div>
@@ -66,9 +109,11 @@ title: Damage Calculator
             <div class="stats">
                 <div class="bulletDMG">
                     <div>Base bullet damage:</div><div class="value">0</div>
+                    <span class="tooltip">The base bullet damage displayed on your character sheet.</span>
                 </div>
                 <div class="avgbulletDMG">
                     <div>Average bullet damage:</div><div class="value">0</div>
+                    <span class="tooltip">Your average bullet damage.<br>This includes Critical Hits, Headshots and Out of Cover Damage.</span>
                 </div>
             </div>
             </div>
@@ -77,32 +122,40 @@ title: Damage Calculator
                 <div class="stats">
                     <div class="pve-bulletDMG">
                         <div>Average bullet damage:</div><div class="value">0</div>
+                        <span class="tooltip">Your average bullet damage in PvE.</span>
                     </div>
                     <div class="pve-burstDPS">
                         <div>Burst DPS:</div><div class="value">0</div>
+                        <span class="tooltip">Your average Burst DPS in PvE.<br>This is only the DPS measured while firing and does not include the time needed to reload.</span>
                     </div>
                     <div class="pve-burstDMG">
                         <div>Burst Damage per magazine:</div><div class="value">0</div>
+                        <span class="tooltip">Your average damage dealt within one Magazine in PvE.</span>
                     </div>
                     <div class="pve-DPS">
                         <div>DPS:</div><div class="value">0</div>
+                        <span class="tooltip">Your average DPS in PvE.<br>This includes the time needed to reload.</span>
                     </div>
                 </div>
             </div>
             <div class="item pvp">
-                <h2>PvP</h2>
+                <h2>Dark Zone</h2>
                 <div class="stats">
                     <div class="pvp-bulletDMG">
                         <div>Average bullet damage:</div><div class="value range"><span>0</span> - <span>0</span></div>
+                        <span class="tooltip">Your average bullet damage in the Dark Zone.<br>The numbers show damage against an opponent with the lowest and highest Armor possible.</span>
                     </div>
                     <div class="pvp-burstDPS">
                         <div>Burst DPS:</div><div class="value range"><span>0</span> - <span>0</span></div>
+                        <span class="tooltip">Your average Burst DPS in the Dark Zone.<br>This is only the DPS measured while firing and does not include the time needed to reload.<br>The numbers show damage against an opponent with the lowest and highest Armor possible.</span>
                     </div>
                     <div class="pvp-burstDMG">
                         <div>Burst Damage per magazine:</div><div class="value range"><span>0</span> - <span>0</span></div>
+                        <span class="tooltip">Your average damage dealt within one Magazine in the Dark Zone.<br>The numbers show damage against an opponent with the lowest and highest Armor possible.</span>
                     </div>
                     <div class="pvp-DPS">
                         <div>DPS:</div><div class="value range"><span>0</span> - <span>0</span></div>
+                        <span class="tooltip">Your average DPS in the Dark Zone.<br>This includes the time needed to reload.<br>The numbers show damage against an opponent with the lowest and highest Armor possible.</span>
                     </div>
                 </div>
             </div>
@@ -111,15 +164,19 @@ title: Damage Calculator
                 <div class="stats">
                     <div class="ls-bulletDMG">
                         <div>Average bullet damage:</div><div class="value">0</div>
+                        <span class="tooltip">Your average bullet damage in Last Stand.</span>
                     </div>
                     <div class="ls-burstDPS">
                         <div>Burst DPS:</div><div class="value">0</div>
+                        <span class="tooltip">Your average Burst DPS in Last Stand.<br>This is only the DPS measured while firing and does not include the time needed to reload.</span>
                     </div>
                     <div class="ls-burstDMG">
                         <div>Burst Damage per magazine:</div><div class="value">0</div>
+                        <span class="tooltip">Your average damage dealt within one Magazine in Last Stand.</span>
                     </div>
                     <div class="ls-DPS">
                         <div>DPS:</div><div class="value">0</div>
+                        <span class="tooltip">Your average DPS in Last Stand.<br>This includes the time needed to reload.</span>
                     </div>
                 </div>
             </div>
