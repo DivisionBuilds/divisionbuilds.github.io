@@ -1,10 +1,14 @@
 var calc = {
 	bulletDMG: function(o) {
 		// Required: base, firearms, scaling
-		// Optional: chc, chd, hsc, hsd, hsmulti, hsmodifier, increase
+		// Optional: gloves, awd, wtd, ooc, chc, chd, hsc, hsd, hsmulti, hsmodifier, increase
 		var base = o.base || 0,
 		    firearms = o.firearms || 0,
 		    scaling = o.scaling || 0,
+		    gloves = o.gloves || 0,
+		    awd = o.awd || 0,
+		    wtd = o.wtd || 0,
+		    ooc = o.ooc || 0,
 		    chc = o.chc || 0,
 		    chd = o.chd || 0,
 		    hsc = o.hsc || 0,
@@ -12,38 +16,36 @@ var calc = {
 		    hsmulti = o.hsmulti || 1,
 		    hsmodifier = o.hsmodifier || 1,
 		    increase = o.increase || 0;
-		var b = (base + (firearms * scaling)),
-			r = (1 + (chd / 100 * chc / 100) + (((hsmulti - 1 + hsd / 100) * hsmodifier) * hsc / 100));
+		var d = (base + (firearms * scaling) + gloves) * (1 + (chd / 100 * chc / 100) + (((hsmulti - 1 + hsd / 100) * hsmodifier) * hsc / 100)) * (1 + (awd + wtd) / 100) * (1 + ooc / 100);
 		if (increase instanceof Array) {
 			for (var i = 0; i < increase.length; i++)
-				r  *= (1 + (increase[i] || 0) / 100);
-			return b * r;
+				d  *= (1 + (increase[i] || 0) / 100);
 		}
-		else return  b * (r + increase / 100);
+		return  d;
 	},
 	pve: {
 		bulletDMG: function(o) {
 		// Required: base, firearms, scaling
-		// Optional: ead, dte, chc, chd, hsc, hsd, hsmulti, hsmodifier, increase
+		// Optional: gloves, awd, wtd, ead, dte, ooc, chc, chd, hsc, hsd, hsmulti, hsmodifier, increase
 			var ead = o.ead || 0,
 			    dte = o.dte || 0;
 			return calc.bulletDMG(o) * (1 + ead / 100) * (1 + dte / 100);
 		},
 		burstDMG: function(o) {
 		// Required: base, magsize, firearms, scaling
-		// Optional: ead, dte, chc, chd, hsc, hsd, hsmulti, hsmodifier, increase
+		// Optional: gloves, awd, wtd, ead, dte, ooc, chc, chd, hsc, hsd, hsmulti, hsmodifier, increase
 			var magsize = o.magsize || 1;
 			return calc.pve.bulletDMG(o) * magsize;
 		},
 		burstDPS: function(o) {
 		// Required: base, rpm, firearms, scaling
-		// Optional: ead, dte, chc, chd, hsc, hsd, hsmulti, hsmodifier, increase
+		// Optional: gloves, awd, wtd, ead, dte, ooc, chc, chd, hsc, hsd, hsmulti, hsmodifier, increase
 			var rpm = o.rpm || 0;
 			return calc.pve.bulletDMG(o) * (rpm / 60);
 		},
 		DPS: function(o) {
 		// Required: base, rpm, magsize, reloadtime, firearms, scaling
-		// Optional: ead, dte, chc, chd, hsc, hsd, hsmulti, hsmodifier, increase
+		// Optional: gloves, awd, wtd, ead, dte, ooc, ooc, chc, chd, hsc, hsd, hsmulti, hsmodifier, increase
 			var rpm = o.rpm || 0,
 				magsize = o.magsize || 1,
 				reloadtime = o.reloadtime || 1;
@@ -53,7 +55,7 @@ var calc = {
 	pvp: {
 		bulletDMG: function(o) {
 		// Required: base, firearms, scaling
-		// Optional: ead, chc, chd, hsc, hsd, hsmulti, hsmodifier, increase, pvpdmg_scaling, pvpead_scaling
+		// Optional: gloves, awd, wtd, ead, ooc, chc, chd, hsc, hsd, hsmulti, hsmodifier, increase, pvpdmg_scaling, pvpead_scaling
 			var ead = o.ead || 0,
 			    pvpdmg_scaling = o.pvpdmg_scaling || 0.42,
 			    pvpead_scaling = o.pvpead_scaling || 0.3,
@@ -67,7 +69,7 @@ var calc = {
 		},
 		burstDMG: function(o) {
 		// Required: base, magsize, firearms, scaling
-		// Optional: ead, chc, chd, hsc, hsd, hsmulti, hsmodifier, increase, pvpdmg_scaling, pvpead_scaling
+		// Optional: gloves, awd, wtd, ead, ooc, chc, chd, hsc, hsd, hsmulti, hsmodifier, increase, pvpdmg_scaling, pvpead_scaling
 			var magsize = o.magsize || 1,
 				d = calc.pvp.bulletDMG(o),
 				a = {};
@@ -78,7 +80,7 @@ var calc = {
 		},
 		burstDPS: function(o) {
 		// Required: base, rpm, firearms, scaling
-		// Optional: ead, chc, chd, hsc, hsd, hsmulti, hsmodifier, increase, pvpdmg_scaling, pvpead_scaling
+		// Optional: gloves, awd, wtd, ead, ooc, chc, chd, hsc, hsd, hsmulti, hsmodifier, increase, pvpdmg_scaling, pvpead_scaling
 			var rpm = o.rpm || 0,
 				d = calc.pvp.bulletDMG(o),
 				a = {};
@@ -89,7 +91,7 @@ var calc = {
 		},
 		DPS: function(o) {
 		// Required: base, rpm, magsize, reloadtime, firearms, scaling
-		// Optional: ead, chc, chd, hsc, hsd, hsmulti, hsmodifier, increase, pvpdmg_scaling, pvpead_scaling
+		// Optional: gloves, awd, wtd, ead, ooc, chc, chd, hsc, hsd, hsmulti, hsmodifier, increase, pvpdmg_scaling, pvpead_scaling
 			var rpm = o.rpm || 0,
 				magsize = o.magsize || 1,
 				reloadtime = o.reloadtime || 1,
