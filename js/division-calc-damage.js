@@ -22,7 +22,7 @@ var page = {
         $(".increase").each(function() {
             o.increase[o.increase.length] = parseFloat($(this).val());
         });
-        $(".bulletDMG .value").text(Math.round(calc.bulletDMG({base: o.base, firearms: o.firearms, scaling: o.scaling, increase: o.increase})));
+        $(".bulletDMG .value").text(Math.round(calc.bulletDMG({base: o.base, firearms: o.firearms, scaling: o.scaling, awd: o.awd, wtd: o.wtd, increase: o.increase})));
         $(".avgbulletDMG .value").text(Math.round(calc.bulletDMG(o)));
         $(".pve-bulletDMG .value").text(Math.round(calc.pve.bulletDMG(o)));
         $(".pve-burstDMG .value").text(Math.round(calc.pve.burstDMG(o)));
