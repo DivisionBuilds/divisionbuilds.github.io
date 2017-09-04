@@ -1,10 +1,10 @@
 $(document).ready(function() {
-        $(".tab-bar-item").click(function() {
-            build.showpage($(this).text());
-        });
-        build.showpage(window.location.hash.slice(1).toLowerCase());
-        tooltips.follow(true);
+    $(".tab-bar-item").click(function() {
+        build.showpage($(this).text());
+    });
+    build.showpage(window.location.hash.slice(1).toLowerCase());
 });
+
 var build = {
 	showpage: function(page) {
 	    var e = $(".tab-bar-item:contains(" + page.capitalize() + ")");
