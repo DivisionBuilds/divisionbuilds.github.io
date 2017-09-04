@@ -5,29 +5,17 @@ title: Calculators
 <div class="main-container text">
     <h1>Calculators</h1>
     <div class="flex-list links margin">
-        <a href="/calc/toughness">
+        {% for f in site.pages %}
+        {% if f.path contains 'calc/' %}
+        <a href="{{f.url | remove: '.html'}}">
             <div class="flex-item">
                 <div class="info">
-                    <div class="title">Toughness Calculator</div>
-                    <div class="text">Calculate your estimated toughness and compare it.</div>
+                    <div class="title">{{f.title}}</div>
+                    <div class="text">{{f.info}}</div>
                 </div>
             </div>
         </a>
-        <a href="/calc/damage">
-            <div class="flex-item">
-                <div class="info">
-                    <div class="title">Damage Calculator</div>
-                    <div class="text">Calculate your estimated bullet damage, burst damage and DPS.</div>
-                </div>
-            </div>
-        </a>
-        <a href="/calc/baseroll">
-            <div class="flex-item">
-                <div class="info">
-                    <div class="title">Base Roll Calculator</div>
-                    <div class="text">Calculate the estimated base damage rolls of your weapons.</div>
-                </div>
-            </div>
-        </a>
+        {% endif %}
+        {% endfor %}
     </div>
 </div>
