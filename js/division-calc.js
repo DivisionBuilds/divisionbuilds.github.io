@@ -21,6 +21,8 @@ var calc = {
 			for (var i = 0; i < increase.length; i++)
 				d  *= (1 + (increase[i] || 0) / 100);
 		}
+		else
+			d *= (1 + (increase || 0) / 100);
 		return  d;
 	},
 	pve: {
