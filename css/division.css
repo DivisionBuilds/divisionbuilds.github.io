@@ -1042,10 +1042,10 @@ textarea,
     height: 2px;
     background: hsla(0, 0%, 100%, .3);
 }
-.build-content .weapons .icon:before,
-.build-content .weapons .icon::before,
-.build-content .weapons .icon:after,
-.build-content .weapons .icon::after,
+.build-content .weapons .icon.weapon-talent:before,
+.build-content .weapons .icon.weapon-talent::before,
+.build-content .weapons .icon.weapon-talent:after,
+.build-content .weapons .icon.weapon-talent::after,
 .build-content .skills .icon:before,
 .build-content .skills .icon::before {
     content: "";
@@ -1056,8 +1056,8 @@ textarea,
     left: 3px;
     opacity: .1;
 }
-.build-content .weapons .icon:after,
-.build-content .weapons .icon::after {
+.build-content .weapons .icon.weapon-talent:after,
+.build-content .weapons .icon.weapon-talent::after {
     top: 0;
     right: 0;
     bottom: 0;
