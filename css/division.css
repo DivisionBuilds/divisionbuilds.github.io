@@ -688,9 +688,6 @@ label {
     -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    -webkit-justify-content: center;
-    -ms-justify-content: center;
-    justify-content: center;
 }
 .build-list:empty:after,
 .build-list:empty::after {
@@ -2526,7 +2523,7 @@ textarea,
         flex-wrap: wrap;
     }
 }
-@media (max-width: 1355px) {
+@media (max-width: 1370px) {
 	.build-list {
 		max-width: 820px;
 	}
