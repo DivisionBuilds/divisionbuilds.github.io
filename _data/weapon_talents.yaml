@@ -1,55 +1,127 @@
-Accurate: "Accuracy is increased by 25%."
-Adept: "Using a skill increases your critical hit chance by 7.50% for 15 seconds."
-Ambusher: "Increase your damage by 10% against targets in cover"
-Balanced: "The weapon reaches max accuracy faster when shouldering."
-Boomstick: "Double trigger fires off both barrels in short succession."
-Brutal: "Headshot damage is increased by 12% when using this weapon."
-Caduceus: "Each critical hit heals you and your group for 1% of your skill power. Can only heal each player every 0.20 seconds."
-Capable: "Using a skill improves the handling of your weapon for 15 seconds."
-Carefree: "Hipfire damage is increased by 11%"
-Center Mass: "Shoots heavy slugs instead of buckshot."
-Commanding: "Every kill performed while the Signature Skill is active extends its duration by 20%."
-Competent: "Weapon damage is increased by 10% for 15 seconds after using a skill."
-Coolheaded: "Performing a headshot reduces all skill cooldowns by 5%."
-Deadly: "Critical hit damage is increased by 15%."
-Destructive: "Armor destruction value is increased by 15% when using this weapon."
-Determined: "Killing a target reduces skill cooldowns by 7.50%."
-Disciplined: "Killing a target will make your next shot with the weapon be an automatic critical hit."
-Distracted: "Your damage is increased by 18% against targets with status effects."
-Dominant: "Every kill performed while your Signature Skill is active reduces the cooldown of your other skills by 10%."
-Elevated: "Increase your damage by 15% when elevated more than 1.2 meters above your target"
-Expert: "The weapon deals 100% more damage when the target is below 30% health."
-Ferocious: "Damage against Elite and Named enemies is increased by 10%."
-Fierce: "Critical hit chance is increased by 5% when using this weapon."
-Focused: "When no skills are on cooldown, your weapon damage is increased by 10%"
-Free Republic: "Each shot with the Liberator grants +5% to your next headshot damage with the Centurion. Max is 200%. Kills with the Centurion grants 10% RPM to all weapons."
-Glutton: "Killing a target increases your damage with 10% until you stop firing. Multiple kills stack this bonus up to 5 times."
-Golden Rhino: "Increase stagger by 200%"
-Harmful: "Each hit has a 15% chance to apply the Bleed Status Effect to the target."
-History Repeats: "Each bullet embeds itself in the target and detonates 1 second later for 700% of your firearms total."
-Hurried: "Critical hits increase reload speed by 10% to a minimum of 1 second reload time"
-Intense: "The first bullet of a magazine has a 25% chance to apply the On Fire Status Effect to the target."
-Lights Out: "Destroying an enemy weak point resets skill cooldowns for you and your nearby group members. Can happen once every 10 seconds."
-Meticulous: "Killing a target has a 25% chance to instantly refill the magazine."
-Midas: "Each bullet you hit with reduces your damage by 1% and your target's damage by 1% up to a max of 20%. This effect is reduced by 5% per second."
-Pakhan: "Each kill makes the next reload have 20% extra bullets compared to its base."
-Play Rough: "Damage taken is reduced by 20% while firing. The taken damage is applied when you stop firing."
-Predatory: "Killing a target regenerates 35% health over 20 seconds."
-Prepared: "Damage is increased by 15% when more than 30 meters from the target."
-Proficient: "The first bullet shot when out of combat has a 50% bonus chance to result in a critical hit."
-Provident: "The last bullet of a magazine deals 10% more damage."
-Quickdraw: "When drawn weapon damage is increase by 20% for 2 seconds. After that weapon damage is decreased by 20%."
-Responsive: "Damage is increased by 10% when closer than 10 meters to the target."
-Self-Preserved: "Critical hits with this weapon heal the user for 3% of damage dealt."
-Showstopper: "Your accuracy with this weapon is increased the fewer shells you have left in the magazine."
-Skilled: "Headshot kills with this weapon increase Signature Skill resources by 5%."
-Stable: "Stability is improved by 35%."
-Sustained: "Killing a target increases your health by 6%."
-Swift: "Reloading is 25% faster."
-Talented: "Killing a target with this weapon increases Skill Power by 15% for 20 seconds. The effect does not stack. Killing a new target refreshes the timer."
-Toxic: "Headshots with this weapon have a 15% chance to apply the Blind Status Effect."
-Trained: "Critical hits increase Signature Skill resources by 0.10%."
-Uncomplicated: "Damage is increased by 15%, accuracy and stability mods reduce this bonus"
-Unforgiving: "Missing health segments increase your damage: 1 missing segment +10%; 2 missing segments +25%."
-Valkyrie: "Each hit with Hildr increases critical hit damage by 1% to max of 30%. The bonus decreases by 1 every second. This bonus only applies to Eir."
-Vicious: "Critical hit chance is increased by 10% while having more than two segments of health."
+Accurate:
+    description: "Accuracy is increased by 25%."
+Adept:
+    description: "Using a skill increases your critical hit chance by 7.50% for 15 seconds."
+Ambusher:
+    description: "Increase your damage by 10% against targets in cover"
+Balanced:
+    description: "The weapon reaches max accuracy faster when shouldering."
+Boomstick:
+    description: "Double trigger fires off both barrels in short succession."
+    exotic: true
+Brutal:
+    description: "Headshot damage is increased by 12% when using this weapon."
+Caduceus:
+    description: "Each critical hit heals you and your group for 1% of your skill power. Can only heal each player every 0.20 seconds."
+    exotic: true
+Capable:
+    description: "Using a skill improves the handling of your weapon for 15 seconds."
+Carefree:
+    description: "Hipfire damage is increased by 11%"
+    exotic: true
+Center Mass:
+    description: "Shoots heavy slugs instead of buckshot."
+    exotic: true
+Commanding:
+    description: "Every kill performed while the Signature Skill is active extends its duration by 20%."
+Competent:
+    description: "Weapon damage is increased by 10% for 15 seconds after using a skill."
+Coolheaded:
+    description: "Performing a headshot reduces all skill cooldowns by 5%."
+Deadly:
+    description: "Critical hit damage is increased by 15%."
+Destructive:
+    description: "Armor destruction value is increased by 15% when using this weapon."
+Determined:
+    description: "Killing a target reduces skill cooldowns by 7.50%."
+Disciplined:
+    description: "Killing a target will make your next shot with the weapon be an automatic critical hit."
+Distracted:
+    description: "Your damage is increased by 18% against targets with status effects."
+    exotic: true
+Dominant:
+    description: "Every kill performed while your Signature Skill is active reduces the cooldown of your other skills by 10%."
+Elevated:
+    description: "Increase your damage by 15% when elevated more than 1.2 meters above your target"
+Expert:
+    description: "The weapon deals 100% more damage when the target is below 30% health."
+Ferocious:
+    description: "Damage against Elite and Named enemies is increased by 10%."
+Fierce:
+    description: "Critical hit chance is increased by 5% when using this weapon."
+Focused:
+    description: "When no skills are on cooldown, your weapon damage is increased by 10%"
+Free Republic:
+    description: "Each shot with the Liberator grants +5% to your next headshot damage with the Centurion. Max is 200%. Kills with the Centurion grants 10% RPM to all weapons."
+    set: true
+Glutton:
+    description: "Killing a target increases your damage with 10% until you stop firing. Multiple kills stack this bonus up to 5 times."
+    exotic: true
+Golden Rhino:
+    description: "Increase stagger by 200%"
+    exotic: true
+Harmful:
+    description: "Each hit has a 15% chance to apply the Bleed Status Effect to the target."
+History Repeats:
+    description: "Each bullet embeds itself in the target and detonates 1 second later for 700% of your firearms total."
+    exotic: true
+Hurried:
+    description: "Critical hits increase reload speed by 10% to a minimum of 1 second reload time"
+Intense:
+    description: "The first bullet of a magazine has a 25% chance to apply the On Fire Status Effect to the target."
+Lights Out:
+    description: "Destroying an enemy weak point resets skill cooldowns for you and your nearby group members. Can happen once every 10 seconds."
+    exotic: true
+Meticulous:
+    description: "Killing a target has a 25% chance to instantly refill the magazine."
+Midas:
+    description: "Each bullet you hit with reduces your damage by 1% and your target's damage by 1% up to a max of 20%. This effect is reduced by 5% per second."
+    exotic: true
+Pakhan:
+    description: "Each kill makes the next reload have 20% extra bullets compared to its base."
+    exotic: true
+Play Rough:
+    description: "Damage taken is reduced by 20% while firing. The taken damage is applied when you stop firing."
+    exotic: true
+Predatory:
+    description: "Killing a target regenerates 35% health over 20 seconds."
+Prepared:
+    description: "Damage is increased by 15% when more than 30 meters from the target."
+Proficient:
+    description: "The first bullet shot when out of combat has a 50% bonus chance to result in a critical hit."
+Provident:
+    description: "The last bullet of a magazine deals 10% more damage."
+Quickdraw:
+    description: "When drawn weapon damage is increase by 20% for 2 seconds. After that weapon damage is decreased by 20%."
+    exotic: true
+Responsive:
+    description: "Damage is increased by 10% when closer than 10 meters to the target."
+Self-Preserved:
+    description: "Critical hits with this weapon heal the user for 3% of damage dealt."
+Showstopper:
+    description: "Your accuracy with this weapon is increased the fewer shells you have left in the magazine."
+    exotic: true
+Skilled:
+    description: "Headshot kills with this weapon increase Signature Skill resources by 5%."
+Stable:
+    description: "Stability is improved by 35%."
+Sustained:
+    description: "Killing a target increases your health by 6%."
+Swift:
+    description: "Reloading is 25% faster."
+Talented:
+    description: "Killing a target with this weapon increases Skill Power by 15% for 20 seconds. The effect does not stack. Killing a new target refreshes the timer."
+Toxic:
+    description: "Headshots with this weapon have a 15% chance to apply the Blind Status Effect."
+Trained:
+    description: "Critical hits increase Signature Skill resources by 0.10%."
+Uncomplicated:
+    description: "Damage is increased by 15%, accuracy and stability mods reduce this bonus"
+    exotic: true
+Unforgiving:
+    description: "Missing health segments increase your damage: 1 missing segment +10%; 2 missing segments +25%."
+Valkyrie:
+    description: "Each hit with Hildr increases critical hit damage by 1% to max of 30%. The bonus decreases by 1 every second. This bonus only applies to Eir."
+    set: true
+Vicious:
+    description: "Critical hit chance is increased by 10% while having more than two segments of health."
