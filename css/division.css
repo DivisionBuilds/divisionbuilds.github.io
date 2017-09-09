@@ -1511,10 +1511,16 @@ textarea,
 .icon.weapon.m1a {
     background-image: url(/sprites/weapons/m1a.png);
 }
-.icon.weapon.m4 {
+.icon.weapon.m4,
+.icon.weapon.lvoa,
+.icon.weapon.lvoa-c,
+.icon.weapon.liberator {
     background-image: url(/sprites/weapons/m4.png);
 }
-.icon.weapon.m44 {
+.icon.weapon.m44,
+.icon.weapon.classic-m44,
+.icon.weapon.custom-m44,
+.icon.weapon.hunting-m44 {
     background-image: url(/sprites/weapons/m44.png);
 }
 .icon.weapon.m60,
@@ -1534,7 +1540,8 @@ textarea,
 .icon.weapon.mg5 {
     background-image: url(/sprites/weapons/mg5.png);
 }
-.icon.weapon.mp5 {
+.icon.weapon.mp5,
+.icon.weapon.burst-fire-mp5 {
     background-image: url(/sprites/weapons/mp5.png);
 }
 .icon.weapon.mp7 {
@@ -1548,7 +1555,8 @@ textarea,
     background-image: url(/sprites/weapons/pp-19.png);
 }
 .icon.weapon.rpk,
-.icon.weapon.rpk-74 {
+.icon.weapon.rpk-74,
+.icon.weapon.pakhan {
     background-image: url(/sprites/weapons/rpk.png);
 }
 .icon.weapon.sa58,
@@ -1557,7 +1565,8 @@ textarea,
 }
 .icon.weapon.sasg,
 .icon.weapon.sasg12,
-.icon.weapon.sasg-12 {
+.icon.weapon.sasg-12,
+.icon.weapon.medved {
     background-image: url(/sprites/weapons/sasg-12.png);
 }
 .icon.weapon.scarh,
@@ -1581,7 +1590,8 @@ textarea,
 .icon.weapon.svd {
     background-image: url(/sprites/weapons/svd.png);
 }
-.icon.weapon.t821 {
+.icon.weapon.t821,
+.icon.weapon.midas {
     background-image: url(/sprites/weapons/t821.png);
 }
 .icon.weapon.tec9,
