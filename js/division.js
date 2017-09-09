@@ -12,7 +12,7 @@ $(document).ready(function() {
 		"https://images.alphacoders.com/618/618045.jpg",
 		"https://images4.alphacoders.com/601/601859.jpg"
 	];
-	$("head").append("<style>body::after{background-image:url(" + img[Math.floor(Math.random() * img.length)] + ");}</style>");
+	$("head").append("<style>body:after,body::after{background-image:url(" + img[Math.floor(Math.random() * img.length)] + ");}</style>");
 	$(".beta").click(function() {
 		core.modal("DivisionBuilds.github.io is in BETA", "<p>This website is still work in progress. If you encounter any issues, please submit them!</p><p>If you want to stay informed, follow <a href='https://twitter.com/Division_Builds'>@Division_Builds</a> on Twitter or join the DivisionBuilds Discord: <a href='https://discord.me/divisionbuilds'>discord.me/divisionbuilds</a>");
 	});
