@@ -947,11 +947,18 @@ a.ui-button:active,
 
 /* SEARCH BAR & INPUTS */
 .search-bar {
-    margin: 10px 0;
-    margin-left: auto;
-    -webkit-align-self: center;
-    -ms-align-self: center;
-    align-self: center;
+    margin: 10px auto;
+    width: 100%;
+    max-width: 1230px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: flex-end;
+    -ms-flex-align: flex-end;
+    align-items: flex-end;
 }
 input,
 textarea,
