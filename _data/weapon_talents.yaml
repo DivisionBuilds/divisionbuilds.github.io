@@ -3,7 +3,7 @@ Accurate:
 Adept:
     description: "Using a skill increases your critical hit chance by 7.50% for 15 seconds."
 Ambusher:
-    description: "Increase your damage by 10% against targets in cover"
+    description: "Increase your damage by 10% against targets in cover."
 Balanced:
     description: "The weapon reaches max accuracy faster when shouldering."
 Boomstick:
@@ -17,7 +17,7 @@ Caduceus:
 Capable:
     description: "Using a skill improves the handling of your weapon for 15 seconds."
 Carefree:
-    description: "Hipfire damage is increased by 11%"
+    description: "Hipfire damage is increased by 11%."
     exotic: true
 Center Mass:
     description: "Shoots heavy slugs instead of buckshot."
@@ -42,7 +42,7 @@ Distracted:
 Dominant:
     description: "Every kill performed while your Signature Skill is active reduces the cooldown of your other skills by 10%."
 Elevated:
-    description: "Increase your damage by 15% when elevated more than 1.2 meters above your target"
+    description: "Increase your damage by 15% when elevated more than 1.2 meters above your target."
 Expert:
     description: "The weapon deals 100% more damage when the target is below 30% health."
 Ferocious:
@@ -50,7 +50,7 @@ Ferocious:
 Fierce:
     description: "Critical hit chance is increased by 5% when using this weapon."
 Focused:
-    description: "When no skills are on cooldown, your weapon damage is increased by 10%"
+    description: "When no skills are on cooldown, your weapon damage is increased by 10%."
 Free Republic:
     description: "Each shot with the Liberator grants +5% to your next headshot damage with the Centurion. Max is 200%. Kills with the Centurion grants 10% RPM to all weapons."
     set: true
@@ -58,7 +58,7 @@ Glutton:
     description: "Killing a target increases your damage with 10% until you stop firing. Multiple kills stack this bonus up to 5 times."
     exotic: true
 Golden Rhino:
-    description: "Increase stagger by 200%"
+    description: "Increase stagger by 200%."
     exotic: true
 Harmful:
     description: "Each hit has a 15% chance to apply the Bleed Status Effect to the target."
@@ -66,7 +66,7 @@ History Repeats:
     description: "Each bullet embeds itself in the target and detonates 1 second later for 700% of your firearms total."
     exotic: true
 Hurried:
-    description: "Critical hits increase reload speed by 10% to a minimum of 1 second reload time"
+    description: "Critical hits increase reload speed by 10% to a minimum of 1 second reload time."
 Intense:
     description: "The first bullet of a magazine has a 25% chance to apply the On Fire Status Effect to the target."
 Lights Out:
@@ -116,7 +116,7 @@ Toxic:
 Trained:
     description: "Critical hits increase Signature Skill resources by 0.10%."
 Uncomplicated:
-    description: "Damage is increased by 15%, accuracy and stability mods reduce this bonus"
+    description: "Damage is increased by 15%, accuracy and stability mods reduce this bonus."
     exotic: true
 Unforgiving:
     description: "Missing health segments increase your damage: 1 missing segment +10%; 2 missing segments +25%."
