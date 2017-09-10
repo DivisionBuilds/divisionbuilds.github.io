@@ -16,8 +16,9 @@ $(document).ready(function() {
 	$(".beta").click(function() {
 		core.modal("DivisionBuilds.github.io is in BETA", "<p>This website is still work in progress. If you encounter any issues, please submit them!</p><p>If you want to stay informed, follow <a href='https://twitter.com/Division_Builds'>@Division_Builds</a> on Twitter or join the DivisionBuilds Discord: <a href='https://discord.me/divisionbuilds'>discord.me/divisionbuilds</a>");
 	});
-	if ($(".tooltip").length > 0)
+	if ($(".tooltip").length > 0) {
 		tooltips.follow(true);
+	}
 });
 
 // CORE FUNCTIONS
@@ -55,14 +56,20 @@ var tooltips = {
 				$(".tooltip").css({top: y, left: x});
 				$(".tooltip").each(function() {
 					var t = $(this),
-						h = t.height();
+						h = t.height(),
+						w = t.width();
 					if (y + h >= window.innerHeight - 20) {
 						t.css({top: window.innerHeight - 20 - h});
+					}
+					if (x + w >= window.innerWidth - 20) {
+						t.css({left: window.innerWidth - 20 - w});
 					}
 				});
 			});
 		}
-		else $(document).off("mousemove");
+		else {
+			$(document).off("mousemove");
+		}
 	}
 };
 

@@ -1444,7 +1444,7 @@ textarea,
     z-index: 100;
 }
 .build-content .tooltip {
-    max-width: 300px;
+    width: 300px;
 }
 .items .icon.he ~ .tooltip {
 	border-color: rgb(180, 139, 55);
