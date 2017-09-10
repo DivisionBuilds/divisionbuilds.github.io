@@ -1,0 +1,96 @@
+alphabridge: 
+    name: "AlphaBridge"
+    bonuses: 
+        - "+ 100% Health Regen"
+        - "+ 5% Weapon Damage"
+        - "If your Primary and Secondary Weapon is of the same category they share the free talent. All talent requirements are ignored for all weapon talents."
+banshee: 
+    name: "Banshee"
+    bonuses: 
+        - "+ 20% Looted DZ Funds"
+        - "+ 10% Damage to targets out of cover"
+        - "While Rogue all ammo is completely refilled every 30 seconds. Damage taken from non rogue players reduced by 10%. While not Rogue Damage to Rogue players is increased by 10%.<br>This bonus is increased to 20% for 10 minutes after being killed by a rogue."
+deadeye: 
+    name: "DeadEYE"
+    bonuses: 
+        - "+ 40% Initial Bullet Stability"
+        - "+ 20% Marksmanrifle Critical Hit Damage"
+        - "When zoomed Marksman Rifles lose headshot damage bonus but gain 100% critical strike chance."
+        - "+ 40% Initial Bullet Stability<br>+ 20% Marksmanrifle Critical Hit Damage"
+        - "When zoomed, getting a headshot kill with marksman rifles will increase critical hit damage by 20% every second to a maximum of 100% and will increase stability by 100%. Lasts for 10 seconds or until no longer zoomed."
+firecrest: 
+    name: "Firecrest"
+    bonuses: 
+        - "+ 3 Incendiary Granade Capacity"
+        - "+ 50% Flame Turret Range<br>+ 30% Flame Turret Damage"
+        - "Your weapon damage is increased by 15% against burning targets."
+final-measure: 
+    name: "Final Measure"
+    bonuses: 
+        - "+ 25% Exotic Damage Resilience"
+        - "+ 15% Protection from Elites"
+        - "When in range of hostile grenades or mortars defuses them and adds grenades to your inventory. Can only happen once every 8 seconds."
+        - "+ 15% Exotic Damage Resilience<br>+ 15% Protection from Elites"
+        - "When a grenade is defused the player and all group members within 30 metres gain a buff based on the grenade type that was defused.<br>EMP/Shock: Skill power increased by 20% for 8 seconds<br>HE/Indendiary: Wepaon damage is increased by 20% for 8 seconds<br>Flashbang/Teargas: Armor increased by 20% for 8 seconds."
+frontline: 
+    name: "D3-FNC"
+    bonuses: 
+        - "+ 15% Protection from Elites"
+        - "+ 30% Ballistic Shield Health"
+        - "Allows using an SMG if one is equipped when Ballistic Shield is deployed. Only Master Rank shield mod is active."
+hunters-faith: 
+    name: "Hunter's Faith"
+    bonuses: 
+        - "+ 20% Optimal Range"
+        - "+ 10% Headshot Damage"
+        - "Hitting an enemy with a bullet grants you and your group temporary protection. The further your shot the more protection. Each group member’s protection disappears after getting hit by one hostile bullet."
+lone-star: 
+    name: "Lone Star"
+    bonuses: 
+        - "+ 100% Ammo Capacity"
+        - "+ 8% LMG Damage<br>+ 8% Shotgun Damage"
+        - "When the weapon is holstered it is instantly reloaded."
+        - "+50% Ammo Capacity<br>+ 12% LMG Damagey<br>+ 12% Shotgun Damage"
+        - "When a weapon has 50% of its magazine remaining, there is a 75% chance to receive a bonus that activates when the final bullet is fired from the current magazine. Once activated, the magazine is instantly refilled, weapon damage and fire rate is increased by 20%. The bonus is cancelled by reloading, swaping weapons or exiting combat."
+nomad: 
+    name: "Path of the Nomad"
+    bonuses: 
+        - "+ 15% Health on Kill"
+        - "Grants a constant small amount of healing allowing the user to regenerate all segments of the health bar during combat."
+        - "When receiving fatal damage you are instead healed to full health. Can occur once every 4 minutes."
+predators-mark: 
+    name: "Predator's Mark"
+    bonuses: 
+        - "+ 10% Reload Speed"
+        - "+ 8% Assault Rifle Damage<br>+ 8% SMG Damage"
+        - "Hit 10 shots without switching target to make the target bleed for 50% of damage already done by those bullets."
+reclaimer: 
+    name: "Reclaimer"
+    bonuses: 
+        - "+ 30% Support Station range"
+        - "+ 50% Support Station duration"
+        - "Support station gains the benefit of the Life Support Immunizer and Ammo Cache mods at the same time."
+        - "+ 15% Support Station range<br>+ 25% Support Station duration"
+        - "- 50% Support Station Revive Time<br>+ 100% Support Station healing speed<br>+ 100% Support Station Health<br>Support Station gains a 25% chance have no cooldown triggered when it is destroyed by an enemy. This chance is increased by 2% for every 1000 Electronics."
+sentry: 
+    name: "Sentry's Call"
+    bonuses: 
+        - "+ 30% Accuracy"
+        - "+ 10% Headshot Damage"
+        - "Headshots using semi-automatic weapons mark the enemy increasing the damage inflicted on the target by 5% for a duration of 30 seconds each. A target can receive up to three marks."
+        - "+ 15% Accuracy<br>+ 15% Headshot Damage"
+        - "NPC targets can now receive up to six marks. After three marks, every headshot on the target has a 50% chance to spread a single mark to additional targets within 25 meters. At six marks, your headshot damage on the target is increased by 100%."
+striker: 
+    name: "Striker's Battlegear"
+    bonuses: 
+        - "+ 20% Stability"
+        - "+ 10% Enemy Armor Damage"
+        - "Every consecutive hit deals 1% more damage. Stacks up to 100%. Missing shots drop bonus by 2%. Bonus is reduced by 1% every second."
+        - "+ 10% Stability<br>+ 5% Enemy Armor Damage"
+        - "Every hit adds a self-healing bonus for 0.01% of max health per second. This bonus is further increased by 0.03% for every 2000 stamina. Stacks up to 100 hits. Bonus is reduced by 0.01% every second. Bonus can be paused by EMP."
+tactician:
+    name: "Tactician's Authority"
+    bonuses: 
+        - "+ 15% Skill Haste"
+        - "+ 10% Skill Power"
+        - "Every bullet you and your group lands on a hostile adds 0.2% skill power to you for a max of 30% bonus. Bonus consumes the skill power buff on skill use."
