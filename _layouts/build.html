@@ -97,9 +97,16 @@ layout: build
 		    					<h1>{{n}}</h1>
 		    					{{site.data.gear_talents[k]}}
 		    				{% else %}
+		    					{% assign count = 0 %}
+		    					{% for g in page.build.gear.items %}
+		    					{% if g[1].icon == t %}
+		    					{% assign count = count | plus: 1 %}
+		    					{% endif %}
+		    					{% endfor %}
 		    					<h1>{{site.data.gearsets[t].name}}</h1>
 		    					{% for b in site.data.gearsets[t].bonuses %}
-		    					<p>{{b}}</p>
+		    					{% assign amount = forloop.index | plus: 1 %}
+		    					<p{% if count >= amount %} class="highlight"{% endif %}><b>Set Bonus ({{amount}}):</b><br>{{b}}</p>
 		    					{% endfor %}
 		    				{% endif %}
 		    				</span>

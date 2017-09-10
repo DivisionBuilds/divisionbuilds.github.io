@@ -1438,6 +1438,7 @@ textarea,
     margin-left: 5px;
     padding: 5px 10px;
     background: rgba(0, 0, 0, .9);
+    color: hsla(0, 0%, 100%, .7);
     border-left: 2px solid #ff7f00;
     font-size: 15px;
     z-index: 100;
@@ -1460,8 +1461,12 @@ textarea,
 .items .icon:not(.he):not(.exotic) ~ .tooltip {
 	border-color: rgb(15, 211, 129);
 }
-.items .icon:not(.he):not(.exotic) ~ .tooltip h1 {
+.items .icon:not(.he):not(.exotic) ~ .tooltip h1,
+.items .icon:not(.he):not(.exotic) ~ .tooltip > .highlight > b {
 	color: rgb(15, 211, 129);
+}
+.items .icon:not(.he):not(.exotic) ~ .tooltip > h1 ~ :not(.highlight) {
+    opacity: .5;
 }
 :not(:hover) > .tooltip {
 	display: none;
