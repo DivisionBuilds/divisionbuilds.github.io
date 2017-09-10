@@ -50,7 +50,16 @@ var tooltips = {
 		if (a) {
 			$(document).off("mousemove");
 			$(document).mousemove(function(e) {
-				$(".tooltip").css({top: e.clientY, left: e.clientX});    		
+				var y = e.clientY,
+					x = e.clientX;
+				$(".tooltip").css({top: y, left: x});
+				$(".tooltip").each(function() {
+					var t = $(this),
+						h = t.height();
+					if (y + h >= window.innerHeight - 20) {
+						t.css({top: window.innerHeight - 20 - h});
+					}
+				});
 			});
 		}
 		else $(document).off("mousemove");
