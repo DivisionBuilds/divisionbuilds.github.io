@@ -1,0 +1,12 @@
+---
+title: Files - DivisionBuilds API
+---
+{
+	"files": [
+		{% for f in site.pages %}
+		{% if f.dir == '/api/json/' and f.name != 'index.html' %}
+		"{{f.name | remove: '.html'}}"{% unless forloop.last %},{% endunless %}
+		{% endif %}
+		{% endfor %}
+	]
+}
