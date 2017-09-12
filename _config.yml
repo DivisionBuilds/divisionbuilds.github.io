@@ -3,3 +3,7 @@ description: Builds for the game Tom Clancy's The Division
 author: Zerthox
 icon: https://avatars.githubusercontent.com/u/28059051
 google_analytics: UA-98254613-1
+
+exclude:
+    - README.md
+    - Gemfile
