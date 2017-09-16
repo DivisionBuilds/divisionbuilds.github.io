@@ -1888,6 +1888,16 @@ textarea,
 .icon.weapon-talent.disciplined::after {
     background-position: 0 -500px;
 }
+.icon.weapon-talent.goldenrhino:before,
+.icon.weapon-talent.goldenrhino::before,
+.icon.weapon-talent.goldenrhino:after,
+.icon.weapon-talent.goldenrhino::after,
+.icon.weapon-talent.golden-rhino:before,
+.icon.weapon-talent.golden-rhino::before,
+.icon.weapon-talent.golden-rhino:after,
+.icon.weapon-talent.golden-rhino::after {
+    background-position: -100px -500px;
+}
 .icon.weapon-talent.showstopper:before,
 .icon.weapon-talent.showstopper::before,
 .icon.weapon-talent.showstopper:after,
@@ -1983,6 +1993,16 @@ textarea,
 .icon.weapon-talent.pakhan:after,
 .icon.weapon-talent.pakhan::after {
     background-position: -500px -700px;
+}
+.icon.weapon-talent.playrough:before,
+.icon.weapon-talent.playrough::before,
+.icon.weapon-talent.playrough:after,
+.icon.weapon-talent.playrough::after,
+.icon.weapon-talent.play-rough:before,
+.icon.weapon-talent.play-rough::before,
+.icon.weapon-talent.play-rough:after,
+.icon.weapon-talent.play-rough::after {
+    background-position: -600px -700px;
 }
 .icon.weapon-talent.midas:before,
 .icon.weapon-talent.midas::before,
