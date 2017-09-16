@@ -1491,7 +1491,8 @@ textarea,
 }
 .icon.weapon.ak,
 .icon.weapon.ak47,
-.icon.weapon.ak-47 {
+.icon.weapon.ak-47,
+.icon.weapon.warlord {
     background-image: url(/sprites/weapons/ak-47.png);
 }
 .icon.weapon.aug {
@@ -1562,9 +1563,15 @@ textarea,
 .icon.weapon.p416 {
     background-image: url(/sprites/weapons/p416.png);
 }
+.icon.weapon.pf45 {
+    background-image: url(/sprites/weapons/pf45.png);
+}
 .icon.weapon.pp19,
 .icon.weapon.pp-19 {
     background-image: url(/sprites/weapons/pp-19.png);
+}
+.icon.weapon.px4 {
+    background-image: url(/sprites/weapons/px4.png);
 }
 .icon.weapon.rpk,
 .icon.weapon.rpk-74,
@@ -1586,7 +1593,8 @@ textarea,
     background-image: url(/sprites/weapons/scar-h.png);
 }
 .icon.weapon.scarl,
-.icon.weapon.scar-l {
+.icon.weapon.scar-l,
+.icon.weapon.caduceus {
     background-image: url(/sprites/weapons/scar-l.png);
 }
 .icon.weapon.showstopper {
@@ -1606,12 +1614,18 @@ textarea,
 .icon.weapon.midas {
     background-image: url(/sprites/weapons/t821.png);
 }
+.icon.weapon.smg9,
+.icon.weapon.smg-9,
 .icon.weapon.tec9,
 .icon.weapon.tec-9 {
     background-image: url(/sprites/weapons/tec-9.png);
 }
 .icon.weapon.tenebrae {
     background-image: url(/sprites/weapons/tenebrae.png);
+}
+.icon.weapon.thompson,
+.icon.weapon.tommy-gun {
+    background-image: url(/sprites/weapons/tommy-gun.png);
 }
 .icon.weapon.ump {
     background-image: url(/sprites/weapons/ump.png);
@@ -1647,12 +1661,14 @@ textarea,
 .icon.weapon.sawedoff,
 .icon.weapon.sawed-off,
 .icon.weapon.double-barrel-sawedoff,
-.icon.weapon.double-barrel-sawed-off {
+.icon.weapon.double-barrel-sawed-off,
+.icon.weapon.double-barrel-sawedoff-shotgun,
+.icon.weapon.double-barrel-sawed-off-shotgun {
     background-image: url(/sprites/weapons/sawed-off.png);
 }
 .icon.weapon.x45,
 .icon.weapon.x-45 {
-    background-image: url(/sprites/weapons/x45.png);
+    background-image: url(/sprites/weapons/x-45.png);
 }
 
 /* WEAPON TALENT ICONS */
