@@ -1,0 +1,615 @@
+93R:
+    dmg: [5454, 6403]
+    scaling: 0.8
+    rpm: 1100
+    mag: 20
+    reload: 1600
+    range: 16
+    hsmulti: 2.0
+    class: pistol
+    sidearm: true
+ACR:
+    dmg: [8863, 10404]
+    scaling: 1.3
+    rpm: 760
+    mag: 30
+    reload: 2300
+    range: 27
+    hsmulti: 1.75
+    class: ar
+AK-47:
+    dmg: [10909, 12805]
+    scaling: 1.6
+    rpm: 600
+    mag: 30
+    reload: 2600
+    range: 26
+    hsmulti: 1.75
+    class: ar
+AUG:
+    dmg: [8863, 10404]
+    scaling: 1.3
+    rpm: 725
+    mag: 25
+    reload: 2100
+    range: 18
+    hsmulti: 1.5
+    class: smg
+Bullfrog:
+    dmg: [7841, 9204]
+    scaling: 1.15
+    rpm: 950
+    mag: 30
+    reload: 1900
+    range: 28
+    hsmulti: 1.75
+    class: ar
+    exotic: Uncomplicated
+Burst Fire MP5:
+    dmg: [10227, 12005]
+    scaling: 1.5
+    rpm: 800
+    mag: 32
+    reload: 2100
+    range: 16
+    hsmulti: 1.5
+    class: smg
+Caduceus:
+    dmg: [10227, 12005]
+    scaling: 1.5
+    rpm: 625
+    mag: 30
+    reload: 2300
+    range: 28
+    hsmulti: 1.75
+    class: ar
+    exotic: Caduceus
+Cassidy:
+    dmg: [70904, 83232]
+    scaling: 10.4
+    rpm: 200
+    mag: 2
+    reload: 800
+    range: 11
+    hsmulti: 1.6
+    class: shotgun
+    exotic: Boomstick
+Centurion:
+    dmg: [13636, 16007]
+    scaling: 2.0
+    rpm: 310
+    mag: 7
+    reload: 1400
+    range: 12
+    hsmulti: 2.0
+    class: pistol
+    sidearm: true
+Classic M44:
+    dmg: [62725, 73631]
+    scaling: 9.2
+    rpm: 55
+    mag: 5
+    reload: 600
+    range: 60
+    hsmulti: 1.0
+    class: mmr
+Custom M44:
+    dmg: [57271, 67229]
+    scaling: 8.4
+    rpm: 55
+    mag: 5
+    reload: 1900
+    range: 60
+    hsmulti: 1.0
+    class: mmr
+Damascus:
+    dmg: [9204, 10805]
+    scaling: 1.35
+    rpm: 450
+    mag: 15
+    reload: 1600
+    range: 16
+    hsmulti: 2.0
+    class: pistol
+    sidearm: true
+    exotic: Quickdraw
+Double-Barrel Shotgun:
+    dmg: [70904, 83232]
+    scaling: 10.4
+    rpm: 200
+    mag: 2
+    reload: 800
+    range: 11
+    hsmulti: 1.6
+    class: shotgun
+Double-Barrel Sawed-Off Shotgun:
+    dmg: [70904, 83232]
+    scaling: 10.4
+    rpm: 200
+    mag: 2
+    reload: 800
+    range: 11
+    hsmulti: 1.6
+    class: shotgun
+    sidearm: true
+FAL:
+    dmg: [12272, 14406]
+    scaling: 1.8
+    rpm: 650
+    mag: 20
+    reload: 2450
+    range: 32
+    hsmulti: 1.75
+    class: ar
+G36:
+    dmg: [9068, 10645]
+    scaling: 1.33
+    rpm: 750
+    mag: 30
+    reload: 2000
+    range: 26
+    hsmulti: 1.75
+    class: ar
+Golden Rhino:
+    dmg: [16363, 19208]
+    scaling: 2.4
+    rpm: 350
+    mag: 6
+    reload: 1800
+    range: 18
+    hsmulti: 2.0
+    class: pistol
+    sidearm: true
+    exotic: Golden Rhino
+Historian:
+    dmg: [20454, 24010]
+    scaling: 3.0
+    rpm: 300
+    mag: 10
+    reload: 2900
+    range: 60
+    hsmulti: 1.0
+    class: mmr
+    exotic: History Repeats
+Hungry Hog:
+    dmg: [9886, 11605]
+    scaling: 1.45
+    rpm: 500
+    mag: 100
+    reload: 5750
+    range: 40
+    hsmulti: 2.0
+    class: lmg
+    exotic: Glutton
+Hunting M44:
+    dmg: [61361, 72031]
+    scaling: 9.0
+    rpm: 55
+    mag: 5
+    reload: 600
+    range: 60
+    hsmulti: 1.0
+    class: mmr
+L86:
+    dmg: [8863, 10404]
+    scaling: 1.3
+    rpm: 610
+    mag: 30
+    reload: 2400
+    range: 32
+    hsmulti: 2.0
+    class: lmg
+Liberator:
+    dmg: [8522, 10004]
+    scaling: 1.25
+    rpm: 850
+    mag: 30
+    reload: 2500
+    range: 28
+    hsmulti: 1.75
+    class: ar
+LVOA-C:
+    dmg: [8863, 10404]
+    scaling: 1.3
+    rpm: 850
+    mag: 30
+    reload: 2550
+    range: 28
+    hsmulti: 1.75
+    class: ar
+M1911:
+    dmg: [13636, 16007]
+    scaling: 2.0
+    rpm: 310
+    mag: 7
+    reload: 1400
+    range: 12
+    hsmulti: 2.0
+    class: pistol
+    sidearm: true
+M1A:
+    dmg: [27272, 32014]
+    scaling: 4.0
+    rpm: 300
+    mag: 10
+    reload: 2900
+    range: 60
+    hsmulti: 1.0
+    class: mmr
+M249:
+    dmg: [9204, 10805]
+    scaling: 1.35
+    rpm: 550
+    mag: 100
+    reload: 5500
+    range: 35
+    hsmulti: 2.0
+    class: lmg
+M4:
+    dmg: [8863, 10404]
+    scaling: 1.3
+    rpm: 850
+    mag: 30
+    reload: 2500
+    range: 28
+    hsmulti: 1.75
+    class: ar
+M60:
+    dmg: [9545, 11205]
+    scaling: 1.4
+    rpm: 500
+    mag: 100
+    reload: 5750
+    range: 40
+    hsmulti: 2.0
+    class: lmg
+M700:
+    dmg: [57952, 68029]
+    scaling: 8.5
+    rpm: 54
+    mag: 7
+    reload: 1950
+    range: 42
+    hsmulti: 1.0
+    class: mmr 
+    exclusive: Elevated
+M870:
+    dmg: [70904, 83232]
+    scaling: 10.4
+    rpm: 75
+    mag: 5
+    reload: 600
+    range: 9
+    hsmulti: 1.6
+    class: shotgun
+M9:
+    dmg: [9000, 10564]
+    scaling: 1.32
+    rpm: 450
+    mag: 15
+    reload: 1600
+    range: 16
+    hsmulti: 2.0
+    class: pistol
+    sidearm: true
+Magnum:
+    dmg: [16363, 19208]
+    scaling: 2.4
+    rpm: 350
+    mag: 6
+    reload: 1800
+    range: 18
+    hsmulti: 2.0
+    class: pistol
+    sidearm: true
+Medved:
+    dmg: [38180, 44819]
+    scaling: 5.6
+    rpm: 180
+    mag: 7
+    reload: 3000
+    range: 20
+    hsmulti: 1.6
+    class: shotgun 
+    exotic: Center Mass  
+MG5:
+    dmg: [7500, 8804]
+    scaling: 1.1
+    rpm: 800
+    mag: 50
+    reload: 5500
+    range: 30
+    hsmulti: 1.85
+    class: lmg
+MK17:
+    dmg: [29044, 34094]
+    scaling: 4.25
+    rpm: 275
+    mag: 20
+    reload: 2500
+    range: 60
+    hsmulti: 1.0
+    class: mmr
+MK20:
+    dmg: [29044, 34094]
+    scaling: 4.25
+    rpm: 275
+    mag: 20
+    reload: 2500
+    range: 60
+    hsmulti: 1.0
+    class: mmr 
+MK46:
+    dmg: [9204, 10805]
+    scaling: 1.35
+    rpm: 550
+    mag: 100
+    reload: 5500
+    range: 35
+    hsmulti: 2.0
+    class: lmg
+MP5:
+    dmg: [8182, 9604]
+    scaling: 1.2
+    rpm: 800
+    mag: 32
+    reload: 2100
+    range: 16
+    hsmulti: 1.5
+    class: smg
+MP7:
+    dmg: [7432, 8724]
+    scaling: 1.09
+    rpm: 950
+    mag: 20
+    reload: 1900
+    range: 19
+    hsmulti: 1.5
+    class: smg
+Pakhan:
+    dmg: [9204, 10805]
+    scaling: 1.35
+    rpm: 650
+    mag: 45
+    reload: 2700
+    range: 28
+    hsmulti: 2.0
+    class: lmg
+    exotic: Pakhan
+P416:
+    dmg: [8863, 10404]
+    scaling: 1.3
+    rpm: 750
+    mag: 30
+    reload: 2300
+    range: 26
+    hsmulti: 1.75
+    class: ar
+PF45:
+    dmg: [7500, 8804]
+    scaling: 1.1
+    rpm: 600
+    mag: 15
+    reload: 1600
+    range: 14
+    hsmulti: 2.0
+    class: pistol
+    sidearm: true
+PP-19:
+    dmg: [8522, 10004]
+    scaling: 1.25
+    rpm: 100
+    mag: 10
+    reload: 2000
+    range: 10
+    hsmulti: 1.5
+    class: smg
+PX4:
+    dmg: [8522, 10004]
+    scaling: 1.25
+    rpm: 450
+    mag: 17
+    reload: 1600
+    range: 18
+    hsmulti: 2.0
+    class: pistol
+    sidearm: true
+Rhino:
+    dmg: [16363, 19208]
+    scaling: 2.4
+    rpm: 350
+    mag: 6
+    reload: 1800
+    range: 18
+    hsmulti: 2.0
+    class: pistol
+    sidearm: true
+RPK:
+    dmg: [7841, 9204]
+    scaling: 1.15
+    rpm: 650
+    mag: 45
+    reload: 2700
+    range: 28
+    hsmulti: 2.0
+    class: lmg
+SA-58:
+    dmg: [12272, 14406]
+    scaling: 1.8
+    rpm: 650
+    mag: 20
+    reload: 2450
+    range: 32
+    hsmulti: 1.75
+    class: ar
+SASG-12:
+    dmg: [46360, 54424]
+    scaling: 6.8
+    rpm: 180
+    mag: 7
+    reload: 3000
+    range: 13
+    hsmulti: 1.6
+    class: shotgun 
+SCAR-H:
+    dmg: [29317, 34415]
+    scaling: 4.3
+    rpm: 275
+    mag: 20
+    reload: 2500
+    range: 60
+    hsmulti: 1.0
+    class: mmr 
+SCAR-L:
+    dmg: [10227, 12005]
+    scaling: 1.5
+    rpm: 625
+    mag: 30
+    reload: 2300
+    range: 28
+    hsmulti: 1.75
+    class: ar
+Showstopper:
+    dmg: [27272, 32016]
+    scaling: 4.0
+    rpm: 240
+    mag: 20
+    reload: 2200
+    range: 14
+    hsmulti: 1.6
+    class: shotgun 
+    exotic: Showstopper
+SMG-9:
+    dmg: [8045, 9444]
+    scaling: 1.18
+    rpm: 825
+    mag: 32
+    reload: 2000
+    range: 13
+    hsmulti: 1.5
+    class: smg
+SRS:
+    dmg: [53180, 62426]
+    scaling: 7.8
+    rpm: 53
+    mag: 7
+    reload: 1950
+    range: 42
+    hsmulti: 1.0  
+    class: mmr
+Super-90:
+    dmg: [54544, 64024]
+    scaling: 8.0
+    rpm: 150
+    mag: 8
+    reload: 600
+    range: 9
+    hsmulti: 1.6
+    class: shotgun
+SVD:
+    dmg: [26590, 31213]
+    scaling: 3.9
+    rpm: 260
+    mag: 10
+    reload: 2300
+    range: 34
+    hsmulti: 1.0
+    class: mmr 
+T821:
+    dmg: [9204, 10805]
+    scaling: 1.35
+    rpm: 550
+    mag: 32
+    reload: 1800
+    range: 17
+    hsmulti: 1.5
+    class: smg
+Tenebrae:
+    dmg: [29317, 34415]
+    scaling: 4.3
+    rpm: 275
+    mag: 20
+    reload: 2500
+    range: 60
+    hsmulti: 1.0
+    class: mmr  
+    exotic: Lights Out
+Thompson:
+    dmg: [9545, 11205]
+    scaling: 1.4
+    rpm: 600
+    mag: 30
+    reload: 2000
+    range: 16
+    hsmulti: 1.5
+    class: smg
+    exotic: Carefree
+Tommy Gun:
+    dmg: [7841, 9204]
+    scaling: 1.15
+    rpm: 800
+    mag: 50
+    reload: 2200
+    range: 16
+    hsmulti: 1.5
+    class: smg
+    exotic: Carefree
+UMP:
+    dmg: [9545, 11205]
+    scaling: 1.4
+    rpm: 650
+    mag: 20
+    reload: 2100
+    range: 14
+    hsmulti: 1.5
+    class: smg
+    exclusive: Ambusher
+Urban MDR:
+    dmg: [22499, 26411]
+    scaling: 3,3
+    rpm: 350
+    mag: 20
+    reload: 2400
+    range: 28
+    hsmulti: 1.95
+    class: ar
+    exotic: Distracted
+USC:
+    dmg: [9545, 11205]
+    scaling: 1.4
+    rpm: 650
+    mag: 20
+    reload: 2100
+    range: 14
+    hsmulti: 1.5
+    class: smg
+    exclusive: Ambusher
+Vector:
+    dmg: [8522, 10004]
+    scaling: 1.25
+    rpm: 750
+    mag: 25
+    reload: 1900
+    range: 15
+    hsmulti: 1.5
+    class: smg
+Warlord:
+    dmg: [10909, 12805]
+    scaling: 1.6
+    rpm: 600
+    mag: 30
+    reload: 2600
+    range: 26
+    hsmulti: 1.75
+    class: ar
+    exotic: Play Rough
+X45:
+    dmg: [7772, 9124]
+    scaling: 1.14
+    rpm: 625
+    mag: 15
+    reload: 1600
+    range: 16
+    hsmulti: 2.0
+    class: pistol
+    sidearm: true
