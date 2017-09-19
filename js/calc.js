@@ -21,8 +21,9 @@ var calc = {
 			for (var i = 0; i < increase.length; i++)
 				d  *= (1 + (increase[i] || 0) / 100);
 		}
-		else
+		else {
 			d *= (1 + (increase || 0) / 100);
+		}
 		return  d;
 	},
 	pve: {
@@ -143,20 +144,17 @@ var calc = {
 	},
 	skillpower: function(o) {
 		// Required: electronics
-		// Optional: talent ("inventive" or "specialized"), firearms, stamina
-		var talent = o.talent.toLowerCase() || "",
-			firearms = o.firearms || 2674,
-			stamina = o.stamina || 2674;
-		var s = o.electronics * 30;
-		switch (talent) {
-			case "inventive":
-				return s * 1.15;
-				break;
-			case "specialized":
-				return s + ((firearms + stamina) * 2);
-				break;
-			default:
-				return s;
+		// Optional: rolls, increase
+		var electronics = o.electronics || 0,
+			rolls = o.rolls || 0;
+		var s = electronics * 30 + rolls;
+		if (increase instanceof Array) {
+			for (var i = 0; i < increase.length; i++)
+				s  *= (1 + (increase[i] || 0) / 100);
 		}
+		else {
+			s *= (1 + (increase || 0) / 100);
+		}
+		return  s;
 	}
 };
