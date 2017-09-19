@@ -60,9 +60,8 @@ var calc = {
 		// Optional: gloves, awd, wtd, ead, ooc, chc, chd, hsc, hsd, hsmulti, hsmodifier, increase, pvpdmg_scaling, pvpead_scaling
 			var ead = o.ead || 0,
 			    pvpdmg_scaling = o.pvpdmg_scaling || 0.42,
-			    pvpead_scaling = o.pvpead_scaling || 0.3,
-			    pvphsd_scaling = o.pvphsd_scaling || 0.8;
-			o.hsmodifier = o.hsmodifier || 0.8;
+			    pvpead_scaling = o.pvpead_scaling || 0.3;
+			o.hsmodifier = o.pvphsd_scaling || 0.8;
 			var a = (calc.bulletDMG(o) * pvpdmg_scaling) / 100;
 			var min = a * (100 - Math.max(0, (calc.mitigation(8008) / 100 * (100 - (ead * pvpead_scaling)))));
 			var max = a * (100 - Math.max(0, (calc.mitigation(6814) / 100 * (100 - (ead * pvpead_scaling)))));
