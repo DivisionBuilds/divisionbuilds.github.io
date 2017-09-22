@@ -18,7 +18,8 @@ $(document).ready(function() {
 					base = href.slice(0, href.length - 1).join("/"),
 					e = true;
 				for (var i = 0; i < d.length; i++) {
-					link = base + "/" + d[i] + "/" + l;
+					link = base + "/build/" + d[i] + "/" + l;
+					console.log(link);
 					if (page.test(link)) {
 						core.alert("Redirecting...", "<a href='" + link + "'>Click here if it does not work.</a>");
 						e = false;
