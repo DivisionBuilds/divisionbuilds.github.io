@@ -6,7 +6,12 @@ layout: division
 <html lang="en-us">
 	<head>
 		{% include header.html %}
-	    {% if page.js %} <script type="text/javascript" src="/js/{{page.js}}.js"></script> {% endif %}
+	    {% if page.js %}
+	    <script type="text/javascript" src="/js/{{page.js}}.js"></script>
+	    {% endif %}
+	    {% if page.js contains 'calc-' %}
+	    <script type="text/javascript" src="/js/calc.js"></script>
+	    {% endif %}
 	</head>
   	<body>
   		<div class="beta">BETA</div>
