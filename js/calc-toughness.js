@@ -1,5 +1,4 @@
 $(document).ready(function() {
-	$("head").append("<script src='/js/division-calc.js'></script>");
     $("input").on("keyup change", page.update);
 });
 

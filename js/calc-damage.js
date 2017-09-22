@@ -1,5 +1,4 @@
 $(document).ready(function() {
-	$("head").append("<script src='/js/division-calc.js'></script>");
     $("input").on("keyup change", page.update);
     $(".button:contains('Add')").click(function() {
         $(".append").append('<div class="flex-child added"><input type="number" value="0" min="0" class="increase"></div>');
