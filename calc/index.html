@@ -6,7 +6,7 @@ title: Calculators
     <h1>Calculators</h1>
     <div class="flex-list links margin">
         {% for f in site.pages %}
-        {% if f.path contains 'calc/' %}
+        {% if f.name != 'index.html' and f.path contains 'calc/' %}
         <a href="{{f.url | remove: '.html'}}">
             <div class="flex-item">
                 <div class="info">
