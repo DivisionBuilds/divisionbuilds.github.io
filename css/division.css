@@ -2087,40 +2087,28 @@ textarea,
     background-image: url(/sprites/items.png);
     background-size: 800px;
 }
-.build-content .gear .holster .icon.he:after,
-.build-content .gear .holster .icon.he::after,
-.build-content .gear .holster .icon.exotic:after,
-.build-content .gear .holster .icon.exotic::after {
+.build-content .gear .icon.holster:after,
+.build-content .gear .icon.holster::after {
     background-position: 0 -413px;
 }
-.build-content .gear .chest .icon.he:after,
-.build-content .gear .chest .icon.he::after,
-.build-content .gear .chest .icon.exotic:after,
-.build-content .gear .chest .icon.exotic::after {
+.build-content .gear .icon.chest:after,
+.build-content .gear .icon.chest::after {
     background-position: -103px -413px;
 }
-.build-content .gear .backpack .icon.he:after,
-.build-content .gear .backpack .icon.he::after,
-.build-content .gear .backpack .icon.exotic:after,
-.build-content .gear .backpack .icon.exotic::after {
+.build-content .gear .icon.backpack:after,
+.build-content .gear .icon.backpack::after {
     background-position: -206px -413px;
 }
-.build-content .gear .mask .icon.he:after,
-.build-content .gear .mask .icon.he::after,
-.build-content .gear .mask .icon.exotic:after,
-.build-content .gear .mask .icon.exotic::after {
+.build-content .gear .icon.mask:after,
+.build-content .gear .icon.mask::after {
     background-position: -310px -413px;
 }
-.build-content .gear .gloves .icon.he:after,
-.build-content .gear .gloves .icon.he::after,
-.build-content .gear .gloves .icon.exotic:after,
-.build-content .gear .gloves .icon.exotic::after {
+.build-content .gear .icon.gloves:after,
+.build-content .gear .icon.gloves::after {
     background-position: -516px -413px;
 }
-.build-content .gear .knee-pads .icon.he:after,
-.build-content .gear .knee-pads .icon.he::after,
-.build-content .gear .knee-pads .icon.exotic:after,
-.build-content .gear .knee-pads .icon.exotic::after {
+.build-content .gear .icon.knee-pads.he:after,
+.build-content .gear .icon.knee-pads.he::after {
     background-position: -618px -413px;
 }
 
