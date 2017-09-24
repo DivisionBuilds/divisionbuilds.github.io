@@ -1179,7 +1179,10 @@ textarea,
     left: 10px;
 }
 .build-content .gear .items .icon {
-    background: linear-gradient(rgba(244, 255, 255, .5), rgba(244, 255, 255, .5) 0) no-repeat, linear-gradient(rgba(244, 255, 255, .5), rgba(244, 255, 255, .5) 0) top right no-repeat, linear-gradient(rgba(244, 255, 255, .5), rgba(244, 255, 255, .5) 0) bottom left no-repeat, linear-gradient(rgba(244, 255, 255, .5), rgba(244, 255, 255, .5) 0) bottom right no-repeat;
+    background: linear-gradient(rgba(244, 255, 255, .5), rgba(244, 255, 255, .5) 0) no-repeat,
+                linear-gradient(rgba(244, 255, 255, .5), rgba(244, 255, 255, .5) 0) top right no-repeat,
+                linear-gradient(rgba(244, 255, 255, .5), rgba(244, 255, 255, .5) 0) bottom left no-repeat,
+                linear-gradient(rgba(244, 255, 255, .5), rgba(244, 255, 255, .5) 0) bottom right no-repeat;
     background-size: 3px 3px;
 }
 .build-content .gear .items .icon:after,
