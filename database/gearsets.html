@@ -1,0 +1,28 @@
+---
+layout: division
+title: Gear Sets
+alttitle: Division Builds Database
+info: All current Gear Sets and their bonuses.
+---
+<div class="main-container text database" id="gearsets">
+    <h1>Gear Sets</h1>
+    <div class="flex-list margin">
+        {% for f in site.data.gearsets %}
+        <div class="flex-item">
+            <div class="title">{{f[1].name}}</div>
+            <div class="info">
+                <div class="icon {{f[0]}}"></div>
+                <div class="bonuses">
+                    {% for b in f[1].bonuses %}
+                    {% assign amount = forloop.index | plus: 1 %}
+                    <div class="bonus">
+                        <span class="amount">{{amount}}</span>
+                        <span class="text">{{b}}</span>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
