@@ -1,0 +1,21 @@
+---
+layout: division
+alttitle: Division Builds Database
+---
+<div class="main-container text database" id="main">
+    <h1>Database</h1>
+    <div class="flex-list links margin">
+        {% for f in site.pages %}
+        {% if f.name != 'index.html' and f.path contains 'database/' %}
+        <a href="{{f.url | remove: '.html'}}">
+            <div class="flex-item">
+                <div class="info">
+                    <div class="title">{{f.title}}</div>
+                    <div class="text">{{f.info}}</div>
+                </div>
+            </div>
+        </a>
+        {% endif %}
+        {% endfor %}
+    </div>
+</div>
