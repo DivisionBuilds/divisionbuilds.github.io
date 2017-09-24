@@ -5,6 +5,9 @@
     <a href="/submit">
     	<div class="nav-bar-item{% if current.last == 'submit.html' %} active{% endif %}">Submit a build</div>
     </a>
+    <a href="/database">
+        <div class="nav-bar-item{% if current contains 'database' %} active{% endif %}">Database</div>
+    </a>
     <a href="/calc">
     	<div class="nav-bar-item{% if current.last == 'calc.html' or current contains 'calc' %} active{% endif %}">Calculators</div>
     </a>
