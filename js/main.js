@@ -14,4 +14,7 @@ $(document).ready(function() {
           		$(this).prev().css({display: ""});
           });
      });
+     $(".banner .close").click(function() {
+          $(this).parents('.banner').remove();
+     });
 });
