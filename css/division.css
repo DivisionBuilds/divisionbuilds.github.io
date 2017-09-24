@@ -571,9 +571,9 @@ label {
     transition-delay: 0s;
 }
 .flex-list.links {
-    -webkit-box-align: start;
-    -ms-flex-align: start;
-    align-items: flex-start;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
 }
 .flex-list.links a {
     color: hsla(0, 0%, 100%, .5);
@@ -586,6 +586,7 @@ label {
 }
 .flex-list.links .flex-item {
     padding: 10px 15px;
+    background: hsla(0, 0%, 50%, .1);
     -webkit-transition: background .15s ease-in-out;
     transition: background .15s ease-in-out;
 }
