@@ -1295,6 +1295,113 @@ textarea,
     font-size: 1.5em;
 }
 
+/* DATABASE */
+.database .flex-item {
+    padding: 10px;
+    background: hsla(0, 0%, 50%, .1);
+}
+.database .icon {
+    position: relative;
+    width: 120px;
+    height: 110px;
+    margin: 0 5px;
+    -webkit-flex-shrink: 0;
+    -ms-flex-shrink: 0;
+    flex-shrink: 0;
+}
+.database .icon:after,
+.database .icon::after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    bottom: 5px;
+    left: 10px;
+    -webkit-filter: drop-shadow(3px 3px 0 rgba(200, 200, 200, .3));
+    filter: drop-shadow(3px 3px 0 rgba(200, 200, 200, .3));
+    opacity: .7;
+}
+.database .bonuses {
+    margin: 5px;
+}
+.database .bonuses > .bonus {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background: hsla(0, 0%, 50%, .1);
+}
+.database .bonuses > .bonus + .bonus {
+    margin-top: 5px;
+}
+.database .bonuses > .bonus .text  {
+    margin: 5px 20px 5px 10px;
+}
+.database#gearsets .title,
+.database#gear-talents .title {
+    margin: 5px 10px 0;
+}
+.database#gear-talents .title.he {
+    color: rgb(180, 139, 55);
+}
+.database#gear-talents .title.exotic {
+    color: rgb(208, 92, 60);
+}
+.database#gear-talents .icon.he:after,
+.database#gear-talents .icon.he::after,
+.database#gear-talents .icon.exotic:after,
+.database#gear-talents .icon.exotic::after {
+    background-image: url(/sprites/items.png);
+    background-size: 800px;
+}
+.database#gear-talents .icon.holster:after,
+.database#gear-talents .icon.holster::after {
+    background-position: 0 -413px;
+}
+.database#gear-talents .icon.chest:after,
+.database#gear-talents .icon.chest::after {
+    background-position: -103px -413px;
+}
+.database#gear-talents .icon.backpack:after,
+.database#gear-talents .icon.backpack::after {
+    background-position: -206px -413px;
+}
+.database#gear-talents .icon.mask:after,
+.database#gear-talents .icon.mask::after {
+    background-position: -310px -413px;
+}
+.database#gear-talents .icon.gloves:after,
+.database#gear-talents .icon.gloves::after {
+    background-position: -516px -413px;
+}
+.database#gear-talents .icon.knee-pads:after,
+.database#gear-talents .icon.knee-pads::after {
+    background-position: -618px -413px;
+}
+.database#gearsets .flex-item {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+}
+.database#gearsets .info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+.database#gearsets .title {
+    color: rgb(15, 211, 129);
+}
+.database#gearsets .bonuses > .bonus .amount  {
+    margin: 5px 10px;
+    color: rgb(15, 211, 129);
+    font-weight: bold;
+}
+
 /* MODALS */
 .modal-wrapper {
 	position: fixed;
