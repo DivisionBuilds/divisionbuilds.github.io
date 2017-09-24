@@ -1,0 +1,29 @@
+---
+layout: division
+title: Gear Talents
+alttitle: Division Builds Database
+info: All current Gear Talents.
+---
+<div class="main-container text database" id="gear-talents">
+    <h1>Gear Talents</h1>
+    <div class="flex-list margin">
+        {% for f in site.data.gear_talents %}
+        {% if f[1].exotic %}
+            {% assign t = 'exotic' %}
+        {% else %}
+            {% assign t = 'he' %}
+        {% endif %}
+        <div class="flex-item">
+            <div class="icon {{t}} {{f[1].type}}"></div>
+            <div class="info">
+                <div class="title {{t}}">{{f[1].name}}</div>
+                <div class="bonuses">
+                    <div class="bonus">
+                        <span class="text">{{f[1].description}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
