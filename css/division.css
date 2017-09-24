@@ -2195,28 +2195,40 @@ textarea,
     background-image: url(/sprites/items.png);
     background-size: 800px;
 }
-.build-content .gear .icon.holster:after,
-.build-content .gear .icon.holster::after {
+.build-content .gear .icon.holster.he:after,
+.build-content .gear .icon.holster.he::after,
+.build-content .gear .icon.holster.exotic:after,
+.build-content .gear .icon.holster.exotic::after {
     background-position: 0 -413px;
 }
-.build-content .gear .icon.chest:after,
-.build-content .gear .icon.chest::after {
+.build-content .gear .icon.chest.he:after,
+.build-content .gear .icon.chest.he::after,
+.build-content .gear .icon.chest.exotic:after,
+.build-content .gear .icon.chest.exotic::after {
     background-position: -103px -413px;
 }
-.build-content .gear .icon.backpack:after,
-.build-content .gear .icon.backpack::after {
+.build-content .gear .icon.backpack.he:after,
+.build-content .gear .icon.backpack.he::after,
+.build-content .gear .icon.backpack.exotic:after,
+.build-content .gear .icon.backpack.exotic::after {
     background-position: -206px -413px;
 }
-.build-content .gear .icon.mask:after,
-.build-content .gear .icon.mask::after {
+.build-content .gear .icon.mask.he:after,
+.build-content .gear .icon.mask.he::after,
+.build-content .gear .icon.mask.exotic:after,
+.build-content .gear .icon.mask.exotic::after {
     background-position: -310px -413px;
 }
-.build-content .gear .icon.gloves:after,
-.build-content .gear .icon.gloves::after {
+.build-content .gear .icon.gloves.he:after,
+.build-content .gear .icon.gloves.he::after,
+.build-content .gear .icon.gloves.exotic:after,
+.build-content .gear .icon.gloves.exotic::after {
     background-position: -516px -413px;
 }
 .build-content .gear .icon.knee-pads.he:after,
-.build-content .gear .icon.knee-pads.he::after {
+.build-content .gear .icon.knee-pads.he::after,
+.build-content .gear .icon.knee-pads.exotic:after,
+.build-content .gear .icon.knee-pads.exotic::after {
     background-position: -618px -413px;
 }
 
