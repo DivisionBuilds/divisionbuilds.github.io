@@ -51,8 +51,8 @@ var calc = {
 		// Optional: gloves, awd, wtd, ead, dte, ooc, ooc, chc, chd, hsc, hsd, hsmulti, hsmodifier, increase
 			var rpm = o.rpm || 0,
 				magsize = o.magsize || 1,
-				reloadtime = o.reloadtime || 1;
-			return (calc.pve.bulletDMG(o) * magsize) / (magsize / (rpm / 60) + reloadtime);
+				reloadtime = o.reloadtime || 0;
+			return (calc.pve.bulletDMG(o) * magsize) / (magsize / (rpm / 60) + Math.max(0, reloadtime));
 		}
 	},
 	pvp: {
