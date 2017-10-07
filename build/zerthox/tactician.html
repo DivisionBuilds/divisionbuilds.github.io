@@ -1,70 +1,70 @@
 ---
 layout: build
-title: "Banshee Dark Zone"
+title: "Tactician Healer"
 author: "Zerthox"
 link: "https://github.com/Zerthox"
-date: "18/05/2017"
+patch: 1.7
+date: "01/09/2017"
 tags: 
     - "pvp"
-    - "dps"
-    - "solo"
+    - "pve"
     - "group"
-    - "banshee"
-    - "darkzone"
+    - "healer"
+    - "tactician"
+    - "skill power"
 build: 
     general: 
-        - "This is a DPS build for the Darkzone. The Banshee 4 piece bonus only applies in the Darkzone. It is designed to be useful for solo and group play."
-        - "It can be used with literally any weapon in the game, I suggest running with at least one Assault Rifle or SMG in PvP though."
-        - "Rolling Stability or Accuracy on the weapon mods does not really matter, feel free pick your preferred handling stat. But the Optimal Range on the underbarrel is for SMGs more beneficial that Stability or Accuracy in my opinion."
+        - "This build is inspired by <a href='https://www.youtube.com/MarcoStyleNL'>MarcoStyle</a>'s Tactician Healer build, you can check out his video here: <a href='https://youtu.be/yNYRCNqS1nM'>Patch 1.6 Tactician Healer Build/Guide | Infinite Sustain</a>"
+        - "Rolling Stability or Accuracy on the weapon mods does not really matter, feel free pick your preferred handling stat."
     weapons: 
         primary: 
             name: "Lightweight M4"
             talents: 
+                - "Talented"
                 - "Competent"
-                - "Responsive"
-                - "Unforgiving"
+                - "Determined"
             mods: 
                 magazine: 
                     - "Magazine Size"
                     - "Rate of Fire"
                     - "Critical Hit Chance"
                 underbarrel: 
-                    - "Critical Hit Damage"
                     - "Reload Speed"
+                    - "Critical Hit Damage"
                     - "Accuracy"
                 muzzle: 
-                    - "Critical Hit Damage"
                     - "Headshot Damage"
                     - "Critical Hit Chance"
+                    - "Critical Hit Damage"
                 scope: 
-                    - "Critical Hit Damage"
                     - "Headshot Damage"
                     - "Critical Hit Chance"
+                    - "Critical Hit Damage"
             icon: "m4"
         secondary: 
-            name: "MP5"
+            name: "M700 Carbon"
             talents: 
+                - "Talented"
                 - "Competent"
-                - "Responsive"
-                - "Unforgiving"
+                - "Coolheaded"
             mods: 
                 magazine: 
                     - "Magazine Size"
                     - "Rate of Fire"
                     - "Critical Hit Chance"
                 underbarrel: 
-                    - "Critical Hit Damage"
                     - "Reload Speed"
-                    - "Optimal Range"
+                    - "Critical Hit Damage"
+                    - "Accuracy"
                 muzzle: 
-                    - "Critical Hit Damage"
                     - "Headshot Damage"
                     - "Critical Hit Chance"
+                    - "Critical Hit Damage"
                 scope: 
-                    - "Critical Hit Damage"
                     - "Headshot Damage"
                     - "Critical Hit Chance"
-            icon: "mp5"
+                    - "Critical Hit Damage"
+            icon: "m700"
     gear: 
         items: 
             chest: 
@@ -75,52 +75,57 @@ build:
                     - "Ammo Capacity"
                 icon: "he"
             backpack: 
-                name: "Specialized Backpack"
+                name: "Inventive Backpack"
                 rolls: 
                     - "Health"
                     - "Burn Resistance"
                 icon: "he"
             mask: 
-                name: "Banshee's Shadow Mask"
+                name: "Tactician's Authority Mask"
                 rolls: 
                     - "Skill Power"
                     - "Burn Resistance"
-                icon: "banshee"
+                icon: "tactician"
             gloves: 
-                name: "Banshee's Shadow Gloves"
+                name: "Tactician's Authority Gloves"
                 rolls: 
                     - "Assault Rifle Damage"
-                    - "SMG Damage"
+                    - "Skill Haste"
                     - "Critical Hit Chance"
-                icon: "banshee"
+                icon: "tactician"
             holster: 
-                name: "Banshee's Shadow Holster"
+                name: "Tactician's Authority Holster"
                 rolls: 
-                    - "Health"
-                icon: "banshee"
+                    - "Skill Haste"
+                icon: "tactician"
             knee-pads: 
-                name: "Banshee's Shadow Knee Pads"
+                name: "Tactician's Authority Knee Pads"
                 rolls: 
                     - "Health"
                     - "Burn Resistance"
                     - "Shock Resistance"
                     - "Disrupt Resistance"
-                icon: "banshee"
+                icon: "tactician"
         rolls: 
-            - [4x, Firearms]
-            - [1x, Electronics]
+            - [4x, Electronics]
+            - [1x, Firearms]
         mods:
-            - [4x, Firearms, "Health"]
-            - [1x, Stamina, "Health"]
+            - [4x, Electronics, "Skill Haste"]
+            - [1x, Electronics, "Health"]
         performance: 
-            - [4x, "First Aid Self Heal", "first-aid"]
+            - [4x, "First Aid Ally Heal", "first-aid"]
     skills: 
         1: 
             name: "First Aid"
-            mod: "Booster Shot"
+            mod: "Defibrillator"
         2: 
-            name: "Pulse"
-            mod: "Scrambler"
+            name: "Support Station"
+            mod: "Life Support"
         link: 
-            name: "Survivor Link"
+            name: "Recovery Link"
+    talents: 
+    - "Triage"
+    - "Strike Back"
+    - "Combat Medic"
+    - "Death by Proxy"
 ---
