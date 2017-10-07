@@ -1,0 +1,2588 @@
+---
+---
+
+// VARIABLES
+$orange: #ff7f00;
+
+// MIXINS
+@mixin display-flex {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+@mixin flex-direction($a) {
+    -webkit-flex-direction: $a;
+    -ms-flex-direction: $a;
+    flex-direction: $a;
+}
+@mixin flex($a) {
+    -webkit-flex: $a;
+    -ms-flex: $a;
+    flex: $a;
+}
+@mixin flex-grow($a) {
+    -webkit-flex-grow: $a;
+    -ms-flex-grow: $a;
+    flex-grow: $a;
+}
+@mixin flex-shrink($a) {
+    -webkit-flex-shrink: $a;
+    -ms-flex-shrink: $a;
+    flex-shrink: $a;
+}
+@mixin flex-wrap($a) {
+    -webkit-flex-wrap: $a;
+    -ms-flex-wrap: $a;
+    flex-wrap: $a;
+}
+@mixin justify-content($a) {
+    -webkit-justify-content: $a;
+    -ms-justify-content: $a;
+    justify-content: $a;
+}
+@mixin align-items($a) {
+    -webkit-box-align: $a;
+    -ms-flex-align: $a;
+    @if $a == start or $a == end {
+        align-items: flex- + $a;
+    }
+    @else {
+        align-items: $a;
+    }
+}
+@mixin align-self($a) {
+    -webkit-align-self: $a;
+    -ms-align-self: $a;
+    align-self: $a;
+}
+@mixin transition($a...) {
+    -webkit-transition: $a;
+    -ms-transition: $a;
+    transition: $a;
+}
+@mixin animation($a...) {
+    -webkit-animation: $a;
+    animation: $a;
+}
+@mixin transform($a) {
+    -webkit-transform: $a;
+    -ms-transform: $a;
+    transform: $a;
+}
+@mixin box-shadow($a...) {
+    -webkit-box-shadow: $a;
+    box-shadow: $a;
+}
+@mixin filter($a) {
+    -webkit-filter: $a;
+    filter: $a;
+}
+@mixin keyframes($a) {
+    @-webkit-keyframes #{$a} {
+        @content;
+    }
+    @keyframes #{$a} {
+        @content;
+    }
+}
+
+// FONT
+@font-face {
+    font-family: Borda;
+    src: url(/fonts/Borda.eot);
+    src: url(/fonts/Borda.eot?#iefix) format("embedded-opentype"),
+         url(/fonts/Borda.woff) format("woff"),
+         url(/fonts/Borda%20Medium.ttf) format("truetype"),
+         url(/fonts/Borda.svg#ywftsvg) format("svg");
+}
+@font-face {
+    font-family: Borda;
+    src: url(/fonts/Borda%20DemiBold.ttf) format("truetype");
+    font-weight: 600;
+}
+@font-face {
+    font-family: Borda;
+    src: url(/fonts/Borda%20Bold.ttf) format("truetype");
+    font-weight: 700;
+}
+@font-face {
+    font-family: Borda;
+    src: url(/fonts/Borda%20Bold.ttf) format("truetype");
+    font-weight: bold;
+}
+
+// GENERAL
+html {
+    height: 100%;
+}
+body {
+    min-height: 100%;
+    margin-right: -14px;
+    @include display-flex;
+    @include flex-direction(column);
+    font-family: Borda;
+    background: #000;
+    color: hsla(0, 0%, 100%, .5);
+    text-shadow: 0 0 3px rgba(0, 0, 0, .3), 3px 3px 0 rgba(150, 150, 150, .1);
+    overflow-x: hidden;
+    overflow-y: scroll;
+    cursor: default;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    &:after,
+    &::after {
+        content: "";
+        position: fixed;
+        top: -20px;
+        right: -20px;
+        bottom: -20px;
+        left: -20px;
+        background-image: url(https://images4.alphacoders.com/773/773361.jpg);
+        background-size: cover;
+        background-position: center;
+        z-index: -9999;
+        @include filter(blur(5px) brightness(40%));
+    }
+    & > * {
+        @include transition(opacity .3s ease-in-out);
+    }
+}
+::selection {
+    color: #fff;
+    background: hsla(0, 0%, 100%, .3);
+}
+::-moz-selection {
+    color: #fff;
+    background: hsla(0, 0%, 100%, .3);
+}
+a {
+    color: $orange;
+    &:hover {
+        text-decoration: none;
+    }
+}
+label {
+    margin-right: 5px;
+}
+
+// SCROLLBAR
+*::-webkit-scrollbar {
+    width: 14px;
+}
+*::-webkit-scrollbar-button {
+    display: none;
+}
+*::-webkit-scrollbar-thumb,
+*::-webkit-scrollbar-track-piece {
+    border: 4px solid transparent;
+    background-clip: padding-box !important;
+}
+*::-webkit-scrollbar-thumb {
+    background: rgba(170, 170, 170, .3);
+}
+*::-webkit-scrollbar-corner,
+*::-webkit-scrollbar-track,
+*::-webkit-scrollbar-track-piece {
+    background: transparent;
+}
+
+// MAIN
+.main {
+    width: 90%;
+    min-width: 500px;
+    margin: 40px auto 0;
+    @include display-flex;
+    @include flex-direction(column);
+    @include flex(1);
+}
+
+// GENERAL FLEX
+.flex-row {
+    @include display-flex;
+    @include flex-direction(row);
+}
+.flex-list {
+    @include display-flex;
+    @include flex-direction(column);
+    &.margin {
+        margin: 20px auto;
+    }
+}
+.flex-row .flex-list {
+    margin-right: 20px;
+}
+.flex-align-start {
+    @include align-items(start);
+}
+.flex-align-center {
+    @include align-items(center);
+}
+.flex-align-end {
+    @include align-items(end);
+}
+.flex-item,
+.flex-child {
+    margin-bottom: 20px;
+    @include display-flex;
+    @include align-items(center);
+}
+.flex-item {
+    font-size: 1.125em;
+    & > label {
+        padding: 3px 0;
+    }
+    label {
+        @include flex-grow(1);
+    }
+    * + input {
+        width: 150px;
+    }
+    button + button {
+        margin-left: 5px;
+    }
+}
+
+// BUTTONS
+.button {
+    padding: 5px 10px;
+    background: linear-gradient(rgba(244, 255, 255, .2), rgba(244, 255, 255, .2) 0) no-repeat,
+                linear-gradient(rgba(244, 255, 255, .2), rgba(244, 255, 255, .2) 0) top right no-repeat,
+                linear-gradient(rgba(244, 255, 255, .2), rgba(244, 255, 255, .2) 0) bottom left no-repeat, 
+                linear-gradient(rgba(244, 255, 255, .2), rgba(244, 255, 255, .2) 0) bottom right no-repeat;
+    background-size: 2px 2px;
+    background-color: hsla(0, 0%, 100%, .1);
+    color: #fff;
+    outline: none;
+    border: none;
+    @include align-self(flex-start);
+    @include transition(background-color .15s ease-in-out);
+    &:hover {
+        background-color: hsla(0, 0%, 100%, .3);
+    }
+}
+.back-button {
+    position: absolute;
+    height: 36px;
+    width: 36px;
+    top: 40px;
+    right: 40px;
+    opacity: .5;
+    @include transition(opacity .15s ease-in-out);
+    z-index: 10;
+    &:hover {
+        opacity: .7;
+    }
+}
+.beta {
+    position: fixed;
+    top: 0;
+    left: 5px;
+    font-size: 2em;
+    color: hsla(0, 0%, 100%, .3);
+    font-weight: bold;
+    text-shadow: none;
+    @include transition(all .15s ease-in-out);
+    cursor: pointer;
+    z-index: 11;
+    &:hover {
+        color: hsla(0, 0%, 100%, .7);
+    }
+}
+
+// HEADER
+.header {
+    @include display-flex;
+    @include flex-wrap(wrap);
+    @include align-items(center);
+    margin-bottom: 20px;
+    @include animation(fade-in .5s ease-in-out);
+}
+.main-header,
+.build-header {
+    padding: 0 20px;
+    @include display-flex;
+    @include flex-direction(column);
+    & > * {
+        margin: 3px;
+    }
+    .title {
+        height: 100%;
+        color: $orange;
+        font-size: 4em;
+        line-height: 40px;
+        font-weight: bold;
+    }
+}
+.build-header {
+    .info {
+        font-size: 1.25em;
+        margin-left: 8px;
+    }
+    .author {
+        color: hsla(0, 0%, 100%, .7);
+        font-weight: bold;
+        @include transition( all .15s ease-in-out);
+        &:hover {
+            color: #fff;
+        }
+    }
+    .date {
+        margin-left: .5em;
+        font-size: .75em;
+        opacity: .3;
+    }
+}
+
+// NAV BAR
+.nav-bar {
+    padding: 5px 0;
+    margin-right: 5px;
+    @include display-flex;
+    @include flex-grow(1);
+    font-size: 1.25em;
+    & > * + * {
+        margin-left: 5px;
+    }
+    .nav-bar-item {
+        position: relative;
+        min-width: 150px;
+        padding: 5px 10px;
+        background: linear-gradient(rgba(244, 255, 255, .2), rgba(244, 255, 255, .2) 0) no-repeat,
+                    linear-gradient(rgba(244, 255, 255, .2), rgba(244, 255, 255, .2) 0) top right no-repeat,
+                    linear-gradient(rgba(244, 255, 255, .2), rgba(244, 255, 255, .2) 0) bottom left no-repeat, 
+                    linear-gradient(rgba(244, 255, 255, .2), rgba(244, 255, 255, .2) 0) bottom right no-repeat;
+        background-size: 2px 2px;
+        background-color: hsla(0, 0%, 100%, .1);
+        color: hsla(0, 0%, 100%, .5);
+        font-weight: 600;
+        text-align: center;
+        @include transition(all .15s ease-in-out);
+        -webkit-transition-delay: .15s;
+        transition-delay: .15s;
+        &:hover {
+            background-color: hsla(0, 0%, 100%, .3);
+        }
+        &.active {
+            background-color: $orange;
+            color: #fff;
+            @include animation(selected-bar-item-delay .6s ease-in-out);
+        }
+        &:hover,
+        &.active {
+            -webkit-transition-delay: 0s;
+            transition-delay: 0s;
+        }
+        &:before,
+        &::before,
+        &:after,
+        &::after {
+            content: "";
+            position: absolute;
+            height: 3px;
+            width: 0;
+            left: 50%;
+            bottom: 100%;
+            margin-bottom: 2px;
+            background: hsla(0, 0%, 100%, .3);
+            @include transition(all .15s ease-in-out);
+            -webkit-transition-delay: .15s;
+            transition-delay: .15s;
+        }
+        &:hover:before,
+        &:hover::before,
+        &.active:before,
+        &.active::before,
+        &.active:after,
+        &.active::after {
+            width: 100%;
+            left: 0;
+            -webkit-transition-delay: 0s;
+            transition-delay: 0s;
+        }
+        &.active:after,
+        &.active::after {
+            background: $orange !important;
+            @include animation(absolute-slide-delay .6s ease-in-out);
+        }
+    }
+}
+
+// TAB BAR
+.tab-bar {
+    height: 75px;
+    padding: 0 20px;
+    margin-left: auto;
+    margin-right: 5%;
+    @include display-flex;
+    @include align-items(center);
+    font-size: 1.5em;
+    line-height: 16px;
+    font-weight: 600;
+    letter-spacing: .4px;
+    .tab-bar-item {
+        position: relative;
+        min-width: 200px;
+        padding: 6px 16px 4px;
+        margin: 0 8px;
+        background: hsla(0, 0%, 100%, .1);
+        border-radius: 0;
+        line-height: 18px;
+        text-align: center;
+        cursor: pointer;
+        @include transition(all .15s ease-in-out);
+        -webkit-transition-delay: .15s;
+        transition-delay: .15s;
+        &:hover {
+            background-color: hsla(0, 0%, 100%, .3);
+        }
+        &.selected {
+            background-color: $orange;
+            color: #fff;
+        }
+        &:hover,
+        &.selected {
+            -webkit-transition-delay: 0s;
+            transition-delay: 0s;
+        }
+        &:before,
+        &::before,
+        &:after,
+        &::after {
+            content: "";
+            position: absolute;
+            height: 3px;
+            width: 0;
+            left: 50%;
+            bottom: 100%;
+            margin-bottom: 2px;
+            background: hsla(0, 0%, 100%, .3);
+            @include transition(all .15s ease-in-out);
+            -webkit-transition-delay: .15s;
+            transition-delay: .15s;
+        }
+        &:hover:before,
+        &:hover::before,
+        &.selected:before,
+        &.selected::before,
+        &.selected:after,
+        &.selected::after {
+            width: 100%;
+            left: 0;
+            -webkit-transition-delay: 0s;
+            transition-delay: 0s;
+        }
+        &.selected:after,
+        &.selected::after {
+            background: $orange !important;
+        }
+    }
+}
+
+// FOOTER
+.footer {
+    margin-right: 20px;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    text-align: right;
+    @include flex(none);
+    z-index: 1s;
+    a {
+        color: hsla(0, 0%, 100%, .5);
+        @include transition(all .15s ease-in-out);
+        &:hover {
+            color: hsla(0, 0%, 100%, .7);
+        }
+    }
+}
+
+// CONTAINER
+.main-container {
+    width: 100%;
+    min-width: 500px;
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px 40px;
+    background: hsla(0, 0%, 50%, .1);
+    cursor: auto;
+    font-size: 1.125em;
+    @include animation(fade-in .5s ease-in-out);
+    &.wide {
+        min-width: 850px;
+    }
+    h1 {
+        font-size: 2em;
+        &:not(:first-child) {
+            margin-top: 20px;
+        }
+    }
+    h3 {
+        font-size: 1.3em;
+    }
+    &.text p {
+        text-align: justify;
+    }
+    ul {
+        margin-left: 20px;
+        margin-bottom: 10px;
+    }
+    iframe {
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+// LINKS
+.main-container a,
+.modal a,
+.error a {
+    position: relative;
+    color: $orange;
+    white-space: nowrap;
+    &:after,
+    &::after,
+    &:before,
+    &::before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: -3px;
+        width: 0;
+        height: 2px;
+        background: $orange;
+        @include transition(all .15s ease-in-out);
+        -webkit-transition-delay: .15s;
+        transition-delay: .15s;
+    }
+    &:before,
+    &::before {
+        margin-left: 1.5px;
+        margin-bottom: -1.5px;
+        background: rgba(150, 150, 150, .1);
+    }
+    &:hover:after,
+    &:hover::after,
+    &:hover:before,
+    &:hover::before {
+        left: 0;
+        width: 100%;
+        -webkit-transition-delay: 0s;
+        transition-delay: 0s;
+    }
+}
+.flex-list.links {
+    @include align-items(stretch);
+    a {
+        color: hsla(0, 0%, 100%, .5);
+        &:after,
+        &::after,
+        &:before,
+        &::before {
+            display: none;
+        }
+    }
+    .flex-item {
+        padding: 10px 15px;
+        background: hsla(0, 0%, 50%, .1);
+        @include transition(background .15s ease-in-out);
+        &:hover {
+            background: hsla(0, 0%, 50%, .3);
+        }
+    }
+}
+
+// DISQUS
+.general {
+    width: 70%;
+    #disqus_thread {
+        width: 100%;
+        min-width: 500px;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+}
+#disqus_thread {
+    @include flex-grow(1);
+    margin-top: 40px;
+}
+
+// ABOUT PAGE
+.flex-item {
+    .title {
+        font-size: 1.25em;
+        font-weight: bold;
+    }
+    .logo {
+        width: 100px;
+        height: 100px;
+        margin-right: 20px;
+        background-position: center;
+        background-size: auto 100px;
+        background-repeat: no-repeat;
+    }
+}
+.logo {
+    &.zerthox {
+        background-image: url(https://i.ytimg.com/an/coOrbYqvnx6BG_VdwDxhhQ/featured_channel.jpg);
+    }
+    &.github {
+        background-image: url(https://cdn.rawgit.com/gilbarbara/logos/master/logos/github-icon.svg);
+        background-size: 100px;
+        @include filter(invert(100%));
+    }
+    &.jekyll {
+        background-image: url(http://jekyllrb.com/img/logo-2x.png);
+        background-size: 100px;
+    }
+    &.ubisoft {
+        background-image: url(https://ubistatic19-a.akamaihd.net/ubicomstatic/de-DE/global/css/images/ubi-mark.svg);
+        background-position: 30% 0;
+        background-size: 200px;
+    }
+    &.alphacoders {
+        background-image: url(https://static.alphacoders.com/alpha_system_360.png);
+    }
+    &.myfonts {
+        background-image: url(https://cdn.myfonts.net/s/images/logo/header_logo.svg);
+        background-size: 100px;
+    }
+}
+
+// BUILD LIST
+.build-container {
+    width: 100%;
+    max-width: 1230px;
+    margin: 0 auto;
+    .divider:first-child {
+        color: $orange;
+    }
+}
+.build-list {
+    margin: 0 auto;
+    @include display-flex;
+    @include flex-wrap(wrap);
+    &:empty:after,
+    &:empty::after {
+        content: "";
+        width: 50px;
+        height: 50px;
+        left: 50%;
+        border: 4px solid hsla(0, 0%, 100%, .1);
+        border-top-color: $orange;
+        border-radius: 50%;
+        @include animation(circle-spin .7s infinite linear);
+    }
+    .list-item {
+        width: 350px;
+        padding: 15px 20px;
+        margin: 35px 30px;
+        color: hsla(0, 0%, 100%, .7);
+        font-size: 1.25em;
+        @include transition(all .15s ease-in-out);
+        @include animation(fade-in .5s ease-in-out);
+        &:hover {
+            background: hsla(0, 0%, 100%, .1);
+        }
+        .title {
+            font-size: 1.275em;
+            font-weight: bold;
+        }
+        .info {
+            line-height: 1.5em;
+        }
+        .author {
+            position: relative;
+            color: $orange;
+            &:after,
+            &::after,
+            &:before,
+            &::before {
+                content: "";
+                position: absolute;
+                left: 50%;
+                bottom: -3px;
+                width: 0;
+                height: 2px;
+                background: $orange;
+                @include transition(all .15s ease-in-out);
+                -webkit-transition-delay: .15s;
+                transition-delay: .15s;
+            }
+            &:before,
+            &::before {
+                margin-left: 1.5px;
+                margin-bottom: -1.5px;
+                background: rgba(150, 150, 150, .1);
+            }
+            &:hover:after,
+            &:hover::after,
+            &:hover:before,
+            &:hover::before {
+                left: 0;
+                width: 100%;
+                -webkit-transition-delay: 0s;
+                transition-delay: 0s;
+            }
+        }
+        .date {
+            margin-left: .5em;
+            float: right;
+            font-size: .75em;
+            opacity: .3;
+        }
+        .tag {
+            font-size: .75em;
+            margin: 3px;
+            padding: 3px 5px;
+            background: hsla(0, 0%, 100%, .1);
+            opacity: .7;
+            white-space: nowrap;
+        }
+    }
+}
+
+// DIVIDER WITH HEADER
+.divider {
+    position: relative;
+    font-size: 2.25em;
+    font-weight: 600;
+    @include transition(all .15s ease-in-out);
+    @include animation(fade-in .5s ease-in-out);
+    overflow: hidden;
+    &:after,
+    &::after {
+        content: "";
+        position: absolute;
+        height: 2px;
+        width: 100%;
+        top: 50%;
+        margin-top: -1px;
+        margin-left: 15px;
+        background-color: hsla(0, 0%, 100%, .1);
+    }
+    &:first-child:after,
+    &:first-child::after {
+        background-color: $orange;
+        opacity: .3;
+    }
+}
+
+// SUBMIT PAGE
+.submit {
+    & > * {
+        @include display-flex;
+        margin-bottom: 20px;
+        & > * {
+            @include display-flex;
+            @include flex-direction(column);
+        }
+        & > * {
+            & + * {
+                margin-left: 10px;
+            }
+            div {
+                @include display-flex;
+                & + div {
+                    margin-top: 5px;
+                }
+                & > * + * {
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+    & > :not(.general) > * {
+        width: 100%;
+        @include flex(1);
+    }
+    input,
+    .tags,
+    .weapon .talents,
+    .weapon.mods > div,
+    .gear .stats,
+    .rolls > div,
+    .performance > div,
+    .skills > * {
+        @include flex-grow(2);
+    }
+    input {
+        min-width: 0;
+    }
+    .highlight {
+        @include box-shadow(0 0 0 1px $orange);
+        &::-webkit-input-placeholder {
+            color: $orange;
+        }
+        &:-ms-input-placeholder {
+            color: $orange;
+        }
+        &::-moz-placeholder {
+            color: $orange;
+        }
+    }
+}
+
+// SUBMIT ALERT
+.alert {
+    font-size: 2em;
+    font-weight: 600;
+    text-align: center;
+    &.loading:after,
+    &.loading::after {
+        content: "";
+        display: block;
+        width: 50px;
+        height: 50px;
+        margin-top: 10px;
+        margin-left: calc(50% - 25px);
+        border: 4px solid hsla(0, 0%, 100%, .1);
+        border-top-color: $orange;
+        border-radius: 50%;
+        @include animation(circle-spin .7s infinite linear);
+    }
+    &.success,
+    &.error {
+        color: $orange;
+    }
+}
+
+// AUTOCOMPLETE
+.ui-autocomplete {
+    max-height: 216px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.ui-state-active,
+.ui-widget-content .ui-state-active,
+.ui-widget-header .ui-state-active,
+a.ui-button:active,
+.ui-button:active,
+.ui-button.ui-state-active:hover,
+.ui-widget-content {
+    border-color: transparent !important;
+}
+.ui-widget-content {
+    background: #000;
+    color: #fff;
+    text-shadow: none;
+}
+.ui-state-active,
+.ui-widget-content .ui-state-active,
+.ui-widget-header .ui-state-active,
+a.ui-button:active,
+.ui-button:active,
+.ui-button.ui-state-active:hover {
+    background: $orange;
+}
+.ui-menu-item-wrapper {
+    border: none !important;
+    @include transition(background .15s ease-in-out !important);
+}
+.ui-menu .ui-state-focus, .ui-menu .ui-state-active {
+    margin: 0;
+}
+
+// SEARCH BAR & INPUTS
+.search-bar {
+    margin: 10px auto;
+    width: 100%;
+    max-width: 1230px;
+    @include display-flex;
+    @include flex-direction(column);
+    @include align-items(end);
+}
+input,
+textarea,
+.search-bar .search {
+    padding: 3px 7px;
+    background: hsla(0, 0%, 100%, .1);
+    color: hsla(0, 0%, 100%, 7);
+    outline: none !important;
+    border: none;
+}
+
+// BUILD
+.build-content {
+    @include display-flex;
+    @include flex(1);
+    margin: 0 40px;
+    & > :not(.visible) {
+        display: none !important;
+    }
+    & > * {
+        @include display-flex;
+        @include flex-direction(column);
+        margin: 0 auto;
+        @include animation(fade-in .5s ease-in-out);
+    }
+    .weapons .icon.weapon-talent:before,
+    .weapons .icon.weapon-talent::before,
+    .weapons .icon.weapon-talent:after,
+    .weapons .icon.weapon-talent::after,
+    .skills .icon:before,
+    .skills .icon::before {
+        content: "";
+        position: absolute;
+        top: 3px;
+        right: -3px;
+        bottom: -3px;
+        left: 3px;
+        opacity: .1;
+    }
+    & .weapons {
+        @include animation(none);
+        .mods,
+        & > :not(.mods) > * {
+            @include animation(fade-in .5s ease-in-out);
+        }
+        & > :not(.mods) > .icon {
+            @include animation(fade-in-7 .5s ease-in-out);
+        }
+    }
+    & > :not(.general) > * {
+        margin: 5px 0;
+        @include display-flex;
+        @include align-items(center);
+        @include flex-shrink(0);
+    }
+    & > :not(.general) > * > * {
+        margin: 5px;
+    }
+    .info {
+        font-size: 1.125em;
+        .name {
+            font-size: 1.25em;
+            font-weight: bold;
+        }
+    }
+    .icon {
+        position: relative;
+        height: 100px;
+        &:not(.weapon-talent) {
+            opacity: .7;
+        }
+    }
+    .weapons {
+        & > * + :not(.mods) {
+            position: relative;
+            margin-top: 80px;
+        }
+        & > * + :not(.mods):before,
+        & > * + :not(.mods)::before {
+            content: "";
+            position: absolute;
+            top: -40px;
+            left: 10%;
+            right: 10%;
+            height: 2px;
+            background: hsla(0, 0%, 100%, .3);
+        }
+        .icon.weapon-talent:after,
+        .icon.weapon-talent::after {
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            opacity: .7;
+        }
+        .info {
+            width: 250px;
+        }
+        .talent-icons {
+            margin-left: auto;
+            @include display-flex;
+            @include align-items(center);
+        }
+        .mods {
+            @include justify-content(space-between);
+            & > * {
+                @include display-flex;
+                @include align-items(center);
+            }
+            .rolls {
+                @include display-flex;
+                @include flex-direction(column);
+            }
+            .icon {
+                margin-right: 10px;
+            }
+        }
+    }
+    .gear {
+        @include flex-direction(row);
+        & > * {
+            @include display-flex;
+            @include flex-direction(column);
+            @include align-items(initial);
+            @include flex-shrink(0);
+            margin: 0 auto;
+            & + * {
+                margin-left: 10px;
+            }
+            & > * {
+                @include display-flex;
+                @include align-items(center);
+                @include flex-shrink(0);
+                margin: 0;
+                & > * {
+                    margin: 5px;
+                }
+            }
+        }
+        .stats {
+            .icon {
+                margin-right: 10px;
+            }
+            .amount {
+                width: 35px;
+                font-size: 2.5em;
+                text-align: center;
+                direction: rtl;
+            }
+            .main-stats .amount {
+                width: 70px;
+            }
+        }
+        .icon {
+            position: relative;
+            width: 120px;
+            height: 110px;
+            @include flex-shrink(0);
+            &:after,
+            &::after {
+                content: "";
+                position: absolute;
+            }
+        }
+        .items .icon {
+            background: linear-gradient(rgba(244, 255, 255, .5), rgba(244, 255, 255, .5) 0) no-repeat,
+                        linear-gradient(rgba(244, 255, 255, .5), rgba(244, 255, 255, .5) 0) top right no-repeat,
+                        linear-gradient(rgba(244, 255, 255, .5), rgba(244, 255, 255, .5) 0) bottom left no-repeat,
+                        linear-gradient(rgba(244, 255, 255, .5), rgba(244, 255, 255, .5) 0) bottom right no-repeat;
+            background-size: 3px 3px;
+            &:after,
+            &::after {
+                top: 5px;
+                right: 10px;
+                bottom: 5px;
+                left: 10px;
+                @include filter(drop-shadow(3px 3px 0 rgba(200, 200, 200, .3)));
+            }
+        }
+        .stats .icon:after,
+        .stats .icon::after {
+            @include filter(drop-shadow(3px 3px 0 hsla(0, 0%, 100%, .07)));
+        }
+        .icon { 
+            &.he {
+                background-color: rgb(180, 139, 55);
+            }
+            &.exotic {
+                background-color: rgb(208, 92, 60);
+            }
+            &.striker,
+            &.hunters-faith,
+            &.nomad,
+            &.sentry,
+            &.tactician,
+            &.predators-mark,
+            &.final-measure,
+            &.lone-star,
+            &.defence,
+            &.d3-fnc,
+            &.frontline,
+            &.banshee,
+            &.reclaimer,
+            &.firecrest,
+            &.alphabridge,
+            &.deadeye {
+                background-color: rgb(15, 211, 129);
+            }
+        }
+        .stats :not(.mods) + .mods {
+            position: relative;
+            margin-top: 6px;
+            &:before,
+            &::before {
+                content: "";
+                position: absolute;
+                top: -4px;
+                left: 10%;
+                right: 10%;
+                height: 2px;
+                background: hsla(0, 0%, 100%, .3);
+            }
+        }
+    }
+    & > :not(.weapons) .icon {
+        margin-right: 30px;
+    }
+    .skills {
+        .talents {
+            position: relative;
+            @include display-flex;
+            & > * + * {
+                margin-left: 30px;
+            }
+            .icon {
+                margin: auto;
+            }
+            .info {
+                margin-top: 10px;
+                text-align: center;
+            }
+        }
+        * + .talents {
+            margin-top: 40px;
+            &:before,
+            &::before {
+                content: "";
+                position: absolute;
+                top: -25px;
+                left: -10%;
+                right: -10%;
+                height: 2px;
+                background: hsla(0, 0%, 100%, .3);
+            }
+        }
+    }
+}
+
+// ERRORS
+.error {
+    @include display-flex;
+    @include flex-direction(column);
+    @include align-items(center);
+    @include justify-content(center);
+    @include flex(1);
+    .error-title {
+        color: $orange;
+        font-size: 4em;
+        line-height: 40px;
+        font-weight: bold;
+    }
+    .error-content {
+        margin-top: 10px;
+        font-size: 1.5em;
+        text-align: center;
+    }
+}
+
+// DATABASE
+.database {
+    .flex-item {
+        padding: 10px;
+        background: hsla(0, 0%, 50%, .1);
+    }
+    .icon {
+        position: relative;
+        width: 120px;
+        height: 110px;
+        margin: 0 5px;
+        @include flex-shrink(0);
+        &:after,
+        &::after {
+            content: "";
+            position: absolute;
+            top: 5px;
+            right: 10px;
+            bottom: 5px;
+            left: 10px;
+            @include filter(drop-shadow(3px 3px 0 rgba(200, 200, 200, .3)));
+            opacity: .7;
+        }
+    }
+    .bonuses {
+        margin: 5px;
+        & > .bonus {
+            @include display-flex;
+            @include align-items(center);
+            background: hsla(0, 0%, 50%, .1);
+            & + .bonus {
+                margin-top: 5px;
+            }
+            & .text  {
+                margin: 5px 20px 5px 10px;
+            }
+        }
+    }
+    &#gearsets .title,
+    &#gear-talents .title {
+        margin: 5px 10px 0;
+    }
+    &#gear-talents {
+        .title.he {
+            color: rgb(180, 139, 55);
+        }
+        .title.exotic {
+            color: rgb(208, 92, 60);
+        }
+        .icon {
+            &.he:after,
+            &.he::after,
+            &.exotic:after,
+            &.exotic::after {
+                background-image: url(/sprites/items.png);
+                background-size: 800px;
+            }
+            &.holster:after,
+            &.holster::after {
+                background-position: 0 -413px;
+            }
+            &.chest:after,
+            &.chest::after {
+                background-position: -103px -413px;
+            }
+            &.backpack:after,
+            &.backpack::after {
+                background-position: -206px -413px;
+            }
+            &.mask:after,
+            &.mask::after {
+                background-position: -310px -413px;
+            }
+            &.gloves:after,
+            &.gloves::after {
+                background-position: -516px -413px;
+            }
+            &.knee-pads:after,
+            &.knee-pads::after {
+                background-position: -618px -413px;
+            }
+        }
+    }
+    &#gearsets{
+        .flex-item {
+            @include flex-direction(column);
+            @include align-items(start);
+        }
+        .info {
+            @include display-flex;
+        }
+        .title {
+            color: rgb(15, 211, 129);
+        }
+        .bonuses > .bonus .amount  {
+            margin: 5px 10px;
+            color: rgb(15, 211, 129);
+            font-weight: bold;
+        }
+    }
+}
+
+// MODALS
+.modal-wrapper {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    @include display-flex;
+}
+.backdrop {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+.modal {
+    position: relative;
+    min-width: 250px;
+    max-width: 750px;
+    margin: auto;
+    padding: 20px 40px;
+    background: hsla(0, 0%, 50%, .1);
+    cursor: auto;
+    font-size: 1.125em;
+    @include animation(fade-in .3s ease-in-out);
+    .close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        height: 36px;
+        width: 36px;
+        opacity: .5;
+        @include transition(all .15s ease-in-out);
+        cursor: pointer;
+    }
+    .close:hover {
+        opacity: .7;
+    }
+    h1 {
+        color: $orange;
+        font-size: 2.5em;
+        font-weight: bold;
+    }
+    p {
+        font-size: 1.125em;
+    }
+}
+
+// BANNER
+.banner {
+    position: relative;
+    margin: 10px auto;
+    padding: 5px 35px 5px 10px;
+    border-radius: 5px;
+    font-size: 1.125em;
+    &.orange {
+        background: $orange;
+    }
+    &.orange .content,
+    &.orange a {
+        color: #fff !important;
+    }
+    &.orange a {
+        font-weight: bold;
+    }
+    .close {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        width: 25px;
+        height: 25px;
+    }
+}
+.close {
+    opacity: .5;
+    @include transition(all .15s ease-in-out);
+    cursor: pointer;
+    &:hover {
+        opacity: 1;
+    }
+}
+
+// CALCULATOR
+.output {
+    margin: auto;
+    font-size: 5em;
+    &.list {
+        font-size: 1.25em;
+        margin: 0 auto;
+        .item {
+            padding: 10px 20px;
+            @include display-flex;
+            @include flex-direction(column);
+            background: hsla(0, 0%, 50%, .1);
+            cursor: default;
+            & + .item {
+                margin-top: 10px;
+            }
+            .stats {
+                @include display-flex;
+                @include flex-direction(column);
+            }
+            .stats > * + * {
+                margin-top: 5px;
+            }
+        }
+    }
+    .value {
+        text-align: right;
+        &.range {
+            @include display-flex;
+            @include justify-content(space-between);
+            span:first-child {
+                margin-right: 5px;
+            }
+            span:last-child {
+                margin-left: 5px;
+            }
+        }
+    }
+}
+
+// TOOLTIPS
+.tooltip {
+    content: "";
+    position: fixed;
+    margin-top: 5px;
+    margin-left: 5px;
+    padding: 5px 10px;
+    background: rgba(0, 0, 0, .9);
+    color: hsla(0, 0%, 100%, .7);
+    border-left: 2px solid $orange;
+    font-size: 15px;
+    z-index: 100;
+    .build-content & {
+        width: 300px;
+    }
+    :not(:hover) > & {
+        display: none;
+    }
+    h1 {
+        font-size: 1.2em;
+        font-weight: bold;
+        color: $orange;
+    }
+}
+.items .icon {
+    &.he ~ .tooltip {
+        border-color: rgb(180, 139, 55);
+    }
+    &.he ~ .tooltip h1 {
+        color: rgb(180, 139, 55);
+    }
+    &.exotic ~ .tooltip {
+        border-color: rgb(208, 92, 60);
+    }
+    &.exotic ~ .tooltip h1 {
+        color: rgb(208, 92, 60);
+    }
+    &:not(.he):not(.exotic) ~ .tooltip {
+        border-color: rgb(15, 211, 129);
+        h1,
+        & > .highlight > b {
+            color: rgb(15, 211, 129);
+        }
+        & > h1 ~ :not(.highlight) {
+            opacity: .5;
+        }
+    }
+}
+
+// WEAPON ICONS
+.icon.weapon {
+    width: 250px;
+    background-size: auto;
+    background-position: 0 -15px;
+    -webkit-mix-blend-mode: screen;
+    -ms-mix-blend-mode: screen;
+    mix-blend-mode: screen;
+    &.acr {
+        background-image: url(/sprites/weapons/acr.png);
+    }
+    &.ak,
+    &.ak47,
+    &.ak-47,
+    &.warlord {
+        background-image: url(/sprites/weapons/ak-47.png);
+    }
+    &.aug {
+        background-image: url(/sprites/weapons/aug.png);
+    }
+    &.bullfrog,
+    &.famas {
+        background-image: url(/sprites/weapons/bullfrog.png);
+    }
+    &.cassidy {
+        background-image: url(/sprites/weapons/cassidy.png);
+    }
+    &.double-barrel,
+    &.double-barrel-shotgun {
+        background-image: url(/sprites/weapons/double-barrel.png);
+    }
+    &.fal {
+        background-image: url(/sprites/weapons/fal.png);
+    }
+    &.g36 {
+        background-image: url(/sprites/weapons/g36.png);
+    }
+    &.historian {
+        background-image: url(/sprites/weapons/historian.png);
+    }
+    &.l86 {
+        background-image: url(/sprites/weapons/l86.png);
+    }
+    &.m1a {
+        background-image: url(/sprites/weapons/m1a.png);
+    }
+    &.m4,
+    &.lvoa,
+    &.lvoa-c,
+    &.liberator {
+        background-image: url(/sprites/weapons/m4.png);
+    }
+    &.m44,
+    &.classic-m44,
+    &.custom-m44,
+    &.hunting-m44 {
+        background-image: url(/sprites/weapons/m44.png);
+    }
+    &.m60,
+    &.hungryhog,
+    &.hungry-hog {
+        background-image: url(/sprites/weapons/m60.png);
+    }
+    &.m249 {
+        background-image: url(/sprites/weapons/m249.png);
+    }
+    &.m700 {
+        background-image: url(/sprites/weapons/m700.png);
+    }
+    &.m870 {
+        background-image: url(/sprites/weapons/m870.png);
+    }
+    &.mg5 {
+        background-image: url(/sprites/weapons/mg5.png);
+    }
+    &.mp5,
+    &.burst-fire-mp5 {
+        background-image: url(/sprites/weapons/mp5.png);
+    }
+    &.mp7 {
+        background-image: url(/sprites/weapons/mp7.png);
+    }
+    &.p416 {
+        background-image: url(/sprites/weapons/p416.png);
+    }
+    &.pf45 {
+        background-image: url(/sprites/weapons/pf45.png);
+    }
+    &.pp19,
+    &.pp-19 {
+        background-image: url(/sprites/weapons/pp-19.png);
+    }
+    &.px4 {
+        background-image: url(/sprites/weapons/px4.png);
+    }
+    &.rpk,
+    &.rpk-74,
+    &.pakhan {
+        background-image: url(/sprites/weapons/rpk.png);
+    }
+    &.sa58,
+    &.sa-58 {
+        background-image: url(/sprites/weapons/sa-58.png);
+    }
+    &.sasg,
+    &.sasg12,
+    &.sasg-12,
+    &.medved {
+        background-image: url(/sprites/weapons/sasg-12.png);
+    }
+    &.scarh,
+    &.scar-h {
+        background-image: url(/sprites/weapons/scar-h.png);
+    }
+    &.scarl,
+    &.scar-l,
+    &.caduceus {
+        background-image: url(/sprites/weapons/scar-l.png);
+    }
+    &.showstopper {
+        background-image: url(/sprites/weapons/showstopper.png);
+    }
+    &.srs {
+        background-image: url(/sprites/weapons/srs.png);
+    }
+    &.super90,
+    &.super-90 {
+        background-image: url(/sprites/weapons/super-90.png);
+    }
+    &.svd {
+        background-image: url(/sprites/weapons/svd.png);
+    }
+    &.t821,
+    &.midas {
+        background-image: url(/sprites/weapons/t821.png);
+    }
+    &.smg9,
+    &.smg-9,
+    &.tec9,
+    &.tec-9 {
+        background-image: url(/sprites/weapons/tec-9.png);
+    }
+    &.tenebrae {
+        background-image: url(/sprites/weapons/tenebrae.png);
+    }
+    &.thompson,
+    &.tommy-gun {
+        background-image: url(/sprites/weapons/tommy-gun.png);
+    }
+    &.ump {
+        background-image: url(/sprites/weapons/ump.png);
+    }
+    &.mdr,
+    &.urban-mdr {
+        background-image: url(/sprites/weapons/urban-mdr.png);
+    }
+    &.vector {
+        background-image: url(/sprites/weapons/vector.png);
+    }
+    &.\39 3r {
+        background-image: url(/sprites/weapons/93r.png);
+    }
+    &.m9,
+    &.damascus {
+        background-image: url(/sprites/weapons/m9.png);
+    }
+    &.rhino {
+        background-image: url(/sprites/weapons/rhino.png);
+    }
+    &.golden-rhino,
+    &.goldenrhino {
+        background-image: url(/sprites/weapons/golden-rhino.png);
+    }
+    &.m1911,
+    &.centurion {
+        background-image: url(/sprites/weapons/m1911.png);
+    }
+    &.magnum {
+        background-image: url(/sprites/weapons/magnum.png);
+    }
+    &.sawedoff,
+    &.sawed-off,
+    &.double-barrel-sawedoff,
+    &.double-barrel-sawed-off,
+    &.double-barrel-sawedoff-shotgun,
+    &.double-barrel-sawed-off-shotgun {
+        background-image: url(/sprites/weapons/sawed-off.png);
+    }
+    &.x45,
+    &.x-45 {
+        background-image: url(/sprites/weapons/x-45.png);
+    }
+}
+
+// WEAPON TALENT ICONS
+.icon.weapon-talent {
+    position: relative;
+    width: 100px;
+    margin: 0 5px;
+    &:before,
+    &::before,
+    &:after,
+    &::after {
+        background-image: url(/sprites/weapon-talents.png);
+        background-size: 800px;
+    }
+    &.ferocious:before,
+    &.ferocious::before,
+    &.ferocious:after,
+    &.ferocious::after {
+        background-position: 0 0;
+    }
+    &.destructive:before,
+    &.destructive::before,
+    &.destructive:after,
+    &.destructive::after {
+        background-position: -100px 0;
+    }
+    &.harmful:before,
+    &.harmful::before,
+    &.harmful:after,
+    &.harmful::after {
+        background-position: -200px 0;
+    }
+    &.responsive:before,
+    &.responsive::before,
+    &.responsive:after,
+    &.responsive::after {
+        background-position: -300px 0;
+    }
+    &.deadly:before,
+    &.deadly::before,
+    &.deadly:after,
+    &.deadly::after {
+        background-position: -400px 0;
+    }
+    &.fierce:before,
+    &.fierce::before,
+    &.fierce:after,
+    &.fierce::after {
+        background-position: -500px 0;
+    }
+    &.self-preserved:before,
+    &.self-preserved::before,
+    &.self-preserved:after,
+    &.self-preserved::after {
+        background-position: -600px 0;
+    }
+    &.trained:before,
+    &.trained::before,
+    &.trained:after,
+    &.trained::after {
+        background-position: -700px 0;
+    }
+    &.unforgiving:before,
+    &.unforgiving::before,
+    &.unforgiving:after,
+    &.unforgiving::after {
+        background-position: 0 -100px;
+    }
+    &.prepared:before,
+    &.prepared::before,
+    &.prepared:after,
+    &.prepared::after {
+        background-position: -100px -100px;
+    }
+    &.swift:before,
+    &.swift::before,
+    &.swift:after,
+    &.swift::after {
+        background-position: -200px -100px;
+    }
+    &.intense:before,
+    &.intense::before,
+    &.intense:after,
+    &.intense::after {
+        background-position: -300px -100px;
+    }
+    &.vicious:before,
+    &.vicious::before,
+    &.vicious:after,
+    &.vicious::after {
+        background-position: -400px -100px;
+    }
+    &.toxic:before,
+    &.toxic::before,
+    &.toxic:after,
+    &.toxic::after {
+        background-position: -500px -100px;
+    }
+    &.brutal:before,
+    &.brutal::before,
+    &.brutal:after,
+    &.brutal::after {
+        background-position: -600px -100px;
+    }
+    &.skilled:before,
+    &.skilled::before,
+    &.skilled:after,
+    &.skilled::after {
+        background-position: -700px -100px;
+    }
+    &.coolheaded:before,
+    &.coolheaded::before,
+    &.coolheaded:after,
+    &.coolheaded::after {
+        background-position: -100px -200px;
+    }
+    &.talented:before,
+    &.talented::before,
+    &.talented:after,
+    &.talented::after {
+        background-position: -200px -200px;
+    }
+    &.meticulous:before,
+    &.meticulous::before,
+    &.meticulous:after,
+    &.meticulous::after {
+        background-position: -300px -200px;
+    }
+    &.determined:before,
+    &.determined::before,
+    &.determined:after,
+    &.determined::after {
+        background-position: -500px -200px;
+    }
+    &.predatory:before,
+    &.predatory::before,
+    &.predatory:after,
+    &.predatory::after {
+        background-position: -600px -200px;
+    }
+    &.sustained:before,
+    &.sustained::before,
+    &.sustained:after,
+    &.sustained::after {
+        background-position: -700px -200px;
+    }
+    &.provident:before,
+    &.provident::before,
+    &.provident:after,
+    &.provident::after {
+        background-position: 0 -300px;
+    }
+    &.proficient:before,
+    &.proficient::before,
+    &.proficient:after,
+    &.proficient::after {
+        background-position: -100px -300px;
+    }
+    &.balanced:before,
+    &.balanced::before,
+    &.balanced:after,
+    &.balanced::after {
+        background-position: -200px -300px;
+    }
+    &.adept:before,
+    &.adept::before,
+    &.adept:after,
+    &.adept::after {
+        background-position: -300px -300px;
+    }
+    &.capable:before,
+    &.capable::before,
+    &.capable:after,
+    &.capable::after {
+        background-position: -400px -300px;
+    }
+    &.competent:before,
+    &.competent::before,
+    &.competent:after,
+    &.competent::after {
+        background-position: -500px -300px;
+    }
+    &.stable:before,
+    &.stable::before,
+    &.stable:after,
+    &.stable::after {
+        background-position: -600px -300px;
+    }
+    &.accurate:before,
+    &.accurate::before,
+    &.accurate:after,
+    &.accurate::after {
+        background-position: -700px -300px;
+    }
+    &.commanding:before,
+    &.commanding::before,
+    &.commanding:after,
+    &.commanding::after {
+        background-position: 0 -400px;
+    }
+    &.dominant:before,
+    &.dominant::before,
+    &.dominant:after,
+    &.dominant::after {
+        background-position: -100px -400px;
+    }
+    &.expert:before,
+    &.expert::before,
+    &.expert:after,
+    &.expert::after {
+        background-position: -700px -400px;
+    }
+    &.disciplined:before,
+    &.disciplined::before,
+    &.disciplined:after,
+    &.disciplined::after {
+        background-position: 0 -500px;
+    }
+    &.goldenrhino:before,
+    &.goldenrhino::before,
+    &.goldenrhino:after,
+    &.goldenrhino::after,
+    &.golden-rhino:before,
+    &.golden-rhino::before,
+    &.golden-rhino:after,
+    &.golden-rhino::after {
+        background-position: -100px -500px;
+    }
+    &.showstopper:before,
+    &.showstopper::before,
+    &.showstopper:after,
+    &.showstopper::after {
+        background-position: -300px -500px;
+    }
+    &.hurried:before,
+    &.hurried::before,
+    &.hurried:after,
+    &.hurried::after {
+        background-position: -400px -500px;
+    }
+    &.distracted:before,
+    &.distracted::before,
+    &.distracted:after,
+    &.distracted::after {
+        background-position: -500px -500px;
+    }
+    &.focused:before,
+    &.focused::before,
+    &.focused:after,
+    &.focused::after {
+        background-position: -600px -500px;
+    }
+    &.carefree:before,
+    &.carefree::before,
+    &.carefree:after,
+    &.carefree::after {
+        background-position: -700px -500px;
+    }
+    &.ambusher:before,
+    &.ambusher::before,
+    &.ambusher:after,
+    &.ambusher::after {
+        background-position: -100px -600px;
+    }
+    &.elevated:before,
+    &.elevated::before,
+    &.elevated:after,
+    &.elevated::after {
+        background-position: -200px -600px;
+    }
+    &.uncomplicated:before,
+    &.uncomplicated::before,
+    &.uncomplicated:after,
+    &.uncomplicated::after {
+        background-position: -300px -600px;
+    }
+    &.caduceus:before,
+    &.caduceus::before,
+    &.caduceus:after,
+    &.caduceus::after {
+        background-position: -600px -600px;
+    }
+    &.glutton:before,
+    &.glutton::before,
+    &.glutton:after,
+    &.glutton::after {
+        background-position: -700px -600px;
+    }
+    &.valkyrie:before,
+    &.valkyrie::before,
+    &.valkyrie:after,
+    &.valkyrie::after {
+        background-position: 0 -700px;
+    }
+    &.lights-out:before,
+    &.lights-out::before,
+    &.lights-out:after,
+    &.lights-out::after {
+        background-position: -100px -700px;
+    }
+    &.center-mass:before,
+    &.center-mass::before,
+    &.center-mass:after,
+    &.center-mass::after {
+        background-position: -200px -700px;
+    }
+    &.boomstick:before,
+    &.boomstick::before,
+    &.boomstick:after,
+    &.boomstick::after {
+        background-position: -300px -700px;
+    }
+    &.quickdraw:before,
+    &.quickdraw::before,
+    &.quickdraw:after,
+    &.quickdraw::after {
+        background-position: -400px -700px;
+    }
+    &.pakhan:before,
+    &.pakhan::before,
+    &.pakhan:after,
+    &.pakhan::after {
+        background-position: -500px -700px;
+    }
+    &.playrough:before,
+    &.playrough::before,
+    &.playrough:after,
+    &.playrough::after,
+    &.play-rough:before,
+    &.play-rough::before,
+    &.play-rough:after,
+    &.play-rough::after {
+        background-position: -600px -700px;
+    }
+    &.midas:before,
+    &.midas::before,
+    &.midas:after,
+    &.midas::after {
+        background-position: -700px -700px;
+    }
+    &.free-republic,
+    &.history-repeats:before,
+    &.history-repeats::before,
+    &.history-repeats:after,
+    &.history-repeats::after {
+        background-image: url(/sprites/weapon-talents2.png);
+    }
+    &.free-republic:before,
+    &.free-republic::before,
+    &.free-republic:after,
+    &.free-republic::after {
+        background-position: 0 0;
+    }
+    &.history-repeats:before,
+    &.history-repeats::before,
+    &.history-repeats:after,
+    &.history-repeats::after {
+        background-position: -300px 0;
+    }
+}
+
+// WEAPON MOD ICONS
+.build-content .weapons .mods {
+    .icon {
+        background-image: url(/sprites/items2.png);
+        background-size: 400px;
+        width: 50px;
+        height: 50px;
+    }
+    .magazine .icon {
+        background-position: 0 -51.5px;
+    }
+    .muzzle .icon {
+        background-position: -51.5px -51.5px;
+    }
+    .scope .icon {
+        background-position: -103px -51.5px;
+    }
+    .underbarrel .icon {
+        background-position: -154.5px -51.5px;
+    }
+}
+
+// MAIN STAT ICONS
+.icon {
+    &.firearms:after,
+    &.firearms::after,
+    &.stamina:after,
+    &.stamina::after,
+    &.electronics:after,
+    &.electronics::after {
+        background-image: url(/sprites/stats.png);
+        width: 64px;
+        height: 64px;
+        top: 23px;
+        left: 28px;
+    }
+    &.firearms:after,
+    &.firearms::after {
+        background-position: 0 0;
+    }
+    &.stamina:after,
+    &.stamina::after {
+        background-position: -64px 0;
+    }
+    &.electronics:after,
+    &.electronics::after {
+        background-position: -128px 0;
+    }
+}
+
+// GEAR ICONS
+.build-content .gear {
+    .items .icon.he:after,
+    .items .icon.he::after,
+    .items .icon.exotic:after,
+    .items .icon.exotic::after {
+        background-image: url(/sprites/items.png);
+        background-size: 800px;
+    }
+        .icon {  
+        &.holster.he:after,
+        &.holster.he::after,
+        &.holster.exotic:after,
+        &.holster.exotic::after {
+            background-position: 0 -413px;
+        }
+        &.chest.he:after,
+        &.chest.he::after,
+        &.chest.exotic:after,
+        &.chest.exotic::after {
+            background-position: -103px -413px;
+        }
+        &.backpack.he:after,
+        &.backpack.he::after,
+        &.backpack.exotic:after,
+        &.backpack.exotic::after {
+            background-position: -206px -413px;
+        }
+        &.mask.he:after,
+        &.mask.he::after,
+        &.mask.exotic:after,
+        &.mask.exotic::after {
+            background-position: -310px -413px;
+        }
+        &.gloves.he:after,
+        &.gloves.he::after,
+        &.gloves.exotic:after,
+        &.gloves.exotic::after {
+            background-position: -516px -413px;
+        }
+        &.knee-pads.he:after,
+        &.knee-pads.he::after,
+        &.knee-pads.exotic:after,
+        &.knee-pads.exotic::after {
+            background-position: -618px -413px;
+        }
+    }
+}
+
+// GEAR SET ICONS
+.icon {
+    &.striker:after,
+    &.striker::after,
+    &.hunters-faith:after,
+    &.hunters-faith::after,
+    &.nomad:after,
+    &.nomad::after,
+    &.sentry:after,
+    &.sentry::after,
+    &.tactician:after,
+    &.tactician::after,
+    &.predators-mark:after,
+    &.predators-mark::after,
+    &.final-measure:after,
+    &.final-measure::after,
+    &.lone-star:after,
+    &.lone-star::after,
+    &.defence:after,
+    &.defence::after,
+    &.d3-fnc:after,
+    &.d3-fnc::after,
+    &.frontline:after,
+    &.frontline::after,
+    &.banshee:after,
+    &.banshee::after,
+    &.reclaimer:after,
+    &.reclaimer::after,
+    &.firecrest:after,
+    &.firecrest::after,
+    &.alphabridge:after,
+    &.alphabridge::after,
+    &.deadeye:after,
+    &.deadeye::after {
+        background-image: url(/sprites/gearsets.png);
+        background-size: 800px;
+    }
+    &.striker:after,
+    &.striker::after {
+        background-position: 0 0;
+    }
+    &.hunters-faith:after,
+    &.hunters-faith::after {
+        background-position: -100px 0;
+    }
+    &.nomad:after,
+    &.nomad::after {
+        background-position: -200px 0;
+    }
+    &.sentry:after,
+    &.sentry::after {
+        background-position: -300px 0;
+    }
+    &.tactician:after,
+    &.tactician::after {
+        background-position: -400px 0;
+    }
+    &.predators-mark:after,
+    &.predators-mark::after {
+        background-position: -500px 0;
+    }
+    &.final-measure:after,
+    &.final-measure::after {
+        background-position: -600px 0;
+    }
+    &.lone-star:after,
+    &.lone-star::after {
+        background-position: -700px 0;
+    }
+    &.defence:after,
+    &.defence::after,
+    &.d3-fnc:after,
+    &.d3-fnc::after,
+    &.frontline:after,
+    &.frontline::after {
+        background-position: -100px -100px;
+    }
+    &.banshee:after ,
+    &.banshee::after {
+        background-position: -400px -100px;
+    }
+    &.reclaimer:after,
+    &.reclaimer::after {
+        background-position: -600px -100px;
+    }
+    &.firecrest:after,
+    &.firecrest::after {
+        background-position: -700px -100px;
+    }
+    &.alphabridge:after,
+    &.alphabridge::after {
+        background-position: 0 -200px;
+    }
+    &.deadeye:after,
+    &.deadeye::after {
+        background-position: -100px -200px;
+    }
+}
+
+// SKILL ICONS
+.icon.skill {
+    &,
+    &.after:after,
+    &.after::after {
+        width: 100px;
+        background-image: url(/sprites/skills.png);
+        background-size: 800px;
+    }
+    &.after,
+    &.after {
+        background-image: none !important;
+    }
+    &.after:after,
+    &.after::after {
+        width: 75px;
+        height: 75px;
+        top: 17.5px;
+        left: 22.5px;
+        background-size: 600px;
+    }
+    &.shield,
+    &.ballistic-shield,
+    &.after.shield:after,
+    &.after.shield::after,
+    &.after.ballistic-shield:after
+    &.after.ballistic-shield::after {
+        background-position: 0 0;
+    }
+    &.kinetic-breaker {
+        background-position: -103px 0;
+    }
+    &.pulse-shield,
+    &.reactive-targeting {
+        background-position: -206px 0;
+    }
+    &.assault-shield {
+        background-position: -309px 0;
+    }
+    &.pulse {
+        background-position: 0 -103px;
+    }
+    &.after.pulse:after,
+    &.after.pulse::after {
+        background-position: 0 -77.25px;
+    }
+    &.recon-pack,
+    &.recon-pulse {
+        background-position: -103px -103px;
+    }
+    &.tactical-scanner,
+    &.tactical-pulse,
+    &.damage-pulse {
+        background-position: -206px -103px;
+    }
+    &.scrambler,
+    &.conceal-pulse {
+        background-position: -309px -103px;
+    }
+    &.seeker,
+    &.seeker-mine {
+        background-position: 0 -206px;
+    }
+    &.after.seeker:after,
+    &.after.seeker::after,
+    &.after.seeker-mine:after,
+    &.after.seeker-mine::after {
+        background-position: 0 -154.5px;
+    }
+    &.cluster {
+        background-position: -103px -206px;
+    }
+    &.gas-charge {
+        background-position: -206px -206px;
+    }
+    &.airburst,
+    &.fire-seeker {
+        background-position: -309px -206px;
+    }
+    &.first-aid {
+        background-position: 0 -309px;
+    }
+    &.after.first-aid:after,
+    &.after.first-aid::after {
+        background-position: 0 -231.75px;
+    }
+    &.overdose {
+        background-position: -103px -309px;
+    }
+    &.defibrillator {
+        background-position: -206px -309px;
+    }
+    &.booster-shot {
+        background-position: -309px -309px;
+    }
+    &.smart-cover {
+        background-position: 0 -412px;
+    }
+    &.after.smart-cover:after,
+    &.after.smart-cover::after {
+        background-position: 0 -309px;
+    }
+    &.trapper {
+        background-position: -103px -412px;
+    }
+    &.recharger {
+        background-position: -206px -412px;
+    }
+    &.concealment {
+        background-position: -309px -412px;
+    }
+    &.mobile-cover {
+        background-position: 0 -515px;
+    }
+    &.after.mobile-cover:after,
+    &.after.mobile-cover::after {
+        background-position: 0 -386.25px;
+    }
+    &.extension {
+        background-position: -103px -515px;
+    }
+    &.countermeasures {
+        background-position: -206px -515px;
+    }
+    &.blast-shield {
+        background-position: -309px -515px;
+    }
+    &.sticky,
+    &.sticky-bomb {
+        background-position: 0 -618px;
+    }
+    &.after.sticky:after,
+    &.after.sticky::after,
+    &.after.sticky-bomb:after,
+    &.after.sticky-bomb::after {
+        background-position: 0 -463.5px;
+    }
+    &.bfb,
+    &.damage-sticky {
+        background-position: -103px -618px;
+    }
+    &.flashbang,
+    &.flash-sticky {
+        background-position: -206px -618px;
+    }
+    &.disruptor,
+    &.disrupt-sticky {
+        background-position: -309px -618px;
+    }
+    &.support-station,
+    &.heal-station,
+    &.life-support,
+    &.revive-station,
+    &.immunizer,
+    &.ammo-cache,
+    &.ammo-station,
+    &.turret,
+    &.active-sensor,
+    &.pulse-turret,
+    &.dragonbreath,
+    &.fire-turret,
+    &.zapper,
+    &.shock-turret,
+    &.green-link,
+    &.recovery-link,
+    &.tactical-link,
+    &.orange-link,
+    &.survivor-link,
+    &.blue-link,
+    &.after.support-station:after,
+    &.after.support-station::after,
+    &.after.heal-station:after,
+    &.after.heal-station::after,
+    &.after.turret:after,
+    &.after.turret::after,
+    &.after.green-link:after,
+    &.after.green-link::after,
+    &.after.recovery-link:after,
+    &.after.recovery-link::after,
+    &.after.tactical-link:after,
+    &.after.tactical-link::after,
+    &.after.orange-link:after,
+    &.after.orange-link::after,
+    &.after.survivor-link:after,
+    &.after.survivor-link::after,
+    &.after.blue-link:after,
+    &.after.blue-link::after {
+        background-image: url(/sprites/skills2.png);
+    }
+    &.support-station,
+    &.heal-station,
+    &.after.support-station:after,
+    &.after.support-station::after,
+    &.after.heal-station:after,
+    &.after.heal-station::after {
+        background-position: 0 0;
+    }
+    &.immunizer {
+        background-position: -103px 0;
+    }
+    &.life-support,
+    &.revive-station {
+        background-position: -206px 0;
+    }
+    &.ammo-cache,
+    &.ammo-station {
+        background-position: -309px 0;
+    }
+    &.turret {
+        background-position: 0 -309px;
+    }
+    &.after.turret:after,
+    &.after.turret::after {
+        background-position: 0 -231.75px;
+    }
+    &.zapper,
+    &.shock-turret {
+        background-position: -103px -309px;
+    }
+    &.active-sensor,
+    &.pulse-turret {
+        background-position: -206px -309px;
+    }
+    &.dragonbreath,
+    &.fire-turret {
+        background-position: -309px -309px;
+    }
+    &.green-link,
+    &.recovery-link {
+        background-position: 0 -515px;
+    }
+    &.tactical-link,
+    &.orange-link  {
+        background-position: -103px -515px;
+    }
+    &.survivor-link,
+    &.blue-link  {
+        background-position: -206px -515px;
+    }
+}
+
+// TALENT ICONS
+.icon.talent {
+    width: 100px;
+    background-image: url(/sprites/talents.png);
+    background-size: 800px;
+    &.critical-save {
+        background-position: 0 0;
+    }
+    &.combat-medic {
+        background-position: -103px 0;
+    }
+    &.adrenaline {
+        background-position: -206px 0;
+    }
+    &.strike-back {
+        background-position: -309px 0;
+    }
+    &.battle-buddy {
+        background-position: -412px 0;
+    }
+    &.triage {
+        background-position: -515px 0;
+    }
+    &.shrapnel {
+        background-position: -618px 0;
+    }
+    &.shock-and-awe {
+        background-position: 0 -103px;
+    }
+    &.fear-tactics {
+        background-position: -103px -103px;
+    }
+    &.wildfire {
+        background-position: -206px -103px;
+    }
+    &.tactical-advance {
+        background-position: -309px -103px;
+    }
+    &.evasive-action {
+        background-position: -412px -103px;
+    }
+    &.police-up {
+        background-position: -515px -103px;
+    }
+    &.tech-support {
+        background-position: -618px -103px;
+    }
+    &.death-by-proxy {
+        background-position: 0 -206px;
+    }
+    &.demolition-expert {
+        background-position: -103px -206px;
+    }
+    &.steady-hands {
+        background-position: -206px -206px;
+    }
+    &.on-the-move {
+        background-position: -309px -206px;
+    }
+    &.one-is-none {
+        background-position: -412px -206px;
+    }
+    &.precision {
+        background-position: -515px -206px;
+    }
+    &.stopping-power {
+        background-position: -618px -206px;
+    }
+    &.chain-reaction {
+        background-position: 0 -306px;
+    }
+    &.desperate-times {
+        background-position: -103px -306px;
+    }
+    &.repo-reaper {
+        background-position: -206px -306px;
+    }
+}
+
+
+// GENERAL ANIMATION KEYFRAMES
+@include keyframes(fade-in) {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@include keyframes(fade-in-7) {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: .7;
+    }
+}
+@include keyframes(circle-spin) {
+    0% {
+        @include transform(rotate(0));
+    }
+    25% {
+        @include transform(rotate(60deg));
+    }
+    75% {
+        @include transform(rotate(300deg));
+    }
+    100% {
+        @include transform(rotate(360deg));
+    }
+}
+@include keyframes(absolute-slide-delay) {
+    0%, 50% {
+        left: 50%;
+        width: 0;
+    }
+    100% {
+        left: 0;
+        width: 100%;
+    }
+}
+@include keyframes(selected-bar-item-delay) {
+    0%, 50% {
+        background-color: hsla(0, 0%, 100%, .3);
+        color: hsla(0, 0%, 100%, .5);
+    }
+    100% {
+        background-color: $orange;
+        color: #fff;
+    }
+}
+
+// MEDIA ADJUSTEMENTS
+@media (max-width: 950px) {
+    .build-content .weapons .talent-icons {
+        display: none;
+    }
+}
+@media (max-width: 1050px) {
+    .build-content .gear {
+        @include flex-wrap(wrap);
+    }
+}
+@media (max-width: 1370px) {
+    .build-list {
+        max-width: 820px;
+    }
+}
+@media (max-width: 920px) {
+    .build-list {
+        max-width: 410px;
+    }
+}
