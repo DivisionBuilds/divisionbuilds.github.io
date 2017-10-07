@@ -7,3 +7,6 @@ google_analytics: UA-98254613-1
 exclude:
     - README.md
     - Gemfile
+
+sass:
+    style: compressed
