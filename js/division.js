@@ -1,23 +1,23 @@
+---
+---
+{% assign a = '|' | split: '|' %}
+{% for f in site.static_files %}
+	{% if f.path contains '/img/' and f.extname == '.jpg'or f.extname == '.jpeg' or f.extname == '.png' %}
+		{% assign a = a | push: f.path %}
+	{% endif %}
+{% endfor %}
+
 $(document).ready(function() {
-	var img = [
-		"https://images4.alphacoders.com/773/773361.jpg",
-		"https://images7.alphacoders.com/602/602603.jpg",
-		"https://images5.alphacoders.com/676/676538.jpg",
-		"https://images8.alphacoders.com/605/605515.jpg",
-		"https://images4.alphacoders.com/601/601859.jpg",
-		"https://images8.alphacoders.com/714/714365.jpg",
-		"https://images6.alphacoders.com/600/600931.jpg",
-		"https://images8.alphacoders.com/527/527385.jpg",
-		"https://images2.alphacoders.com/527/527383.png",
-		"https://images.alphacoders.com/618/618045.jpg",
-		"https://images4.alphacoders.com/601/601859.jpg"
-	];
+	var img = {{a | jsonify}};
 	$("head").append("<style>body:after,body::after{background-image:url(" + img[Math.floor(Math.random() * img.length)] + ");}</style>");
 	$(".beta").click(function() {
 		core.modal("DivisionBuilds.github.io is in BETA", "<p>This website is still work in progress. If you encounter any issues, please submit them!</p><p>If you want to stay informed, follow <a href='https://twitter.com/Division_Builds'>@Division_Builds</a> on Twitter or join the DivisionBuilds Discord: <a href='https://discord.me/divisionbuilds'>discord.me/divisionbuilds</a>");
 	});
 	if ($(".tooltip").length > 0) {
 		tooltips.follow(true);
+	}
+	if ($(".select").length > 0) {
+		core.select();
 	}
 });
 
@@ -42,6 +42,36 @@ var core = {
 			$(".modal-wrapper").remove();
 			$("body > :not(.footer)").css({opacity: "", "pointer-events": ""});;
 		});
+	},
+	select: function() {
+		$(document).on("click.drop-down", function() {
+			$(".select").removeClass("visible");
+		});
+		$(".select, .select .drop-down").click(function(e){
+			e.stopPropagation();
+		});
+	    $(".select").click(function() {
+	    	if ($(this).hasClass("visible")) {
+	    		$(this).removeClass("visible");
+	    		$(document).off("click.drop-down")
+	    	}
+	    	else if (!$(this).hasClass("disabled")) {
+	    		$(this).addClass("visible");
+	    	}
+	    });
+	    var f = function() {
+	    	$(".select").each(function() {
+		    	var t = this.getBoundingClientRect().bottom,
+		    		d = $(this).children(".drop-down");
+		    	if (d.height() > t) {
+		    		d.css({height: window.innerHeight - t});
+		    	}
+		    });
+	    };
+	    f();
+	    $(window).resize(function() {
+	    	f();
+	    });
 	}
 };
 
@@ -70,6 +100,45 @@ var tooltips = {
 		else {
 			$(document).off("mousemove");
 		}
+	}
+};
+
+// BASEID FUNCTIONS
+var baseid = {
+	alphabet: ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"],
+	setalphabet: function(a) {
+		baseid.alphabet = a;
+	},
+	encode: function(a) {
+		if (a.constructor === Array) {
+			var r = [];
+			for (var i = 0; i < a.length; i++) {
+				if (a[i] >= baseid.alphabet.length) {
+					return null;
+				}
+				else {
+					r.push(baseid.alphabet[a[i]]);
+				}
+			}
+			return r.join("");
+		}
+		else {
+			return baseid.alphabet[a];
+		}
+	},
+	decode: function(a) {
+		var r = [],
+			s = a.split("");
+		for (var i = 0; i < a.length; i++) {
+			var o = baseid.alphabet.indexOf(s[i]);
+			if (o < 0) {
+				return null;
+			}
+			else {
+				r.push();
+			}
+		}
+		return r;
 	}
 };
 
