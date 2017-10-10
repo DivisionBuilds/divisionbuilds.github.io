@@ -2,7 +2,8 @@
 ---
 {% assign a = '|' | split: '|' %}
 {% for f in site.static_files %}
-	{% if f.path contains '/img/' and f.extname == '.jpg'or f.extname == '.jpeg' or f.extname == '.png' %}
+	{% assign p = f.path | slice: 0, 5 %}
+	{% if p == '/img/' and f.extname == '.jpg'or f.extname == '.jpeg' or f.extname == '.png' %}
 		{% assign a = a | push: f.path %}
 	{% endif %}
 {% endfor %}
