@@ -1,94 +1,14 @@
 ---
 ---
 
+// IMPORT MIXINS
+@import "css/mixins.scss";
+
 // VARIABLES
 $orange: #ff7f00;
 
-// MIXINS
-@mixin display-flex {
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-}
-@mixin flex-direction($a) {
-    -webkit-flex-direction: $a;
-    -ms-flex-direction: $a;
-    flex-direction: $a;
-}
-@mixin flex($a) {
-    -webkit-flex: $a;
-    -ms-flex: $a;
-    flex: $a;
-}
-@mixin flex-grow($a) {
-    -webkit-flex-grow: $a;
-    -ms-flex-grow: $a;
-    flex-grow: $a;
-}
-@mixin flex-shrink($a) {
-    -webkit-flex-shrink: $a;
-    -ms-flex-shrink: $a;
-    flex-shrink: $a;
-}
-@mixin flex-wrap($a) {
-    -webkit-flex-wrap: $a;
-    -ms-flex-wrap: $a;
-    flex-wrap: $a;
-}
-@mixin justify-content($a) {
-    -webkit-justify-content: $a;
-    -ms-justify-content: $a;
-    justify-content: $a;
-}
-@mixin align-items($a) {
-    -webkit-box-align: $a;
-    -ms-flex-align: $a;
-    @if $a == start or $a == end {
-        align-items: flex- + $a;
-    }
-    @else {
-        align-items: $a;
-    }
-}
-@mixin align-self($a) {
-    -webkit-align-self: $a;
-    -ms-align-self: $a;
-    align-self: $a;
-}
-@mixin transition($a...) {
-    -webkit-transition: $a;
-    -ms-transition: $a;
-    transition: $a;
-}
-@mixin animation($a...) {
-    -webkit-animation: $a;
-    animation: $a;
-}
-@mixin transform($a) {
-    -webkit-transform: $a;
-    -ms-transform: $a;
-    transform: $a;
-}
-@mixin box-shadow($a...) {
-    -webkit-box-shadow: $a;
-    box-shadow: $a;
-}
-@mixin filter($a) {
-    -webkit-filter: $a;
-    filter: $a;
-}
-@mixin keyframes($a) {
-    @-webkit-keyframes #{$a} {
-        @content;
-    }
-    @keyframes #{$a} {
-        @content;
-    }
-}
-
 // FONT
-@font-face {
-    font-family: Borda;
+@include font(Borda) {
     src: url(/fonts/Borda.eot);
     src: url(/fonts/Borda.eot?#iefix) format("embedded-opentype"),
          url(/fonts/Borda.woff) format("woff"),
