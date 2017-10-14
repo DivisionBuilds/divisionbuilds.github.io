@@ -9,4 +9,5 @@ exclude:
     - Gemfile
 
 sass:
+    sass_dir: /
     style: compressed
