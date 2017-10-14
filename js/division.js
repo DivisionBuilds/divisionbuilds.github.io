@@ -1,9 +1,11 @@
 ---
 ---
 {% assign a = '|' | split: '|' %}
+{% assign path = '/img/' %}
+{% assign pathlength = path | size %}
 {% for f in site.static_files %}
-	{% assign p = f.path | slice: 0, 5 %}
-	{% if p == '/img/' and f.extname == '.jpg'or f.extname == '.jpeg' or f.extname == '.png' %}
+	{% assign p = f.path | slice: 0, pathlength %}
+	{% if p == path and f.extname == '.jpg'or f.extname == '.jpeg' or f.extname == '.png' %}
 		{% assign a = a | push: f.path %}
 	{% endif %}
 {% endfor %}
