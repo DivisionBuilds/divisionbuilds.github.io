@@ -16,14 +16,14 @@ layout: division
   	<body>
   		<div class="beta">BETA</div>
 		{% if page.id != "index" %}
-		<a href="/." class="back-button">
-		    {% include svg-close.html %}
+		<a href="/" class="back-button">
+		    {% include close.svg %}
 		</a>
 		{% endif %}
 		<div class="main">
 			{% if page.id != "build" and page.id != 404 %}
 			<div class="header">
-			    <a href="/.">
+			    <a href="/">
 			        <div class="main-header">
 			            <div class="title">Division Builds</div>
 			        </div>
