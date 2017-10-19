@@ -1,3 +1,4 @@
+{% assign current = page.url | downcase | split: '/' %}
 <div class="nav-bar">
     <a href="/">
     	<div class="nav-bar-item{% if current.last == nil or current.last == 'index.html' %} active{% endif %}">Home</div>
