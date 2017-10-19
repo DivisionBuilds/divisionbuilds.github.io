@@ -95,13 +95,13 @@
         @content;
     }
 }
-@mixin font($name, $url, $format, $weight: null, $style: null, $decoration: null) {
+@mixin font($name, $url: null, $format: null, $weight: null, $style: null, $decoration: null) {
     @font-face {
         font-family: $name;
-        @if variable-exists(url) and variable-exists(format) {
+        @if $url != null and $format != null {
             src: url($url) format($format);
         }
-        @else if variable-exists(url) {
+        @else if $url != null {
             src: url($url);
         }
         @else {
