@@ -15,21 +15,9 @@ $orange: #ff7f00;
          url(/fonts/Borda%20Medium.ttf) format("truetype"),
          url(/fonts/Borda.svg#ywftsvg) format("svg");
 }
-@font-face {
-    font-family: Borda;
-    src: url(/fonts/Borda%20DemiBold.ttf) format("truetype");
-    font-weight: 600;
-}
-@font-face {
-    font-family: Borda;
-    src: url(/fonts/Borda%20Bold.ttf) format("truetype");
-    font-weight: 700;
-}
-@font-face {
-    font-family: Borda;
-    src: url(/fonts/Borda%20Bold.ttf) format("truetype");
-    font-weight: bold;
-}
+@include font(Borda, "/fonts/Borda%20DemiBold.ttf", "truetype", $weight: 600);
+@include font(Borda, "/fonts/Borda%20Bold.ttf", "truetype", $weight: 700);
+@include font(Borda, "/fonts/Borda%20Bold.ttf", "truetype", $weight: bold);
 
 // GENERAL
 html {
