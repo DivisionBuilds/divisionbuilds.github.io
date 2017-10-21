@@ -11,5 +11,7 @@ exclude:
 sass:
     sass_dir: /
     style: compressed
+
 plugins:
+  - jekyll-redirect-from
   - jekyll-sitemap
