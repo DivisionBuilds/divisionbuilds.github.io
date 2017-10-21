@@ -11,3 +11,5 @@ exclude:
 sass:
     sass_dir: /
     style: compressed
+plugins:
+  - jekyll-sitemap
