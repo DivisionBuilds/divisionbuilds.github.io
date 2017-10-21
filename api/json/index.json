@@ -1,8 +1,5 @@
 ---
 redirect_from:
-    - /api/json
-    - /api/json/
-    - /api/json/index
     - /api/json/index.html
 ---
 {%- assign i = 0 -%}
