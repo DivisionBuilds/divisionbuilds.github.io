@@ -1,0 +1,23 @@
+---
+redirect_from:
+    - /api/json
+    - /api/json/
+    - /api/json/index
+    - /api/json/index.html
+---
+{%- assign i = 0 -%}
+{%- assign n = 0 -%}
+{%- for f in site.pages -%}
+	{%- if f.dir == '/api/json/' -%}
+	{%- assign n = n | plus: 1 -%}
+	{%- endif %}
+{%- endfor -%}
+{
+    {%- for f in site.pages -%}
+    {% if f.path contains 'api/json/' %}
+    {% assign i = i | plus: 1 -%}
+    "{{f.name | remove: '.json' }}": "{{f.path | absolute_url}}"
+    {%- if i < n %},{% endif %}
+    {% endif %}
+    {%- endfor %}
+}
