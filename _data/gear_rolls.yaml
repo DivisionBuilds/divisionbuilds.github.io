@@ -1,3 +1,14 @@
+absolutes:
+    - armor
+    - main
+    - health
+    - skill_power
+    - assault_rifle_damage
+    - shotgun_damage
+    - lmg_damage
+    - marksman_rifle_damage
+    - smg_damage
+    - pistol_damage
 chest: 
     armor: [1704, 2003]
     main: [1114, 1272]
