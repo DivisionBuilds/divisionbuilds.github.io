@@ -86,11 +86,16 @@ layout: build
 			                <div class="icon {{i[0]}} {{t}}"></div>
 			                <div class="info">
 			                    <div class="name">{{n}}</div>
-			                    <!-- <div class="rolls text">{{i[1].rolls | join: ', '}}</div> -->
 			                    <div class="rolls">
 									{% for r in i[1].rolls %}
 									{% assign roll = r | downcase | replace: ' ', '_' %}
-									<div><span>{{site.data.gear_rolls[slot][roll] | join: ' - '}}</span> {{r}}</div>
+									{% if site.data.gear_rolls.absolutes contains roll %}
+									{% assign unit = "" %}
+									{% else %}
+									{% assign unit = "%" %}
+									{% endif %}
+									{% assign seperator = unit | append: ' - ' %}
+									<div><span>{{site.data.gear_rolls[slot][roll] | join: seperator}}{{unit}}</span> {{r}}</div>
 									{% endfor %}
 								</div>
 			                </div>
