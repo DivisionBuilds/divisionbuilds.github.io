@@ -980,6 +980,9 @@ textarea,
             }
         }
         .items {
+            & > * {
+                max-height: 120px;
+            }
             .rolls {
                 span {
                     font-weight: 600;
