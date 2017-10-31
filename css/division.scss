@@ -939,6 +939,10 @@ textarea,
         .stats {
             .icon {
                 margin-right: 10px;
+                &:after,
+                &::after {
+                    @include filter(drop-shadow(3px 3px 0 hsla(0, 0%, 100%, .07)));
+                }
             }
             .amount {
                 width: 35px;
@@ -949,6 +953,20 @@ textarea,
             .main-stats .amount {
                 width: 70px;
             }
+            :not(.mods) + .mods {
+            position: relative;
+            margin-top: 6px;
+            &:before,
+            &::before {
+                content: "";
+                position: absolute;
+                top: -4px;
+                left: 10%;
+                right: 10%;
+                height: 2px;
+                background: hsla(0, 0%, 100%, .3);
+            }
+        }
         }
         .icon {
             position: relative;
@@ -961,24 +979,27 @@ textarea,
                 position: absolute;
             }
         }
-        .items .icon {
-            background: linear-gradient(rgba(244, 255, 255, .5), rgba(244, 255, 255, .5) 0) no-repeat,
-                        linear-gradient(rgba(244, 255, 255, .5), rgba(244, 255, 255, .5) 0) top right no-repeat,
-                        linear-gradient(rgba(244, 255, 255, .5), rgba(244, 255, 255, .5) 0) bottom left no-repeat,
-                        linear-gradient(rgba(244, 255, 255, .5), rgba(244, 255, 255, .5) 0) bottom right no-repeat;
-            background-size: 3px 3px;
-            &:after,
-            &::after {
-                top: 5px;
-                right: 10px;
-                bottom: 5px;
-                left: 10px;
-                @include filter(drop-shadow(3px 3px 0 rgba(200, 200, 200, .3)));
+        .items {
+            .rolls {
+                span {
+                    font-weight: 600;
+                }
             }
-        }
-        .stats .icon:after,
-        .stats .icon::after {
-            @include filter(drop-shadow(3px 3px 0 hsla(0, 0%, 100%, .07)));
+            .icon {
+                background: linear-gradient(rgba(244, 255, 255, .5), rgba(244, 255, 255, .5) 0) no-repeat,
+                            linear-gradient(rgba(244, 255, 255, .5), rgba(244, 255, 255, .5) 0) top right no-repeat,
+                            linear-gradient(rgba(244, 255, 255, .5), rgba(244, 255, 255, .5) 0) bottom left no-repeat,
+                            linear-gradient(rgba(244, 255, 255, .5), rgba(244, 255, 255, .5) 0) bottom right no-repeat;
+                background-size: 3px 3px;
+                &:after,
+                &::after {
+                    top: 5px;
+                    right: 10px;
+                    bottom: 5px;
+                    left: 10px;
+                    @include filter(drop-shadow(3px 3px 0 rgba(200, 200, 200, .3)));
+                }
+            }
         }
         .icon { 
             &.he {
@@ -1004,20 +1025,6 @@ textarea,
             &.alphabridge,
             &.deadeye {
                 background-color: rgb(15, 211, 129);
-            }
-        }
-        .stats :not(.mods) + .mods {
-            position: relative;
-            margin-top: 6px;
-            &:before,
-            &::before {
-                content: "";
-                position: absolute;
-                top: -4px;
-                left: 10%;
-                right: 10%;
-                height: 2px;
-                background: hsla(0, 0%, 100%, .3);
             }
         }
     }

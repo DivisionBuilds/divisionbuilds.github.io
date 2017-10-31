@@ -80,12 +80,19 @@ layout: build
 			        <div class="items">
 			        	{% for i in page.build.gear.items %}
 			        	{% assign n = i[1].name %}
-			        	{% assign t = i[1].icon %}
-						<div class="{{i[0]}}">
+						{% assign t = i[1].icon %}
+						{% assign slot = i[0] %}
+						<div class="{{slot}}">
 			                <div class="icon {{i[0]}} {{t}}"></div>
 			                <div class="info">
 			                    <div class="name">{{n}}</div>
-			                    <div class="rolls text">{{i[1].rolls | join: ', '}}</div>
+			                    <!-- <div class="rolls text">{{i[1].rolls | join: ', '}}</div> -->
+			                    <div class="rolls">
+									{% for r in i[1].rolls %}
+									{% assign roll = r | downcase | replace: ' ', '_' %}
+									<div><span>{{site.data.gear_rolls[slot][roll] | join: ' - '}}</span> {{r}}</div>
+									{% endfor %}
+								</div>
 			                </div>
 			                <span class="tooltip">
 			                {% if t == 'he' or t == 'exotic' %}
