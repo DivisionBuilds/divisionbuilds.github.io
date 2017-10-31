@@ -1025,6 +1025,7 @@ textarea,
         margin-right: 30px;
     }
     .skills {
+        @include align-items(center);
         .talents {
             position: relative;
             @include display-flex;
