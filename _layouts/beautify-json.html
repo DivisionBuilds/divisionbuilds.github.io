@@ -3,15 +3,15 @@ layout: beautify-json
 ---
 {%- for d in site.data -%}
 {%- if d[0] == page.data -%}
-{%- assign json = d[1] | jsonify | replace: ':', ': ' | replace: ',"', ',<b>"' | replace: '{"', '{<b><i+>"' | replace: '}', '<b><i->}' | split: '<b>' -%}
+{%- assign json = d[1] | jsonify | replace: ':', ': ' | replace: ',', ',<@b>' | replace: '{', '{<@b><@i+>' | replace: '}', '<@b><@i->}' | replace: '[', '[<@b><@i+>' | replace: ']', '<@b><@i->]' | split: '<@b>' -%}
 {%- for e in json -%}
-{%- if e contains '<i+>' -%}
+{%- if e contains '<@i+>' -%}
 {%- assign i = i | append: '    ' -%}
 {%- endif -%}
-{%- if e contains '<i->' -%}
+{%- if e contains '<@i->' -%}
 {%- assign i = i | remove_first: '    ' -%}
 {%- endif %}
-{{i}}{{e | remove: '<i+>' | remove: '<i->'}}
+{{i}}{{e | remove: '<@i+>' | remove: '<@i->'}}
 {% endfor -%}
 {%- endif -%}
 {%- endfor -%}
