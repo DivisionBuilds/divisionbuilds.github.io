@@ -1025,7 +1025,23 @@ textarea,
         margin-right: 30px;
     }
     .skills {
-        @include align-items(center);
+        .list {
+            @include flex-direction(column);
+            @include align-items(start);
+            margin: 0 auto;
+            & > * {
+                margin: 5px 0px;
+                @include display-flex;
+                @include align-items(center);
+                @include flex-shrink(0);
+                & > * {
+                    margin: 5px;
+                }
+                .icon {
+                    margin-right: 30px;
+                }
+            }
+        }
         .talents {
             position: relative;
             @include display-flex;

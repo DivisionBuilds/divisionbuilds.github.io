@@ -158,32 +158,34 @@ layout: build
 			        </div>
 			    {% endif %}
 			    {% if c[0] == 'skills' %}
-			    	{% for i in page.build.skills %}
-			    	<div class="{{i[0]}}">
-			    	{% assign m = i[1].mod %}
-			    	{% assign n = i[1].name %}
-			    		{% if m %}
-			    		<div class="icon skill {{m | downcase | replace: ' ', '-'}}"></div>
-			    		{% else %}
-			    		<div class="icon skill {{n | downcase | replace: ' ', '-'}}"></div>
-			    		{% endif %}
-			    		<div class="info">
-			    			<div class="name">{{n}}</div>
-			    			{% if m %}
-			    			<div class="mod text">{{m}}</div>
-			    			{% endif %}
-			    		</div>
-			    		<span class="tooltip">
-			    			{% if m %}
-	    					<h1>{{m}}</h1>
-	    					{{site.data.skills[m]}}
-	    					{% else %}
-	    					<h1>{{n}}</h1>
-	    					{{site.data.skills[n]}}
-	    					{% endif %}
-	    				</span>
-			    	</div>
-			    	{% endfor %}
+					<div class="list">
+						{% for i in page.build.skills %}
+						<div class="{{i[0]}}">
+						{% assign m = i[1].mod %}
+						{% assign n = i[1].name %}
+							{% if m %}
+							<div class="icon skill {{m | downcase | replace: ' ', '-'}}"></div>
+							{% else %}
+							<div class="icon skill {{n | downcase | replace: ' ', '-'}}"></div>
+							{% endif %}
+							<div class="info">
+								<div class="name">{{n}}</div>
+								{% if m %}
+								<div class="mod text">{{m}}</div>
+								{% endif %}
+							</div>
+							<span class="tooltip">
+								{% if m %}
+								<h1>{{m}}</h1>
+								{{site.data.skills[m]}}
+								{% else %}
+								<h1>{{n}}</h1>
+								{{site.data.skills[n]}}
+								{% endif %}
+							</span>
+						</div>
+						{% endfor %}
+					</div>
 			    	{% if page.build.talents %}
 				    <div class="talents">
 				    	{% for i in page.build.talents %}
