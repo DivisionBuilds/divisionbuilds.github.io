@@ -2,7 +2,6 @@ $(document).ready(function() {
     $(".tab-bar-item").click(function() {
         build.showpage($(this).text());
     });
-    build.showpage(window.location.hash.slice(1).toLowerCase());
 });
 
 var build = {
@@ -13,7 +12,6 @@ var build = {
 	    	$(".build-content .visible").removeClass("visible");
 	        e.addClass("selected");
 	        $(".build-content ." + page.toLowerCase()).addClass("visible");
-	        window.location.hash = page.toLowerCase();
 	    }
 	}
 };
