@@ -1,0 +1,30 @@
+ar:
+    name: Assault Rifle
+    bonus:
+        type: EAD
+        name: Enemy Armor Damage
+        amount: [17.5, 24]
+lmg:
+    name: LMG
+    bonus:
+        type: OOC
+        name: Out of Cover Damage
+        amount: [11, 15]
+shotgun:
+    name: Shotgun
+    bonus:
+        type: Stagger
+        name: Stagger
+        amount: [296, 362]
+mmr:
+    name: Marksman Rifle
+    bonus:
+        type: HSD
+        name: Headshot Damage
+        amount: [141, 172]
+smg:
+    name: SMG
+    bonus:
+        type: CHC
+        name: Critical Hit Chance
+        amount: [18, 22.5]
