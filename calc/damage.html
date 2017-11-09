@@ -39,7 +39,7 @@ info: "Calculate your estimated bullet damage, burst damage and DPS."
                 <label>Reload time (Seconds):
                     <span class="tooltip">Reload time of your gun in seconds.</span>
                 </label>
-                <input type="number" value="1" min="0" class="reloadtime">
+                <input type="number" value="1" min="0" step="0.01" class="reloadtime">
             </div>
             <div class="flex-item">
                 <label>Firearms:
@@ -51,7 +51,7 @@ info: "Calculate your estimated bullet damage, burst damage and DPS."
                 <label>Firearms scaling:
                     <span class="tooltip">The Firearms scaling of your gun.<br>Leave this at 0 when already included in the base damage.</span>
                 </label>
-                <input type="number" value="0" min="0" class="scaling">
+                <input type="number" value="0" min="0" step="0.01" class="scaling">
             </div>
             <div class="flex-item">
                 <label>Enemy Armor Damage (%):
@@ -81,7 +81,7 @@ info: "Calculate your estimated bullet damage, burst damage and DPS."
                 <label>Base Headshot Multiplier:
                     <span class="tooltip">The Base Headshot Multiplier of your gun.<br>Leave this at 1 when already included in the Headshot Damage.</span>
                 </label>
-                <input type="number" value="1" min="1" class="hsmulti">
+                <input type="number" value="1" min="1" step="0.01" class="hsmulti">
             </div>
             <div class="flex-item">
                 <label>Headshot Chance (%):
