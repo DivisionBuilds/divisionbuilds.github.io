@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $("input").on("keyup change", page.update);
+    $("input").on("keyup change input", page.update);
 });
 
 // PAGE UPDATE

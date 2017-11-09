@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $("input").on("keyup change", page.update);
+    $("input").on("keyup change input", page.update);
     $(".button:contains('Add')").click(function() {
         $(".append").append('<div class="flex-child added"><input type="number" value="0" min="0" class="increase"></div>');
         $("input").on("keyup change", page.update);
