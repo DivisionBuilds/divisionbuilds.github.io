@@ -35,8 +35,7 @@ body {
     overflow-x: hidden;
     overflow-y: scroll;
     cursor: default;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
+    @include prefix(backface-visibility, hidden);
     &:after,
     &::after {
         content: "";
@@ -49,10 +48,10 @@ body {
         background-size: cover;
         background-position: center;
         z-index: -9999;
-        @include filter(blur(5px) brightness(40%));
+        @include prefix(filter, blur(5px) brightness(40%));
     }
     & > * {
-        @include transition(opacity .3s ease-in-out);
+        @include prefix(transition, opacity .3s ease-in-out);
     }
 }
 ::selection {
@@ -163,7 +162,7 @@ label {
     outline: none;
     border: none;
     @include align-self(flex-start);
-    @include transition(background-color .15s ease-in-out);
+    @include prefix(transition, background-color .15s ease-in-out);
     &:hover {
         background-color: hsla(0, 0%, 100%, .3);
     }
@@ -175,7 +174,7 @@ label {
     top: 40px;
     right: 40px;
     opacity: .5;
-    @include transition(opacity .15s ease-in-out);
+    @include prefix(transition, opacity .15s ease-in-out);
     z-index: 10;
     &:hover {
         opacity: .7;
@@ -189,7 +188,7 @@ label {
     color: hsla(0, 0%, 100%, .3);
     font-weight: bold;
     text-shadow: none;
-    @include transition(all .15s ease-in-out);
+    @include prefix(transition, all .15s ease-in-out);
     cursor: pointer;
     z-index: 11;
     &:hover {
@@ -203,7 +202,7 @@ label {
     @include flex-wrap(wrap);
     @include align-items(center);
     margin-bottom: 20px;
-    @include animation(fade-in .5s ease-in-out);
+    @include prefix(animation, fade-in .5s ease-in-out);
 }
 .main-header,
 .build-header {
@@ -229,7 +228,7 @@ label {
     .author {
         color: hsla(0, 0%, 100%, .7);
         font-weight: bold;
-        @include transition( all .15s ease-in-out);
+        @include prefix(transition,  all .15s ease-in-out);
         &:hover {
             color: #fff;
         }
@@ -264,16 +263,15 @@ label {
         color: hsla(0, 0%, 100%, .5);
         font-weight: 600;
         text-align: center;
-        @include transition(all .15s ease-in-out);
-        -webkit-transition-delay: .15s;
-        transition-delay: .15s;
+        @include prefix(transition, all .15s ease-in-out);
+        @include prefix(transition-delay, .15s);
         &:hover {
             background-color: hsla(0, 0%, 100%, .3);
         }
         &.active {
             background-color: $orange;
             color: #fff;
-            @include animation(selected-bar-item-delay .6s ease-in-out);
+            @include prefix(animation, selected-bar-item-delay .6s ease-in-out);
         }
         &:hover,
         &.active {
@@ -292,7 +290,7 @@ label {
             bottom: 100%;
             margin-bottom: 2px;
             background: hsla(0, 0%, 100%, .3);
-            @include transition(all .15s ease-in-out);
+            @include prefix(transition, all .15s ease-in-out);
             -webkit-transition-delay: .15s;
             transition-delay: .15s;
         }
@@ -310,7 +308,7 @@ label {
         &.active:after,
         &.active::after {
             background: $orange !important;
-            @include animation(absolute-slide-delay .6s ease-in-out);
+            @include prefix(animation, absolute-slide-delay .6s ease-in-out);
         }
     }
 }
@@ -337,7 +335,7 @@ label {
         line-height: 18px;
         text-align: center;
         cursor: pointer;
-        @include transition(all .15s ease-in-out);
+        @include prefix(transition, all .15s ease-in-out);
         -webkit-transition-delay: .15s;
         transition-delay: .15s;
         &:hover {
@@ -364,7 +362,7 @@ label {
             bottom: 100%;
             margin-bottom: 2px;
             background: hsla(0, 0%, 100%, .3);
-            @include transition(all .15s ease-in-out);
+            @include prefix(transition, all .15s ease-in-out);
             -webkit-transition-delay: .15s;
             transition-delay: .15s;
         }
@@ -396,7 +394,7 @@ label {
     z-index: 1s;
     a {
         color: hsla(0, 0%, 100%, .5);
-        @include transition(all .15s ease-in-out);
+        @include prefix(transition, all .15s ease-in-out);
         &:hover {
             color: hsla(0, 0%, 100%, .7);
         }
@@ -413,7 +411,7 @@ label {
     background: hsla(0, 0%, 50%, .1);
     cursor: auto;
     font-size: 1.125em;
-    @include animation(fade-in .5s ease-in-out);
+    @include prefix(animation, fade-in .5s ease-in-out);
     &.wide {
         min-width: 850px;
     }
@@ -457,9 +455,8 @@ label {
         width: 0;
         height: 2px;
         background: $orange;
-        @include transition(all .15s ease-in-out);
-        -webkit-transition-delay: .15s;
-        transition-delay: .15s;
+        @include prefix(transition, all .15s ease-in-out);
+        @include prefix(transition-delay, .15s);
     }
     &:before,
     &::before {
@@ -473,8 +470,7 @@ label {
     &:hover::before {
         left: 0;
         width: 100%;
-        -webkit-transition-delay: 0s;
-        transition-delay: 0s;
+        @include prefix(transition-delay, 0s);
     }
 }
 .flex-list.links {
@@ -491,7 +487,7 @@ label {
     .flex-item {
         padding: 10px 15px;
         background: hsla(0, 0%, 50%, .1);
-        @include transition(background .15s ease-in-out);
+        @include prefix(transition, background .15s ease-in-out);
         &:hover {
             background: hsla(0, 0%, 50%, .3);
         }
@@ -535,7 +531,7 @@ label {
     &.github {
         background-image: url(https://cdn.rawgit.com/gilbarbara/logos/master/logos/github-icon.svg);
         background-size: 100px;
-        @include filter(invert(100%));
+        @include prefix(filter, invert(100%));
     }
     &.jekyll {
         background-image: url(http://jekyllrb.com/img/logo-2x.png);
@@ -577,7 +573,7 @@ label {
         border: 4px solid hsla(0, 0%, 100%, .1);
         border-top-color: $orange;
         border-radius: 50%;
-        @include animation(circle-spin .7s infinite linear);
+        @include prefix(animation, circle-spin .7s infinite linear);
     }
     .list-item {
         width: 350px;
@@ -585,8 +581,8 @@ label {
         margin: 35px 30px;
         color: hsla(0, 0%, 100%, .7);
         font-size: 1.25em;
-        @include transition(all .15s ease-in-out);
-        @include animation(fade-in .5s ease-in-out);
+        @include prefix(transition, all .15s ease-in-out);
+        @include prefix(animation, fade-in .5s ease-in-out);
         &:hover {
             background: hsla(0, 0%, 100%, .1);
         }
@@ -611,9 +607,8 @@ label {
                 width: 0;
                 height: 2px;
                 background: $orange;
-                @include transition(all .15s ease-in-out);
-                -webkit-transition-delay: .15s;
-                transition-delay: .15s;
+                @include prefix(transition, all .15s ease-in-out);
+                @include prefix(transition-delay, .15s);
             }
             &:before,
             &::before {
@@ -627,8 +622,7 @@ label {
             &:hover::before {
                 left: 0;
                 width: 100%;
-                -webkit-transition-delay: 0s;
-                transition-delay: 0s;
+                @include prefix(transition-delay, 0s);
             }
         }
         .date {
@@ -653,8 +647,8 @@ label {
     position: relative;
     font-size: 2.25em;
     font-weight: 600;
-    @include transition(all .15s ease-in-out);
-    @include animation(fade-in .5s ease-in-out);
+    @include prefix(transition, all .15s ease-in-out);
+    @include prefix(animation, fade-in .5s ease-in-out);
     overflow: hidden;
     &:after,
     &::after {
@@ -716,15 +710,11 @@ label {
         min-width: 0;
     }
     .highlight {
-        @include box-shadow(0 0 0 1px $orange);
-        &::-webkit-input-placeholder {
-            color: $orange;
-        }
-        &:-ms-input-placeholder {
-            color: $orange;
-        }
-        &::-moz-placeholder {
-            color: $orange;
+        @include prefix(box-shadow, 0 0 0 1px $orange);
+        @each $s in webkit, ms, moz {
+            &::-#{$s}-input-placeholder {
+                color: $orange;
+            }
         }
     }
 }
@@ -745,7 +735,7 @@ label {
         border: 4px solid hsla(0, 0%, 100%, .1);
         border-top-color: $orange;
         border-radius: 50%;
-        @include animation(circle-spin .7s infinite linear);
+        @include prefix(animation, circle-spin .7s infinite linear);
     }
     &.success,
     &.error {
@@ -783,7 +773,7 @@ a.ui-button:active,
 }
 .ui-menu-item-wrapper {
     border: none !important;
-    @include transition(background .15s ease-in-out !important);
+    @include prefix(transition, background .15s ease-in-out !important);
 }
 .ui-menu .ui-state-focus, .ui-menu .ui-state-active {
     margin: 0;
@@ -820,7 +810,7 @@ textarea,
         @include display-flex;
         @include flex-direction(column);
         margin: 0 auto;
-        @include animation(fade-in .5s ease-in-out);
+        @include prefix(animation, fade-in .5s ease-in-out);
     }
     .weapons .icon.weapon-talent:before,
     .weapons .icon.weapon-talent::before,
@@ -837,13 +827,13 @@ textarea,
         opacity: .1;
     }
     & .weapons {
-        @include animation(none);
+        @include prefix(animation, none);
         .mods,
         & > :not(.mods) > * {
-            @include animation(fade-in .5s ease-in-out);
+            @include prefix(animation, fade-in .5s ease-in-out);
         }
         & > :not(.mods) > .icon {
-            @include animation(fade-in-7 .5s ease-in-out);
+            @include prefix(animation, fade-in-7 .5s ease-in-out);
         }
     }
     & > :not(.general) > * {
@@ -941,7 +931,7 @@ textarea,
                 margin-right: 10px;
                 &:after,
                 &::after {
-                    @include filter(drop-shadow(3px 3px 0 hsla(0, 0%, 100%, .07)));
+                    @include prefix(filter, drop-shadow(3px 3px 0 hsla(0, 0%, 100%, .07)));
                 }
             }
             .amount {
@@ -1000,7 +990,7 @@ textarea,
                     right: 10px;
                     bottom: 5px;
                     left: 10px;
-                    @include filter(drop-shadow(3px 3px 0 rgba(200, 200, 200, .3)));
+                    @include prefix(filter, drop-shadow(3px 3px 0 rgba(200, 200, 200, .3)));
                 }
             }
         }
@@ -1122,7 +1112,7 @@ textarea,
             right: 10px;
             bottom: 5px;
             left: 10px;
-            @include filter(drop-shadow(3px 3px 0 rgba(200, 200, 200, .3)));
+            @include prefix(filter, drop-shadow(3px 3px 0 rgba(200, 200, 200, .3)));
             opacity: .7;
         }
     }
@@ -1229,7 +1219,7 @@ textarea,
     background: hsla(0, 0%, 50%, .1);
     cursor: auto;
     font-size: 1.125em;
-    @include animation(fade-in .3s ease-in-out);
+    @include prefix(animation, fade-in .3s ease-in-out);
     .close {
         position: absolute;
         top: 10px;
@@ -1237,7 +1227,7 @@ textarea,
         height: 36px;
         width: 36px;
         opacity: .5;
-        @include transition(all .15s ease-in-out);
+        @include prefix(transition, all .15s ease-in-out);
         cursor: pointer;
     }
     .close:hover {
@@ -1280,7 +1270,7 @@ textarea,
 }
 .close {
     opacity: .5;
-    @include transition(all .15s ease-in-out);
+    @include prefix(transition, all .15s ease-in-out);
     cursor: pointer;
     &:hover {
         opacity: 1;
@@ -1381,9 +1371,7 @@ textarea,
     width: 250px;
     background-size: auto;
     background-position: 0 -15px;
-    -webkit-mix-blend-mode: screen;
-    -ms-mix-blend-mode: screen;
-    mix-blend-mode: screen;
+    @include prefix(filter, blur(.5px));
     &.acr {
         background-image: url(/sprites/weapons/acr.png);
     }
