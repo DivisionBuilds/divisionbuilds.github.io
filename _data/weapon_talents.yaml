@@ -25,6 +25,10 @@ Caduceus:
 Capable:
     description: "Using a skill improves the handling of your weapon for 15 seconds."
     available: [ar, lmg, smg, mmr, shotgun, pistol]
+Card Counter: 
+    description: "One half of the magazine does 20% increased damage. The half which deals increased damage flips after 15 seconds or when the magazine is empty."
+    available: [smg]
+    exotic: true
 Carefree:
     description: "Hipfire damage is increased by 11%."
     available: [smg]
@@ -42,6 +46,10 @@ Competent:
 Coolheaded:
     description: "Performing a headshot reduces all skill cooldowns by 5%."
     available: [mmr, pistol]
+Cover Shooter:
+    description: "Every bullet fired at an enemy from cover increases weapon damage by 0.5% up to 50%. The bonus lasts for 10 seconds. Getting a kill with this weapon while in cover resets the duration. The bonus damage is cancelled by reloading, swapping weapons, or exiting combat."
+    available: [lmg]
+    exotic: true
 Deadly:
     description: "Critical hit damage is increased by 15%."
     available: [ar, lmg, smg, mmr, shotgun, pistol]
@@ -74,6 +82,14 @@ Ferocious:
 Fierce:
     description: "Critical hit chance is increased by 5% when using this weapon."
     available: [ar, lmg, smg, mmr, shotgun, pistol]
+Fire:
+    description: "Headshot increase stability by 30% for 15 seconds. Bodyshot increase headshot damage by 30% for 15 seconds."
+    available: [mmr]
+    exotic: true
+Fury:
+    description: "Hitting weakpoints increases weapon damage by 15% for 15 seconds. Hitting skill proxies increase critical hit damage by 30% for 15 seconds."
+    available: [mmr]
+    exotic: true
 Focused:
     description: "When no skills are on cooldown, your weapon damage is increased by 10%."
     available: [ar]
@@ -164,6 +180,10 @@ Swift:
 Talented:
     description: "Killing a target with this weapon increases Skill Power by 15% for 20 seconds. The effect does not stack. Killing a new target refreshes the timer."
     available: [ar, lmg, smg, mmr, shotgun, pistol]
+The Devil's Heel:
+    description: "Both weapons gain the Fire and Fury talents, and the buff durations are increased by 15 seconds. Bonuses from Fire and Fury are no longer lost when swapping betweeen Devil and Heel. Weapon swap speed is increased by 50%."
+    available: [mmr]
+    set: true
 Toxic:
     description: "Headshots with this weapon have a 15% chance to apply the Blind Status Effect."
     available: [mmr, pistol]
