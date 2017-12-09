@@ -35,6 +35,16 @@ AUG:
     range: 18
     hsmulti: 1.5
     class: smg
+Big Alejandro:
+    dmg: [6341, 7443]
+    scaling: 0.93
+    rpm: 1000
+    mag: 55
+    reload: 5500
+    range: 28
+    hsmulti: 2.0
+    class: lmg
+    exotic: Cover Shooter
 Bullfrog:
     dmg: [7841, 9204]
     scaling: 1.15
@@ -55,8 +65,8 @@ Burst Fire MP5:
     hsmulti: 1.5
     class: smg
 Caduceus:
-    dmg: [10227, 12005]
-    scaling: 1.5
+    dmg: [10840, 12725]
+    scaling: 1.59
     rpm: 625
     mag: 30
     reload: 2300
@@ -103,8 +113,8 @@ Custom M44:
     hsmulti: 1.0
     class: mmr
 Damascus:
-    dmg: [9204, 10805]
-    scaling: 1.35
+    dmg: [9818, 11525]
+    scaling: 1.44
     rpm: 450
     mag: 15
     reload: 1600
@@ -113,6 +123,16 @@ Damascus:
     class: pistol
     sidearm: true
     exotic: Quickdraw
+Devil:
+    dmg: [30476, 35775]
+    scaling: 4.47
+    rpm: 275
+    mag: 15
+    reload: 2150
+    range: null
+    hsmulti: 1.0
+    class: mmr
+    exotic: Fire
 Double-Barrel Shotgun:
     dmg: [70904, 83232]
     scaling: 10.4
@@ -132,6 +152,15 @@ Double-Barrel Sawed-Off Shotgun:
     hsmulti: 1.6
     class: shotgun
     sidearm: true
+Eir:
+    dmg: [8045, 9444]
+    scaling: 1.18
+    rpm: 825
+    mag: 32
+    reload: 2000
+    range: 13
+    hsmulti: 1.5
+    class: smg
 FAL:
     dmg: [12272, 14406]
     scaling: 1.8
@@ -161,9 +190,28 @@ Golden Rhino:
     class: pistol
     sidearm: true
     exotic: Golden Rhino
+Heel:
+    dmg: [30476, 35775]
+    scaling: 4.47
+    rpm: 275
+    mag: 15
+    reload: 2150
+    range: null
+    hsmulti: 1.0
+    class: mmr
+    exotic: Fury
+Hildr:
+    dmg: [8045, 9444]
+    scaling: 1.18
+    rpm: 825
+    mag: 32
+    reload: 2000
+    range: 13
+    hsmulti: 1.5
+    class: smg
 Historian:
-    dmg: [20454, 24010]
-    scaling: 3.0
+    dmg: [21067, 24730]
+    scaling: 3.09
     rpm: 300
     mag: 10
     reload: 2900
@@ -172,8 +220,8 @@ Historian:
     class: mmr
     exotic: History Repeats
 Hungry Hog:
-    dmg: [9886, 11605]
-    scaling: 1.45
+    dmg: [10159, 11925]
+    scaling: 1.49
     rpm: 500
     mag: 100
     reload: 5750
@@ -209,8 +257,8 @@ Liberator:
     hsmulti: 1.75
     class: ar
 LVOA-C:
-    dmg: [8863, 10404]
-    scaling: 1.3
+    dmg: [8522, 10004]
+    scaling: 1.25
     rpm: 850
     mag: 30
     reload: 2550
@@ -246,8 +294,8 @@ M249:
     hsmulti: 2.0
     class: lmg
 M4:
-    dmg: [8863, 10404]
-    scaling: 1.3
+    dmg: [8522, 10004]
+    scaling: 1.25
     rpm: 850
     mag: 30
     reload: 2500
@@ -321,6 +369,15 @@ MG5:
     range: 30
     hsmulti: 1.85
     class: lmg
+Midas:
+    dmg: [9818, 11525]
+    scaling: 1.44
+    rpm: 550
+    mag: 32
+    reload: 1800
+    range: 17
+    hsmulti: 1.5
+    class: smg
 MK17:
     dmg: [29044, 34094]
     scaling: 4.25
@@ -367,8 +424,8 @@ MP7:
     hsmulti: 1.5
     class: smg
 Pakhan:
-    dmg: [9204, 10805]
-    scaling: 1.35
+    dmg: [8454, 9924]
+    scaling: 1.24
     rpm: 650
     mag: 45
     reload: 2700
@@ -470,8 +527,8 @@ SCAR-L:
     hsmulti: 1.75
     class: ar
 Showstopper:
-    dmg: [27272, 32016]
-    scaling: 4.0
+    dmg: [36000, 42256]
+    scaling: 5.28
     rpm: 240
     mag: 20
     reload: 2200
@@ -525,8 +582,8 @@ T821:
     hsmulti: 1.5
     class: smg
 Tenebrae:
-    dmg: [29317, 34415]
-    scaling: 4.3
+    dmg: [29931, 35135]
+    scaling: 4.39
     rpm: 275
     mag: 20
     reload: 2500
@@ -534,6 +591,16 @@ Tenebrae:
     hsmulti: 1.0
     class: mmr  
     exotic: Lights Out
+The House:
+    dmg: [8659, 10164]
+    scaling: 1.27
+    rpm: 850
+    mag: 30
+    reload: 2070
+    range: 17
+    hsmulti: 1.5
+    class: smg
+    exotic: Card Counter
 Thompson:
     dmg: [9545, 11205]
     scaling: 1.4
@@ -594,8 +661,8 @@ Vector:
     hsmulti: 1.5
     class: smg
 Warlord:
-    dmg: [10909, 12805]
-    scaling: 1.6
+    dmg: [11522, 13526]
+    scaling: 1.69
     rpm: 600
     mag: 30
     reload: 2600
