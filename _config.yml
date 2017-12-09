@@ -9,7 +9,7 @@ exclude:
     - Gemfile
 
 sass:
-    style: expanded
+    style: compressed
 
 plugins:
   - jekyll-redirect-from
