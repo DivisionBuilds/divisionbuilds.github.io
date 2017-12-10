@@ -1333,6 +1333,12 @@ textarea,
         font-weight: bold;
         color: $orange;
     }
+    .name {
+        font-weight: bold;
+    }
+    .pre {
+        white-space: pre-line;
+    }
 }
 .items .icon {
     &.he ~ .tooltip {
@@ -1350,7 +1356,7 @@ textarea,
     &:not(.he):not(.exotic) ~ .tooltip {
         border-color: rgb(15, 211, 129);
         h1,
-        & > .highlight > b {
+        & > .highlight > .name {
             color: rgb(15, 211, 129);
         }
         & > h1 ~ :not(.highlight) {
