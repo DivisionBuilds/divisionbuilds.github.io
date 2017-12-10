@@ -8,7 +8,7 @@ Astute:
     type: gloves
 Barrets:
     name: "Barret's Bulletproof Vest"
-    description: "No skills on cooldown increases Skillpower by 10%.<br>One skill on cooldown increases Damage by 5%.<br>Two skills on cooldown increases Armor by 10%."
+    description: "No skills on cooldown increases Skillpower by 10%.\nOne skill on cooldown increases Damage by 5%.\nTwo skills on cooldown increases Armor by 10%."
     type: chest
     exotic: true
 Bliss:
