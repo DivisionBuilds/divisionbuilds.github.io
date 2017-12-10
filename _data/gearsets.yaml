@@ -1,43 +1,51 @@
 alphabridge: 
     name: "AlphaBridge"
     bonuses: 
-        - "+ 100% Health Regen"
+        - "+ 100% Health Regeneration"
         - "+ 5% Weapon Damage"
         - "If your Primary and Secondary Weapon is of the same category they share the free talent. All talent requirements are ignored for all weapon talents."
+        - "+ 25% Health Regeneration\n+ 10% Weapon Damage"
+        - "Inactive personal versions of all Signature Skills are rotating every 6 seconds and can be activated by killing enemy agents or Veteran/Elite NPCs. The Signature Skills that is up on rotation when an enemy is killed is activated for 10 seconds when all Primary Stats are balanced between each other.These times are shortened depending on the difference in the ranges of your Primary Attributes.\nYou can no longer activate Signature Skills or be affected by Ally Signature Skills."
 banshee: 
     name: "Banshee"
     bonuses: 
-        - "+ 20% Looted DZ Funds"
+        - "+ 20% Dark Zone Currency Gained"
         - "+ 10% Damage to targets out of cover"
-        - "While Rogue all ammo is completely refilled every 30 seconds. Damage taken from non rogue players reduced by 10%. While not Rogue Damage to Rogue players is increased by 10%.<br>This bonus is increased to 20% for 10 minutes after being killed by a rogue."
+        - "While Rogue all ammo is completely refilled every 30 seconds. Damage taken from non rogue players reduced by 10%. While not Rogue Damage to Rogue players is increased by 10%.\nThis bonus is increased to 20% for 10 minutes after being killed by a rogue."
+        - "+ 20% Dark Zone Currency Gained\n+ 5% Damage to Targets out of Cover"
+        - "While Rogue, the time to clear Manhunt status is decreased by 5% for every group member within 10 meters. All Rogue status actions that result in a rank up are doubled. Rewards for clearing Manhunt status are improved.\nWhile not Rogue, damage to Manhunt status agents is increased by 5% for each Manhunt level the agent has. Rewards for killing a Manhunt status agent are improved."
 deadeye: 
     name: "DeadEYE"
     bonuses: 
         - "+ 40% Initial Bullet Stability"
         - "+ 20% Marksmanrifle Critical Hit Damage"
         - "When zoomed Marksman Rifles lose headshot damage bonus but gain 100% critical strike chance."
-        - "+ 40% Initial Bullet Stability<br>+ 20% Marksmanrifle Critical Hit Damage"
+        - "+ 40% Initial Bullet Stability\n+ 20% Marksmanrifle Critical Hit Damage"
         - "When zoomed, getting a headshot kill with marksman rifles will increase critical hit damage by 20% every second to a maximum of 100% and will increase stability by 100%. Lasts for 10 seconds or until no longer zoomed."
 firecrest: 
     name: "Firecrest"
     bonuses: 
         - "+ 3 Incendiary Granade Capacity"
-        - "+ 50% Flame Turret Range<br>+ 30% Flame Turret Damage"
+        - "+ 50% Flame Turret Range\n+ 30% Flame Turret Damage"
         - "Your weapon damage is increased by 15% against burning targets."
+        - "+ 1 Incendiary Grenade Capacity\n+ 5% Flame Turret Range\n+ 20% Flame Turret Damage"
+        - "Bullets have a 2% chance to cause an enemy to burn. Burning targets can cause a fiery explosion when killed by bullets once every 10 seconds. NPCs set on fire by your flame turret will burn 25% longer for every 2000 Electronics."
 final-measure: 
     name: "Final Measure"
     bonuses: 
         - "+ 25% Exotic Damage Resilience"
         - "+ 15% Protection from Elites"
         - "When in range of hostile grenades or mortars defuses them and adds grenades to your inventory. Can only happen once every 8 seconds."
-        - "+ 15% Exotic Damage Resilience<br>+ 15% Protection from Elites"
-        - "When a grenade is defused the player and all group members within 30 metres gain a buff based on the grenade type that was defused.<br>EMP/Shock: Skill power increased by 20% for 8 seconds<br>HE/Indendiary: Wepaon damage is increased by 20% for 8 seconds<br>Flashbang/Teargas: Armor increased by 20% for 8 seconds."
+        - "+ 15% Exotic Damage Resilience\n+ 15% Protection from Elites"
+        - "When a grenade is defused the player and all group members within 30 metres gain a buff based on the grenade type that was defused.\nEMP/Shock: Skill power increased by 20% for 8 seconds\nHE/Indendiary: Wepaon damage is increased by 20% for 8 seconds\nFlashbang/Teargas: Armor increased by 20% for 8 seconds."
 frontline: 
     name: "D3-FNC"
     bonuses: 
         - "+ 15% Protection from Elites"
-        - "+ 30% Ballistic Shield Health"
-        - "Allows using an SMG if one is equipped when Ballistic Shield is deployed. Only Master Rank shield mod is active."
+        - "+ 5% Ballistic Shield Damage Resilience"
+        - " When used, your Ballistic Shield has no skill mod active. It will no longer remove Critical Chance from your weapon. SMGs can be equipped. Ballistic Shield health is increased by 57% for every 3000 stamina"
+        - "+ 15% Protection From Elites\n+ 5% Ballistic Shield Damage Resilience"
+        - "When Ballistic Shield is deployed, melee damage is increased by 2000% and all overhealing the agent receives is applied to the Ballistic Shield as healing. After receiving a damage threshold from receiving Physical or Exotic damage, the Ballistic Shield grants a buff to the agent and all group members within 15 meters for 6 seconds. The duration of the buff is increased by 2 seconds for every 3000 Stamina the agent has.\nPhysical Damage: Armor is increased by 30%.\nExotic Damage: Weapon Damage is increased by 30%."
 hunters-faith: 
     name: "Hunter's Faith"
     bonuses: 
@@ -48,9 +56,9 @@ lone-star:
     name: "Lone Star"
     bonuses: 
         - "+ 100% Ammo Capacity"
-        - "+ 8% LMG Damage<br>+ 8% Shotgun Damage"
+        - "+ 8% LMG Damage\n+ 8% Shotgun Damage"
         - "When the weapon is holstered it is instantly reloaded."
-        - "+50% Ammo Capacity<br>+ 12% LMG Damagey<br>+ 12% Shotgun Damage"
+        - "+ 50% Ammo Capacity\n+ 12% LMG Damagey\n+ 12% Shotgun Damage"
         - "When a weapon has 50% of its magazine remaining, there is a 75% chance to receive a bonus that activates when the final bullet is fired from the current magazine. Once activated, the magazine is instantly refilled, weapon damage and fire rate is increased by 20%. The bonus is cancelled by reloading, swaping weapons or exiting combat."
 nomad: 
     name: "Path of the Nomad"
@@ -58,27 +66,31 @@ nomad:
         - "+ 15% Health on Kill"
         - "Grants a constant small amount of healing allowing the user to regenerate all segments of the health bar during combat."
         - "When receiving fatal damage you are instead healed to full health. Can occur once every 4 minutes."
+        - "+ 10% Health on Kill\nIncreases the amount of healing from Nomad's Resolve. Nomad's Resolve will now overheal."
+        - "50% chance to have no cooldown for Path of the Nomad. Take 60% less damage for 10 seconds after Path of the Nomad is triggered."
 predators-mark: 
     name: "Predator's Mark"
     bonuses: 
         - "+ 10% Reload Speed"
-        - "+ 8% Assault Rifle Damage<br>+ 8% SMG Damage"
+        - "+ 8% Assault Rifle Damage\n+ 8% SMG Damage"
         - "Hit 10 shots without switching target to make the target bleed for 50% of damage already done by those bullets."
+        - "+ 10% Reload Speed\n+ 8% Assault Rifle Damage\n+ 8% SMG Damage"
+        - "Hitting 10 shots without switching targets now applies The Predator’s Mark which makes the target bleed for 50% of the damage already done by those bullets; The Predator’s Mark ignores the targets Bleed Resistance. The Damage over time to the target is increased by 15% for every 3000 Stamina and can critically hit the target. When at 9000 Stamina the damage over time bonus is increased by an additional 120%"
 reclaimer: 
     name: "Reclaimer"
     bonuses: 
-        - "+ 30% Support Station range"
-        - "+ 50% Support Station duration"
+        - "+ 30% Support Station Range"
+        - "+ 50% Support Station Duration"
         - "Support station gains the benefit of the Life Support Immunizer and Ammo Cache mods at the same time."
-        - "+ 15% Support Station range<br>+ 25% Support Station duration"
-        - "- 50% Support Station Revive Time<br>+ 100% Support Station healing speed<br>+ 100% Support Station Health<br>Support Station gains a 25% chance have no cooldown triggered when it is destroyed by an enemy. This chance is increased by 2% for every 1000 Electronics."
+        - "+ 15% Support Station Range\n+ 25% Support Station Duration"
+        - "+ 100% Support Station Healing Speed\n+ 100% Support Station Health\nSupport Station gains a 25% chance have no cooldown triggered when it is destroyed by an enemy. This chance is increased by 2% for every 1000 Electronics."
 sentry: 
     name: "Sentry's Call"
     bonuses: 
         - "+ 30% Accuracy"
         - "+ 10% Headshot Damage"
         - "Headshots using semi-automatic weapons mark the enemy increasing the damage inflicted on the target by 5% for a duration of 30 seconds each. A target can receive up to three marks."
-        - "+ 15% Accuracy<br>+ 15% Headshot Damage"
+        - "+ 15% Accuracy\n+ 15% Headshot Damage"
         - "NPC targets can now receive up to six marks. After three marks, every headshot on the target has a 50% chance to spread a single mark to additional targets within 25 meters. At six marks, your headshot damage on the target is increased by 100%."
 striker: 
     name: "Striker's Battlegear"
@@ -86,7 +98,7 @@ striker:
         - "+ 20% Stability"
         - "+ 10% Enemy Armor Damage"
         - "Every consecutive hit deals 1% more damage. Stacks up to 100%. Missing shots drop bonus by 2%. Bonus is reduced by 1% every second."
-        - "+ 10% Stability<br>+ 5% Enemy Armor Damage"
+        - "+ 10% Stability\n+ 5% Enemy Armor Damage"
         - "Every hit adds a self-healing bonus for 0.01% of max health per second. This bonus is further increased by 0.03% for every 2000 stamina. Stacks up to 100 hits. Bonus is reduced by 0.01% every second. Bonus can be paused by EMP."
 tactician:
     name: "Tactician's Authority"
@@ -94,3 +106,5 @@ tactician:
         - "+ 15% Skill Haste"
         - "+ 10% Skill Power"
         - "Every bullet you and your group lands on a hostile adds 0.2% skill power to you for a max of 30% bonus. Bonus consumes the skill power buff on skill use."
+        - "+ 5% Skill haste\n+ 5% Skill Power"
+        - "Using a skill while at the max bonus will reset the skill power buff but will raise the cap to 60%. Using a different skill at 60% has a 40% chance to set the buff power back to 30% while keeping the cap at 60%. This chance is increased by 20% for every 3000 Electronics."
