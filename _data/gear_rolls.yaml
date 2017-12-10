@@ -3,12 +3,6 @@ absolutes:
     - main
     - health
     - skill_power
-    - assault_rifle_damage
-    - shotgun_damage
-    - lmg_damage
-    - marksman_rifle_damage
-    - smg_damage
-    - pistol_damage
 chest: 
     armor: [1704, 2003]
     main: [1114, 1272]
@@ -48,12 +42,12 @@ mask:
 gloves: 
     armor: [852, 1001]
     main: [1114, 1272]
-    assault_rifle_damage: [1135, 1334]
-    shotgun_damage: [1135, 1334]
-    lmg_damage: [1135, 1334]
-    marksman_rifle_damage: [3982, 4681]
-    smg_damage: [852, 1001]
-    pistol_damage: [2270, 2668]
+    assault_rifle_damage: [10, 12]
+    shotgun_damage: [10, 12]
+    lmg_damage: [10, 12]
+    marksman_rifle_damage: [10, 12]
+    smg_damage: [10, 12]
+    pistol_damage: [10, 12]
     critical_hit_chance: [5, 6]
     critical_hit_damage: [14, 17]
     enemy_armor_damage: [6.5, 8]
