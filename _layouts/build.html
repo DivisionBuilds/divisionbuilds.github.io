@@ -88,14 +88,14 @@ layout: build
 			                    <div class="name">{{n}}</div>
 			                    <div class="rolls">
 									{% for r in i[1].rolls %}
-									{% assign roll = r | downcase | replace: ' ', '_' %}
-									{% if site.data.gear_rolls.absolutes contains roll %}
-									{% assign unit = "" %}
-									{% else %}
-									{% assign unit = "%" %}
-									{% endif %}
-									{% assign seperator = unit | append: ' - ' %}
-									<div class="roll"><span>{{site.data.gear_rolls[slot][roll] | join: seperator}}{{unit}}</span> {{r}}</div>
+										{% assign roll = r | downcase | replace: ' ', '_' %}
+										{% if site.data.gear_rolls.absolutes contains roll %}
+											{% assign unit = "" %}
+										{% else %}
+											{% assign unit = "%" %}
+										{% endif %}
+										{% assign seperator = unit | append: ' - ' %}
+										<div class="roll"><span>{{site.data.gear_rolls[slot][roll] | join: seperator}}{{unit}}</span> {{r}}</div>
 									{% endfor %}
 								</div>
 			                </div>
@@ -122,7 +122,10 @@ layout: build
 		    					<h1>{{site.data.gearsets[t].name}}</h1>
 		    					{% for b in site.data.gearsets[t].bonuses %}
 									{% assign amount = forloop.index | plus: 1 %}
-									<p{% if count >= amount %} class="highlight"{% endif %}><b>Set Bonus ({{amount}}):</b><br>{{b}}</p>
+									<div{% if count >= amount %} class="highlight"{% endif %}>
+										<div class="name">Set Bonus ({{amount}}):</div>
+										<div class="pre">{{b}}</div>
+									</div>
 		    					{% endfor %}
 		    				{% endif %}
 		    				</span>
