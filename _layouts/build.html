@@ -95,7 +95,7 @@ layout: build
 									{% assign unit = "%" %}
 									{% endif %}
 									{% assign seperator = unit | append: ' - ' %}
-									<div><span>{{site.data.gear_rolls[slot][roll] | join: seperator}}{{unit}}</span> {{r}}</div>
+									<div class="roll"><span>{{site.data.gear_rolls[slot][roll] | join: seperator}}{{unit}}</span> {{r}}</div>
 									{% endfor %}
 								</div>
 			                </div>
@@ -158,8 +158,22 @@ layout: build
 					        		<div class="amount">{{i[0]}}</div>
 					        		<div class="icon {{i[1] | downcase}}"></div>
 					        		<div class="info">
-					        			<div class="name">{{i[1]}} Mod</div>
-					        			{{i[2]}}
+										{% capture a %}{{i[1]}}|{{i[2]}}{% endcapture %}
+										{% assign a = a | split: '|' %}
+										{% for r in a %}
+											{% assign roll = r | downcase | replace: ' ', '_' %}
+											{% if forloop.index == 1 %}
+												<div class="name roll"><span>{{site.data.gear_rolls.mods.main | join: ' - '}}</span> {{r}} Mod</div>
+											{% else %}
+												{% if site.data.gear_rolls.absolutes contains roll %}
+													{% assign unit = "" %}
+												{% else %}
+													{% assign unit = "%" %}
+												{% endif %}
+												{% assign seperator = unit | append: ' - ' %}
+												<div class="roll"><span>{{site.data.gear_rolls.mods[roll] | join: seperator}}{{unit}}</span> {{r}}</div>
+											{% endif %}
+										{% endfor %}
 					        		</div>
 					        	</div>
 					        {% endfor %}
