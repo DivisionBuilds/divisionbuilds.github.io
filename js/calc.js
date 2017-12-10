@@ -16,7 +16,7 @@ var calc = {
 		    hsmulti = o.hsmulti || 1,
 		    hsmodifier = o.hsmodifier || 1,
 		    increase = o.increase || 0;
-		var d = (base + (firearms * scaling) + gloves) * (1 + (Math.max(1, ((Math.max(1, hsmulti) + hsd / 100) * hsmodifier)) - 1) * hsc / 100 + (chd / 100 * chc / 100)) * (1 + (awd + wtd) / 100) * (1 + ooc / 100);
+		var d = (base + (firearms * scaling)) * (1 + (Math.max(1, ((Math.max(1, hsmulti) + hsd / 100) * hsmodifier)) - 1) * hsc / 100 + (chd / 100 * chc / 100)) * (1 + (awd + wtd + gloves) / 100) * (1 + ooc / 100);
 		if (increase instanceof Array) {
 			for (var i = 0; i < increase.length; i++)
 				d  *= (1 + (increase[i] || 0) / 100);
