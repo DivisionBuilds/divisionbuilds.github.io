@@ -682,7 +682,7 @@ label {
     .weapon .talents,
     .weapon.mods > div,
     .gear .stats,
-    .rolls > div,
+    .rolls > .roll,
     .performance > div,
     .skills > * {
         @include flex-grow(2);
@@ -958,14 +958,14 @@ textarea,
                 position: absolute;
             }
         }
+        .roll {
+            & > span {
+                font-weight: 600;
+            }
+        }
         .items {
             & > * {
                 max-height: 120px;
-            }
-            .rolls {
-                span {
-                    font-weight: 600;
-                }
             }
             .icon {
                 background: linear-gradient(rgba(244, 255, 255, .5), rgba(244, 255, 255, .5) 0) no-repeat,
