@@ -39,8 +39,7 @@ body {
     overflow-y: scroll;
     cursor: default;
     @include prefix(backface-visibility, hidden);
-    &:after,
-    &::after {
+    @include pseudo(after) {
         content: "";
         position: fixed;
         top: -20px;
@@ -281,10 +280,7 @@ label {
             -webkit-transition-delay: 0s;
             transition-delay: 0s;
         }
-        &:before,
-        &::before,
-        &:after,
-        &::after {
+        @include pseudo(before, after) {
             content: "";
             position: absolute;
             height: 3px;
@@ -297,21 +293,19 @@ label {
             -webkit-transition-delay: .15s;
             transition-delay: .15s;
         }
-        &:hover:before,
-        &:hover::before,
-        &.active:before,
-        &.active::before,
-        &.active:after,
-        &.active::after {
-            width: 100%;
-            left: 0;
-            -webkit-transition-delay: 0s;
-            transition-delay: 0s;
+        &:hover,
+        &.active {
+            @include pseudo(before, after) {
+                width: 100%;
+                left: 0;
+                @include prefix(transition-delay, 0s);
+            }
         }
-        &.active:after,
-        &.active::after {
-            background: $orange !important;
-            @include prefix(animation, absolute-slide-delay .6s ease-in-out);
+        &.active {
+            @include pseudo(after) {
+                background: $orange !important;
+                @include prefix(animation, absolute-slide-delay .6s ease-in-out);
+            }
         }
     }
 }
@@ -353,10 +347,7 @@ label {
             -webkit-transition-delay: 0s;
             transition-delay: 0s;
         }
-        &:before,
-        &::before,
-        &:after,
-        &::after {
+        @include pseudo(before, after) {
             content: "";
             position: absolute;
             height: 3px;
@@ -369,20 +360,19 @@ label {
             -webkit-transition-delay: .15s;
             transition-delay: .15s;
         }
-        &:hover:before,
-        &:hover::before,
-        &.selected:before,
-        &.selected::before,
-        &.selected:after,
-        &.selected::after {
-            width: 100%;
-            left: 0;
-            -webkit-transition-delay: 0s;
-            transition-delay: 0s;
+        &:hover,
+        &.selected {
+            @include pseudo(before, after) {
+                width: 100%;
+                left: 0;
+                -webkit-transition-delay: 0s;
+                @include prefix(transition-delay, 0s);
+            }
         }
-        &.selected:after,
-        &.selected::after {
-            background: $orange !important;
+        &.selected {
+            @include pseudo(after) {
+                background: $orange !important;
+            }
         }
     }
 }
@@ -447,10 +437,7 @@ label {
     position: relative;
     color: $orange;
     white-space: nowrap;
-    &:after,
-    &::after,
-    &:before,
-    &::before {
+    @include pseudo(before, after) {
         content: "";
         position: absolute;
         left: 50%;
@@ -461,29 +448,24 @@ label {
         @include prefix(transition, all .15s ease-in-out);
         @include prefix(transition-delay, .15s);
     }
-    &:before,
-    &::before {
+    @include pseudo(before) {
         margin-left: 1.5px;
         margin-bottom: -1.5px;
         background: rgba(150, 150, 150, .1);
     }
-    &:hover:after,
-    &:hover::after,
-    &:hover:before,
-    &:hover::before {
-        left: 0;
-        width: 100%;
-        @include prefix(transition-delay, 0s);
+    &:hover {
+        @include pseudo(before, after) {
+            left: 0;
+            width: 100%;
+            @include prefix(transition-delay, 0s);
+        }
     }
 }
 .flex-list.links {
     @include align-items(stretch);
     a {
         color: hsla(0, 0%, 100%, .5);
-        &:after,
-        &::after,
-        &:before,
-        &::before {
+        @include pseudo(before, after) {
             display: none;
         }
     }
@@ -567,16 +549,17 @@ label {
     margin: 0 auto;
     @include display-flex;
     @include flex-wrap(wrap);
-    &:empty:after,
-    &:empty::after {
-        content: "";
-        width: 50px;
-        height: 50px;
-        left: 50%;
-        border: 4px solid hsla(0, 0%, 100%, .1);
-        border-top-color: $orange;
-        border-radius: 50%;
-        @include prefix(animation, circle-spin .7s infinite linear);
+    &:empty {
+        @include pseudo(before, after) {
+            content: "";
+            width: 50px;
+            height: 50px;
+            left: 50%;
+            border: 4px solid hsla(0, 0%, 100%, .1);
+            border-top-color: $orange;
+            border-radius: 50%;
+            @include prefix(animation, circle-spin .7s infinite linear);
+        }
     }
     .list-item {
         width: 350px;
@@ -599,10 +582,7 @@ label {
         .author {
             position: relative;
             color: $orange;
-            &:after,
-            &::after,
-            &:before,
-            &::before {
+            @include pseudo(before, after) {
                 content: "";
                 position: absolute;
                 left: 50%;
@@ -613,19 +593,17 @@ label {
                 @include prefix(transition, all .15s ease-in-out);
                 @include prefix(transition-delay, .15s);
             }
-            &:before,
-            &::before {
+            @include pseudo(before) {
                 margin-left: 1.5px;
                 margin-bottom: -1.5px;
                 background: rgba(150, 150, 150, .1);
             }
-            &:hover:after,
-            &:hover::after,
-            &:hover:before,
-            &:hover::before {
-                left: 0;
-                width: 100%;
-                @include prefix(transition-delay, 0s);
+            &:hover {
+                @include pseudo(before, after) {
+                    left: 0;
+                    width: 100%;
+                    @include prefix(transition-delay, 0s);
+                }
             }
         }
         .date {
@@ -653,8 +631,7 @@ label {
     @include prefix(transition, all .15s ease-in-out);
     @include prefix(animation, fade-in .5s ease-in-out);
     overflow: hidden;
-    &:after,
-    &::after {
+    @include pseudo(after) { 
         content: "";
         position: absolute;
         height: 2px;
@@ -664,10 +641,11 @@ label {
         margin-left: 15px;
         background-color: hsla(0, 0%, 100%, .1);
     }
-    &:first-child:after,
-    &:first-child::after {
-        background-color: $orange;
-        opacity: .3;
+    &:first-child {
+        @include pseudo(after) { 
+            background-color: $orange;
+            opacity: .3;
+        }
     }
 }
 
@@ -727,18 +705,19 @@ label {
     font-size: 2em;
     font-weight: 600;
     text-align: center;
-    &.loading:after,
-    &.loading::after {
-        content: "";
-        display: block;
-        width: 50px;
-        height: 50px;
-        margin-top: 10px;
-        margin-left: calc(50% - 25px);
-        border: 4px solid hsla(0, 0%, 100%, .1);
-        border-top-color: $orange;
-        border-radius: 50%;
-        @include prefix(animation, circle-spin .7s infinite linear);
+    &.loading {
+        @include pseudo(after) { 
+            content: "";
+            display: block;
+            width: 50px;
+            height: 50px;
+            margin-top: 10px;
+            margin-left: calc(50% - 25px);
+            border: 4px solid hsla(0, 0%, 100%, .1);
+            border-top-color: $orange;
+            border-radius: 50%;
+            @include prefix(animation, circle-spin .7s infinite linear);
+        }
     }
     &.success,
     &.error {
@@ -815,19 +794,27 @@ textarea,
         margin: 0 auto;
         @include prefix(animation, fade-in .5s ease-in-out);
     }
-    .weapons .icon.weapon-talent:before,
-    .weapons .icon.weapon-talent::before,
-    .weapons .icon.weapon-talent:after,
-    .weapons .icon.weapon-talent::after,
-    .skills .icon:before,
-    .skills .icon::before {
-        content: "";
-        position: absolute;
-        top: 3px;
-        right: -3px;
-        bottom: -3px;
-        left: 3px;
-        opacity: .1;
+    .weapons .icon.weapon-talent {
+        @include pseudo(before, after) { 
+            content: "";
+            position: absolute;
+            top: 3px;
+            right: -3px;
+            bottom: -3px;
+            left: 3px;
+            opacity: .1;
+        }
+    }
+    .skills .icon {
+        @include pseudo(before) { 
+            content: "";
+            position: absolute;
+            top: 3px;
+            right: -3px;
+            bottom: -3px;
+            left: 3px;
+            opacity: .1;
+        }
     }
     & .weapons {
         @include prefix(animation, none);
@@ -877,13 +864,14 @@ textarea,
             height: 2px;
             background: hsla(0, 0%, 100%, .3);
         }
-        .icon.weapon-talent:after,
-        .icon.weapon-talent::after {
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            opacity: .7;
+        .icon.weapon-talent {
+            @include pseudo(after) { 
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                opacity: .7;
+            }
         }
         .info {
             width: 250px;
@@ -932,8 +920,7 @@ textarea,
         .stats {
             .icon {
                 margin-right: 10px;
-                &:after,
-                &::after {
+                @include pseudo(after) { 
                     @include prefix(filter, drop-shadow(3px 3px 0 hsla(0, 0%, 100%, .07)));
                 }
             }
@@ -966,8 +953,7 @@ textarea,
             width: 120px;
             height: 110px;
             @include flex-shrink(0);
-            &:after,
-            &::after {
+            @include pseudo(after) { 
                 content: "";
                 position: absolute;
             }
@@ -987,8 +973,7 @@ textarea,
                             linear-gradient(rgba(244, 255, 255, .5), rgba(244, 255, 255, .5) 0) bottom left no-repeat,
                             linear-gradient(rgba(244, 255, 255, .5), rgba(244, 255, 255, .5) 0) bottom right no-repeat;
                 background-size: 3px 3px;
-                &:after,
-                &::after {
+                @include pseudo(after) { 
                     top: 5px;
                     right: 10px;
                     bottom: 5px;
@@ -1107,8 +1092,7 @@ textarea,
         height: 110px;
         margin: 0 5px;
         @include flex-shrink(0);
-        &:after,
-        &::after {
+        @include pseudo(after) { 
             content: "";
             position: absolute;
             top: 5px;
@@ -1145,36 +1129,42 @@ textarea,
             color: rgb(208, 92, 60);
         }
         .icon {
-            &.he:after,
-            &.he::after,
-            &.exotic:after,
-            &.exotic::after {
-                background-image: url(/sprites/items.png);
-                background-size: 800px;
+            &.he,
+            &.exotic {
+                @include pseudo(after) { 
+                    background-image: url(/sprites/items.png);
+                    background-size: 800px;
+                }
             }
-            &.holster:after,
-            &.holster::after {
-                background-position: 0 -413px;
+            &.holster {
+                @include pseudo(after) { 
+                    background-position: 0 -413px;
+                }
             }
-            &.chest:after,
-            &.chest::after {
-                background-position: -103px -413px;
+            &.chest {
+                @include pseudo(after) { 
+                    background-position: -103px -413px;
+                }
             }
-            &.backpack:after,
-            &.backpack::after {
-                background-position: -206px -413px;
+            &.backpack {
+                @include pseudo(after) { 
+                    background-position: -206px -413px;
+                }
             }
-            &.mask:after,
-            &.mask::after {
-                background-position: -310px -413px;
+            &.mask {
+                @include pseudo(after) { 
+                    background-position: -310px -413px;
+                }
             }
-            &.gloves:after,
-            &.gloves::after {
-                background-position: -516px -413px;
+            &.gloves {
+                @include pseudo(after) { 
+                    background-position: -516px -413px;
+                }
             }
-            &.knee-pads:after,
-            &.knee-pads::after {
-                background-position: -618px -413px;
+            &.knee-pads {
+                @include pseudo(after) { 
+                    background-position: -618px -413px;
+                }
             }
         }
     }
@@ -1566,357 +1556,292 @@ textarea,
     position: relative;
     width: 100px;
     margin: 0 5px;
-    &:before,
-    &::before,
-    &:after,
-    &::after {
+    @include pseudo(before, after) { 
         background-image: url(/sprites/weapon-talents.png);
         background-size: 800px;
     }
-    &.ferocious:before,
-    &.ferocious::before,
-    &.ferocious:after,
-    &.ferocious::after {
-        background-position: 0 0;
+    &.ferocious {
+        @include pseudo(before, after) { 
+            background-position: 0 0;
+        }
     }
-    &.destructive:before,
-    &.destructive::before,
-    &.destructive:after,
-    &.destructive::after {
-        background-position: -100px 0;
+    &.destructive {
+        @include pseudo(before, after) { 
+            background-position: -100px 0;
+        }
     }
-    &.harmful:before,
-    &.harmful::before,
-    &.harmful:after,
-    &.harmful::after {
-        background-position: -200px 0;
+    &.harmful {
+        @include pseudo(before, after) { 
+            background-position: -200px 0;
+        }
     }
-    &.responsive:before,
-    &.responsive::before,
-    &.responsive:after,
-    &.responsive::after {
-        background-position: -300px 0;
+    &.responsive {
+        @include pseudo(before, after) { 
+            background-position: -300px 0;
+        }
     }
-    &.deadly:before,
-    &.deadly::before,
-    &.deadly:after,
-    &.deadly::after {
-        background-position: -400px 0;
+    &.deadly {
+        @include pseudo(before, after) { 
+            background-position: -400px 0;
+        }
     }
-    &.fierce:before,
-    &.fierce::before,
-    &.fierce:after,
-    &.fierce::after {
-        background-position: -500px 0;
+    &.fierce {
+        @include pseudo(before, after) { 
+            background-position: -500px 0;
+        }
     }
-    &.self-preserved:before,
-    &.self-preserved::before,
-    &.self-preserved:after,
-    &.self-preserved::after {
-        background-position: -600px 0;
+    &.self-preserved {
+        @include pseudo(before, after) { 
+            background-position: -600px 0;
+        }
     }
-    &.trained:before,
-    &.trained::before,
-    &.trained:after,
-    &.trained::after {
-        background-position: -700px 0;
+    &.trained {
+        @include pseudo(before, after) { 
+            background-position: -700px 0;
+        }
     }
-    &.unforgiving:before,
-    &.unforgiving::before,
-    &.unforgiving:after,
-    &.unforgiving::after {
-        background-position: 0 -100px;
+    &.unforgiving {
+        @include pseudo(before, after) { 
+            background-position: 0 -100px;
+        }
     }
-    &.prepared:before,
-    &.prepared::before,
-    &.prepared:after,
-    &.prepared::after {
-        background-position: -100px -100px;
+    &.prepared {
+        @include pseudo(before, after) { 
+            background-position: -100px -100px;
+        }
     }
-    &.swift:before,
-    &.swift::before,
-    &.swift:after,
-    &.swift::after {
-        background-position: -200px -100px;
+    &.swift {
+        @include pseudo(before, after) { 
+            background-position: -200px -100px;
+        }
     }
-    &.intense:before,
-    &.intense::before,
-    &.intense:after,
-    &.intense::after {
-        background-position: -300px -100px;
+    &.intense {
+        @include pseudo(before, after) { 
+            background-position: -300px -100px;
+        }
     }
-    &.vicious:before,
-    &.vicious::before,
-    &.vicious:after,
-    &.vicious::after {
-        background-position: -400px -100px;
+    &.vicious {
+        @include pseudo(before, after) { 
+            background-position: -400px -100px;
+        }
     }
-    &.toxic:before,
-    &.toxic::before,
-    &.toxic:after,
-    &.toxic::after {
-        background-position: -500px -100px;
+    &.toxic {
+        @include pseudo(before, after) { 
+            background-position: -500px -100px;
+        }
     }
-    &.brutal:before,
-    &.brutal::before,
-    &.brutal:after,
-    &.brutal::after {
-        background-position: -600px -100px;
+    &.brutal {
+        @include pseudo(before, after) { 
+            background-position: -600px -100px;
+        }
     }
-    &.skilled:before,
-    &.skilled::before,
-    &.skilled:after,
-    &.skilled::after {
-        background-position: -700px -100px;
+    &.skilled {
+        @include pseudo(before, after) { 
+            background-position: -700px -100px;
+        }
     }
-    &.coolheaded:before,
-    &.coolheaded::before,
-    &.coolheaded:after,
-    &.coolheaded::after {
-        background-position: -100px -200px;
+    &.coolheaded {
+        @include pseudo(before, after) { 
+            background-position: -100px -200px;
+        }
     }
-    &.talented:before,
-    &.talented::before,
-    &.talented:after,
-    &.talented::after {
-        background-position: -200px -200px;
+    &.talented {
+        @include pseudo(before, after) { 
+            background-position: -200px -200px;
+        }
     }
-    &.meticulous:before,
-    &.meticulous::before,
-    &.meticulous:after,
-    &.meticulous::after {
-        background-position: -300px -200px;
+    &.meticulous {
+        @include pseudo(before, after) { 
+            background-position: -300px -200px;
+        }
     }
-    &.determined:before,
-    &.determined::before,
-    &.determined:after,
-    &.determined::after {
-        background-position: -500px -200px;
+    &.determined {
+        @include pseudo(before, after) { 
+            background-position: -500px -200px;
+        }
     }
-    &.predatory:before,
-    &.predatory::before,
-    &.predatory:after,
-    &.predatory::after {
-        background-position: -600px -200px;
+    &.predatory {
+        @include pseudo(before, after) { 
+            background-position: -600px -200px;
+        }
     }
-    &.sustained:before,
-    &.sustained::before,
-    &.sustained:after,
-    &.sustained::after {
-        background-position: -700px -200px;
+    &.sustained {
+        @include pseudo(before, after) { 
+            background-position: -700px -200px;
+        }
     }
-    &.provident:before,
-    &.provident::before,
-    &.provident:after,
-    &.provident::after {
-        background-position: 0 -300px;
+    &.provident {
+        @include pseudo(before, after) { 
+            background-position: 0 -300px;
+        }
     }
-    &.proficient:before,
-    &.proficient::before,
-    &.proficient:after,
-    &.proficient::after {
-        background-position: -100px -300px;
+    &.proficient {
+        @include pseudo(before, after) { 
+            background-position: -100px -300px;
+        }
     }
-    &.balanced:before,
-    &.balanced::before,
-    &.balanced:after,
-    &.balanced::after {
-        background-position: -200px -300px;
+    &.balanced {
+        @include pseudo(before, after) { 
+            background-position: -200px -300px;
+        }
     }
-    &.adept:before,
-    &.adept::before,
-    &.adept:after,
-    &.adept::after {
-        background-position: -300px -300px;
+    &.adept {
+        @include pseudo(before, after) { 
+            background-position: -300px -300px;
+        }
     }
-    &.capable:before,
-    &.capable::before,
-    &.capable:after,
-    &.capable::after {
-        background-position: -400px -300px;
+    &.capable {
+        @include pseudo(before, after) { 
+            background-position: -400px -300px;
+        }
     }
-    &.competent:before,
-    &.competent::before,
-    &.competent:after,
-    &.competent::after {
-        background-position: -500px -300px;
+    &.competent {
+        @include pseudo(before, after) { 
+            background-position: -500px -300px;
+        }
     }
-    &.stable:before,
-    &.stable::before,
-    &.stable:after,
-    &.stable::after {
-        background-position: -600px -300px;
+    &.stable {
+        @include pseudo(before, after) { 
+            background-position: -600px -300px;
+        }
     }
-    &.accurate:before,
-    &.accurate::before,
-    &.accurate:after,
-    &.accurate::after {
-        background-position: -700px -300px;
+    &.accurate {
+        @include pseudo(before, after) { 
+            background-position: -700px -300px;
+        }
     }
-    &.commanding:before,
-    &.commanding::before,
-    &.commanding:after,
-    &.commanding::after {
-        background-position: 0 -400px;
+    &.commanding {
+        @include pseudo(before, after) { 
+            background-position: 0 -400px;
+        }
     }
-    &.dominant:before,
-    &.dominant::before,
-    &.dominant:after,
-    &.dominant::after {
-        background-position: -100px -400px;
+    &.dominant {
+        @include pseudo(before, after) { 
+            background-position: -100px -400px;
+        }
     }
-    &.expert:before,
-    &.expert::before,
-    &.expert:after,
-    &.expert::after {
-        background-position: -700px -400px;
+    &.expert {
+        @include pseudo(before, after) { 
+            background-position: -700px -400px;
+        }
     }
-    &.disciplined:before,
-    &.disciplined::before,
-    &.disciplined:after,
-    &.disciplined::after {
-        background-position: 0 -500px;
+    &.disciplined {
+        @include pseudo(before, after) { 
+            background-position: 0 -500px;
+        }
     }
-    &.goldenrhino:before,
-    &.goldenrhino::before,
-    &.goldenrhino:after,
-    &.goldenrhino::after,
-    &.golden-rhino:before,
-    &.golden-rhino::before,
-    &.golden-rhino:after,
-    &.golden-rhino::after {
-        background-position: -100px -500px;
+    &.goldenrhino,
+    &.golden-rhino {
+        @include pseudo(before, after) { 
+            background-position: -100px -500px;
+        }
     }
-    &.showstopper:before,
-    &.showstopper::before,
-    &.showstopper:after,
-    &.showstopper::after {
-        background-position: -300px -500px;
+    &.showstopper {
+        @include pseudo(before, after) { 
+            background-position: -300px -500px;
+        }
     }
-    &.hurried:before,
-    &.hurried::before,
-    &.hurried:after,
-    &.hurried::after {
-        background-position: -400px -500px;
+    &.hurried {
+        @include pseudo(before, after) { 
+            background-position: -400px -500px;
+        }
     }
-    &.distracted:before,
-    &.distracted::before,
-    &.distracted:after,
-    &.distracted::after {
-        background-position: -500px -500px;
+    &.distracted {
+        @include pseudo(before, after) { 
+            background-position: -500px -500px;
+        }
     }
-    &.focused:before,
-    &.focused::before,
-    &.focused:after,
-    &.focused::after {
-        background-position: -600px -500px;
+    &.focused {
+        @include pseudo(before, after) { 
+            background-position: -600px -500px;
+        }
     }
-    &.carefree:before,
-    &.carefree::before,
-    &.carefree:after,
-    &.carefree::after {
-        background-position: -700px -500px;
+    &.carefree {
+        @include pseudo(before, after) { 
+            background-position: -700px -500px;
+        }
     }
-    &.ambusher:before,
-    &.ambusher::before,
-    &.ambusher:after,
-    &.ambusher::after {
-        background-position: -100px -600px;
+    &.ambusher {
+        @include pseudo(before, after) { 
+            background-position: -100px -600px;
+        }
     }
-    &.elevated:before,
-    &.elevated::before,
-    &.elevated:after,
-    &.elevated::after {
-        background-position: -200px -600px;
+    &.elevated {
+        @include pseudo(before, after) { 
+            background-position: -200px -600px;
+        }
     }
-    &.uncomplicated:before,
-    &.uncomplicated::before,
-    &.uncomplicated:after,
-    &.uncomplicated::after {
-        background-position: -300px -600px;
+    &.uncomplicated {
+        @include pseudo(before, after) { 
+            background-position: -300px -600px;
+        }
     }
-    &.caduceus:before,
-    &.caduceus::before,
-    &.caduceus:after,
-    &.caduceus::after {
-        background-position: -600px -600px;
+    &.caduceus {
+        @include pseudo(before, after) { 
+            background-position: -600px -600px;
+        }
     }
-    &.glutton:before,
-    &.glutton::before,
-    &.glutton:after,
-    &.glutton::after {
-        background-position: -700px -600px;
+    &.glutton {
+        @include pseudo(before, after) { 
+            background-position: -700px -600px;
+        }
     }
-    &.valkyrie:before,
-    &.valkyrie::before,
-    &.valkyrie:after,
-    &.valkyrie::after {
-        background-position: 0 -700px;
+    &.valkyrie {
+        @include pseudo(before, after) { 
+            background-position: 0 -700px;
+        }
     }
-    &.lights-out:before,
-    &.lights-out::before,
-    &.lights-out:after,
-    &.lights-out::after {
-        background-position: -100px -700px;
+    &.lights-out {
+        @include pseudo(before, after) { 
+            background-position: -100px -700px;
+        }
     }
-    &.center-mass:before,
-    &.center-mass::before,
-    &.center-mass:after,
-    &.center-mass::after {
-        background-position: -200px -700px;
+    &.center-mass {
+        @include pseudo(before, after) { 
+            background-position: -200px -700px;
+        }
     }
-    &.boomstick:before,
-    &.boomstick::before,
-    &.boomstick:after,
-    &.boomstick::after {
-        background-position: -300px -700px;
+    &.boomstick {
+        @include pseudo(before, after) { 
+            background-position: -300px -700px;
+        }
     }
-    &.quickdraw:before,
-    &.quickdraw::before,
-    &.quickdraw:after,
-    &.quickdraw::after {
-        background-position: -400px -700px;
+    &.quickdraw {
+        @include pseudo(before, after) { 
+            background-position: -400px -700px;
+        }
     }
-    &.pakhan:before,
-    &.pakhan::before,
-    &.pakhan:after,
-    &.pakhan::after {
-        background-position: -500px -700px;
+    &.pakhan {
+        @include pseudo(before, after) { 
+            background-position: -500px -700px;
+        }
     }
-    &.playrough:before,
-    &.playrough::before,
-    &.playrough:after,
-    &.playrough::after,
-    &.play-rough:before,
-    &.play-rough::before,
-    &.play-rough:after,
-    &.play-rough::after {
-        background-position: -600px -700px;
+    &.playrough,
+    &.play-rough {
+        @include pseudo(before, after) { 
+            background-position: -600px -700px;
+        }
     }
-    &.midas:before,
-    &.midas::before,
-    &.midas:after,
-    &.midas::after {
-        background-position: -700px -700px;
+    &.midas {
+        @include pseudo(before, after) { 
+            background-position: -700px -700px;
+        }
     }
     &.free-republic,
-    &.history-repeats:before,
-    &.history-repeats::before,
-    &.history-repeats:after,
-    &.history-repeats::after {
-        background-image: url(/sprites/weapon-talents2.png);
+    &.history-repeats {
+        @include pseudo(before, after) { 
+            background-image: url(/sprites/weapon-talents2.png);
+        }
     }
-    &.free-republic:before,
-    &.free-republic::before,
-    &.free-republic:after,
-    &.free-republic::after {
-        background-position: 0 0;
+    &.free-republic {
+        @include pseudo(before, after) { 
+            background-position: 0 0;
+        }
     }
-    &.history-repeats:before,
-    &.history-repeats::before,
-    &.history-repeats:after,
-    &.history-repeats::after {
-        background-position: -300px 0;
+    &.history-repeats {
+        @include pseudo(before, after) { 
+            background-position: -300px 0;
+        }
     }
 }
 
@@ -1944,208 +1869,221 @@ textarea,
 
 // MAIN STAT ICONS
 .icon {
-    &.firearms:after,
-    &.firearms::after,
-    &.stamina:after,
-    &.stamina::after,
-    &.electronics:after,
-    &.electronics::after {
-        background-image: url(/sprites/stats.png);
-        width: 64px;
-        height: 64px;
-        top: 23px;
-        left: 28px;
+    &.firearms,
+    &.stamina,
+    &.electronics {
+        @include pseudo(after) { 
+            background-image: url(/sprites/stats.png);
+            width: 64px;
+            height: 64px;
+            top: 23px;
+            left: 28px;
+        }
     }
-    &.firearms:after,
-    &.firearms::after {
-        background-position: 0 0;
+    &.firearms {
+        @include pseudo(after) { 
+            background-position: 0 0;
+        }
     }
-    &.stamina:after,
-    &.stamina::after {
-        background-position: -64px 0;
+    &.stamina {
+        @include pseudo(after) { 
+            background-position: -64px 0;
+        }
     }
-    &.electronics:after,
-    &.electronics::after {
-        background-position: -128px 0;
+    &.electronics {
+        @include pseudo(after) { 
+            background-position: -128px 0;
+        }
     }
 }
 
 // GEAR ICONS
 .build-content .gear {
-    .items .icon.he:after,
-    .items .icon.he::after,
-    .items .icon.exotic:after,
-    .items .icon.exotic::after {
-        background-image: url(/sprites/items.png);
-        background-size: 800px;
+    .items .icon {
+        &.he,
+        &.exotic {
+            @include pseudo(after) { 
+                background-image: url(/sprites/items.png);
+                background-size: 800px;
+            }
+        }
     }
-        .icon {  
-        &.holster.he:after,
-        &.holster.he::after,
-        &.holster.exotic:after,
-        &.holster.exotic::after {
-            background-position: 0 -413px;
+    .icon {
+        &.holster.he,
+        &.holster.exotic {
+            @include pseudo(after) { 
+                background-position: 0 -413px;
+            }
         }
-        &.chest.he:after,
-        &.chest.he::after,
-        &.chest.exotic:after,
-        &.chest.exotic::after {
-            background-position: -103px -413px;
+        &.chest.he,
+        &.chest.exotic {
+            @include pseudo(after) { 
+                background-position: -103px -413px;
+            }
         }
-        &.backpack.he:after,
-        &.backpack.he::after,
-        &.backpack.exotic:after,
-        &.backpack.exotic::after {
-            background-position: -206px -413px;
+        &.backpack.he,
+        &.backpack.exotic {
+            @include pseudo(after) { 
+                background-position: -206px -413px;
+            }
         }
-        &.mask.he:after,
-        &.mask.he::after,
-        &.mask.exotic:after,
-        &.mask.exotic::after {
-            background-position: -310px -413px;
+        &.mask.he,
+        &.mask.exotic {
+            @include pseudo(after) { 
+                background-position: -310px -413px;
+            }
         }
-        &.gloves.he:after,
-        &.gloves.he::after,
-        &.gloves.exotic:after,
-        &.gloves.exotic::after {
-            background-position: -516px -413px;
+        &.gloves.he,
+        &.gloves.exotic {
+            @include pseudo(after) { 
+                background-position: -516px -413px;
+            }
         }
-        &.knee-pads.he:after,
-        &.knee-pads.he::after,
-        &.knee-pads.exotic:after,
-        &.knee-pads.exotic::after {
-            background-position: -618px -413px;
+        &.knee-pads.he,
+        &.knee-pads.exotic {
+            @include pseudo(after) { 
+                background-position: -618px -413px;
+            }
         }
     }
 }
 
 // GEAR SET ICONS
 .icon {
-    &.striker:after,
-    &.striker::after,
-    &.hunters-faith:after,
-    &.hunters-faith::after,
-    &.nomad:after,
-    &.nomad::after,
-    &.sentry:after,
-    &.sentry::after,
-    &.tactician:after,
-    &.tactician::after,
-    &.predators-mark:after,
-    &.predators-mark::after,
-    &.final-measure:after,
-    &.final-measure::after,
-    &.lone-star:after,
-    &.lone-star::after,
-    &.defence:after,
-    &.defence::after,
-    &.d3-fnc:after,
-    &.d3-fnc::after,
-    &.frontline:after,
-    &.frontline::after,
-    &.banshee:after,
-    &.banshee::after,
-    &.reclaimer:after,
-    &.reclaimer::after,
-    &.firecrest:after,
-    &.firecrest::after,
-    &.alphabridge:after,
-    &.alphabridge::after,
-    &.deadeye:after,
-    &.deadeye::after {
-        background-image: url(/sprites/gearsets.png);
-        background-size: 800px;
+    &.classified {
+        @include pseudo(before) {
+            content: "";
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            height: 30px;
+            width: 30px;
+            background-image: url(/sprites/gearsets.png);
+            background-size: 240px;
+            background-position: 0 -210px
+        }
     }
-    &.striker:after,
-    &.striker::after {
-        background-position: 0 0;
+    &.striker,
+    &.hunters-faith,
+    &.nomad,
+    &.sentry,
+    &.tactician,
+    &.predators-mark,
+    &.final-measure,
+    &.lone-star,
+    &.defence,
+    &.d3-fnc,
+    &.frontline,
+    &.banshee,
+    &.reclaimer,
+    &.firecrest,
+    &.alphabridge,
+    &.deadeye {
+        @include pseudo(after) {
+            background-image: url(/sprites/gearsets.png);
+            background-size: 800px;
+        }
     }
-    &.hunters-faith:after,
-    &.hunters-faith::after {
-        background-position: -100px 0;
+    &.striker {
+        @include pseudo(after) {
+            background-position: 0 0;
+        }
     }
-    &.nomad:after,
-    &.nomad::after {
-        background-position: -200px 0;
+    &.hunters-faith {
+        @include pseudo(after) {
+            background-position: -100px 0;
+        }
     }
-    &.sentry:after,
-    &.sentry::after {
-        background-position: -300px 0;
+    &.nomad, {
+        @include pseudo(after) {
+            background-position: -200px 0;
+        }
     }
-    &.tactician:after,
-    &.tactician::after {
-        background-position: -400px 0;
+    &.sentry, {
+        @include pseudo(after) {
+            background-position: -300px 0;
+        }
     }
-    &.predators-mark:after,
-    &.predators-mark::after {
-        background-position: -500px 0;
+    &.tactician, {
+        @include pseudo(after) {
+            background-position: -400px 0;
+        }
     }
-    &.final-measure:after,
-    &.final-measure::after {
-        background-position: -600px 0;
+    &.predators-mark, {
+        @include pseudo(after) {
+            background-position: -500px 0;
+        }
     }
-    &.lone-star:after,
-    &.lone-star::after {
-        background-position: -700px 0;
+    &.final-measure, {
+        @include pseudo(after) {
+            background-position: -600px 0;
+        }
     }
-    &.defence:after,
-    &.defence::after,
-    &.d3-fnc:after,
-    &.d3-fnc::after,
-    &.frontline:after,
-    &.frontline::after {
-        background-position: -100px -100px;
+    &.lone-star, {
+        @include pseudo(after) {
+            background-position: -700px 0;
+        }
     }
-    &.banshee:after ,
-    &.banshee::after {
-        background-position: -400px -100px;
+    &.defence,
+    &.d3-fnc,
+    &.frontline {
+        @include pseudo(after) {
+            background-position: -100px -100px;
+        }
     }
-    &.reclaimer:after,
-    &.reclaimer::after {
-        background-position: -600px -100px;
+    &.banshee, {
+        @include pseudo(after) {
+            background-position: -400px -100px;
+        }
     }
-    &.firecrest:after,
-    &.firecrest::after {
-        background-position: -700px -100px;
+    &.reclaimer, {
+        @include pseudo(after) {
+            background-position: -600px -100px;
+        }
     }
-    &.alphabridge:after,
-    &.alphabridge::after {
-        background-position: 0 -200px;
+    &.firecrest, {
+        @include pseudo(after) {
+            background-position: -700px -100px;
+        }
     }
-    &.deadeye:after,
-    &.deadeye::after {
-        background-position: -100px -200px;
+    &.alphabridge, {
+        @include pseudo(after) {
+            background-position: 0 -200px;
+        }
+    }
+    &.deadeye, {
+        @include pseudo(after) {
+            background-position: -100px -200px;
+        }
     }
 }
 
 // SKILL ICONS
 .icon.skill {
-    &,
-    &.after:after,
-    &.after::after {
-        width: 100px;
-        background-image: url(/sprites/skills.png);
-        background-size: 800px;
-    }
-    &.after,
+    width: 100px;
+    background-image: url(/sprites/skills.png);
+    background-size: 800px;
     &.after {
         background-image: none !important;
     }
-    &.after:after,
-    &.after::after {
-        width: 75px;
-        height: 75px;
-        top: 17.5px;
-        left: 22.5px;
-        background-size: 600px;
+    &.after {
+        @include pseudo(after) {
+            width: 75px;
+            height: 75px;
+            top: 17.5px;
+            left: 22.5px;
+            background-image: url(/sprites/skills.png);
+            background-size: 600px;
+        }
     }
     &.shield,
-    &.ballistic-shield,
-    &.after.shield:after,
-    &.after.shield::after,
-    &.after.ballistic-shield:after
-    &.after.ballistic-shield::after {
+    &.ballistic-shield {
         background-position: 0 0;
+        &.after {
+            @include pseudo(after) {
+                background-position: 0 0;
+            }
+        }
     }
     &.kinetic-breaker {
         background-position: -103px 0;
@@ -2159,10 +2097,11 @@ textarea,
     }
     &.pulse {
         background-position: 0 -103px;
-    }
-    &.after.pulse:after,
-    &.after.pulse::after {
-        background-position: 0 -77.25px;
+        &.after {
+            @include pseudo(after) {
+                background-position: 0 -77.25px;
+            }
+        }
     }
     &.recon-pack,
     &.recon-pulse {
@@ -2180,12 +2119,11 @@ textarea,
     &.seeker,
     &.seeker-mine {
         background-position: 0 -206px;
-    }
-    &.after.seeker:after,
-    &.after.seeker::after,
-    &.after.seeker-mine:after,
-    &.after.seeker-mine::after {
-        background-position: 0 -154.5px;
+        &.after {
+            @include pseudo(after) {
+                background-position: 0 -154.5px;
+            }
+        }
     }
     &.cluster {
         background-position: -103px -206px;
@@ -2199,10 +2137,11 @@ textarea,
     }
     &.first-aid {
         background-position: 0 -309px;
-    }
-    &.after.first-aid:after,
-    &.after.first-aid::after {
-        background-position: 0 -231.75px;
+        &.after {
+            @include pseudo(after) {
+                background-position: 0 -231.75px;
+            }
+        }
     }
     &.overdose {
         background-position: -103px -309px;
@@ -2215,10 +2154,11 @@ textarea,
     }
     &.smart-cover {
         background-position: 0 -412px;
-    }
-    &.after.smart-cover:after,
-    &.after.smart-cover::after {
-        background-position: 0 -309px;
+        &.after {
+            @include pseudo(after) {
+                background-position: 0 -309px;
+            }
+        }
     }
     &.trapper {
         background-position: -103px -412px;
@@ -2231,10 +2171,11 @@ textarea,
     }
     &.mobile-cover {
         background-position: 0 -515px;
-    }
-    &.after.mobile-cover:after,
-    &.after.mobile-cover::after {
-        background-position: 0 -386.25px;
+        &.after {
+            @include pseudo(after) {
+                background-position: 0 -386.25px;
+            }
+        }
     }
     &.extension {
         background-position: -103px -515px;
@@ -2248,12 +2189,11 @@ textarea,
     &.sticky,
     &.sticky-bomb {
         background-position: 0 -618px;
-    }
-    &.after.sticky:after,
-    &.after.sticky::after,
-    &.after.sticky-bomb:after,
-    &.after.sticky-bomb::after {
-        background-position: 0 -463.5px;
+        &.after {
+            @include pseudo(after) {
+                background-position: 0 -463.5px;
+            }
+        }
     }
     &.bfb,
     &.damage-sticky {
@@ -2286,34 +2226,23 @@ textarea,
     &.tactical-link,
     &.orange-link,
     &.survivor-link,
-    &.blue-link,
-    &.after.support-station:after,
-    &.after.support-station::after,
-    &.after.heal-station:after,
-    &.after.heal-station::after,
-    &.after.turret:after,
-    &.after.turret::after,
-    &.after.green-link:after,
-    &.after.green-link::after,
-    &.after.recovery-link:after,
-    &.after.recovery-link::after,
-    &.after.tactical-link:after,
-    &.after.tactical-link::after,
-    &.after.orange-link:after,
-    &.after.orange-link::after,
-    &.after.survivor-link:after,
-    &.after.survivor-link::after,
-    &.after.blue-link:after,
-    &.after.blue-link::after {
+    &.blue-link {
         background-image: url(/sprites/skills2.png);
+        &.after {
+            @include pseudo(after) {
+                background-image: url(/sprites/skills2.png);
+            }
+        }
     }
     &.support-station,
-    &.heal-station,
-    &.after.support-station:after,
-    &.after.support-station::after,
-    &.after.heal-station:after,
-    &.after.heal-station::after {
+    &.heal-station {
         background-position: 0 0;
+        &.after {
+            @include pseudo(after) {
+                background-position: 0 0;
+
+            }
+        }
     }
     &.immunizer {
         background-position: -103px 0;
@@ -2328,10 +2257,11 @@ textarea,
     }
     &.turret {
         background-position: 0 -309px;
-    }
-    &.after.turret:after,
-    &.after.turret::after {
-        background-position: 0 -231.75px;
+        &.after {
+            @include pseudo(after) {
+                background-position: 0 -231.75px;
+            }
+        }
     }
     &.zapper,
     &.shock-turret {
