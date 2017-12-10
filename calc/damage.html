@@ -12,14 +12,14 @@ info: "Calculate your estimated bullet damage, burst damage and DPS."
         <div class="flex-list margin">
             <h2>Setup</h2> 
             <div class="flex-item">
-                <label>Base damage:
-                    <span class="tooltip">The base damage roll of your gun.</span>
+                <label>Base Damage:
+                    <span class="tooltip">The Base Damage roll of your gun.</span>
                 </label>
                 <input type="number" min="0" class="base">
             </div>
             <div class="flex-item">
-                <label>Gloves damage:
-                    <span class="tooltip">The damage roll on your gloves.<br>Leave this at 0 when already included in the base damage.</span>
+                <label>Gloves Weapon Type Damage (%):
+                    <span class="tooltip">The Weapon Type Damage roll on your gloves.<br>Leave this at 0 when already included in the base damage.</span>
                 </label>
                 <input type="number" min="0" class="gloves">
             </div>
@@ -30,14 +30,14 @@ info: "Calculate your estimated bullet damage, burst damage and DPS."
                 <input type="number" min="0" class="rpm">
             </div>
             <div class="flex-item">
-                <label>Magazine size:
-                    <span class="tooltip">The Magazine size of your gun.</span>
+                <label>Magazine Size:
+                    <span class="tooltip">The Magazine Size of your gun.</span>
                 </label
                 ><input type="number" value="1" min="1" class="magsize">
             </div>
             <div class="flex-item">
-                <label>Reload time (Seconds):
-                    <span class="tooltip">Reload time of your gun in seconds.</span>
+                <label>Reload Time (Seconds):
+                    <span class="tooltip">Reload Time of your gun in seconds.</span>
                 </label>
                 <input type="number" value="1" min="0" step="0.01" class="reloadtime">
             </div>
@@ -48,8 +48,8 @@ info: "Calculate your estimated bullet damage, burst damage and DPS."
                 <input type="number" min="0" class="firearms">
             </div>
             <div class="flex-item">
-                <label>Firearms scaling:
-                    <span class="tooltip">The Firearms scaling of your gun.<br>Leave this at 0 when already included in the base damage.</span>
+                <label>Firearms Scaling:
+                    <span class="tooltip">The Firearms Scaling of your gun.<br>Leave this at 0 when already included in the base damage.</span>
                 </label>
                 <input type="number" value="0" min="0" step="0.01" class="scaling">
             </div>
@@ -97,13 +97,13 @@ info: "Calculate your estimated bullet damage, burst damage and DPS."
             </div>
             <div class="flex-item">
                 <label>All Weapons Damage (%):
-                    <span class="tooltip">Your total amount of All Weapons Damage.<br>All Weapons Damage stat can be increased by weapon talents, player gear, player skills and player talents.</span>
+                    <span class="tooltip">Your total amount of All Weapons Damage.<br>All Weapons Damage stat can be increased by weapon talents, player gear, player skills and player talents.<br>Leave this at 0 when already included in the base damage.</span>
                 </label>
                 <input type="number" min="0" class="awd">
             </div>
             <div class="flex-item">
                 <label>Weapon Type Damage (%):
-                    <span class="tooltip">Your total amount of Weapon Type Damage for your gun.<br>Examples: 3 piece Predator's Mark, 3 &amp; 5 piece LoneStar</span>
+                    <span class="tooltip">Your total amount of Weapon Type Damage for your gun.<br>Examples: 3 piece Predator's Mark, 3 &amp; 5 piece LoneStar<br>Leave this at 0 when already included in the base damage.</span>
                 </label>
                 <input type="number" min="0" class="wtd">
             </div>
