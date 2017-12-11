@@ -415,8 +415,8 @@ MP5:
     hsmulti: 1.5
     class: smg
 MP7:
-    dmg: [7432, 8724]
-    scaling: 1.09
+    dmg: [7091, 8324]
+    scaling: 1.04
     rpm: 950
     mag: 20
     reload: 1900
