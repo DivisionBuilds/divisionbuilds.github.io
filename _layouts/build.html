@@ -49,7 +49,7 @@ layout: build
 			    		</div>
 			    		<div class="talent-icons">
 			    			{% for t in i[1].talents %}
-			    			{% assign n = t | downcase | replace: ' ', '-' %}
+			    			{% assign n = t | downcase | replace: ' ', '-' | remove: "'" %}
 			    			<div class="icon weapon-talent {{n}}">
 			    				<span class="tooltip">
 			    					<h1>{{t}}</h1>
