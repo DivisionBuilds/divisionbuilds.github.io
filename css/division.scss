@@ -794,15 +794,26 @@ textarea,
         margin: 0 auto;
         @include prefix(animation, fade-in .5s ease-in-out);
     }
-    .weapons .icon.weapon-talent {
-        @include pseudo(before, after) { 
-            content: "";
-            position: absolute;
-            top: 3px;
-            right: -3px;
-            bottom: -3px;
-            left: 3px;
-            opacity: .1;
+    .weapons .icon  {
+        &.weapon,
+        &.weapon-talent {
+            @include pseudo(before, after) { 
+                content: "";
+                position: absolute;
+                top: 3px;
+                right: -3px;
+                bottom: -3px;
+                left: 3px;
+                opacity: .1;
+            }
+        }
+        &.weapon {
+            @include pseudo(before) {
+                display: none;
+            }
+            @include pseudo(after) {
+                background: inherit;
+            }
         }
     }
     .skills .icon {
@@ -1848,6 +1859,42 @@ textarea,
     &.history-repeats {
         @include pseudo(before, after) { 
             background-position: -300px 0;
+        }
+    }
+    &.cover-shooter,
+    &.card-counter,
+    &.fire,
+    &.fury,
+    &.devils-heels,
+    &.the-devils-heels {
+        @include pseudo(before, after) { 
+            background-image: url(/sprites/gearsets.png);
+        }
+    }
+    &.cover-shooter {
+        @include pseudo(before, after) {
+            background-position: -300px -200px;
+        }
+    }
+    &.card-counter {
+        @include pseudo(before, after) {
+            background-position: -400px -200px;
+        }
+    }
+    &.fire {
+        @include pseudo(before, after) {
+            background-position: -100px -300px;
+        }
+    }
+    &.fury {
+        @include pseudo(before, after) {
+            background-position: -200px -300px;
+        }
+    }
+    &.devils-heels,
+    &.the-devils-heels {
+        @include pseudo(before, after) {
+            background-position: 0 -300px;
         }
     }
 }
