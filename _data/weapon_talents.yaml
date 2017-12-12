@@ -180,7 +180,7 @@ Swift:
 Talented:
     description: "Killing a target with this weapon increases Skill Power by 15% for 20 seconds. The effect does not stack. Killing a new target refreshes the timer."
     available: [ar, lmg, smg, mmr, shotgun, pistol]
-The Devil's Heel:
+The Devil's Heels:
     description: "Both weapons gain the Fire and Fury talents, and the buff durations are increased by 15 seconds. Bonuses from Fire and Fury are no longer lost when swapping betweeen Devil and Heel. Weapon swap speed is increased by 50%."
     available: [mmr]
     set: true
