@@ -60,7 +60,7 @@ var calc = {
 		// Required: base, firearms, scaling
 		// Optional: gloves, awd, wtd, ead, ooc, chc, chd, hsc, hsd, hsmulti, hsmodifier, increase, pvpdmg_scaling, pvpead_scaling
 			var ead = o.ead || 0,
-			    pvpdmg_scaling = o.pvpdmg_scaling || 0.42,
+			    pvpdmg_scaling = o.pvpdmg_scaling || 0.49,
 			    pvpead_scaling = o.pvpead_scaling || 0.3;
 			o.hsmodifier = o.pvphsd_scaling || 0.8;
 			var a = (calc.bulletDMG(o) * pvpdmg_scaling) / 100;
