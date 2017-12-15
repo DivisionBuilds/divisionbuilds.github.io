@@ -13,73 +13,31 @@ js: index
     <input class="search" type="text" placeholder="Search">
 </div>
 <div class="build-container">
-    <h1 class="divider">Patch 1.8</h1>
-    <div class="build-list">
-        {% for f in site.pages %}
-        {% if f.layout == 'build' and f.patch == 1.8 %}
-        <a href="{{f.url | remove: '.html'}}">
-            <div class="list-item">
-                <div class="title">{{f.title}}</div>
-                <div class="info">
-                    Author: <span class="author">{{f.author}}</span>
-                    <span class="date">Last updated: {{f.date}}</span>
+    {% assign a = '1.8,1.7,1.6' | split: ',' %}
+    {% for p in a %}
+        {% assign n = p | plus: 0 %}
+        <h1 class="divider">Patch {{p}}</h1>
+        <div class="build-list">
+            {% for f in site.pages %}
+            {% if f.layout == 'build' and f.patch == n %}
+            <a href="{{f.url | remove: '.html'}}">
+                <div class="list-item">
+                    <div class="title">{{f.title}}</div>
+                    <div class="info">
+                        Author: <span class="author">{{f.author}}</span>
+                        <span class="date">Last updated: {{f.date}}</span>
+                    </div>
+                    {% if f.tags %}
+                    <div class="tags">
+                        {% for t in f.tags %}
+                        <span class="tag">{{t}}</span>
+                        {% endfor %}
+                    </div>
+                    {% endif %}
                 </div>
-                {% if f.tags %}
-                <div class="tags">
-                    {% for t in f.tags %}
-                    <span class="tag">{{t}}</span>
-                    {% endfor %}
-                </div>
-                {% endif %}
-            </div>
-        </a>
-        {% endif %}
-        {% endfor %}
-    </div>
-    <h1 class="divider">Patch 1.7</h1>
-    <div class="build-list">
-        {% for f in site.pages %}
-        {% if f.layout == 'build' and f.patch == 1.7 %}
-        <a href="{{f.url | remove: '.html'}}">
-            <div class="list-item">
-                <div class="title">{{f.title}}</div>
-                <div class="info">
-                    Author: <span class="author">{{f.author}}</span>
-                    <span class="date">Last updated: {{f.date}}</span>
-                </div>
-                {% if f.tags %}
-                <div class="tags">
-                    {% for t in f.tags %}
-                    <span class="tag">{{t}}</span>
-                    {% endfor %}
-                </div>
-                {% endif %}
-            </div>
-        </a>
-        {% endif %}
-        {% endfor %}
-    </div>
-    <h1 class="divider">Patch 1.6</h1>
-    <div class="build-list">
-        {% for f in site.pages %}
-        {% if f.layout == 'build' and f.patch == 1.6 %}
-        <a href="{{f.url | remove: '.html'}}">
-            <div class="list-item">
-                <div class="title">{{f.title}}</div>
-                <div class="info">
-                    Author: <span class="author">{{f.author}}</span>
-                    <span class="date">Last updated: {{f.date}}</span>
-                </div>
-                {% if f.tags %}
-                <div class="tags">
-                    {% for t in f.tags %}
-                    <span class="tag">{{t}}</span>
-                    {% endfor %}
-                </div>
-                {% endif %}
-            </div>
-        </a>
-        {% endif %}
-        {% endfor %}
-    </div>
+            </a>
+            {% endif %}
+            {% endfor %}
+        </div>
+    {% endfor %}
 </div>
