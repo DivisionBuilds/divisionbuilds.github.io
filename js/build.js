@@ -1,7 +1,8 @@
 $(document).ready(function() {
     $(".tab-bar-item").click(function() {
         build.showpage($(this).text());
-    });
+	});
+	build.showpage(window.location.hash.slice(1).toLowerCase());
 });
 
 var build = {
