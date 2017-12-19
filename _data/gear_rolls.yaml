@@ -12,8 +12,8 @@ chest:
     all_resistance: [4, 4]
     health_on_kill: [4, 5]
     skill_haste: [7, 9]
-    ammo_capacity: [23, 28]
-    increased_kill_xp: [46, 56]
+    ammo_capacity: [46, 56]
+    increased_kill_xp: [23, 28]
 backpack: 
     armor: [1135, 1334]
     main: [1114, 1272]
