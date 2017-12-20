@@ -13,7 +13,7 @@ banshee:
         - "+ 10% Damage to targets out of cover"
         - "While Rogue all ammo is completely refilled every 30 seconds. Damage taken from non rogue players reduced by 10%. While not Rogue Damage to Rogue players is increased by 10%.\nThis bonus is increased to 20% for 10 minutes after being killed by a rogue."
         - "+ 20% Dark Zone Currency Gained\n+ 5% Damage to Targets out of Cover"
-        - "While Rogue, the time to clear Manhunt status is decreased by 5% for every group member within 10 meters. All Rogue status actions that result in a rank up are doubled. Rewards for clearing Manhunt status are improved.\nWhile not Rogue, damage to Manhunt status agents is increased by 5% for each Manhunt level the agent has. Rewards for killing a Manhunt status agent are improved."
+        - "While Rogue, the time to clear Manhunt status is decreased by 5% for every group member within 10 meters. All Rogue status actions that result in a rank up are doubled. Rewards for clearing Manhunt status are improved.\nWhile not Rogue, damage to Manhunt status agents is increased by 2% for each Manhunt level the agent has. Rewards for killing a Manhunt status agent are improved."
 deadeye: 
     name: "DeadEYE"
     bonuses: 
