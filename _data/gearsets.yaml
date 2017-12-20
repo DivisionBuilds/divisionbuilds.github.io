@@ -51,7 +51,9 @@ hunters-faith:
     bonuses: 
         - "+ 20% Optimal Range"
         - "+ 10% Headshot Damage"
-        - "Hitting an enemy with a bullet grants you and your group temporary protection. The further your shot the more protection. Each group member’s protection disappears after getting hit by one hostile bullet."
+        - "Each consecutive shot with a bolt action marksman rifle that hits an enemy deals 3% more damage. The damage bonus is increased by 4% for every 2000 Firearms. The bonus damage is removed once a shot misses a target, upon weapon swap or reload, or after 10 seconds."
+        - "+ 20% Optimal Range\n+ 10% Headshot Damage"
+        - "Headshots double the gained increased damage bonus. 2 consecutive missed shots are needed to lose the bonus damage."
 lone-star: 
     name: "Lone Star"
     bonuses: 
@@ -59,7 +61,7 @@ lone-star:
         - "+ 8% LMG Damage\n+ 8% Shotgun Damage"
         - "When the weapon is holstered it is instantly reloaded."
         - "+ 50% Ammo Capacity\n+ 12% LMG Damagey\n+ 12% Shotgun Damage"
-        - "When a weapon has 50% of its magazine remaining, there is a 75% chance to receive a bonus that activates when the final bullet is fired from the current magazine. Once activated, the magazine is instantly refilled, weapon damage and fire rate is increased by 20%. The bonus is cancelled by reloading, swaping weapons or exiting combat."
+        - "When a weapon has 50% of its magazine remaining, there is a 75% chance to receive a bonus that activates when the final bullet is fired from the current magazine. Once activated, the magazine is instantly refilled, weapon damage and fire rate is increased by 30%. The bonus is cancelled by reloading, swaping weapons or exiting combat."
 nomad: 
     name: "Path of the Nomad"
     bonuses: 
