@@ -51,7 +51,7 @@ hunters-faith:
     bonuses: 
         - "+ 20% Optimal Range"
         - "+ 10% Headshot Damage"
-        - "Each consecutive shot with a bolt action marksman rifle that hits an enemy deals 3% more damage. The damage bonus is increased by 4% for every 2000 Firearms. The bonus damage is removed once a shot misses a target, upon weapon swap or reload, or after 10 seconds."
+        - "Each consecutive shot with a bolt action marksman rifle that hits an enemy deals 3% more damage. The damage bonus is increased by 4% for every 3000 Firearms. The bonus damage is removed once a shot misses a target, upon weapon swap or reload, or after 10 seconds."
         - "+ 20% Optimal Range\n+ 10% Headshot Damage"
         - "Headshots double the gained increased damage bonus. 2 consecutive missed shots are needed to lose the bonus damage."
 lone-star: 
