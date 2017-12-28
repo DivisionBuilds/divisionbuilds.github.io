@@ -34,7 +34,7 @@ mask:
     enemy_armor_damage: [6.5, 8]
     all_resistanceance: [4, 4]
     health_on_kill: [4, 5]
-    damage_to_elites: [9, 11]
+    damage_to_elites: [9, 12]
     blind/deaf_resistance: [14, 17]
     burn_resistance: [14, 17]
     disorient_resistance: [14, 17]
