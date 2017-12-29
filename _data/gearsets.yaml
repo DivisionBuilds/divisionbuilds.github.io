@@ -45,7 +45,7 @@ frontline:
         - "+ 5% Ballistic Shield Damage Resilience"
         - " When used, your Ballistic Shield has no skill mod active. It will no longer remove Critical Chance from your weapon. SMGs can be equipped. Ballistic Shield health is increased by 57% for every 3000 stamina"
         - "+ 15% Protection From Elites\n+ 5% Ballistic Shield Damage Resilience"
-        - "When Ballistic Shield is deployed, melee damage is increased by 2000% and all overhealing the agent receives is applied to the Ballistic Shield as healing. After receiving a damage threshold from receiving Physical or Exotic damage, the Ballistic Shield grants a buff to the agent and all group members within 15 meters for 6 seconds. The duration of the buff is increased by 2 seconds for every 3000 Stamina the agent has.\nPhysical Damage: Armor is increased by 30%.\nExotic Damage: Weapon Damage is increased by 30%."
+        - "When Ballistic Shield is deployed, melee damage is increased by 2000% and all overhealing the agent receives is applied to the Ballistic Shield as healing. After receiving a damage threshold from receiving Physical or Exotic damage, the Ballistic Shield grants a buff to the agent and all group members within 15 meters for 6 seconds. The duration of the buff is increased by 2 seconds for every 3000 Stamina the agent has.\nPhysical Damage: Armor is increased by 30%.\nExotic Damage: Weapon Damage is increased by 30%.\n\nWhen at 9000 Stamina, Ballistic Shield health is increased by 200%."
 hunters-faith: 
     name: "Hunter's Faith"
     bonuses: 
