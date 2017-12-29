@@ -1395,12 +1395,20 @@ textarea,
     &.aug {
         background-image: url(/sprites/weapons/aug.png);
     }
+    &.alejandro,
+    &.bigalejandro,
+    &.big-alejandro {
+        background-image: url(/sprites/weapons/big-alejandro.png);
+    }
     &.bullfrog,
     &.famas {
         background-image: url(/sprites/weapons/bullfrog.png);
     }
     &.cassidy {
         background-image: url(/sprites/weapons/cassidy.png);
+    }
+    &.devil {
+        background-image: url(/sprites/weapons/devil.png);
     }
     &.double-barrel,
     &.double-barrel-shotgun {
@@ -1412,8 +1420,16 @@ textarea,
     &.g36 {
         background-image: url(/sprites/weapons/g36.png);
     }
+    &.heel {
+        background-image: url(/sprites/weapons/heel.png);
+    }
     &.historian {
         background-image: url(/sprites/weapons/historian.png);
+    }
+    &.house,
+    &.thehouse,
+    &.the-house {
+        background-image: url(/sprites/weapons/the-house.png);
     }
     &.l86 {
         background-image: url(/sprites/weapons/l86.png);
