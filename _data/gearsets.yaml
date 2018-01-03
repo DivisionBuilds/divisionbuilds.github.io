@@ -99,9 +99,9 @@ striker:
     bonuses: 
         - "+ 20% Stability"
         - "+ 10% Enemy Armor Damage"
-        - "Every consecutive hit deals 1% more damage. Stacks up to 100%. Missing shots drop bonus by 2%. Bonus is reduced by 1% every second."
+        - "Every consecutive hit deals 1% more damage. Stacks up to 100%. Missing shots drop bonus by 2%. Bonus is reduced by 1% every second. Bonus can be paused by EMP and is lost when exiting combat."
         - "+ 10% Stability\n+ 5% Enemy Armor Damage"
-        - "Every hit adds a self-healing bonus for 0.01% of max health per second. This bonus is further increased by 0.03% for every 2000 stamina. Stacks up to 100 hits. Bonus is reduced by 0.01% every second. Bonus can be paused by EMP."
+        - "Every hit adds a self-healing bonus for 0.02% of max health per second. This bonus is increased by 0.05% for every 3000 stamina. Stacks up to 100 hits. Missing shots drops the bonus by 1 stack and the bonus is reduced by 2 stacks every second.\n\nEvery hit increases the bonus damage from Striker's Battlegear by an additional 1%. Missing shots drop the bonus damage from Striker's Battlegear by 1% and the bonus is reduced by 2% every second."
 tactician:
     name: "Tactician's Authority"
     bonuses: 
