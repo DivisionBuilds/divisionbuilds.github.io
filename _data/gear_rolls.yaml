@@ -8,7 +8,7 @@ chest:
     main: [1114, 1272]
     health: [14184, 16674]
     exotic_damage_resilience: [9, 11]
-    enemy_armor_damage: [3, 4]
+    enemy_armor_damage: [5, 6]
     all_resistance: [4, 4]
     health_on_kill: [4, 5]
     skill_haste: [7, 9]
