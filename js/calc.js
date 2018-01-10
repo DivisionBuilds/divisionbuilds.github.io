@@ -114,7 +114,7 @@ var calc = {
 			gloves = o.gloves || 0,
 			awd = o.awd || 0,
 			wtd = o.wtd || 0;
-		return Math.round(dmg / (1 + (awd + wtd) / 100)) - gloves - firearms * scaling;
+		return Math.round(dmg / (1 + (awd + wtd + gloves) / 100)) - firearms * scaling;
 	},
 	mitigation: function(arm, wt = 5) {
 		switch (wt) {
