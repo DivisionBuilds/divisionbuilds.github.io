@@ -107,6 +107,6 @@ tactician:
     bonuses: 
         - "+ 15% Skill Haste"
         - "+ 10% Skill Power"
-        - "Every bullet you and your group lands on a hostile adds 0.2% skill power to you for a max of 30% bonus. Bonus consumes the skill power buff on skill use."
+        - "Every bullet you hit enemies with adds 1% bonus skill power. Every bullet your deployed skills hit enemies with adds 0.2% bonus skill power. Skill power bonus max is 30%. Bonus is consumed on skill use."
         - "+ 5% Skill haste\n+ 5% Skill Power"
         - "Using a skill while at the max bonus will reset the skill power buff but will raise the cap to 60%. Using a different skill at 60% has a 40% chance to set the buff power back to 30% while keeping the cap at 60%. This chance is increased by 20% for every 3000 Electronics."
