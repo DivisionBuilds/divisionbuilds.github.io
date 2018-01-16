@@ -13,30 +13,43 @@ js: index
     <input class="search" type="text" placeholder="Search">
 </div>
 <div class="build-container">
+    {% assign t = '|' | split: '|' %}
+    {% assign s = site.pages | where: 'layout', 'build' %}
+    {% for f in s %}
+        {% assign d = f.date | date: '%s' %}
+        {% assign t = t | push: d %}
+    {% endfor %}
+    {% assign t = t | sort | reverse %}
+    {% assign b = '|' | split: '|' %}
+    {% for i in t %}
+        {% assign d = i | date: '%d/%m/%Y' %}
+        {% assign c = s | where: 'date', d %}
+        {% assign b = b | push: c[0] %}
+    {% endfor %}
     {% assign a = '1.8,1.7,1.6' | split: ',' %}
     {% for p in a %}
         {% assign n = p | plus: 0 %}
         <h1 class="divider">Patch {{p}}</h1>
         <div class="build-list">
-            {% for f in site.pages %}
-            {% if f.layout == 'build' and f.patch == n %}
-            <a href="{{f.url | remove: '.html'}}">
-                <div class="list-item">
-                    <div class="title">{{f.title}}</div>
-                    <div class="info">
-                        Author: <span class="author">{{f.author}}</span>
-                        <span class="date">Last updated: {{f.date}}</span>
+            {% for f in b %}
+                {% if f.patch == n %}
+                <a href="{{f.url | remove: '.html'}}">
+                    <div class="list-item">
+                        <div class="title">{{f.title}}</div>
+                        <div class="info">
+                            Author: <span class="author">{{f.author}}</span>
+                            <span class="date">Last updated: {{f.date}}</span>
+                        </div>
+                        {% if f.tags %}
+                        <div class="tags">
+                            {% for t in f.tags %}
+                            <span class="tag">{{t}}</span>
+                            {% endfor %}
+                        </div>
+                        {% endif %}
                     </div>
-                    {% if f.tags %}
-                    <div class="tags">
-                        {% for t in f.tags %}
-                        <span class="tag">{{t}}</span>
-                        {% endfor %}
-                    </div>
-                    {% endif %}
-                </div>
-            </a>
-            {% endif %}
+                </a>
+                {% endif %}
             {% endfor %}
         </div>
     {% endfor %}
