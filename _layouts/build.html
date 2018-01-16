@@ -107,18 +107,26 @@ layout: build
 							{% else %}
 								{% assign l = t | split: ' ' %}
 								{% if l[0] == 'classified' %}
-									{% assign classified = true %}
 									{% assign t = l[1] %}
 								{% endif %}
 		    					{% assign count = 0 %}
+		    					{% assign classy = 0 %}
 								{% for g in page.build.gear.items %}
-									{% unless count >= 4 and classified != true %}
-										{% assign a = g[1].icon | split: ' ' %}
-										{% if a contains t %}
-											{% assign count = count | plus: 1 %}
+									{% assign a = g[1].icon | split: ' ' %}
+									{% assign k = g[1].name | split: ' ' | first %}
+									{% if a contains t or k == 'NinjaBike' %}
+										{% assign count = count | plus: 1 %}
+										{% if g[1].icon contains 'classified' %}
+											{% assign classy = classy | plus: 1 %}
 										{% endif %}
-									{% endunless %}
-		    					{% endfor %}
+									{% endif %}
+								{% endfor %}
+								{% if count > 4 %}
+									{% assign count = 4 %}
+								{% endif %}
+								{% if classy > count %}
+									{% assign count = classy %}
+								{% endif %}
 		    					<h1>{{site.data.gearsets[t].name}}</h1>
 		    					{% for b in site.data.gearsets[t].bonuses %}
 									{% assign amount = forloop.index | plus: 1 %}
