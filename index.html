@@ -24,7 +24,9 @@ js: index
     {% for i in t %}
         {% assign d = i | date: '%d/%m/%Y' %}
         {% assign c = s | where: 'date', d %}
-        {% assign b = b | push: c[0] %}
+        {% for e in c %}
+            {% assign b = b | push: e %}
+        {% endfor %}
     {% endfor %}
     {% assign a = '1.8,1.7,1.6' | split: ',' %}
     {% for p in a %}
