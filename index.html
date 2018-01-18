@@ -19,7 +19,7 @@ js: index
         {% assign d = f.date | date: '%s' %}
         {% assign t = t | push: d %}
     {% endfor %}
-    {% assign t = t | sort | reverse %}
+    {% assign t = t | uniq | sort | reverse %}
     {% assign b = '|' | split: '|' %}
     {% for i in t %}
         {% assign d = i | date: '%d/%m/%Y' %}
