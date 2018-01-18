@@ -85,7 +85,7 @@ reclaimer:
         - "+ 50% Support Station Duration"
         - "Support station gains the benefit of the Life Support Immunizer and Ammo Cache mods at the same time."
         - "+ 15% Support Station Range\n+ 25% Support Station Duration"
-        - "+ 100% Support Station Healing Speed\n+ 100% Support Station Health\nSupport Station gains a 25% chance have no cooldown triggered when it is destroyed by an enemy. This chance is increased by 2% for every 1000 Electronics."
+        - "+ 100% Support Station Healing Speed\n+ 50% Support Station Health\nSupport Station gains a 40% chance have no cooldown triggered when it is destroyed by an enemy. This chance is increased by 20% for every 3000 Electronics."
 sentry: 
     name: "Sentry's Call"
     bonuses: 
