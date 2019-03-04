@@ -22,6 +22,9 @@ $(document).ready(function() {
 	if ($(".select").length > 0) {
 		core.select();
 	}
+	$(".banner .close").click(function() {
+		$(this).parents('.banner').remove();
+   });
 });
 
 // CORE FUNCTIONS
@@ -94,9 +97,10 @@ Object.defineProperty(String.prototype, "classify", {
 	enumberable: false
 });
 
-Object.defineProperty(Array.prototype, "last", {
+Object.defineProperty(Array.prototype, "get", {
 	value: function(i = 0) {
-	    return this[this.length - i - 1];
+		if (i < 0) return this[this.length + i];
+		else return this[i];
 	},
 	configurable: true,
 	enumberable: false
@@ -105,6 +109,31 @@ Object.defineProperty(Array.prototype, "last", {
 Object.defineProperty(String.prototype, "replaceAll", {
 	value: function(s = "", r = "") {
 		return this.split(s).join(r);
+	},
+	configurable: true,
+	enumberable: false
+});
+
+Object.defineProperty(Math, "factorial", {
+	value: function(n = 0) {
+		for (var i = n; i > 1; i--) {
+			n *= i - 1;
+		}
+		return n;
+	},
+	configurable: true,
+	enumberable: false
+});
+
+Object.defineProperty(Math, "binomial", {
+	value: function(n = 0, k = 0) {
+		function f(n) {
+			for (var i = n; i > 1; i--) {
+				n *= i - 1;
+			}
+			return n;
+		}
+		return f(n) / (f(k) * f(n - k));
 	},
 	configurable: true,
 	enumberable: false
