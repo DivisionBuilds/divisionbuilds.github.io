@@ -379,12 +379,17 @@ label {
 
 // FOOTER
 .footer {
-    margin-right: 20px;
-    margin-bottom: 10px;
+    @include display-flex;
+    margin: 0 20px 10px;
     font-size: 1.2em;
-    text-align: right;
     @include flex(none);
-    z-index: 1s;
+    z-index: 1;
+    .left {
+        margin-right: auto;
+    }
+    .right {
+        margin-left: auto;
+    }
     a {
         color: hsla(0, 0%, 100%, .5);
         @include prefix(transition, all .15s ease-in-out);
